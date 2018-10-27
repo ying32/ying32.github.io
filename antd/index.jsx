@@ -1,6 +1,5 @@
-
 // 语言设置
-moment.locale('zh-cn');
+// moment.locale('zh-cn');
 
 // 导入
 
@@ -33,13 +32,13 @@ const Timeline = antd.Timeline;
 
 const Tabs = antd.Tabs;
 
-const Row = antd.Row;
-const Col = antd.CRow
+// const Row = antd.Row;
+// const Col = antd.CRow
 
-const LocaleProvider = antd.LocaleProvider;
+// const LocaleProvider = antd.LocaleProvider;
 
-// import zhCN from 'antd/lib/locale-provider/zh_CN';
-const zhCN = antd.zh_CN;
+// // import zhCN from 'antd/lib/locale-provider/zh_CN';
+// const zhCN = antd.zh_CN;
 
 // 主页
 class Home extends React.Component {
@@ -99,7 +98,7 @@ class Home extends React.Component {
         const TabPane = Tabs.TabPane;
 
         return (
-            <LocaleProvider locale={zhCN}>
+            // <LocaleProvider locale={zhCN}>
                 <Layout  style={{ minHeight: '100vh' }}>
   
                     <Header id={'header'}>
@@ -163,7 +162,7 @@ class Home extends React.Component {
                         {/* 主体层 */}
                         <Layout>
                             
-                            <Tabs defaultActiveKey="2" style={{ padding: 15}} >
+                           <Tabs defaultActiveKey="2" style={{ padding: 15}} >
                                                 <TabPane tab={<span><Icon type="apple" />第一页</span>} key="1">
                                                 Tab 1
                                                 </TabPane>
@@ -184,7 +183,7 @@ class Home extends React.Component {
                             <a href={'https://ant.design/docs/react/getting-started-cn'}>Ant Design</a> ying32 学习例程
                     </Footer>
                 </Layout>
-            </LocaleProvider>
+            // </LocaleProvider>
         );
       }
 }
