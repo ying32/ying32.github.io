@@ -1,4 +1,7 @@
 
+// 语言设置
+moment.locale('zh-cn');
+
 // 导入
 
 const Layout = antd.Layout;
@@ -27,6 +30,16 @@ const Popconfirm = antd.Popconfirm;
 const message = antd.message;
 
 const Timeline = antd.Timeline;
+
+const Tabs = antd.Tabs;
+
+const Row = antd.Row;
+const Col = antd.CRow
+
+const LocaleProvider = antd.LocaleProvider;
+
+// import zhCN from 'antd/lib/locale-provider/zh_CN';
+const zhCN = antd.zh_CN;
 
 // 主页
 class Home extends React.Component {
@@ -83,67 +96,95 @@ class Home extends React.Component {
     }
 
     render() {
-        return (
-            <Layout  style={{ minHeight: '85vh' }}>
-                <Sider trigger={null}  collapsible  collapsed={this.state.collapsed}>
-                    <div className="logo"><img width={32} height={32} src="icon.svg" /></div>
-                    <Menu
-                            defaultSelectedKeys={['']}
-                            defaultOpenKeys={['tables']}
-                            mode="inline"
-                            theme="dark"
-                            inlineCollapsed={this.state.collapsed}
-                            onClick={this.onclick}
-                            selectedKeys={[this.state.selectedKey]}
-                            >
-                            <Menu.Item key="form">
-                                <antd.Icon type="pie-chart" />
-                                <span>表单</span>
-                            </Menu.Item>
-                            <Menu.Item key="notification">
-                                <Icon type="desktop" />
-                                <span>通知</span>
-                            </Menu.Item>
-                            <Menu.Item key="pagination">
-                                <Icon type="inbox" />
-                                <span>分页控件</span>
-                            </Menu.Item>
-                            <SubMenu key="tables" title={<span><Icon type="mail" /><span>表格</span></span>}>
-                                <Menu.Item key="table1">表格1</Menu.Item>
-                            </SubMenu>
-                            <Menu.Item key="timeline">
-                                <Icon type="desktop" />
-                                <span>时间轴</span>
-                            </Menu.Item>
+        const TabPane = Tabs.TabPane;
 
-                            
-                            <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-                                <Menu.Item key="9">Option 9</Menu.Item>
-                                <Menu.Item key="10">Option 10</Menu.Item>
-                                <SubMenu key="sub3" title="Submenu">
-                                <Menu.Item key="11">Option 11</Menu.Item>
-                                <Menu.Item key="12">Option 12</Menu.Item>
-                                </SubMenu>
-                            </SubMenu>
-                    </Menu>
-                </Sider>
-   
-                <Layout>
-                    <Header style={{ background: '#fff', padding: 0 }}>
+        return (
+            <LocaleProvider locale={zhCN}>
+                <Layout  style={{ minHeight: '100vh' }}>
+  
+                    <Header id={'header'}>
+                        <span>Ant Design 学习</span>
                         <Icon
-                        className="trigger"
-                        type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                        onClick={this.toggle}
-                        />
+                            className="trigger"
+                                type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+                                onClick={this.toggle} 
+                                >
+                        </Icon>
                     </Header>
-                    <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-                        <div id="context" />
-                    </Content>
-                    <Footer style={{ textAlign: 'center' }}>
-                        <a href={'https://ant.design/docs/react/getting-started-cn'}>Ant Design</a> ying32 学习例程
+
+                    <Layout>
+
+                        <Sider trigger={null}  collapsible  collapsed={this.state.collapsed}>
+                            <div className="logo"><img width={32} height={32} src="icon.svg" />
+ 
+                            </div> 
+                            <Menu
+                                    defaultSelectedKeys={['']}
+                                    defaultOpenKeys={['tables']}
+                                    mode="inline"
+                                    theme="dark"
+                                    inlineCollapsed={this.state.collapsed}
+                                    onClick={this.onclick}
+                                    selectedKeys={[this.state.selectedKey]}
+                                    >
+                                    <Menu.Item key="form">
+                                        <antd.Icon type="pie-chart" />
+                                        <span>表单</span>
+                                    </Menu.Item>
+                                    <Menu.Item key="notification">
+                                        <Icon type="desktop" />
+                                        <span>通知</span>
+                                    </Menu.Item>
+                                    <Menu.Item key="pagination">
+                                        <Icon type="inbox" />
+                                        <span>分页控件</span>
+                                    </Menu.Item>
+                                    <SubMenu key="tables" title={<span><Icon type="mail" /><span>表格</span></span>}>
+                                        <Menu.Item key="table1">表格1</Menu.Item>
+                                    </SubMenu>
+                                    <Menu.Item key="timeline">
+                                        <Icon type="desktop" />
+                                        <span>时间轴</span>
+                                    </Menu.Item>
+
+                                    
+                                    <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
+                                        <Menu.Item key="9">Option 9</Menu.Item>
+                                        <Menu.Item key="10">Option 10</Menu.Item>
+                                        <SubMenu key="sub3" title="Submenu">
+                                        <Menu.Item key="11">Option 11</Menu.Item>
+                                        <Menu.Item key="12">Option 12</Menu.Item>
+                                        </SubMenu>
+                                    </SubMenu>
+                            </Menu>
+                        </Sider>
+                  
+
+                        {/* 主体层 */}
+                        <Layout>
+                            
+                            <Tabs defaultActiveKey="2" style={{ padding: 15}} >
+                                                <TabPane tab={<span><Icon type="apple" />第一页</span>} key="1">
+                                                Tab 1
+                                                </TabPane>
+                                                <TabPane tab={<span><Icon type="android" />第二页</span>} key="2">
+                                                Tab 2
+                                                </TabPane>
+                            </Tabs>
+                                
+                            <Content style={{ margin: '0px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
+                                <div id="context" />
+                            </Content>
+    
+                        </Layout>
+
+                    </Layout>
+
+                     <Footer style={{ textAlign: 'center' }}>
+                            <a href={'https://ant.design/docs/react/getting-started-cn'}>Ant Design</a> ying32 学习例程
                     </Footer>
                 </Layout>
-            </Layout>
+            </LocaleProvider>
         );
       }
 }
