@@ -1,0 +1,24 @@
+| 方法名| 说明 | 仅限控件 | 平台限制 |
+| ---- | ---- | ---- | ---- |
+|  Hide |  隐藏控件 | 是 | |
+|  Show |  显示控件 | 是 | |
+|  ToString |  输出控件信息，取决于这个控件 | | | 
+|  FindComponent |  通过组件名查询自身子组件 | | |
+|  HasParent |  bool 是否有父类 | | |
+|  Free |  释放此组件 | | |
+|  Invalidate |  要求重新绘制 | 是 | |
+|  Repaint |  要求重绘 | 是 | |
+|  Realign |  重新对齐 | 是 | |
+|  BringToFront |  调整控件顺序到最前 | 是 | |
+|  Perform |  向控件发送一个wm消息 | 是 | |
+|  Refresh |  要求重新刷新控件 | 是 | |
+|  SendToBack |  调整控件顺序到最后 | 是 | | 
+|  Assign |  复制一个对象，视情况，有些并没有实现此方法 |  | |
+|  Equals |  同另一个对象比较 |  | |
+|  GetHashCode |  HashCode |  | |
+|  LoadFromStream |  从流加载 |  | |
+|  SaveToStream |  保存到流 |  | |
+|  LoadFromResourceName |  从资源中通过资源名加载 | | Windows  |
+|  LoadFromResourceID |  从资源中通过资源id加载 | | Windows |
+|  LoadFromFile |  从文件加载 |  | |
+|  SaveToFile |  保存到文件 |  | |

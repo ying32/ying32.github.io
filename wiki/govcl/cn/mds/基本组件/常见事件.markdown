@@ -1,0 +1,41 @@
+
+| 事件（如OnClick调用时使用SetOnClick），有些事件在LCL下是不生效的 | 事件说明 | 
+| ---- | ---- |
+| OnClick|  鼠标左键单击事件，大部分可视控件拥有 |
+| OnEnter|  焦点进入控件 |
+| OnExit|  焦点退出控件 |
+| OnKeyDown|  控件响应键盘按键按下 |
+| OnKeyUp|  控件响应键盘按键抬起 |
+| OnMouseDown|  控件响应鼠标按下 |
+| OnMouseEnter|  鼠标进入控件 |
+| OnMouseLeave|  鼠标退出控件 |
+| OnMouseMove|  鼠标在控件移动事件 |
+| OnMouseUp|  鼠标抬起事件 |
+| OnClose|  某个窗口关闭事件，视情况，一般TForm用的多 |
+| OnCloseQuery|  TForm关闭时处理,优先于TForm的`OnClose` |
+| OnDblClick|  控件的双击事件 |
+| OnHide|  控件隐藏时事件 |
+| OnShow|  控件显示时事件 |
+| OnPaint|  控件绘制事件，一般在这里使用`Canvas`绘制自己的 |
+| OnResize|  控件大小发生变化 |
+| OnExecute|  常用于TAction 的执行事件 |
+| OnUpdate|  常用于TAction 的更新事件 |    
+| OnCreate | 窗口创建完成事件 |  
+| OnDestroy | 窗口的析构事件 |
+| OnDropFiles | 窗口文件拖放 |  
+| OnConstrainedResize | 窗口或者控件大小约束 |  
+| OnContextPopup | 上下文件弹出事件 | 
+| OnDragOver | 拖放完成 |  
+| OnDragDrop | 拖放下落 | 
+| OnStartDrag | 开始拖放 | 
+| OnEndDrag | 结束拖放 |  
+| OnDockDrop | 停靠下落 |  
+| OnDockOver | 停靠完成 | 
+| OnUnDock | 解除停靠 | 
+| OnStartDock | 开始停靠 |  
+| OnMouseWheel | 鼠标中键滚动 | 
+| OnGetSiteInfo | 停靠信息获取 | 
+| OnMouseWheelUp | 鼠标中键抬起 |
+| OnMouseWheelDown | 鼠标中键按下 | 
+| OnMessage | Windows,libvcl消息循环 |  
+| OnWndProc| 窗口消息循环，类似于OnMessage，但可以跨平台，相关消息定义位于types/messages包 |

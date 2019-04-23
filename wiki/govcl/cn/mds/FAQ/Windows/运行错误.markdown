@@ -1,0 +1,5 @@
+1、下面这类错误都是没有找到库，请将相应平台的库放到当前目录或者环境变量中。
+
+“faild to load libvcl.dll:The specified module could not be found”,错误码 panic: runtime error: invalid memory address or nil pointer dereference [signal 0xc0000005 code=0x0 addr=0x8 pc=0x4fecb9]
+
+goroutine 1 [running]: gitee.com/ying32/govcl/vcl.(*TApplication).Initialize(0x0) E:/GOPATH/src/gitee.com/ying32/govcl/vcl/application.go:75 +0x19 main.main()  

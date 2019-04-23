@@ -1,0 +1,8 @@
+|  | 说明 | 举列 |
+| ---- | ---- | ---- |
+| NewXXX |  新建一个对象  | NewForm，新建一个TForm对象 |
+| XXXFromInst | 新建一个XXX对象来自已存在的实例  | Form := FormFromInst(obj.Instance()) |
+| XXXFromObj | 新建一个XXX对象来自已存在的一个对象   | Form := FormFromObj(obj) |
+| Free | 释放对象   | obj.Free() |
+| Instance | 对象实例指针  | obj.Instance() |
+| IsValid | 对象实例指针是否有效   | obj.IsValid() |

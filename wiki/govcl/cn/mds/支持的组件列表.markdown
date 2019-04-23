@@ -1,0 +1,131 @@
+> 此列表组件不代表所有都能进行跨平台。大部分可跨平台，少数仅限于Windows并限于libvcl库。 
+
+> 现支持组件和非组件类列表：  
+
+ 
+
+| 组件(控件) | 是否可视 | 说明 | 特定平台限制 | Delphi Wiki | Lazarus Wiki |
+| ----- | :-----: | ---- | ----- | ----- | ----- |
+| TApplication   | 否  | 应用程序服务类，整个程序中有有一个实例，默认创建 | |
+| TForm          | 是 | 窗口容器 | |
+| TButton        | 是 | 按钮 | | [访问](http://docwiki.embarcadero.com/Libraries/Tokyo/en/Vcl.StdCtrls.TButton) | [访问](http://wiki.freepascal.org/TButton) |
+| TEdit          | 是 | 单行文本编辑 | |
+| TMainMenu      | 否 | 主菜单管理  | |
+| TPopupMenu     | 否 | 弹出式菜单管理   | |
+| TMemo          | 是 | 多行文本编辑器 | |
+| TCheckBox      | 是 | 复选框  | |
+| TRadioButton   | 是 | 单选按钮    | |
+| TGroupBox      | 是 | 分组框 | |
+| TLabel         | 是 | 标签 | |
+| TListBox       | 是 | 列表框 | |
+| TComboBox      | 是 | 组合框 | |
+| TPanel         | 是 | 面板，一般来用布局 | |
+| TImage         | 是 | 图像显示 | |
+| TLinkLabel     | 是 | 超链接标签  | |
+| TSpeedButton   | 是 | 按钮，图像式的，自绘的那种 | |
+| TSplitter      | 是 | 分割器 | |
+| TRadioGroup    | 是 | 单选按钮分组框 | |
+| TStaticText    | 是 | 标签，跟TLabel差不多 | |
+| TColorBox      | 是 | 颜色选择组合框 | |
+| TColorListBox  | 是 | 颜色选择列表框 | |
+| TTrayIcon      | 否 | 托盘管理  | Windows、MacOS、部分Linux(已测试Linux Mint 17.1、19、Deepin可使用) |
+| TBalloonHint   | 否 | Balloon提示样式组件  | Windows,libvcl |
+| TCategoryPanelGroup  | 是 | 分类面板管理，可伸缩的  | Windows,libvcl |
+| TOpenDialog          | 否 | 系统打开文件对话框 | |
+| TSaveDialog          | 否 | 系统保存文件对话框 | |
+| TColorDialog         | 否 | 系统颜色对话框 | |
+| TFontDialog          | 否 | 系统字体对话框 | |
+| TPrintDialog         | 否 | 系统打印对话框 | |
+| TOpenPictureDialog   | 否 | 系统打开图片对话框 | |
+| TSavePictureDialog   | 否 | 系统保存图片对话框 | |
+| TSaveTextFileDialog  | 否 | 系统保存文本文件对话框  | Windows,libvcl |
+| TOpenTextFileDialog  | 否 | 系统打开文本文件对话框 | Windows,libvcl |
+| TRichEdit         | 是 | 富文本框 | Windows,libvcl |
+| TTrackBar         | 是 | 滑块条 | |
+| TImageList        | 否 | icon图像列表管理，一般做图标列表组件 | |
+| TUpDown           | 是 | 上下调节的按钮 | |
+| TProgressBar      | 是 | 进度条 | |
+| THotKey           | 是 | 热键输入框 | Windows,libvcl |
+| TDateTimePicker   | 是 | 时间选择器 | |
+| TMonthCalendar    | 是 | 日历选择器 | |
+| TListView         | 是 | 高级列表框 | |
+| TTreeView         | 是 | 树形列表 | |
+| TStatusBar        | 是 | 状态条，底部的 | |
+| TToolBar          | 是 | 工具条，顶部的 | |
+| TPageControl      | 是 | 分页控件管理，类似于TabControl | |
+| TTabSheet       | 是 | 分页控件 | |
+| TControl        | 是 | 控件基类 | |
+| TActionList     | 否 | 动作管理器  | |
+| TToolButton     | 是 | 工具条按钮  | |
+| TPaintBox       | 是 | 绘图框 | |
+| TTimer          | 否 | 计时器组件 | |
+| TCategoryPanel  | 是 | 分组面板 | Windows,libvcl |
+| TShape          | 是 | 形状 | |
+| TBevel          | 是 | 边 |  |  
+| TScrollBox      | 是 | 滚动框   | |
+| TScrollBar      | 是 | 滚动条   | |
+| TCheckListBox   | 是 | 复选列表框   | |
+| TGauge          | 是 | 自绘的一种进度条 |  |
+| TImageButton    | 是 | 四态图像控件 | |
+| TFindDialog    | 否 | 查找对话框 | |
+| TReplaceDialog    | 否 | 替换对话框 | |
+| TPrinterSetupDialog  | 否 | 打印机设置对话框 | |
+| TPageSetupDialog | 否 | 页面设置对话框 | windows、linux |
+| TStringGrid | 是 | 字符串表格 |
+| TDrawGrid | 是 |  绘画表格 | 
+| TValueListEditor| 是 | 键值表格 | 
+| THeaderControl | 是 | 眉页控件 | 
+| TLabeledEdit | 是 | 标签编辑框 | 
+| TFlowPanel | 是 | 流线性布局面板 |  
+| TCoolBar | 是 | 酷我条 |   
+| TTaskbar| 否 | windows任务栏新特性 | windows,libvcl,win7+ |        
+| TJumpList | 否 | windows任务栏新特性-跳转列表 | windows,libvcl,win7+ |    
+| TMiniWebview | 是 | 一个简单的浏览器组件 | windows,libvcl,liblcl,  macOS,cocoa |    
+
+
+| 类 | 说明 | 特定平台限制 | Delphi Wiki | Lazarus Wiki |
+| ----- | ----- | ----- | ----- | ----- |
+| TIcon           | ico图标类 | |
+| TBitmap         | BMP图片类 | |
+| TMemoryStream   | 内存流类   | |
+| TFont           | 字体类    | |
+| TStrings        | 字符管理类，虚拟 |  |
+| TStringList     | 字符管理类   | |
+| TBrush          | 画刷类  |  |
+| TPen            | 画笔类  |   |
+| TMenuItem       | 菜单项目类  |  |
+| TListGroups     | TListView分组管理| Windows,libvcl |
+| TPicture        | 图片类  |  |
+| TTreeNodes      | TTreeView 节点管理 | |
+| TTreeNode       | TTreeView 子项目类  |    |
+| TScreen         | 屏幕信息类  |   |
+| TMouse          | 鼠标信息类 |   |
+| TListColumns    | TListView 列管理 | |
+| TListItems      | TListView 子项管理 | |
+| TListItem       | TListView 子项目类 | |
+| TListGroup      | TListView 分组项目类  | Windows,libvcl |
+| TListColumn     | TListView 列类  | |
+| TCollectionItem | 某此的基类  |   |
+| TStatusPanels   | 状态条面板管理类 |     |
+| TStatusPanel    | 状态条面板   | |
+| TCanvas         | 画布类   | |
+| TObject         | 基类   | |
+| TPngImage       | Png图片类   |  |
+| TJPEGImage      | JPG图片类    | |
+| TGIFImage       | GIF图片类   | |
+| TGIFFrame       | 属于TGIFImage属性中的，一般不使用 | Windows,libvcl |
+| TIniFile        | Ini文件操作类  | |
+| TRegistry       | 注册表操作类  | |
+| TClipboard      | 剪切板操作类 | |
+| TMonitor        | 监视器类  | |
+| TMargins        | 边距类  | Windows,libvcl |
+| TList           | 指针List，不需要使用 |  |
+| TGraphic        | 图形基类  | |
+| TComponent      | 组件基类  | |
+| TStyleManager   | 样式管理类  | Windows,libvcl |
+| THeaderSection | 与HeaderControl有关的 | 
+| THeaderSections | 与HeaderControl有关的 |   
+| TBoundLabel | 与TLabeledEdit有关的 |  
+| TCoolBands| 与TCoolBar有关的 |  
+| TCoolBand | 与TCoolBar有关的 |        
+| TPrinter | 打印机操作类 |      

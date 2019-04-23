@@ -1,0 +1,1 @@
+定义着 MessageBox or MessageDlg 返回值

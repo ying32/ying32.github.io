@@ -1,0 +1,1 @@
+随着govcl的稳定以及VCL基础控件基本封装完，后续在VCL上除新增控件外不再有大更新了，另外LCL由于在dll中存在些bug，可能会随着Lazarus的版本升级，目前发现Lazarus2.0并不如意，所以dev分支的代码暂不打算合并到master分支中，对于Lazarus2.0处于观望中。
