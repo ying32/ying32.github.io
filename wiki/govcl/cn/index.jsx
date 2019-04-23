@@ -62,6 +62,8 @@ class Home extends React.Component {
             });
             const mountNode = document.getElementById('context')
             switch (e.key) {
+                case "home1":
+                    break;
                 case "form":
                     const WrappedNormalLoginForm = Form.create()(LoginForm);
                     ReactDOM.render(<WrappedNormalLoginForm />, mountNode);
@@ -102,7 +104,7 @@ class Home extends React.Component {
                 <Layout  style={{ minHeight: '100vh' }}>
   
                     <Header id={'header'}>
-                        <span>Ant Design 学习</span>
+                        <span>GoVCL WIKI</span>
                         <Icon
                             className="trigger"
                                 type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
@@ -113,7 +115,7 @@ class Home extends React.Component {
 
                     <Layout>
 
-                        <Sider trigger={null}  collapsible  collapsed={this.state.collapsed}>
+                        <Sider trigger={null}  collapsible  collapsed={this.state.collapsed}  width={280}>
                             <div className="logo"><img width={32} height={32} src="icon.svg" />
  
                             </div> 
@@ -126,10 +128,33 @@ class Home extends React.Component {
                                     onClick={this.onclick}
                                     selectedKeys={[this.state.selectedKey]}
                                     >
-                                    <Menu.Item key="form">
-                                        <antd.Icon type="pie-chart" />
-                                        <span>表单</span>
-                                    </Menu.Item>
+                                    
+                                    <SubMenu key="home" title={<span><Icon type="home" /><span>主页</span></span>}>
+                                        <Menu.Item key="home_1">入门必读</Menu.Item>
+                                        <Menu.Item key="home_2">关于govcl更新进度</Menu.Item>
+                                        <Menu.Item key="home_3">UI的布局</Menu.Item>
+                                        <Menu.Item key="home_4">支持的事件</Menu.Item>
+                                        <Menu.Item key="home_5">支持的组件列表</Menu.Item>
+                                        <Menu.Item key="home_6">对象指针问题说明（重要）</Menu.Item>
+                                        <Menu.Item key="home_7">协程中操作UI组件（重要）</Menu.Item>
+                                        <Menu.Item key="home_8">自动关联事件</Menu.Item>
+                                        <Menu.Item key="home_9">res2go工具说明</Menu.Item>
+                                        <Menu.Item key="home_10">Govcl开发APP规范</Menu.Item>
+                                        <Menu.Item key="home_11">Go源码、libvcl、liblcl中命名规则</Menu.Item>
+                                    </SubMenu>
+
+                                    <SubMenu key="components" title={<span><Icon type="desktop" /><span>组件</span></span>}>
+                                        <Menu.Item key="components_1">Delphi-VCL组件WIKI</Menu.Item>
+                                        <Menu.Item key="components_2">Lazarus-LCL组件WIKI</Menu.Item>
+                                        <Menu.Item key="components_3">常见属性</Menu.Item>
+                                        <Menu.Item key="components_4">常见事件</Menu.Item>
+                                        <Menu.Item key="components_5">常见方法</Menu.Item>
+                                        <Menu.Item key="components_6">对象默认方法</Menu.Item>
+                                        <SubMenu key="basecomponents" title={<span><Icon type="home" /><span>基础组件</span></span>}>
+                                           <Menu.Item key="basecomponents_1">TForm</Menu.Item>
+                                        </SubMenu>
+                                    </SubMenu>
+                                 
                                     <Menu.Item key="notification">
                                         <Icon type="desktop" />
                                         <span>通知</span>
@@ -180,7 +205,7 @@ class Home extends React.Component {
                     </Layout>
 
                      <Footer style={{ textAlign: 'center' }}>
-                            <a href={'https://ant.design/docs/react/getting-started-cn'}>Ant Design</a> ying32 学习例程
+                            <a href={'https://github.com/ying32/govcl'}>govcl WIKI</a> ying32
                     </Footer>
                 </Layout>
             // </LocaleProvider>
