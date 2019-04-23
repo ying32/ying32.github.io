@@ -77,25 +77,6 @@
         Content = Layout.Content,
         Footer = Layout.Footer;
 
-
-    // // import zhCN from 'antd/lib/locale-provider/zh_CN';
-    // const zhCN = antd.zh_CN;
-
-    marked.setOptions({
-        gfm: true,
-        tables: true,
-        breaks: false,
-        pedantic: false,
-        sanitize: false,
-        smartLists: true,
-        smartypants: false,
-        highlight: function highlight(code) {
-            return hljs.highlightAuto(code).value;
-        }
-    });
-
-    // 主页
-
     var Home = function (_React$Component) {
         _inherits(Home, _React$Component);
 

@@ -20,4 +20,5 @@ Delphi/Lazarus中的所有`可视的UI组件`都**非**`线程`或`协程`安全
         f.Button.SetCaption("Hello.")
         fmt.Println(f.Button.Caption())
   }()
+  
 ```
