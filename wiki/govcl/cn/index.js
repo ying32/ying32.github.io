@@ -153,8 +153,8 @@
                             React.createElement(
                                 Menu,
                                 {
-                                    defaultSelectedKeys: [''],
-                                    defaultOpenKeys: ['tables'],
+                                    defaultSelectedKeys: ['入门必读.md'],
+                                    defaultOpenKeys: ['home'],
                                     mode: "inline",
                                     theme: "dark",
                                     inlineCollapsed: this.state.collapsed,
@@ -276,7 +276,7 @@
                                         { key: "basecomponents", title: React.createElement(
                                                 "span",
                                                 null,
-                                                React.createElement(Icon, { type: "home" }),
+                                                React.createElement(Icon, { type: "desktop" }),
                                                 React.createElement(
                                                     "span",
                                                     null,

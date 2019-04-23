@@ -73,8 +73,8 @@ class Home extends React.Component {
  
                             </div> 
                             <Menu
-                                    defaultSelectedKeys={['']}
-                                    defaultOpenKeys={['tables']}
+                                    defaultSelectedKeys={['入门必读.md']}
+                                    defaultOpenKeys={['home']}
                                     mode="inline"
                                     theme="dark"
                                     inlineCollapsed={this.state.collapsed}
@@ -103,7 +103,7 @@ class Home extends React.Component {
                                         <Menu.Item key="基本组件/常见事件.markdown">常见事件</Menu.Item>
                                         <Menu.Item key="基本组件/常见方法.markdown">常见方法</Menu.Item>
                                         <Menu.Item key="基本组件/对象默认方法.markdown">对象默认方法</Menu.Item>
-                                        <SubMenu key="basecomponents" title={<span><Icon type="home" /><span>基础组件</span></span>}>
+                                        <SubMenu key="basecomponents" title={<span><Icon type="desktop" /><span>基础组件</span></span>}>
                                            <Menu.Item key="基本组件/组件/TForm.markdown">TForm</Menu.Item>
                                         </SubMenu>
                                     </SubMenu>
