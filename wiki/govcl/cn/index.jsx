@@ -13,9 +13,17 @@ const { Header, Sider, Content, Footer } = Layout;
 
 // // import zhCN from 'antd/lib/locale-provider/zh_CN';
 // const zhCN = antd.zh_CN;
+
 marked.setOptions({
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: false,
+    smartLists: true,
+    smartypants: false,
     highlight: function (code) {
-    return hljs.highlightAuto(code).value;
+      return hljs.highlightAuto(code).value;
   }
 });
  
