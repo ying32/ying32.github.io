@@ -73,7 +73,7 @@ class Home extends React.Component {
  
                             </div> 
                             <Menu
-                                    defaultSelectedKeys={['入门必读.md']}
+                                    defaultSelectedKeys={['']}
                                     defaultOpenKeys={['home']}
                                     mode="inline"
                                     theme="dark"
