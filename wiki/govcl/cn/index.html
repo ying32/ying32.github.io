@@ -35,19 +35,20 @@
     
 
     <!-- markdown -->
-    <script src="https://cdn.bootcss.com/marked/0.6.2/marked.js"></script>
+    <script src="https://cdn.bootcss.com/marked/0.6.2/marked.min.js"></script>
     <!-- 代码高亮 -->
     <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/github.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/highlight.js/9.15.6/highlight.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.15.6/languages/go.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.15.6/languages/delphi.min.js"></script>
     
     <!-- <link href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet"> -->
     <!-- <script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script> -->
     <script>
        hljs.initHighlightingOnLoad();
-
-       var rendererMD = new marked.Renderer();
+ 
        marked.setOptions({
-            renderer: rendererMD,
+            renderer: new marked.Renderer(),
             gfm: true,
             tables: true,
             breaks: false,
@@ -55,8 +56,15 @@
             sanitize: false,
             smartLists: true,
             smartypants: false,
-            highlight: function (code) {
-              return hljs.highlightAuto(code).value;
+            highlight: function (code, lang) {
+                console.log("lang:"+lang)
+                // if (lang && hljs.getLanguage(lang)) {    
+                    // return hljs.highlight(lang, code, true).value;
+                // } else {
+                    return hljs.highlightAuto(code).value;
+                // }
+               // console.log(code)
+              //return hljs.highlightAuto(code).value;
             }
         });
  
