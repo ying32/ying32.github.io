@@ -39,11 +39,18 @@ const Tabs = antd.Tabs;
 
 // // import zhCN from 'antd/lib/locale-provider/zh_CN';
 // const zhCN = antd.zh_CN;
+const { Switch, Route, hashHistory, Link, BrowserRouter, Redirect  } = ReactRouterDOM
+ 
 
-// 主页
-class Home extends React.Component {
+
+
+class UsersMenu extends React.Component {
     constructor(props) {
         super(props)
+
+        const {children} = this.props;
+
+         
         this.state = {
             collapsed: false,
             selectedKey:"",
@@ -55,54 +62,54 @@ class Home extends React.Component {
             });
         }
 
-        this.onclick = (e) => {
-            console.log( e.key)
-            this.setState({
-                selectedKey: e.key
-            });
-            const mountNode = document.getElementById('context')
-            switch (e.key) {
-                case "form":
-                    const WrappedNormalLoginForm = Form.create()(LoginForm);
-                    ReactDOM.render(<WrappedNormalLoginForm />, mountNode);
-                    break;
+        // this.onclick = (e) => {
+        //     console.log( e.key)
+        //     this.setState({
+        //         selectedKey: e.key
+        //     });
+            // const mountNode = document.getElementById('context')
+            // switch (e.key) {
+            //     case "form":
+            //         // const WrappedNormalLoginForm = Form.create()(LoginForm);
+            //         // ReactDOM.render(<WrappedNormalLoginForm />, mountNode);
+            //         break;
 
-                case "notification":
+            //     case "notification":
                 
-                    ReactDOM.render(<NotificationMsg />, mountNode);
-                    break;
+            //         ReactDOM.render(<NotificationMsg />, mountNode);
+            //         break;
 
-                case "pagination":
+            //     case "pagination":
 
-                    ReactDOM.render(<PaginationTest />, mountNode);
-                    break;
+            //         ReactDOM.render(<PaginationTest />, mountNode);
+            //         break;
 
-                case "table1":
-                    ReactDOM.render(<Table1 />, mountNode);
-                    break;
+            //     case "table1":
+            //         ReactDOM.render(<Table1 />, mountNode);
+            //         break;
 
-                case "timeline":
-                    ReactDOM.render(<TimeLineTest />, mountNode)
-                    break;
+            //     case "timeline":
+            //         ReactDOM.render(<TimeLineTest />, mountNode)
+            //         break;
             
-                default:
-                    break;
-            }
+            //     default:
+            //         break;
+            // }
 
            
-        }
+        // }
         
     }
 
     render() {
         const TabPane = Tabs.TabPane;
-
+      
         return (
             // <LocaleProvider locale={zhCN}>
                 <Layout  style={{ minHeight: '100vh' }}>
   
                     <Header id={'header'}>
-                        <span>Ant Design 学习</span>
+                        <span><Link to="/">Ant Design 学习</Link></span>
                         <Icon
                             className="trigger"
                                 type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
@@ -113,7 +120,7 @@ class Home extends React.Component {
 
                     <Layout>
 
-                        <Sider trigger={null}  collapsible  collapsed={this.state.collapsed}>
+                        <Sider trigger={null}  collapsible  collapsed={this.state.collapsed} mode="inline" theme="dark" style={{width: '240'}}>
                             <div className="logo"><img width={32} height={32} src="icon.svg" />
  
                             </div> 
@@ -128,22 +135,22 @@ class Home extends React.Component {
                                     >
                                     <Menu.Item key="form">
                                         <antd.Icon type="pie-chart" />
-                                        <span>表单</span>
+                                        <Link to="/form">表单</Link>
                                     </Menu.Item>
                                     <Menu.Item key="notification">
                                         <Icon type="desktop" />
-                                        <span>通知</span>
+                                        <Link to="/notification">通知</Link>
                                     </Menu.Item>
                                     <Menu.Item key="pagination">
                                         <Icon type="inbox" />
-                                        <span>分页控件</span>
+                                        <Link to="/pagination">分页控件</Link>
                                     </Menu.Item>
                                     <SubMenu key="tables" title={<span><Icon type="mail" /><span>表格</span></span>}>
-                                        <Menu.Item key="table1">表格1</Menu.Item>
+                                        <Menu.Item key="table1"><Link to="/table1">表格1</Link></Menu.Item>
                                     </SubMenu>
                                     <Menu.Item key="timeline">
                                         <Icon type="desktop" />
-                                        <span>时间轴</span>
+                                        <Link to="/timeline">时间轴</Link>
                                     </Menu.Item>
 
                                     
@@ -172,7 +179,9 @@ class Home extends React.Component {
                             </Tabs>
                                 
                             <Content style={{ margin: '0px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-                                <div id="context" />
+                                <div id="context">
+                                
+                                </div>
                             </Content>
     
                         </Layout>
@@ -188,6 +197,15 @@ class Home extends React.Component {
       }
 }
 
+// 主页
+class Home extends React.Component {
+    render() {
+      console.log(this.props)
+       return (
+           <div>Hello!</div>
+       )
+    }
+}
 
 
 // 登录表单
@@ -404,4 +422,52 @@ class TimeLineTest extends React.Component {
 }
 
 
-ReactDOM.render(<Home />, document.getElementById('app'));
+class Routers extends React.Component{
+    render(){
+        return (
+            <div className="primary-layout">
+                <header>
+                    <Route path="/" component={UsersMenu} />
+                </header>
+                <main>
+                     <Route path="/" exact component={Home} />
+                     <Route path="/form" exact component={Form.create()(LoginForm)} />
+                     <Route path="/notification" component={NotificationMsg}/>  
+                     <Route path="/pagination" component={PaginationTest}/>
+                     <Route path="/table1" component={Table1}/>
+                     <Route path="/timeline" component={TimeLineTest}/>
+                     
+                </main>
+            </div>   
+        )
+    }
+}
+
+
+//   {/* <Switch> */}
+                     
+//                         {/* <Route path="/" component={Home} exact /> */}
+//                         {/* <Route path="/form" component={Form.create()(LoginForm)}/> */}
+//                         {/* <Route path="/notification" component={NotificationMsg}/> */}
+//                         {/* <Route path="/pagination" component={PaginationTest}/> */}
+//                         {/* <Route path="/table1" component={Table1}/> */}
+//                         {/* <Route path="/timeline" component={TimeLineTest}/> */}
+                       
+ 
+//                 {/* </Switch>  */}
+
+class App extends React.Component{
+    render(){
+        return (
+            <BrowserRouter>
+               <Routers />
+            </BrowserRouter>  
+        )
+    }
+}
+ 
+
+ 
+ReactDOM.render(<App />, document.getElementById('app'));
+
+// ReactDOM.render(<Home />, document.getElementById('app'));
