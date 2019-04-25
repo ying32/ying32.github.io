@@ -61,9 +61,6 @@
         if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
     }
 
-    // 语言设置
-    // moment.locale('zh-cn');
-
     // 导入
 
     var Layout = antd.Layout;
@@ -76,6 +73,12 @@
         Sider = Layout.Sider,
         Content = Layout.Content,
         Footer = Layout.Footer;
+    var _ReactRouterDOM = ReactRouterDOM,
+        Switch = _ReactRouterDOM.Switch,
+        Route = _ReactRouterDOM.Route,
+        hashHistory = _ReactRouterDOM.hashHistory,
+        Link = _ReactRouterDOM.Link,
+        BrowserRouter = _ReactRouterDOM.BrowserRouter;
 
     var Home = function (_React$Component) {
         _inherits(Home, _React$Component);
@@ -288,6 +291,15 @@
                                             { key: "\u57FA\u672C\u7EC4\u4EF6/\u7EC4\u4EF6/TForm.markdown" },
                                             "TForm"
                                         )
+                                    ),
+                                    React.createElement(
+                                        Menu.Item,
+                                        { key: "test" },
+                                        React.createElement(
+                                            Link,
+                                            { to: "/wiki/govcl/cn/test/" },
+                                            "App"
+                                        )
                                     )
                                 )
                             )
@@ -329,5 +341,41 @@
         return Home;
     }(React.Component);
 
-    ReactDOM.render(React.createElement(Home, null), document.getElementById('app'));
+    var Test = function (_React$Component2) {
+        _inherits(Test, _React$Component2);
+
+        function Test(props) {
+            _classCallCheck(this, Test);
+
+            return _possibleConstructorReturn(this, (Test.__proto__ || Object.getPrototypeOf(Test)).call(this, props));
+        }
+
+        _createClass(Test, [{
+            key: "render",
+            value: function render() {
+
+                return React.createElement(
+                    "span",
+                    null,
+                    "Hello"
+                );
+            }
+        }]);
+
+        return Test;
+    }(React.Component);
+
+    var routes = React.createElement(
+        BrowserRouter,
+        { history: hashHistory },
+        React.createElement(
+            Switch,
+            null,
+            React.createElement(Route, { path: "/wiki/govcl/cn/", component: Home }),
+            React.createElement(Route, { path: "/wiki/govcl/cn/test/", component: Test })
+        )
+    );
+
+    ReactDOM.render(routes, document.getElementById('app'));
+    // register();
 });

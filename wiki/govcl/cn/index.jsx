@@ -1,5 +1,3 @@
-// 语言设置
-// moment.locale('zh-cn');
 
 // 导入
 
@@ -14,7 +12,8 @@ const { Header, Sider, Content, Footer } = Layout;
 // // import zhCN from 'antd/lib/locale-provider/zh_CN';
 // const zhCN = antd.zh_CN;
 
-
+const { Switch, Route, hashHistory, Link, BrowserRouter  } = ReactRouterDOM
+ 
 // 主页
 class Home extends React.Component {
     constructor(props) {
@@ -106,6 +105,8 @@ class Home extends React.Component {
                                         <SubMenu key="basecomponents" title={<span><Icon type="desktop" /><span>基础组件</span></span>}>
                                            <Menu.Item key="基本组件/组件/TForm.markdown">TForm</Menu.Item>
                                         </SubMenu>
+                                        
+                                        <Menu.Item key="test"><Link to="/wiki/govcl/cn/test/">App</Link></Menu.Item>
                                     </SubMenu>
                                  
                                  
@@ -122,7 +123,7 @@ class Home extends React.Component {
                                   
                                 </div>
                             </Content>
-    
+                        
                         </Layout>
 
                     </Layout>
@@ -136,5 +137,27 @@ class Home extends React.Component {
       }
 }
 
+class Test extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-ReactDOM.render(<Home />, document.getElementById('app'));
+    render() {
+       
+        return (
+            <span>Hello</span>    
+        );
+      }
+}
+
+const routes = (
+    <BrowserRouter history={hashHistory}>
+      <Switch>
+        <Route path="/wiki/govcl/cn/" component={Home}/>
+        <Route path="/wiki/govcl/cn/test/" component={Test}/>
+      </Switch>
+    </BrowserRouter>
+  );
+ 
+ReactDOM.render(routes, document.getElementById('app'));
+// register();
