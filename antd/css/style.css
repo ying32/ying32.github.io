@@ -22,15 +22,7 @@
     margin: 16px;
 }
 
-#app .login-form {
-        max-width: 300px; 
-}
-#app .login-form-forgot {
-        float: right;
-}
-#app .login-form-button {
-        width: 100%;
-}
+ 
 
 #header {
     background: #fff;
@@ -45,6 +37,38 @@
     padding: 0 20px;
     line-height: 50px;
 }
+
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+   
+.login-body {
+    width: 360px;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .3);
+}
+   
+.login-header {
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 10px;
+    background-color: #108ee9; 
+}
+
+.login-form-forgot {
+    float: right;
+}
+.login-form-button {
+    width: 100%;
+}
+   
+.login-form {
+    margin-top: 12px;
+    padding: 24px;
+}
+ 
 
 pre {background-color: rgb(230, 230, 233);}
 table{border:1px solid rgb(223, 226, 229);} 

@@ -2,7 +2,7 @@
 // moment.locale('zh-cn');
 
 // 导入
-
+ 
 const Layout = antd.Layout;
 const Menu = antd.Menu;
 const Icon = antd.Icon;
@@ -39,17 +39,12 @@ const Tabs = antd.Tabs;
 
 // // import zhCN from 'antd/lib/locale-provider/zh_CN';
 // const zhCN = antd.zh_CN;
-const { Switch, Route, hashHistory, Link, BrowserRouter, Redirect  } = ReactRouterDOM
- 
-
+const { Router, Route, hashHistory, Link  } = ReactRouter
 
 
 class UsersMenu extends React.Component {
     constructor(props) {
         super(props)
-
-        const {children} = this.props;
-
          
         this.state = {
             collapsed: false,
@@ -66,133 +61,97 @@ class UsersMenu extends React.Component {
         //     console.log( e.key)
         //     this.setState({
         //         selectedKey: e.key
-        //     });
-            // const mountNode = document.getElementById('context')
-            // switch (e.key) {
-            //     case "form":
-            //         // const WrappedNormalLoginForm = Form.create()(LoginForm);
-            //         // ReactDOM.render(<WrappedNormalLoginForm />, mountNode);
-            //         break;
-
-            //     case "notification":
-                
-            //         ReactDOM.render(<NotificationMsg />, mountNode);
-            //         break;
-
-            //     case "pagination":
-
-            //         ReactDOM.render(<PaginationTest />, mountNode);
-            //         break;
-
-            //     case "table1":
-            //         ReactDOM.render(<Table1 />, mountNode);
-            //         break;
-
-            //     case "timeline":
-            //         ReactDOM.render(<TimeLineTest />, mountNode)
-            //         break;
-            
-            //     default:
-            //         break;
-            // }
-
-           
-        // }
-        
+        //     });  
     }
 
     render() {
         const TabPane = Tabs.TabPane;
-      
+        const {children} = this.props;
         return (
-            // <LocaleProvider locale={zhCN}>
-                <Layout  style={{ minHeight: '100vh' }}>
-  
-                    <Header id={'header'}>
-                        <span><Link to="/">Ant Design 学习</Link></span>
-                        <Icon
-                            className="trigger"
-                                type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                                onClick={this.toggle} 
-                                >
-                        </Icon>
+            <Layout>
+                <Sider
+                    trigger={null}  collapsible  collapsed={this.state.collapsed} mode="inline" theme="dark"
+                    style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0,}}
+                    
+                >
+                    <div className="logo"><img width={32} height={32} src="icon.svg" /></div>
+                    <Menu
+                        defaultSelectedKeys={['']}
+                        defaultOpenKeys={['other1','homepage']}
+                        mode="inline"
+                        theme="dark"
+                        inlineCollapsed={this.state.collapsed}
+                        // style={{ width: 256 }}
+                        // onClick={this.onclick}
+                        // selectedKeys={[this.state.selectedKey]}
+                        >
+
+                        <SubMenu key="homepage" title={<span><Icon type="home" /><span> 主页</span></span>}>
+                            <Menu.Item key="home">
+                                <Link to={'/'}> 首页</Link>
+                            </Menu.Item>
+
+                        </SubMenu>
+                        
+                        <SubMenu key="usrmgr" title={<span><Icon type="user" /><span> 用户管理</span></span>}>
+                            <Menu.Item key="usrlist">
+                                <Link to={'/usrlist'}> 用户列表</Link>
+                            </Menu.Item>
+                        </SubMenu>
+
+                        <SubMenu key="other1" title={<span><Icon type="appstore" /><span> 其他</span></span>}>
+                        
+                            <Menu.Item key="notification">
+                                <Link to="/notification"> 通知</Link>
+                            </Menu.Item>
+                            <Menu.Item key="pagination">
+                                <Link to="/pagination"> 分页控件</Link>
+                            </Menu.Item>
+                            <SubMenu key="tables" title={<span><Icon type="mail" /><span> 表格</span></span>}>
+                                <Menu.Item key="table1">
+                                    <Link to="/table1">表格1</Link>
+                                </Menu.Item>
+                            </SubMenu>
+                            <Menu.Item key="timeline">
+                                <Link to="/timeline">时间轴</Link>
+                            </Menu.Item>
+                        </SubMenu>
+                        
+                        <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
+                            <Menu.Item key="9">Option 9</Menu.Item>
+                            <Menu.Item key="10">Option 10</Menu.Item>
+                            <SubMenu key="sub3" title="Submenu">
+                            <Menu.Item key="11">Option 11</Menu.Item>
+                            <Menu.Item key="12">Option 12</Menu.Item>
+                            </SubMenu>
+                        </SubMenu>
+                    </Menu>
+                </Sider>
+                <Layout style={{ marginLeft: 200 }}>
+                    <Header style={{  position: 'fixed', zIndex: 1, width: '100%', background: '#fff', padding: 0 }}>
+                        {/* <Icon
+                        className="trigger"
+                        type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+                        onClick={this.toggle}
+                        /> */}
                     </Header>
-
-                    <Layout>
-
-                        <Sider trigger={null}  collapsible  collapsed={this.state.collapsed} mode="inline" theme="dark" style={{width: '240'}}>
-                            <div className="logo"><img width={32} height={32} src="icon.svg" />
- 
-                            </div> 
-                            <Menu
-                                    defaultSelectedKeys={['']}
-                                    defaultOpenKeys={['tables']}
-                                    mode="inline"
-                                    theme="dark"
-                                    inlineCollapsed={this.state.collapsed}
-                                    onClick={this.onclick}
-                                    selectedKeys={[this.state.selectedKey]}
-                                    >
-                                    <Menu.Item key="form">
-                                        <antd.Icon type="pie-chart" />
-                                        <Link to="/form">表单</Link>
-                                    </Menu.Item>
-                                    <Menu.Item key="notification">
-                                        <Icon type="desktop" />
-                                        <Link to="/notification">通知</Link>
-                                    </Menu.Item>
-                                    <Menu.Item key="pagination">
-                                        <Icon type="inbox" />
-                                        <Link to="/pagination">分页控件</Link>
-                                    </Menu.Item>
-                                    <SubMenu key="tables" title={<span><Icon type="mail" /><span>表格</span></span>}>
-                                        <Menu.Item key="table1"><Link to="/table1">表格1</Link></Menu.Item>
-                                    </SubMenu>
-                                    <Menu.Item key="timeline">
-                                        <Icon type="desktop" />
-                                        <Link to="/timeline">时间轴</Link>
-                                    </Menu.Item>
-
-                                    
-                                    <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-                                        <Menu.Item key="9">Option 9</Menu.Item>
-                                        <Menu.Item key="10">Option 10</Menu.Item>
-                                        <SubMenu key="sub3" title="Submenu">
-                                        <Menu.Item key="11">Option 11</Menu.Item>
-                                        <Menu.Item key="12">Option 12</Menu.Item>
-                                        </SubMenu>
-                                    </SubMenu>
-                            </Menu>
-                        </Sider>
-                  
-
-                        {/* 主体层 */}
-                        <Layout>
-                            
-                           <Tabs defaultActiveKey="2" style={{ padding: 15}} >
-                                                <TabPane tab={<span><Icon type="apple" />第一页</span>} key="1">
-                                                Tab 1
-                                                </TabPane>
-                                                <TabPane tab={<span><Icon type="android" />第二页</span>} key="2">
-                                                Tab 2
-                                                </TabPane>
-                            </Tabs>
-                                
-                            <Content style={{ margin: '0px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-                                <div id="context">
-                                
-                                </div>
-                            </Content>
-    
-                        </Layout>
-
-                    </Layout>
-
-                     <Footer style={{ textAlign: 'center' }}>
-                            <a href={'https://ant.design/docs/react/getting-started-cn'}>Ant Design</a> ying32 学习例程
+                    <Content style={{
+                          background: '#fff', minHeight: 280,  margin: '24px 16px 0', overflow: 'initial' 
+                    }}>
+                        {/* <Link to="/">Ant Design 学习</Link> */}
+                        <div id="context">
+                            {children}
+                        </div>
+                    </Content>
+                    <Footer style={{ textAlign: 'center' }}>
+                      <a href={'https://ant.design/docs/react/getting-started-cn'}>Ant Design</a> ying32 学习例程
                     </Footer>
                 </Layout>
-            // </LocaleProvider>
+ 
+            </Layout>
+    
+
+
         );
       }
 }
@@ -207,57 +166,96 @@ class Home extends React.Component {
     }
 }
 
+// post
+function post(url, params) {
+    return fetch(url, params, 'POST', 'application/x-www-form-urlencoded')
+}
+
+// get
+function get(url) {
+    return fetch(url, "", 'GET', '')
+}
 
 // 登录表单
 class LoginForm extends React.Component {
-    constructor() {
-       super()
+    constructor(props) {
+       super(props)
+       
        this.handleSubmit = (e) => {
             e.preventDefault();
             this.props.form.validateFields((err, values) => {
                 if (!err) {
                     console.log('Received values of form: ', values);
+                    post('/login', values)
+                    // 成功的回调
+                    .then((res) => {
+                        console.log(res)
+                        if(res){
+                            message.info('登录成功');
+                            // 页面跳转
+                            this.context.router.push('/');
+                        }else{
+                            message.info('登录失败,账号或密码错误');
+                        }
+                    });
                 }
             });
         }
+
+         
     }
 
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form">
-                <FormItem>
-                {getFieldDecorator('userName', {
-                    rules: [{ required: true, message: '请输入用户名！' }],
-                })(
-                    <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
-                )}
-                </FormItem>
-                <FormItem>
-                {getFieldDecorator('password', {
-                    rules: [{ required: true, message: '请输入你的密码！' }],
-                })(
-                    <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="密码" />
-                )}
-                </FormItem>
-                <FormItem>
-                {getFieldDecorator('remember', {
-                    valuePropName: 'checked',
-                    initialValue: true,
-                })(
-                    <Checkbox>记住我</Checkbox>
-                )}
-                <a className="login-form-forgot" href="">忘记密码</a>
-                <Button type="primary" htmlType="submit" className="login-form-button">
-                    登录
-                </Button>
-                或者 <a href="">注册！</a>
-                </FormItem>
-            </Form>
-                   
+            <div className="login-wrapper">
+                <div className="login-body">
+                    <header className="login-header">
+                        登录
+                    </header>
+            
+                    <section className="login-form">
+                        <Form onSubmit={this.handleSubmit} className="login-form">
+                            <FormItem>
+                                {getFieldDecorator('userName', {
+                                    rules: [{ required: true, message: '请输入用户名！' }],
+                                })(
+                                    <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
+                                )}
+                            </FormItem>
+                            <FormItem>
+                                {getFieldDecorator('password', {
+                                    rules: [{ required: true, message: '请输入你的密码！' }],
+                                })(
+                                    <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="密码" />
+                                )}
+                            </FormItem>
+                            <FormItem>
+                                {getFieldDecorator('remember', {
+                                    valuePropName: 'checked',
+                                    initialValue: true,
+                                })(
+                                    <Checkbox>记住我</Checkbox>
+                                )}
+                                <a className="login-form-forgot" href="">忘记密码</a>
+                            <Button type="primary" htmlType="submit" className="login-form-button">
+                                登录
+                            </Button>
+                            
+                            </FormItem>
+                        </Form>
+                    </section>
+                </div>
+            </div>        
         );
     }
 }
+
+LoginForm.contextTypes = {
+    router: PropTypes.object.isRequired
+};
+    
+const Login = Form.create()(LoginForm);
 
 // 通知
 class NotificationMsg extends React.Component {
@@ -421,53 +419,25 @@ class TimeLineTest extends React.Component {
     }
 }
 
-
+// 路由
 class Routers extends React.Component{
     render(){
         return (
-            <div className="primary-layout">
-                <header>
-                    <Route path="/" component={UsersMenu} />
-                </header>
-                <main>
-                     <Route path="/" exact component={Home} />
-                     <Route path="/form" exact component={Form.create()(LoginForm)} />
-                     <Route path="/notification" component={NotificationMsg}/>  
-                     <Route path="/pagination" component={PaginationTest}/>
-                     <Route path="/table1" component={Table1}/>
-                     <Route path="/timeline" component={TimeLineTest}/>
-                     
-                </main>
-            </div>   
+            <Router history={hashHistory}>
+                <Route component={UsersMenu}>
+                    <Route path="/" component={Home} exact />
+                    <Route path="/notification" component={NotificationMsg}/> 
+                    <Route path="/pagination" component={PaginationTest}/> 
+                    <Route path="/table1" component={Table1}/> 
+                    <Route path="/timeline" component={TimeLineTest}/>    
+                </Route> 
+                <Route path="/login" component={Login}/>
+            </Router >                     
         )
     }
 }
 
-
-//   {/* <Switch> */}
-                     
-//                         {/* <Route path="/" component={Home} exact /> */}
-//                         {/* <Route path="/form" component={Form.create()(LoginForm)}/> */}
-//                         {/* <Route path="/notification" component={NotificationMsg}/> */}
-//                         {/* <Route path="/pagination" component={PaginationTest}/> */}
-//                         {/* <Route path="/table1" component={Table1}/> */}
-//                         {/* <Route path="/timeline" component={TimeLineTest}/> */}
-                       
  
-//                 {/* </Switch>  */}
-
-class App extends React.Component{
-    render(){
-        return (
-            <BrowserRouter>
-               <Routers />
-            </BrowserRouter>  
-        )
-    }
-}
- 
-
- 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Routers />, document.getElementById('app'));
 
 // ReactDOM.render(<Home />, document.getElementById('app'));
