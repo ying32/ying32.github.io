@@ -3,3 +3,6 @@ title: 不在乎y(ying32)
 description: 不在乎y的个人主页
 locale: zh_CN
 show_downloads: true
+github:
+  zip_url: https://github.com/ying32/govcl/archive/master.zip
+  another_url: https://github.com/ying32/govcl
