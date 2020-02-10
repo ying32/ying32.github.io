@@ -32,9 +32,16 @@ layui.define(['code'], function(exports){
     events[attrEvent] && events[attrEvent].call(this, othis);
   });
 
+  
+  //$('.site-showv').html('1.2.7');
+  
   //展示当前版本
-  $('.site-showv').html('1.2.7');
-
+  $.get('https://api.github.com/repos/ying32/govcl/releases/latest', function(res){
+      $('#getVersion').html(res.tag_name);
+	  $('#binDownload').attr("href", res.assets[0].browser_download_url);
+	  
+    }, 'json');
+	
   var getStars = $('#getStars');
   if(getStars[0]){
     $.get('https://api.github.com/repos/ying32/govcl', function(res){
