@@ -121,7 +121,7 @@ body .layui-layout-admin .footer-demo{height: 50px; line-height: 50px; padding: 
 
 .site-download{margin-top: 80px; font-size: 0;}
 .site-download a{position: relative; padding: 0 55px 0 95px; height: 65px; line-height: 65px; border: 1px solid #c2c2c2;  border-color: rgba(255,255,255,.2); font-size: 24px; color: #ccc; transition: all .5s; -webkit-transition: all .5s;}
-.site-download a:hover{border-color: rgba(255,255,255,.3); color: #fff; background-color: rgba(255,255,255,.05); border-radius: 30px;}
+.site-download a:hover{border-color: rgba(255,255,255,.3); color: #fff; background-color: rgba(255,255,255,.05);  }
 .site-download a cite{position: absolute; left: 55px; top: 2px; font-size: 30px;}
 .site-version{position: relative; margin-top: 15px; color: #ccc; font-size: 12px;}
 .site-version span{padding: 0 3px;}
@@ -211,7 +211,7 @@ body .layui-layer-notice .layui-layer-content{padding: 20px; line-height: 26px; 
   .site-desc .web-font-desc{padding-top: 20px; font-size: 30px;}
   .site-desc cite{display: none;}
   .site-download{margin-top: 0; }
-  .site-download a{height: 40px; line-height: 40px; padding: 0 25px 0 60px; border-radius: 30px; color: #fff; font-size: 16px;}
+  .site-download a{height: 40px; line-height: 40px; padding: 0 25px 0 60px; color: #fff; font-size: 16px;}
   .site-download a cite{left: 20px;}
   .site-banner-other{bottom: 10px;}
 
