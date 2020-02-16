@@ -1,0 +1,39 @@
+/*  by: ying32 */
+
+.icon {
+	/*width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+	font-size: 16px;*/
+}
+
+.bs-docs-nav { 
+	background-color:#000;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+ 
+.bs-docs-nav .navbar-nav li a {
+	color:#ffffff;
+}
+ 
+.bs-docs-masthead {
+	background-image: linear-gradient(to bottom,#7b3838 0,#8e7a1900 100%);
+}
+ 
+.btn-outline-inverse {
+	border-radius: 0px;
+}
+
+.version a {
+	color: #9783b9;
+	text-decoration: underline;
+}
+ 
+.lead .smallbtn  {
+	width: auto;
+	border-radius: 0px;
+	font-size: 12px;  
+	padding: 6px 8px;
+}

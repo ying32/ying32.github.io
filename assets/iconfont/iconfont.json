@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "129335",
+      "name": "video",
+      "font_class": "video",
+      "unicode": "e901",
+      "unicode_decimal": 59649
+    },
+    {
+      "icon_id": "432028",
+      "name": "star",
+      "font_class": "star",
+      "unicode": "e7f0",
+      "unicode_decimal": 59376
+    },
+    {
+      "icon_id": "7239783",
+      "name": "fork",
+      "font_class": "fork",
+      "unicode": "e735",
+      "unicode_decimal": 59189
+    },
+    {
+      "icon_id": "9567570",
+      "name": "download",
+      "font_class": "download",
+      "unicode": "e504",
+      "unicode_decimal": 58628
+    },
+    {
+      "icon_id": "10135235",
+      "name": "lib",
+      "font_class": "lib",
+      "unicode": "e8b3",
+      "unicode_decimal": 59571
+    }
+  ]
+}
