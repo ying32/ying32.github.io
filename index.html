@@ -1,146 +1,167 @@
-
- 
- 
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <title>govcl - 跨平台的桌面原生 UI 框架</title>
-  <meta name="keywords" content="govcl,go,goui,gogui,框架">
-  <meta name="description" content="govcl是一个跨平台的Golang GUI库，底层绑定自Delphi VCL和Lazarus LCL">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  
-  <link rel="stylesheet" href="http://www.layuicdn.com/layui/css/layui.css"  media="all">
-  <link rel="stylesheet" href="/assets/css/global.css" media="all">
-</head>
-<body class="site-home" style="background-color: #eee;" data-date="2-10">
 
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="govcl - 跨平台的原生Go GUI开发库">
+<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus">
+<meta name="author" content="ying32">
 
+<title>GoVCL | 跨平台的原生Go GUI开发库。</title>
 
-<div class="layui-header header header-index" winter>
-  <div class="layui-main">
-     <a class="logo" href="/">
-       <img src="/assets/images/logo.png" alt="govcl"> 
-     </a> 
- 
-    <ul class="layui-nav">
-      <li class="layui-nav-item ">
-        <a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">文档<!-- <span class="layui-badge-dot"></span> --></a> 
-      </li>
-      <li class="layui-nav-item ">
-        <a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">示例<!-- <span class="layui-badge-dot"></span> --></a>
-      </li>
-   
-    </ul>
-  </div>
-</div>
-<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!-- Bootstrap core CSS -->
+<link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-<![endif]--> 
-<div class="site-banner">
-  <div class="site-banner-bg" style="background-image: url(/assets/images/winter.jpg); background-size: cover;">
-  </div>
-  <div class="site-banner-main">
-    <div class="site-zfj">
-      <!-- <i class="layui-icon" style="color: #fff; color: rgba(255,255,255,.7);"></i> -->
-    </div>
-    <div class="layui-anim site-desc">
-      <p class="web-font-desc">小而巧的Go原生GUI框架</p>
-      <cite>跨平台的GUI库，底层绑定自Delphi VCL和Lazarus LCL</cite>
-    </div>
-    <div class="site-download">
-      <a href="https://github.com/ying32/govcl/archive/master.zip" class="layui-inline site-down" target="_blank">
-        <cite class="layui-icon">&#xe601;</cite>
-        立即下载
-      </a>
-    </div>
-    <div class="site-version">
-      <span>当前版本：<cite id="getVersion" class="site-showv">1.2.7</cite></span>
-      <span><a href="https://github.com/ying32/govcl/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97(What's-new)" rel="nofollow" target="_blank">更新日志</a></span>
-    </div>
-    <div class="site-banner-other">
-      <a href="https://github.com/ying32/govcl/" target="_blank" class="site-star">
-        <i class="layui-icon">&#xe658;</i>
-        Star <cite id="getStars"></cite> 
-      </a>
-      <a href="https://github.com/ying32/govcl/network/members" target="_blank" rel="nofollow" class="site-fork">
-        <i class="layui-icon">&#xe62e;</i>
-        Fork 
-      </a>
-      <a href="https://gitee.com/ying32/govcl" target="_blank" rel="nofollow" class="site-fork">
-        码云
-      </a>
-      <a href="javascript:;" target="_blank" id="binDownload" rel="nofollow" class="site-fork">
-        预编译GUI下载
-      </a>
-    </div>
-  </div>
-</div>
-<div class="layui-main">
-  
-  
-  <!-- <ul class="site-idea"> -->
-    <!-- <li> -->
-      <!-- <fieldset class="layui-elem-field layui-field-title"> -->
-        <!-- <legend></legend> -->
-        <!-- <p></p> -->
-      <!-- </fieldset> -->
-    <!-- </li> -->
-    <!-- <li> -->
-      <!-- <fieldset class="layui-elem-field layui-field-title"> -->
-        <!-- <legend></legend> -->
-        <!-- <p></p> -->
-      <!-- </fieldset> -->
-    <!-- </li> -->
-    <!-- <li> -->
-      <!-- <fieldset class="layui-elem-field layui-field-title"> -->
-        <!-- <legend></legend> -->
-        <!-- <p></p> -->
-      <!-- </fieldset> -->
-    <!-- </li> -->
-  <!-- </ul>   -->
-<!-- </div> -->
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
 
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+<link rel="icon" href="/assets/images/favicon.ico">
+<style>
+ .bs-docs-nav {
+    background-color:#000;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+ }
 
-<div class="layui-footer footer footer-index">
-  <div class="layui-main">
-    <p>&copy; 2017 - 2020 <a href="/">z-kit.cc</a> Apache License 2.0 </p>
-    <p>
-      <a href="https://github.com/ying32/govcl/" target="_blank" rel="nofollow">GitHub</a>
-      <a href="https://gitee.com/ying32/govcl" target="_blank" rel="nofollow">码云</a>
+ .bs-docs-nav .navbar-nav li a {
+   color:#ffffff;
+ }
+ 
+ .bs-docs-masthead {
+    background-image: linear-gradient(to bottom,#7b3838 0,#8e7a1900 100%);
+ }
+ 
+ .version a {
+   color: #9783b9;
+   text-decoration: underline;
+ }
+ 
+ .lead .smallbtn  {
+    width: auto;
+    border-radius: 4px;
+    font-size: 12px;  
+	padding: 6px 8px;
+ }
+</style>
+</head>
+<body class="bs-docs-home">
+  <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
+ 
+<header class="navbar navbar-static-top bs-docs-nav" id="top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="https://github.com/ying32/govcl" class="navbar-brand" style="color: #ffffff;">GoVCL</a>
+    </div>
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+		  <!-- 这里可以添加左边的菜单栏 -->
+         
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+		  <li>
+			<a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">文档</a> 
+		  </li>
+		  <li>
+			<a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">示例</a>
+		  </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Page content of course! -->
+<main class="bs-docs-masthead" id="content" tabindex="-1">
+  <div class="container">
+	<p class="lead"><img src="/assets/images/logo.png" /></p>
+    <p class="lead">小而巧的跨平台原生GUI库</p>
+    <p class="lead">
+      <a href="https://github.com/ying32/govcl/archive/master.zip" class="btn btn-outline-inverse btn-lg">下载 GoVCL</a>
     </p>
-    <div class="site-union">
-      <p class="site-union-desc">
-        <span>
-          修改自<a href="https://layui.com">layui.com</a>官网主页
-        </span>
-      </p>
-      
+    <p class="version" >当前版本：<span id="versionInfo"></span> | <a href="https://github.com/ying32/govcl/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97(What's-new)" target="_blank" rel="nofollow">更新日志</a></p>
+    <p class="lead">
+      <a href="https://github.com/ying32/govcl/" class="btn btn-outline-inverse smallbtn">Star <span id="repstar" ></span></a>
+	  <a href="https://github.com/ying32/govcl/network/members" class="btn btn-outline-inverse smallbtn">Fork</a>
+	  <a href="javascript:;" class="btn btn-outline-inverse smallbtn" id="btnDownload">预编译GUI库</a>
+    </p>
+    <div id="tuijian"></div>
+  </div>
+</main>
+
+<div class="bs-docs-featurette">
+  <div class="container">
+    <h2 class="bs-docs-featurette-title">简单易用，一次编写，多个平台编译。</h2>
+    
+    <hr class="half-rule">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="" alt="Platform" class="img-responsive">
+        <h3>一个框架多个平台编译</h3>
+        <p>平台说明....</p>
+      </div>
+      <div class="col-sm-6">
+        <img src="" alt="Components" class="img-responsive">
+        <h3>组件多</h3>
+        <p>组件说明....</p>
+      </div>
     </div>
+
+    <hr class="half-rule">
+
+    <p class="lead">GoVCL 是完全开源的、免费的跨Go语言跨平GUI库，底层绑定自Delphi VCL/Lazarus LCL</p>
+    <a href="https://github.com/ying32/govcl" class="btn btn-outline btn-lg">查看 GitHub 项目主页</a>
   </div>
 </div>
- 
-<div class="site-tree-mobile layui-hide">
-  <i class="layui-icon">&#xe602;</i>
-</div>
-<div class="site-mobile-shade"></div>
-<script src="http://www.layuicdn.com/layui/layui.js" charset="utf-8"></script>
 
- 
+
+<!-- Footer -->
+<footer class="bs-docs-footer">
+  <div class="container">
+    <ul class="bs-docs-footer-links">
+      <li><a href="https://github.com/ying32/govcl" target="_blank" rel="nofollow">GitHub 仓库</a></li>
+	  <li><a href="https://gitee.com/ying32/govcl" target="_blank" rel="nofollow">Gitee 仓库</a></li>
+      <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank" rel="nofollow">实例</a></li>
+      <li><a href="https://github.com/ying32" target="_blank" rel="nofollow">关于</a></li>
+    </ul>
+    <p>&copy; 2017 - 2020 <a href="/">z-kit.cc</a> Apache License 2.0 </p>
+	<p>Power by <a href="https://github.com/twbs/bootstrap"  target="_blank" rel="nofollow">bootstrap3</a></p>
+
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+
+<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 <script>
-	window.global = { pageType: 'index'}; 
-	layui.config({ 
-	base: '/assets/js/' 
-	    ,version: '1579809530540' 
-	 }).use('global');
+(function(){
+  //展示当前版本
+  $.get('https://api.github.com/repos/ying32/govcl/releases/latest', function(res){
+      //$('#getVersion').html(res.tag_name);
+	  $('#btnDownload').attr("href", res.assets[0].browser_download_url);
+	  $("#versionInfo").html(res.tag_name);
+    }, 'json');
+	
+  var repstar = $('#repstar');
+  if(repstar[0]){
+    $.get('https://api.github.com/repos/ying32/govcl', function(res){
+      repstar.html(res.stargazers_count);
+    }, 'json');
+  }
+})()
 </script>
-
 </body>
 </html>
