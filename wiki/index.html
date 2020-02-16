@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="govcl - WIKI">
+<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus">
+<meta name="author" content="ying32">
+
+<title>GoVCL | 中文WIKI</title>
+
+<!-- Bootstrap core CSS -->
+<link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+<link rel="icon" href="/assets/images/favicon.ico">
+
+<!-- iconfont -->
+<script src="//at.alicdn.com/t/font_1642113_uxrvbppqfq.js"></script>
+
+<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
+
+<!-- markdown -->
+<script src="https://cdn.bootcss.com/marked/0.6.2/marked.min.js"></script>
+
+<script src="https://cdn.bootcss.com/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.22.2/locale/zh-cn.js"></script>
+
+<!-- 代码高亮 -->
+<link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/github.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.15.6/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.6/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.6/languages/delphi.min.js"></script>
+
+
+<!-- 我自己的样式定义 -->
+<link href="/assets/css/style.css" rel="stylesheet">
+
+<script>
+   // 语言设置
+   moment.locale('zh-cn');
+
+   hljs.initHighlightingOnLoad();
+
+   marked.setOptions({
+		renderer: new marked.Renderer(),
+		gfm: true,
+		tables: true,
+		breaks: false,
+		pedantic: false,
+		sanitize: false,
+		smartLists: true,
+		smartypants: false,
+		highlight: function (code, lang) {
+		   return hljs.highlightAuto(code).value;
+		}
+	});
+  
+</script>
+</head>
+<body class="bs-docs-home">
+  <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
+ 
+<header class="navbar navbar-static-top bs-docs-nav navbar-fixed-top" id="top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand" style="color: #ffffff;">GoVCL</a>
+    </div>
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+		  <!-- 这里可以添加左边的菜单栏 -->
+         
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">文档</a></li>
+		  <li><a href="/wiki">文档(测试)</a></li>
+		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">示例</a></li>
+		  
+          <li class="dropdown">
+			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">更多项目 <b class="caret"></b></a>
+			<ul role="menu" class="dropdown-menu" style="">
+				<li><a href="https://github.com/ying32/rproxy" target="_blank">rproxy</a></li>
+				<li><a href="https://github.com/ying32/dylib">dylib</a></li>
+				<li><a href="https://github.com/ying32/readability">readability</a></li>
+				<li class="divider"></li>
+				<li><a href="https://github.com/ying32/FMXWndProcHook">FMXWndProcHook</a></li>
+			</ul>
+		  </li> 
+		  
+		  <li><a href="https://video.0-w.cc/videos/1"><span class="iconfont icon-video"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg></span> 视频教程(第三方)</a></li>
+		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><span class="iconfont icon-qq"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg></span> 加入QQ群</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+ 
+<div class="container-fluid">
+  <div class="row">
+	<div class="col-sm-3 col-md-2 sidebar">
+	  <ul class="nav nav-sidebar">
+		<li class ="docsidebartitle">开始使用</li>
+ 
+		<li class="active"><a href="#">1. 简介</a></li>
+		<li><a href="#">2. 安装/配置</a></li>
+		 
+	  </ul>
+	   
+	  <ul class="nav nav-sidebar">
+	    <li class ="docsidebartitle">FAQ</li>
+		<li><a href="">Nav item</a></li>
+	  </ul>
+	  <ul class="nav nav-sidebar">
+	    <li class ="docsidebartitle">开始使用</li>
+		<li><a href="">Nav item again</a></li>
+	  </ul>
+	</div>
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	  <h1 class="page-header">GoVCL简介</h1>
+	  <div class="row placeholders">
+		 <div id="mdcontext">
+		 
+		 </div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<pre id="mdtext" style="display:none;">
+
+### 初衷
+
+##### 项目的起源  
+
+&nbsp;&nbsp;govcl(Go Language Visual Component Library)项目最初来源于自己的gofmx实验项目，当初做gofmx项目遇到了些问题，后来不知道怎么的就放弃了。时隔8个多月后想起来试试移植VCL，一开始并没有打算做完整的，只是实验下，偶然间解决了之前做gofmx的遇到的问题，然后就一发不可收拾，捡起以前gofmx的生成器改为govcl的，一路也不是这么顺畅,踩坑很多。慢慢的随着各种需求又加入了基于LCL组件的跨平台方案、独立的GOVCL UI设计器等。从项目发布到现已经一年多了，涵盖了Delphi VCL/Lazarus LCL大部分的标准组件, 完善度也越来越高。 依靠Delphi/Lazarus这两棵大树使得govcl变得简单易用，稳定性也不差。   
+
+----
+
+##### 项目的现状态
+
+&nbsp;&nbsp; 因为基本上没有进行推广，知名度太低， 除了最开始在OSC上发了些后就很少再发过相关，一直都默默的更新，也懒得去做宣传了。
+
+----  
+
+##### 为什么要自己做
+
+&nbsp;&nbsp;现在开源的go UI库也不少，自己也尝试简单使用过go-qt、lxn/walk、andlabs/ui、go-sciter等，但都不如意，缺失的太多。有些处在停止更新，有些二进制依赖太多太臃肿、有些组件太少、有些非原生、有些不易使用等等各种问题。基于这些原因我决定自己造个轮子。govcl的目标为 `简单 + 小巧 + 原生`。  
+
+----
+
+##### 学习govcl是否需要懂Pascal语言？
+
+**不需要懂Pascal语言**，仅仅只需要了解控件的使用方法和相关的属性及事件之类的。**除非你需要修改libvcl或者liblcl的源代码才会涉及到Pascal语言。**
+
+----
+
+##### 优/缺点
+
+* 优点   
+
+&nbsp;&nbsp; UI库小，用UPX压缩下也就1M-2M大小的，无依赖，简单，特别是加上使用可视化的设计器或者res2go工具能快速生成UI，免去了手动创建的烦恼。控件多，属性多，事件多，对于一些工具开发足以。
+
+
+* 缺点   
+
+&nbsp;&nbsp; 因为UI库全是原生组件，那么要做到像DirectUI那样的就是很麻烦的事了，所以这算是govcl现在的一大遗憾吧。一些比较简单的美化界面还是相对容易做到。  
+
+---- 
+
+##### 其他 
+**现Release中提供了一些各个平台的预编译的二进制，主要是用来测试的（正式请自己编译）。** 
+ 
+* 二进制包括：libvcl-win32、libvcl-win64、liblcl-win32、liblcl-win64、liblcl-linux64、liblcl-macOS32-carbon、liblcl-macOS64-cocoa。  至于为什么没有linux-32、linux-arm主要是不想折腾编译环境了，想要的可以自己解决。<br />     
+
+* 原本govcl是基于Delphi VCL库的，没有跨平台一说。但后来有人需求，所以就研究了下借助Lazarus LCL来填补这个空缺。因为Lazarus LCL并不是100%兼容Delphi的VCL库，所以在相关的组件、方法、函数、事件上有所缺失，部分我已经手动做了兼容补丁，能补多少算多少，补不了的也没办法了。   
+ 
+----
+
+##### Go版本建议
+`当前开发基于go1.9.2版本，从govcl 1.2.0开始，最低只支持go1.9。 v1.2.0之前的已测在go1.5也可编译运行`    
+
+**另外由于govcl项目太大已经不适合使用go 32位的编译器了编译代码了，必须使用go 64位的编译器编译，否则在编译的时候就会造成内存溢出。**   
+
+**govcl主要代码已经达到13万多行，例程差不多3万行，libvcl+liblcl+res2go约20多万行。** 
+
+----
+
+##### 已测试的各个系统平台情况  
+
+| 系统 | 已经测试系统版本|说明| 
+| :------: | :------ | ------ | 
+| Windows | Windows XP、Windows7、Window10 |目前只对Windows Vista之上系统比较友好，对Windows XP<br />有些问题。<br />主要是因为uxtheme.dll引起的，相关解决方法见[FAQ](https://gitee.com/ying32/govcl/wikis/pages?title=Windows-XP%E4%B8%8B%E5%85%B3%E9%97%AD%E6%97%B6uxtheme.dll%E9%94%99%E8%AF%AF%E5%AF%B9%E8%AF%9D%E6%A1%86%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95&parent=FAQ)中的|
+| Linux | Ubuntu 16.04、Linux Mint 17.1、Linux Mint 19、Deepin 15.5 ||
+| MacOS | macOS 10.12、10.13 | 注：从macOS 10.14后不再支持32位应用，Lazarus从2.0开始已经转向cocoa库了，目前使用的还算可以。 |
+| Raspberry pi |  | 使用CodeTyphon交叉编译为arm格式。<br />暂发现Menu组件有问题，其他似乎没啥大问题 |
+
+
+----
+		 
+</pre>
+ 
+<!-- Footer -->
+<footer class="bs-docs-footer">
+  <div class="container" align="center">
+    <ul class="bs-docs-footer-links">
+      <li><a href="https://github.com/ying32/govcl" target="_blank" rel="nofollow">GitHub 仓库</a></li>
+	  <li><a href="https://gitee.com/ying32/govcl" target="_blank" rel="nofollow">Gitee 仓库</a></li>
+      <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank" rel="nofollow">实例</a></li>
+      <li><a href="https://github.com/ying32" target="_blank" rel="nofollow">关于</a></li>
+    </ul>
+    <p>&copy; 2017 - 2020 <a href="/">z-kit.cc</a> Apache License 2.0 </p>
+	<p>Power by <a href="https://github.com/twbs/bootstrap"  target="_blank" rel="nofollow">Bootstrap</a></p>
+	<p>Iconfont <a href="https://www.iconfont.cn/"  target="_blank" rel="nofollow">阿里巴巴矢量图标库</a></p>
+
+  </div>
+</footer>
+
+
+<script>
+(function(){
+ 
+  $.get('https://api.github.com/repos/ying32/govcl/releases/latest', function(res){
+	  $('#btnDownload').attr("href", res.assets[0].browser_download_url);
+	  $("#versionInfo").html(res.tag_name);
+    }, 'json');
+
+  $.get('https://api.github.com/repos/ying32/govcl', function(res){
+      $('#repstar').html(res.stargazers_count);
+	  $('#repfork').html(res.forks_count);
+	  
+    }, 'json');
+	
+  // 默认的markdown文档
+  $("#mdcontext").html(marked($("#mdtext").html(), {gfm: true, breaks: true, tables:true}));   
+})()
+</script>
+</body>
+</html>

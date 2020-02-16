@@ -4,10 +4,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="govcl - 跨平台的原生Go GUI开发库">
-<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus">
+<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus delphi">
 <meta name="author" content="ying32">
 
-<title>GoVCL | 跨平台的原生Go GUI开发库。</title>
+<title>GoVCL | 跨平台的原生Go GUI开发库</title>
 
 <!-- Bootstrap core CSS -->
 <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -24,9 +24,13 @@
 <link rel="icon" href="/assets/images/favicon.ico">
 
 <!-- iconfont -->
-<!-- <script src="/assets/iconfont/iconfont.js"></script> -->
-<!-- <link href="/assets/iconfont/iconfont.css" rel="stylesheet"> -->
 <script src="//at.alicdn.com/t/font_1642113_uxrvbppqfq.js"></script>
+
+<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 <link href="/assets/css/style.css" rel="stylesheet">
 
@@ -35,7 +39,7 @@
 <body class="bs-docs-home">
   <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
  
-<header class="navbar navbar-static-top bs-docs-nav" id="top">
+<header class="navbar navbar-static-top bs-docs-nav navbar-fixed-top" id="top">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
@@ -44,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="https://github.com/ying32/govcl" class="navbar-brand" style="color: #ffffff;">GoVCL</a>
+      <a href="/" class="navbar-brand" style="color: #ffffff;">GoVCL</a>
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -55,7 +59,20 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
 		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">文档</a></li>
+		  <li><a href="/wiki">文档(测试)</a></li>
 		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">示例</a></li>
+		  
+          <li class="dropdown">
+			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">更多项目 <b class="caret"></b></a>
+			<ul role="menu" class="dropdown-menu" style="">
+				<li><a href="https://github.com/ying32/rproxy" target="_blank">rproxy</a></li>
+				<li><a href="https://github.com/ying32/dylib">dylib</a></li>
+				<li><a href="https://github.com/ying32/readability">readability</a></li>
+				<li class="divider"></li>
+				<li><a href="https://github.com/ying32/FMXWndProcHook">FMXWndProcHook</a></li>
+			</ul>
+		  </li> 
+		  
 		  <li><a href="https://video.0-w.cc/videos/1"><span class="iconfont icon-video"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg></span> 视频教程(第三方)</a></li>
 		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><span class="iconfont icon-qq"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg></span> 加入QQ群</a></li>
       </ul>
@@ -73,9 +90,9 @@
     </p>
     <p class="version" >当前版本：<span id="versionInfo"></span> | <a href="https://github.com/ying32/govcl/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97(What's-new)" target="_blank" rel="nofollow">更新日志</a></p>
     <p class="lead">
-      <a href="https://github.com/ying32/govcl/" class="btn btn-outline-inverse smallbtn"><span class="iconfont icon-star"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-star"></use></svg></span> Star <span id="repstar" ></span></a>
-	  <a href="https://github.com/ying32/govcl/network/members" class="btn btn-outline-inverse smallbtn"><span class="iconfont icon-fork"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fork"></use></svg></span> Fork <span id="repfork" ></span></a>
-	  <a href="javascript:;" class="btn btn-outline-inverse smallbtn" id="btnDownload"><span class="iconfont icon-filebinary"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-filebinary"></use></svg></span> 预编译GUI库</a>
+      <a href="https://github.com/ying32/govcl/" class="btn btn-outline-inverse btnsmall"><span class="iconfont icon-star"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-star"></use></svg></span> Star <span id="repstar" ></span></a>
+	  <a href="https://github.com/ying32/govcl/network/members" class="btn btn-outline-inverse btnsmall"><span class="iconfont icon-fork"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fork"></use></svg></span> Fork <span id="repfork" ></span></a>
+	  <a href="javascript:;" class="btn btn-outline-inverse btnsmall" id="btnDownload"><span class="iconfont icon-filebinary"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-filebinary"></use></svg></span> 预编译GUI库</a>
 	 
     </p>
     <div id="tuijian"></div>
@@ -137,17 +154,13 @@
       <li><a href="https://github.com/ying32" target="_blank" rel="nofollow">关于</a></li>
     </ul>
     <p>&copy; 2017 - 2020 <a href="/">z-kit.cc</a> Apache License 2.0 </p>
-	<p>Power by <a href="https://github.com/twbs/bootstrap"  target="_blank" rel="nofollow">bootstrap3</a></p>
+	<p>Power by <a href="https://github.com/twbs/bootstrap"  target="_blank" rel="nofollow">Bootstrap</a></p>
 	<p>Iconfont <a href="https://www.iconfont.cn/"  target="_blank" rel="nofollow">阿里巴巴矢量图标库</a></p>
 
   </div>
 </footer>
 
-<!-- Bootstrap core JavaScript -->
 
-<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="/assets/js/docs.min.js"></script>
 <script>
 (function(){
  
