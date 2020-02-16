@@ -1,21 +1,21 @@
 /*  by: ying32 */
 
 .icon {
-	/*width: 1em;
+	width: 1em;
 	height: 1em;
 	vertical-align: -0.15em;
 	fill: currentColor;
 	overflow: hidden;
-	font-size: 16px;*/
+	/*font-size: 16px;*/
 }
 
 .bs-docs-nav { 
 	background-color:#000;
-	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+	box-shadow:0 0 1px #fff inset;
 }
  
 .bs-docs-nav .navbar-nav li a {
-	color:#ffffff;
+	color:#fff;
 }
  
 .bs-docs-masthead {
