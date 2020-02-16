@@ -55,6 +55,9 @@
 	margin-left:5px;
 }
 
+.mdcontext {
+font-size: 16px;
+}
 
 pre {background-color: rgb(230, 230, 233);}
 table{border:1px solid rgb(223, 226, 229);} 

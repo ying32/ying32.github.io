@@ -39,7 +39,8 @@
 <script src="https://cdn.bootcss.com/moment.js/2.22.2/locale/zh-cn.js"></script>
 
 <!-- 代码高亮 -->
-<link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/github.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/github.min.css" rel="stylesheet"> -->
+<link href="https://cdn.bootcss.com/highlight.js/9.15.10/styles/googlecode.min.css" rel="stylesheet">
 <script src="https://cdn.bootcss.com/highlight.js/9.15.6/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.6/languages/go.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.6/languages/delphi.min.js"></script>
@@ -92,8 +93,8 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">文档</a></li>
-		  <li><a href="/wiki">文档(测试)</a></li>
+		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">中文文档</a></li>
+		  <li><a href="/wiki">中文文档(测试)</a></li>
 		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">示例</a></li>
 		  
           <li class="dropdown">
@@ -138,7 +139,7 @@
 	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 	  <h1 class="page-header">GoVCL简介</h1>
 	  <div class="row placeholders">
-		 <div id="mdcontext">
+		 <div id="mdcontext" class="mdcontext" style="font-size: 16px;">
 		 
 		 </div>
 	  </div>
@@ -239,17 +240,6 @@
 <script>
 (function(){
  
-  $.get('https://api.github.com/repos/ying32/govcl/releases/latest', function(res){
-	  $('#btnDownload').attr("href", res.assets[0].browser_download_url);
-	  $("#versionInfo").html(res.tag_name);
-    }, 'json');
-
-  $.get('https://api.github.com/repos/ying32/govcl', function(res){
-      $('#repstar').html(res.stargazers_count);
-	  $('#repfork').html(res.forks_count);
-	  
-    }, 'json');
-	
   // 默认的markdown文档
   $("#mdcontext").html(marked($("#mdtext").html(), {gfm: true, breaks: true, tables:true}));   
 })()
