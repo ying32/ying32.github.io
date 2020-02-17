@@ -13,6 +13,7 @@
 	background-color:#000;
 	box-shadow:0 0 1px #fff inset;
 }
+
  
 .bs-docs-nav .navbar-nav li a {
 	color:#fff;
@@ -28,6 +29,7 @@
  
 .bs-docs-masthead {
 	background-image: linear-gradient(to bottom,#7b3838 0,#8e7a1900 100%);
+    padding: 80px 0;
 }
  
 .btn-outline-inverse {
