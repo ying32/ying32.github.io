@@ -93,9 +93,13 @@
 }
 
 .bs-docs-nav .navbar-toggle .icon-bar {
-	background-color: #fff;
+	background-color: #474752;
 }
 
+.bs-docs-nav .navbar-toggle:hover {
+	background-color: #fff;
+}
+ 
  
 .lead .btnsmall  {
 	width: auto;
