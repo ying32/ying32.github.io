@@ -3,11 +3,11 @@
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="govcl - 跨平台的原生Go GUI开发库">
+<meta name="description" content="govcl - Cross-platform native Go GUI development library">
 <meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus delphi">
 <meta name="author" content="ying32">
 
-<title>GoVCL | 跨平台的原生Go GUI开发库</title>
+<title>GoVCL | Cross-platform native Go GUI development library</title>
 
 <!-- Bootstrap core CSS -->
 <link href="//cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -58,12 +58,11 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">中文文档</a></li>
-		  <li><a href="/wiki">中文文档(测试)</a></li>
-		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">示例</a></li>
+		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">Chinese doc</a></li>
+		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">Example</a></li>
 		  
           <li class="dropdown">
-			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">更多项目 <b class="caret"></b></a>
+			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">More project<b class="caret"></b></a>
 			<ul role="menu" class="dropdown-menu" style="">
 				<li><a href="https://github.com/ying32/rproxy" target="_blank">rproxy</a></li>
 				<li><a href="https://github.com/ying32/dylib" target="_blank">dylib</a></li>
@@ -73,8 +72,8 @@
 			</ul>
 		  </li> 
 		  
-		  <li><a href="https://video.0-w.cc/videos/1" target="_blank"><span class="iconfont icon-video"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg></span> 视频教程(第三方)</a></li>
-		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><span class="iconfont icon-qq"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg></span> 加入QQ群</a></li>
+		  <li><a href="https://video.0-w.cc/videos/1" target="_blank"><span class="iconfont icon-video"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg></span> Video tutorial (third party)</a></li>
+		  <!-- <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><span class="iconfont icon-qq"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg></span> 加入QQ群</a></li> -->
 		  
 		  <li class="dropdown">
 			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">Language <b class="caret"></b></a>
@@ -92,15 +91,15 @@
 <main class="bs-docs-masthead" id="content" tabindex="-1" style="height:480px;">
   <div class="container">
 	<p class="lead"><img src="/assets/images/logo.png" /></p>
-    <p class="lead">小而巧的跨平台原生GUI库</p>
+    <p class="lead">Small cross-platform native GUI library</p>
     <p class="lead">
-      <a href="https://github.com/ying32/govcl"  target="_blank" class="btn btn-outline-inverse btn-lg"><span class="iconfont icon-download" style="font-size:20px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-download"></use></svg></span>下载 GoVCL</a>
+      <a href="https://github.com/ying32/govcl"  target="_blank" class="btn btn-outline-inverse btn-lg"><span class="iconfont icon-download" style="font-size:20px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-download"></use></svg></span>Download GoVCL</a>
     </p>
-    <p class="version" >当前版本：<span id="versionInfo"></span> | <a href="https://github.com/ying32/govcl/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97(What's-new)" target="_blank" rel="nofollow">更新日志</a></p>
+    <p class="version" >Version: <span id="versionInfo"></span> | <a href="https://github.com/ying32/govcl/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97(What's-new)" target="_blank" rel="nofollow">Change log</a></p>
     <p class="lead" style="padding-top:30px;">
       <a href="https://github.com/ying32/govcl/" class="btn btn-outline-inverse btnsmall"><span class="iconfont icon-star"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-star"></use></svg></span> Star <span id="repstar" ></span></a>
 	  <a href="https://github.com/ying32/govcl/network/members" class="btn btn-outline-inverse btnsmall"><span class="iconfont icon-fork"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fork"></use></svg></span> Fork <span id="repfork" ></span></a>
-	  <a href="javascript:;" class="btn btn-outline-inverse btnsmall" id="btnDownload"><span class="iconfont icon-filebinary"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-filebinary"></use></svg></span> 预编译GUI库</a>
+	  <a href="javascript:;" class="btn btn-outline-inverse btnsmall" id="btnDownload"><span class="iconfont icon-filebinary"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-filebinary"></use></svg></span> Pre-compiled GUI library</a>
 	 
     </p>
    
@@ -109,7 +108,7 @@
 
 <div class="bs-docs-featurette">
   <div class="container">
-    <h2 class="bs-docs-featurette-title">简单易用，一次编写，多个平台编译。</h2>
+    <h2 class="bs-docs-featurette-title">Easy to use, write once, compile on multiple platforms.</h2>
     
     <hr class="half-rule">
 	
@@ -146,8 +145,8 @@
 
     <hr class="half-rule">
 
-    <p class="lead">GoVCL是完全开源的、免费的、跨平台Go语言GUI库，底层绑定自Delphi VCL/Lazarus LCL</p>
-    <a href="https://github.com/ying32/govcl" class="btn btn-outline btn-lg">查看 GitHub 项目主页</a>
+    <p class="lead">GoVCL is a completely open source, free, cross-platform Go language GUI library, and the underlying binding is from Delphi VCL / Lazarus LCL</p>
+    <a href="https://github.com/ying32/govcl" class="btn btn-outline btn-lg">View the GitHub</a>
   </div>
 </div>
 
@@ -156,14 +155,14 @@
 <footer class="bs-docs-footer">
   <div class="container" align="center">
     <ul class="bs-docs-footer-links">
-      <li><a href="https://github.com/ying32/govcl" target="_blank" rel="nofollow">GitHub 仓库</a></li>
-	  <li><a href="https://gitee.com/ying32/govcl" target="_blank" rel="nofollow">Gitee 仓库</a></li>
-      <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank" rel="nofollow">实例</a></li>
-      <li><a href="https://github.com/ying32" target="_blank" rel="nofollow">关于</a></li>
+      <li><a href="https://github.com/ying32/govcl" target="_blank" rel="nofollow">GitHub repository</a></li>
+	  <li><a href="https://gitee.com/ying32/govcl" target="_blank" rel="nofollow">Gitee repository</a></li>
+      <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank" rel="nofollow">Example</a></li>
+      <li><a href="https://github.com/ying32" target="_blank" rel="nofollow">About</a></li>
     </ul>
     <p>&copy; 2017 - 2020 <a href="/">z-kit.cc</a> Apache License 2.0 </p>
 	<p>Power by <a href="https://github.com/twbs/bootstrap" target="_blank" rel="nofollow">Bootstrap</a>，<a href="https://pages.github.com/" target="_blank" rel="nofollow">github Pages</a></p>
-	<p>Iconfont <a href="https://www.iconfont.cn/"  target="_blank" rel="nofollow">阿里巴巴矢量图标库</a></p>
+	<p>Iconfont <a href="https://www.iconfont.cn/"  target="_blank" rel="nofollow">ALIMAMA MUX</a></p>
 
   </div>
 </footer>
@@ -183,7 +182,7 @@
 	  
     }, 'json');
 	
-	<!-- alert(navigator.language||navigator.userLanguage); -->
+	
 })()
 </script>
 <!-- HTTPS -->
