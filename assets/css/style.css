@@ -36,6 +36,8 @@
 	
 }
 
+ 
+
 .bs-docs-footer a {
 	color:#b9b8bd;
 } 
@@ -89,7 +91,7 @@
 }
 
 .bs-docs-footer {
-   background-color: #000000;
+  background-color: #07051c;
 }
 
 .bs-docs-nav .navbar-toggle .icon-bar {
