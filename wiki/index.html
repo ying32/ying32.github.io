@@ -1,101 +1,103 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="govcl - WIKI">
-<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus">
-<meta name="author" content="ying32">
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="govcl - WIKI">
+	<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus">
+	<meta name="author" content="ying32">
 
-<title>GoVCL | 中文WIKI</title>
+	<title>GoVCL | 中文WIKI</title>
 
-<!-- Bootstrap core CSS -->
-<link href="//cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="/assets/css/docs.min.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="//cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/css/docs.min.css" rel="stylesheet">
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="//cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="//cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+	  <script src="//cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+	<![endif]-->
 
-<!-- Favicons -->
-<link rel="apple-touch-icon" href="/assets/images/favicon.png">
-<link rel="icon" href="/assets/images/favicon.ico">
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+	<link rel="icon" href="/assets/images/favicon.ico">
 
-<!-- iconfont -->
-<script src="//at.alicdn.com/t/font_1642113_uxrvbppqfq.js"></script>
+	<!-- iconfont -->
+	<script src="//at.alicdn.com/t/font_1642113_uxrvbppqfq.js"></script>
 
-<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
 
-<!-- Bootstrap core JavaScript -->
-<script src="//cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="/assets/js/docs.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script src="//cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="/assets/js/docs.min.js"></script>
 
-<!-- markdown -->
-<script src="//cdn.bootcss.com/marked/0.6.2/marked.min.js"></script>
+	<!-- markdown -->
+	<script src="//cdn.bootcss.com/marked/0.6.2/marked.min.js"></script>
 
-<script src="//cdn.bootcss.com/moment.js/2.22.2/moment.min.js"></script>
-<script src="//cdn.bootcss.com/moment.js/2.22.2/locale/zh-cn.js"></script>
+	<script src="//cdn.bootcss.com/moment.js/2.22.2/moment.min.js"></script>
+	<script src="//cdn.bootcss.com/moment.js/2.22.2/locale/zh-cn.js"></script>
 
-<!-- 代码高亮 -->
-<!-- <link href="//cdn.bootcss.com/highlight.js/9.15.6/styles/github.min.css" rel="stylesheet"> -->
-<link href="//cdn.bootcss.com/highlight.js/9.15.10/styles/googlecode.min.css" rel="stylesheet">
-<script src="//cdn.bootcss.com/highlight.js/9.15.6/highlight.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.15.6/languages/go.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.15.6/languages/delphi.min.js"></script>
-
-
-<!-- <link href="/assets/css/markdownhere.css" rel="stylesheet"> -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" rel="stylesheet">
- 
-<!-- 我自己的样式定义 -->
-<link href="/assets/css/style.css" rel="stylesheet">
+	<!-- 代码高亮 -->
+	<!-- <link href="//cdn.bootcss.com/highlight.js/9.15.6/styles/github.min.css" rel="stylesheet"> -->
+	<link href="//cdn.bootcss.com/highlight.js/9.15.10/styles/googlecode.min.css" rel="stylesheet">
+	<script src="//cdn.bootcss.com/highlight.js/9.15.6/highlight.min.js"></script>
+	<script src="//cdn.bootcss.com/highlight.js/9.15.6/languages/go.min.js"></script>
+	<script src="//cdn.bootcss.com/highlight.js/9.15.6/languages/delphi.min.js"></script>
 
 
-<style>
-	.markdown-body {
-		box-sizing: border-box;
-		min-width: 200px;
-		<!-- max-width: 980px; -->
-		margin: 0 auto;
-		padding: 45px;
-	}
-	@media (max-width: 767px) {
+	<!-- <link href="/assets/css/markdownhere.css" rel="stylesheet"> -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" rel="stylesheet">
+	 
+	<!-- 我自己的样式定义 -->
+	<link href="/assets/css/style.css" rel="stylesheet">
+
+
+	<style>
 		.markdown-body {
-			padding: 15px;
+			box-sizing: border-box;
+			min-width: 200px;
+			<!-- max-width: 980px; -->
+			margin: 0 auto;
+			padding: 45px;
 		}
-	}
-</style>
-<script>
-   // 语言设置
-   moment.locale('zh-cn');
-
-   hljs.initHighlightingOnLoad();
-
-   marked.setOptions({
-		renderer: new marked.Renderer(),
-		gfm: true,
-		tables: true,
-		breaks: false,
-		pedantic: false,
-		sanitize: false,
-		smartLists: true,
-		smartypants: false,
-		highlight: function (code, lang) {
-		   return hljs.highlightAuto(code).value;
+		@media (max-width: 767px) {
+			.markdown-body {
+				padding: 15px;
+			}
 		}
-	});
-	
-	function loadDoc(title) {
-	  $("#doctitle").html(title)
-	  $.get("/wiki/cn-docs/"+title+".md",function(data, status){
-          // 默认的markdown文档
-          $("#mdcontext").html(marked(data, {gfm: true, breaks: true, tables:true}));   
-      });
-	}
-  
-</script>
+	</style>
+	<script>
+	   // 语言设置
+	   moment.locale('zh-cn');
+
+	   hljs.initHighlightingOnLoad();
+
+	   marked.setOptions({
+			renderer: new marked.Renderer(),
+			gfm: true,
+			tables: true,
+			breaks: false,
+			pedantic: false,
+			sanitize: false,
+			smartLists: true,
+			smartypants: false,
+			highlight: function (code, lang) {
+			   return hljs.highlightAuto(code).value;
+			}
+		});
+		
+		function loadDoc(title) {
+		  $("#doctitle").html(title)
+		  $.get("/wiki/cn-docs/"+title+".md",function(data, status){
+			  // 默认的markdown文档
+			  $("#mdcontext").html(marked(data, {gfm: true, breaks: true, tables:true}));   
+		  });
+		}
+	  
+	</script>
 </head>
 <body class="bs-docs-home">
   <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
