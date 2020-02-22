@@ -96,7 +96,8 @@
       <a href="https://github.com/ying32/govcl"  target="_blank" class="btn btn-outline-inverse btn-lg"><span class="iconfont icon-download" style="font-size:20px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-download"></use></svg></span>Download GoVCL</a>
     </p>
     <p class="version" >Version: <span id="versionInfo"></span> | <a href="https://github.com/ying32/govcl/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97(What's-new)" target="_blank" rel="nofollow">Change log</a></p>
-    <p class="lead" style="padding-top:30px;">
+    <p class="version">Last Updated: <span id="lastupdate">2020-02-19</span></p>
+	<p class="lead" style="padding-top:10px;">
       <a href="https://github.com/ying32/govcl/" class="btn btn-outline-inverse btnsmall"><span class="iconfont icon-star"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-star"></use></svg></span> Star <span id="repstar" ></span></a>
 	  <a href="https://github.com/ying32/govcl/network/members" class="btn btn-outline-inverse btnsmall"><span class="iconfont icon-fork"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fork"></use></svg></span> Fork <span id="repfork" ></span></a>
 	  <a href="javascript:;" class="btn btn-outline-inverse btnsmall" id="btnDownload"><span class="iconfont icon-filebinary"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-filebinary"></use></svg></span> Pre-compiled GUI library</a>
@@ -179,6 +180,7 @@
   $.get('https://api.github.com/repos/ying32/govcl', function(res){
       $('#repstar').html(res.stargazers_count);
 	  $('#repfork').html(res.forks_count);
+	  $('#lastupdate').html(res.pushed_at.substring(0, 10));
 	  
     }, 'json');
 	
