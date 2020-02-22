@@ -46,9 +46,27 @@
 <script src="//cdn.bootcss.com/highlight.js/9.15.6/languages/delphi.min.js"></script>
 
 
+<!-- <link href="/assets/css/markdownhere.css" rel="stylesheet"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" rel="stylesheet">
+ 
 <!-- 我自己的样式定义 -->
 <link href="/assets/css/style.css" rel="stylesheet">
 
+
+<style>
+	.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		<!-- max-width: 980px; -->
+		margin: 0 auto;
+		padding: 45px;
+	}
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
+	}
+</style>
 <script>
    // 语言设置
    moment.locale('zh-cn');
@@ -68,6 +86,14 @@
 		   return hljs.highlightAuto(code).value;
 		}
 	});
+	
+	function loadDoc(title) {
+	  $("#doctitle").html(title)
+	  $.get("/wiki/cn-docs/"+title+".md",function(data, status){
+          // 默认的markdown文档
+          $("#mdcontext").html(marked(data, {gfm: true, breaks: true, tables:true}));   
+      });
+	}
   
 </script>
 </head>
@@ -122,8 +148,8 @@
 	  <ul class="nav nav-sidebar">
 		<li class ="docsidebartitle">开始使用</li>
  
-		<li class="active"><a href="#">1. 简介</a></li>
-		<li><a href="#">2. 安装/配置</a></li>
+		<li class="active"><a href="javascript:loadDoc('简介')">1. 简介</a></li>
+		<li><a href="javascript:loadDoc('简介2')">2. 安装/配置</a></li>
 		 
 	  </ul>
 	   
@@ -137,88 +163,16 @@
 	  </ul>
 	</div>
 	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-	  <h1 class="page-header">GoVCL简介</h1>
+	  <h1 class="page-header" id="doctitle">GoVCL简介</h1>
 	  <div class="row placeholders">
-		 <div id="mdcontext" class="mdcontext" style="font-size: 16px;">
-		 
-		 </div>
+		 <article class="markdown-body" id="mdcontext">
+         </article>
+
 	  </div>
 	</div>
   </div>
 </div>
 
-<pre id="mdtext" style="display:none;">
-
-### 初衷
-
-##### 项目的起源  
-
-&nbsp;&nbsp;govcl(Go Language Visual Component Library)项目最初来源于自己的gofmx实验项目，当初做gofmx项目遇到了些问题，后来不知道怎么的就放弃了。时隔8个多月后想起来试试移植VCL，一开始并没有打算做完整的，只是实验下，偶然间解决了之前做gofmx的遇到的问题，然后就一发不可收拾，捡起以前gofmx的生成器改为govcl的，一路也不是这么顺畅,踩坑很多。慢慢的随着各种需求又加入了基于LCL组件的跨平台方案、独立的GOVCL UI设计器等。从项目发布到现已经一年多了，涵盖了Delphi VCL/Lazarus LCL大部分的标准组件, 完善度也越来越高。 依靠Delphi/Lazarus这两棵大树使得govcl变得简单易用，稳定性也不差。   
-
-----
-
-##### 项目的现状态
-
-&nbsp;&nbsp; 因为基本上没有进行推广，知名度太低， 除了最开始在OSC上发了些后就很少再发过相关，一直都默默的更新，也懒得去做宣传了。
-
-----  
-
-##### 为什么要自己做
-
-&nbsp;&nbsp;现在开源的go UI库也不少，自己也尝试简单使用过go-qt、lxn/walk、andlabs/ui、go-sciter等，但都不如意，缺失的太多。有些处在停止更新，有些二进制依赖太多太臃肿、有些组件太少、有些非原生、有些不易使用等等各种问题。基于这些原因我决定自己造个轮子。govcl的目标为 `简单 + 小巧 + 原生`。  
-
-----
-
-##### 学习govcl是否需要懂Pascal语言？
-
-**不需要懂Pascal语言**，仅仅只需要了解控件的使用方法和相关的属性及事件之类的。**除非你需要修改libvcl或者liblcl的源代码才会涉及到Pascal语言。**
-
-----
-
-##### 优/缺点
-
-* 优点   
-
-&nbsp;&nbsp; UI库小，用UPX压缩下也就1M-2M大小的，无依赖，简单，特别是加上使用可视化的设计器或者res2go工具能快速生成UI，免去了手动创建的烦恼。控件多，属性多，事件多，对于一些工具开发足以。
-
-
-* 缺点   
-
-&nbsp;&nbsp; 因为UI库全是原生组件，那么要做到像DirectUI那样的就是很麻烦的事了，所以这算是govcl现在的一大遗憾吧。一些比较简单的美化界面还是相对容易做到。  
-
----- 
-
-##### 其他 
-**现Release中提供了一些各个平台的预编译的二进制，主要是用来测试的（正式请自己编译）。** 
- 
-* 二进制包括：libvcl-win32、libvcl-win64、liblcl-win32、liblcl-win64、liblcl-linux64、liblcl-macOS32-carbon、liblcl-macOS64-cocoa。  至于为什么没有linux-32、linux-arm主要是不想折腾编译环境了，想要的可以自己解决。<br />     
-
-* 原本govcl是基于Delphi VCL库的，没有跨平台一说。但后来有人需求，所以就研究了下借助Lazarus LCL来填补这个空缺。因为Lazarus LCL并不是100%兼容Delphi的VCL库，所以在相关的组件、方法、函数、事件上有所缺失，部分我已经手动做了兼容补丁，能补多少算多少，补不了的也没办法了。   
- 
-----
-
-##### Go版本建议
-`当前开发基于go1.9.2版本，从govcl 1.2.0开始，最低只支持go1.9。 v1.2.0之前的已测在go1.5也可编译运行`    
-
-**另外由于govcl项目太大已经不适合使用go 32位的编译器了编译代码了，必须使用go 64位的编译器编译，否则在编译的时候就会造成内存溢出。**   
-
-**govcl主要代码已经达到13万多行，例程差不多3万行，libvcl+liblcl+res2go约20多万行。** 
-
-----
-
-##### 已测试的各个系统平台情况  
-
-| 系统 | 已经测试系统版本|说明| 
-| :------: | :------ | ------ | 
-| Windows | Windows XP、Windows7、Window10 |目前只对Windows Vista之上系统比较友好，对Windows XP<br />有些问题。<br />主要是因为uxtheme.dll引起的，相关解决方法见[FAQ](https://gitee.com/ying32/govcl/wikis/pages?title=Windows-XP%E4%B8%8B%E5%85%B3%E9%97%AD%E6%97%B6uxtheme.dll%E9%94%99%E8%AF%AF%E5%AF%B9%E8%AF%9D%E6%A1%86%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95&parent=FAQ)中的|
-| Linux | Ubuntu 16.04、Linux Mint 17.1、Linux Mint 19、Deepin 15.5 ||
-| MacOS | macOS 10.12、10.13 | 注：从macOS 10.14后不再支持32位应用，Lazarus从2.0开始已经转向cocoa库了，目前使用的还算可以。 |
-| Raspberry pi |  | 使用CodeTyphon交叉编译为arm格式。<br />暂发现Menu组件有问题，其他似乎没啥大问题 |
-
-
-----
-		 
-</pre>
  
 <!-- Footer -->
 <footer class="bs-docs-footer">
@@ -232,6 +186,7 @@
     <p>&copy; 2017 - 2020 <a href="/">z-kit.cc</a> Apache License 2.0 </p>
 	<p>Power by <a href="https://github.com/twbs/bootstrap"  target="_blank" rel="nofollow">Bootstrap</a>，<a href="https://pages.github.com/" target="_blank" rel="nofollow">github Pages</a></p>
 	<p>Iconfont <a href="https://www.iconfont.cn/"  target="_blank" rel="nofollow">阿里巴巴矢量图标库</a></p>
+	<p><a href="https://github.com/sindresorhus/github-markdown-css"  target="_blank" rel="nofollow">github-markdown-css</a></p>
 
   </div>
 </footer>
@@ -239,9 +194,7 @@
 
 <script>
 (function(){
- 
-  // 默认的markdown文档
-  $("#mdcontext").html(marked($("#mdtext").html(), {gfm: true, breaks: true, tables:true}));   
+    loadDoc('简介');
 })()
 </script>
 </body>
