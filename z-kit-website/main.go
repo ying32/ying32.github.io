@@ -72,6 +72,7 @@ func makeSite(root string, langName, langDir string, langs []interface{}) {
 				pg["langDir"] = langDir
 				pg["langs"] = langs
 				pg["footer"] = dataMap["footer"]
+				pg["menubar"] = dataMap["menubar"]
 				makeHtmlPage(root, pg)
 			}
 		}

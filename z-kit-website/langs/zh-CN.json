@@ -6,6 +6,12 @@
 		"exampleTitle": "示例"
 	},
 
+	"menubar": {
+		"docTitle": "中文文档",
+		"exampleTitle": "示例",
+		"videoTitle": "视频教程(第三方)"
+	},
+
 	"pages": [
 		{
 		    "name": "index",
@@ -17,9 +23,6 @@
 
 		    "title": "GoVCL | 跨平台的原生Go GUI开发库",
 		    "description": "govcl - 跨平台的原生Go GUI开发库",
-		    "menuDocTitle": "中文文档",
-		    "menuExampleTitle": "示例",
-		    "menuVideoTitle": "视频教程(第三方)",
 			"title2": "小而巧的跨平台原生GUI库",
 			"version": "当前版本：",
 			"changeLog": "更新日志",
@@ -34,7 +37,8 @@
 		   "name": "index",
 		   "path": "wiki/",
 
-		   "enabled": false,
+		   "enabled": true,
+		   "markdown": true,
 
 		   "includeFile1": "_wiki_home.html",
 		   "includeFile2": "_wiki_init_load.html",

@@ -6,6 +6,10 @@
 		"exampleTitle": "Example"
 	},
 
+	"menubar": {
+		
+	},
+
    "pages": [
 		{
 		   "name": "index",

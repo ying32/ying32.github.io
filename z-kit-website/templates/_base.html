@@ -34,8 +34,68 @@
 	<script src="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 	<script src="/assets/js/docs.min.js"></script>
 
+{{if .markdown}}
+	<!-- markdown -->
+	<script src="//cdn.jsdelivr.net/npm/marked@0.6.2/marked.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/moment@2.18.1/locale/zh-cn.min.js"></script>
+	<!-- 代码高亮 -->
+	<link href="//cdn.jsdelivr.net/npm/highlight.js@9.15.10/styles/googlecode.css" rel="stylesheet">
+	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/highlight.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/languages/go.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/languages/delphi.min.js"></script>
+    <!-- markdown css -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" rel="stylesheet">
+{{end}}
+
 	<link href="/assets/css/style.css" rel="stylesheet">
-	
+
+{{if .markdown}}
+	<style>
+		.markdown-body {
+			box-sizing: border-box;
+			min-width: 200px;
+		<!-- max-width: 980px; -->
+			margin: 0 auto;
+			padding: 45px;
+		}
+		@media (max-width: 767px) {
+			.markdown-body {
+				padding: 15px;
+			}
+		}
+	</style>
+	<script>
+		// 语言设置
+		moment.locale('zh-cn');
+
+		hljs.initHighlightingOnLoad();
+
+		marked.setOptions({
+			renderer: new marked.Renderer(),
+			gfm: true,
+			tables: true,
+			breaks: false,
+			pedantic: false,
+			sanitize: false,
+			smartLists: true,
+			smartypants: false,
+			highlight: function (code, lang) {
+				return hljs.highlightAuto(code).value;
+			}
+		});
+
+		function loadDoc(title) {
+			$("#doctitle").html(title)
+			$.get("/wiki/cn-docs/"+title+".md",function(data, status){
+				// 默认的markdown文档
+				$("#mdcontext").html(marked(data, {gfm: true, breaks: true, tables:true}));
+			});
+		}
+	</script>
+
+{{end}}
+
 </head>
 <body class="bs-docs-home">
   <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
@@ -59,11 +119,11 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">{{.menuDocTitle}}</a></li>
+		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">{{.menubar.docTitle}}</a></li>
 	    {{if eq .lang "zh-CN"}}
 		  <li><a href="/wiki">中文文档(测试)</a></li>
 		{{end}}
-		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">{{.menuExampleTitle}}</a></li>
+		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">{{.menubar.exampleTitle}}</a></li>
 		  
           <!--<li class="dropdown">
 			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">更多项目 <b class="caret"></b></a>
@@ -76,7 +136,7 @@
 			</ul>
 		  </li> -->
 		  
-		  <li><a href="https://video.0-w.cc/videos/1" target="_blank"><span class="iconfont icon-video"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg></span> {{.menuVideoTitle}}</a></li>
+		  <li><a href="https://video.0-w.cc/videos/1" target="_blank"><span class="iconfont icon-video"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg></span> {{.menubar.videoTitle}}</a></li>
 	    {{if eq .lang "zh-CN"}}
 		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><span class="iconfont icon-qq"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg></span> 加入QQ群</a></li>
 		{{end}}
