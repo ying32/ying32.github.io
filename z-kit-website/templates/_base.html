@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="{{.lang}}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{.description}}">
+	<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus delphi">
+	<meta name="author" content="ying32">
+
+	<title>{{.title}}</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/css/docs.min.css" rel="stylesheet">
+
+	{{html "<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->" }}
+	{{html "<!--[if lt IE 9]>" }}
+	  <script src="//cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+	  <script src="//cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+	{{html "<![endif]-->" }}
+ 
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+	<link rel="icon" href="/assets/images/favicon.ico">
+
+	<!-- iconfont -->
+	<script src="//at.alicdn.com/t/font_1642113_uxrvbppqfq.js"></script>
+
+	<script src="//cdn.jsdelivr.net/npm/jquery@1.11.1/dist/jquery.min.js"></script>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+	<script src="/assets/js/docs.min.js"></script>
+
+	<link href="/assets/css/style.css" rel="stylesheet">
+	
+</head>
+<body class="bs-docs-home">
+  <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
+ 
+<header class="navbar navbar-static-top bs-docs-nav navbar-fixed-top" id="top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/{{.langDir}}" class="navbar-brand" style="color:#d0cfdc;">GoVCL</a>
+    </div>
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+		  <!-- 这里可以添加左边的菜单栏 -->
+         
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">{{.menuDocTitle}}</a></li>
+	    {{if eq .lang "zh-CN"}}
+		  <li><a href="/wiki">中文文档(测试)</a></li>
+		{{end}}
+		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">{{.menuExampleTitle}}</a></li>
+		  
+          <!--<li class="dropdown">
+			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">更多项目 <b class="caret"></b></a>
+			<ul role="menu" class="dropdown-menu" style="">
+				<li><a href="https://github.com/ying32/rproxy" target="_blank">rproxy</a></li>
+				<li><a href="https://github.com/ying32/dylib" target="_blank">dylib</a></li>
+				<li><a href="https://github.com/ying32/readability" target="_blank">readability</a></li>
+				<li class="divider"></li>
+				<li><a href="https://github.com/ying32/FMXWndProcHook" target="_blank">FMXWndProcHook</a></li>
+			</ul>
+		  </li> -->
+		  
+		  <li><a href="https://video.0-w.cc/videos/1" target="_blank"><span class="iconfont icon-video"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg></span> {{.menuVideoTitle}}</a></li>
+	    {{if eq .lang "zh-CN"}}
+		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><span class="iconfont icon-qq"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg></span> 加入QQ群</a></li>
+		{{end}}
+		  <li class="dropdown">
+			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">Language <b class="caret"></b></a>
+			<ul role="menu" class="dropdown-menu" style="">
+			{{range .langs}}
+				<li><a href="/{{.langDir}}">{{.title}}</a></li>
+			{{end}}
+			</ul>
+		  </li> 
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{{if .isHome}}
+  {{include "_home.html" .}}
+{{end}}
+
+{{include "_footer.html" .}}
+
+{{if .isHome}}
+  {{include "_home_github.html" .}}
+{{end}}
+<!-- HTTPS -->
+<script src="https://jic.talkingdata.com/app/h5/v1?appid=127AF79D245A4C6889C128E6E088C2BE&vn=1.0&vc=1.0"></script>
+<!-- HTTP -->
+<!-- <script src="http://sdk.talkingdata.com/app/h5/v1?appid=127AF79D245A4C6889C128E6E088C2BE&vn=1.0&vc=1.0"></script> -->
+</body>
+</html>

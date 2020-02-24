@@ -12,3 +12,6 @@
 *.out
 /blog
 .keep.markdown
+
+.idea
+*.exe

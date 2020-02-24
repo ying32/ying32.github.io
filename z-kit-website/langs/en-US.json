@@ -1,0 +1,25 @@
+{
+   "pages": [
+		{
+		   "name": "index",
+		   "isHome": true,
+		   "title": "GoVCL | Cross-platform native Go GUI development library",
+		   "description": "govcl - Cross-platform native Go GUI development library",
+		   "menuDocTitle": "Chinese doc",
+		   "menuExampleTitle": "Example",
+		   "menuVideoTitle": "Video tutorial (third party)",
+		   "aboutTitle": "About",
+		   "repositoryTitle": "repository",
+
+			"title2": "Small cross-platform native GUI library",
+			"version": "Version: ",
+			"changeLog": "Change log",
+			"lastUpdated": "Last Updated: ",
+			"downloadGoVCL": "Download GoVCL",
+			"preCompiledGUILibrary": "Pre-compiled GUI library",
+			"description2": "Easy to use, write once, compile on multiple platforms.",
+			"description3": "GoVCL is a completely open source, free, cross-platform Go language GUI library, and the underlying binding is from Delphi VCL / Lazarus LCL",
+			"viewTheGitHub": "View the GitHub"
+	   }
+	]
+}

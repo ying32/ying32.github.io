@@ -1,0 +1,13 @@
+[
+    {
+        "lang": "zh-CN",
+        "title": "简体中文",
+        "langDir": ""
+    },
+    {
+        "lang": "en-US",
+        "title": "English",
+        "langDir": "en"
+    }
+
+]
