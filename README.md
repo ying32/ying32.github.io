@@ -1,4 +1,3 @@
-# ying32.github.io
-测试用
+GOVCL主页站点
 
-详细可以直接访问： http://z-kit.cc/
+详细可以直接访问： https://z-kit.cc/
