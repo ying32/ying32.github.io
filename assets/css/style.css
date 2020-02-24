@@ -45,9 +45,9 @@
 .bs-docs-masthead {
 	/* background-image: linear-gradient(to bottom,#7b3838 0,#8e7a1900 100%); */
 	background-image: url(/assets/images/banner.jpg);
-	background-repeat:no-repeat;
-	background-size: 100% 100%;
-	/* background-repeat-y: repeat; */
+	/* background-repeat:no-repeat; */
+	/* background-size: 100% 100%; */
+	background-repeat: repeat;
 	background-color:#000;
     padding: 100px 0;
 }
