@@ -1,1 +1,0 @@
-在编译时加上参数 -ldflags="-H windowsgui"，比如`go build -i -ldflags="-H windowsgui"`

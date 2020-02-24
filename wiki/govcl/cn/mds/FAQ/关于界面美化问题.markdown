@@ -1,8 +1,0 @@
-govcl是使用的原生Windows界面，样式跟随Windows而定。有些朋友可能想实现DirectUI相关的，很遗憾，没有。 说完全没有样式也不是的，govcl中带原版style（皮肤），皮肤有限，制作不是很方便。`有可能是你没有使用manifest文件，默认就是windows经典样式，当然就难看了。`   
-
-这里给出几种解决方法吧：  
-
-* 1、使用govcl中的style  
-* 2、Windows下使用第三方皮肤库skinsharp（收费）的dll来换肤，已经翻译go头文件,并配有相关例程演示，具体见例程中。   
-* 3、自己调用windows api自绘。  
-* 4、放弃此UI库，换个吧。

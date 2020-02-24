@@ -1,1 +1,0 @@
-http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Category:VCL_Reference
