@@ -3,6 +3,11 @@
 		{
 		    "name": "index",
 		    "isHome": true,
+			"path": "",
+
+			"includeFile1": "_home.html",
+			"includeFile2": "_home_github.html",
+
 		    "title": "GoVCL | 跨平台的原生Go GUI开发库",
 		    "description": "govcl - 跨平台的原生Go GUI开发库",
 		    "menuDocTitle": "中文文档",
@@ -20,6 +25,33 @@
 			"description2": "简单易用，一次编写，多个平台编译。",
 			"description3": "GoVCL是完全开源的、免费的、跨平台Go语言GUI库，底层绑定自Delphi VCL/Lazarus LCL",
 			"viewTheGitHub": "查看 GitHub 项目主页"
+	   },
+	   {
+		   "name": "index",
+		   "path": "wiki/",
+
+		   "enabled": false,
+
+		   "includeFile1": "_wiki_home.html",
+		   "includeFile2": "_wiki_init_load.html",
+
+		   "title": "GoVCL | 中文WIKI",
+		   "description": "GoVCL | 中文WIKI",
+		   "menuDocTitle": "中文文档",
+		   "menuExampleTitle": "示例",
+		   "menuVideoTitle": "视频教程(第三方)",
+		   "aboutTitle": "关于",
+		   "repositoryTitle": "仓库",
+
+		   "title2": "小而巧的跨平台原生GUI库",
+		   "version": "当前版本：",
+		   "changeLog": "更新日志",
+		   "lastUpdated": "上一次更新时间：",
+		   "downloadGoVCL": "下载 GoVCL",
+		   "preCompiledGUILibrary": "预编译GUI库",
+		   "description2": "简单易用，一次编写，多个平台编译。",
+		   "description3": "GoVCL是完全开源的、免费的、跨平台Go语言GUI库，底层绑定自Delphi VCL/Lazarus LCL",
+		   "viewTheGitHub": "查看 GitHub 项目主页"
 	   }
 	]
 }

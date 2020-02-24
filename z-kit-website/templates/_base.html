@@ -93,14 +93,14 @@
   </div>
 </header>
 
-{{if .isHome}}
-  {{include "_home.html" .}}
+{{if ne .includeFile1 ""}}
+  {{include .includeFile1 .}}
 {{end}}
 
 {{include "_footer.html" .}}
 
-{{if .isHome}}
-  {{include "_home_github.html" .}}
+{{if ne .includeFile2 ""}}
+  {{include .includeFile2 .}}
 {{end}}
 <!-- HTTPS -->
 <script src="https://jic.talkingdata.com/app/h5/v1?appid=127AF79D245A4C6889C128E6E088C2BE&vn=1.0&vc=1.0"></script>

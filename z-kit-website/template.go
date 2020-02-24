@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"html/template"
 	"io/ioutil"
 	"log"
@@ -77,12 +78,21 @@ func makeHtmlPage(root string, datas map[string]interface{}) {
 	if !strings.HasSuffix(root, "/") {
 		root += "/"
 	}
-	if langDir, ok := datas["langDir"].(string); ok {
+	if langDir, ok := datas["langDir"].(string); ok && langDir != "" {
 		if !strings.HasSuffix(langDir, "/") {
 			langDir += "/"
-			root += langDir
 		}
+		root += langDir
 	}
+
+	if path, ok := datas["path"].(string); ok && path != "" {
+		if !strings.HasSuffix(path, "/") {
+			path += "/"
+		}
+		root += path
+	}
+
+	fmt.Println("--------", root)
 	if _, err := os.Stat(root); err != nil {
 		os.MkdirAll(root, 0775)
 	}

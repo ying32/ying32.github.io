@@ -61,6 +61,13 @@ func makeSite(root string, langName, langDir string, langs []interface{}) {
 			switch page.(type) {
 			case map[string]interface{}:
 				pg := page.(map[string]interface{})
+
+				if val, ok := pg["enabled"]; ok {
+					if !val.(bool) {
+						continue
+					}
+				}
+
 				pg["lang"] = langName
 				pg["langDir"] = langDir
 				pg["langs"] = langs
