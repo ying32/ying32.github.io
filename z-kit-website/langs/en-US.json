@@ -7,7 +7,9 @@
 	},
 
 	"menubar": {
-
+		"docTitle": "Chinese doc",
+		"exampleTitle": "Example",
+		"videoTitle": "Video tutorial (third party)"
 	},
 
    "pages": [
@@ -20,9 +22,6 @@
 
 		   "title": "GoVCL | Cross-platform native Go GUI development library",
 		   "description": "govcl - Cross-platform native Go GUI development library",
-		   "menuDocTitle": "Chinese doc",
-		   "menuExampleTitle": "Example",
-		   "menuVideoTitle": "Video tutorial (third party)",
 		   "aboutTitle": "About",
 		   "repositoryTitle": "repository",
 
