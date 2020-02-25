@@ -26,7 +26,7 @@
 	<link rel="icon" href="/assets/images/favicon.ico">
 
 	<!-- iconfont -->
-	<script src="//at.alicdn.com/t/font_1642113_uxrvbppqfq.js"></script>
+	<script src="//at.alicdn.com/t/font_1642113_h45dap95vrd.js"></script>
 
 	<script src="//cdn.jsdelivr.net/npm/jquery@1.11.1/dist/jquery.min.js"></script>
 
@@ -136,12 +136,12 @@
 			</ul>
 		  </li> -->
 		  
-		  <li><a href="https://video.0-w.cc/videos/1" target="_blank"><span class="iconfont icon-video"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg></span> {{.menubar.videoTitle}}</a></li>
+		  <li><a href="https://video.0-w.cc/videos/1" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg> {{.menubar.videoTitle}}</a></li>
 	    {{if eq .lang "zh-CN"}}
-		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><span class="iconfont icon-qq"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg></span> 加入QQ群</a></li>
+		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg> 加入QQ群</a></li>
 		{{end}}
 		  <li class="dropdown">
-			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">Language <b class="caret"></b></a>
+			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-language"></use></svg> Language<b class="caret"></b></a>
 			<ul role="menu" class="dropdown-menu" style="">
 			{{range .langs}}
 				<li><a href="/{{.langDir}}">{{.title}}</a></li>
