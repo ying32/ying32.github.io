@@ -92,7 +92,7 @@ func makeHtmlPage(root string, datas map[string]interface{}) {
 		root += path
 	}
 
-	fmt.Println("--------", root)
+	fmt.Println("--------", root+file+".html")
 	if _, err := os.Stat(root); err != nil {
 		os.MkdirAll(root, 0775)
 	}
