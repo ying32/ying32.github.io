@@ -3,7 +3,8 @@
 	"footer": {
 		"aboutTitle": "关于",
 		"repositoryTitle": "仓库",
-		"exampleTitle": "示例"
+		"exampleTitle": "示例",
+		"sponsorTitle": "赞助GoVCL"
 	},
 
 	"menubar": {
@@ -39,12 +40,27 @@
 
 		   "enabled": true,
 		   "markdown": true,
+		   "iswiki": true,
+
 
 		   "includeFile1": "_wiki_home.html",
 		   "includeFile2": "_wiki_init_load.html",
 
 		   "title": "GoVCL | 中文WIKI",
 		   "description": "GoVCL | 中文WIKI"
-	   }
+	   },
+		{
+			"name": "sponsor",
+			"path": "",
+
+			"enabled": true,
+			"markdown": true,
+
+			"includeFile1": "_sponsor.html",
+
+
+			"title": "GoVCL | 赞助GoVCL",
+			"description": ""
+		}
 	]
 }

@@ -32,7 +32,7 @@ func templateFormatdate(t time.Time) string {
 
 func templateInclude(filename string, data map[string]interface{}) template.HTML {
 	var buf bytes.Buffer
-	t := template.New(filename) //filename[strings.LastIndex(filename, "/")+1:])
+	t := template.New(filename).Funcs(template.FuncMap{"include": templateInclude}) //filename[strings.LastIndex(filename, "/")+1:])
 	t, err := t.ParseFiles(templatePath + filename)
 	if err != nil {
 		log.Fatalln(err)

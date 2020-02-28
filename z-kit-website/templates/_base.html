@@ -88,7 +88,7 @@
 				return hljs.highlightAuto(code).value;
 			}
 		});
-
+	{{if .iswiki}}
 		function loadDoc(title) {
 			$("#doctitle").html(title)
 			$.get("/wiki/cn-docs/"+title+".md",function(data, status){
@@ -96,6 +96,7 @@
 				$("#mdcontext").html(marked(data, {gfm: true, breaks: true, tables:true}));
 			});
 		}
+	{{end}}
 	</script>
 
 {{end}}

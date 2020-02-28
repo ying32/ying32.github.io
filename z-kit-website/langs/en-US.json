@@ -3,7 +3,8 @@
 	"footer": {
 		"aboutTitle": "About",
 		"repositoryTitle": "repository",
-		"exampleTitle": "Example"
+		"exampleTitle": "Example",
+		"sponsorTitle": "Sponsor GoVCL"
 	},
 
 	"menubar": {
