@@ -41,13 +41,16 @@
 {{if .markdown}}
 	<!-- markdown -->
 	<script src="//cdn.jsdelivr.net/npm/marked@0.6.2/marked.min.js"></script>
+  {{if not .nocode}}
 	<script src="//cdn.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/moment@2.18.1/locale/zh-cn.min.js"></script>
+
 	<!-- 代码高亮 -->
 	<link href="//cdn.jsdelivr.net/npm/highlight.js@9.15.10/styles/googlecode.css" rel="stylesheet">
 	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/highlight.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/languages/go.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/languages/delphi.min.js"></script>
+  {{end}}
     <!-- markdown css -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" rel="stylesheet">
 {{end}}
@@ -70,11 +73,12 @@
 		}
 	</style>
 	<script>
+	{{if not .nocode}}
 		// 语言设置
 		moment.locale('zh-cn');
 
 		hljs.initHighlightingOnLoad();
-
+	{{end}}
 		marked.setOptions({
 			renderer: new marked.Renderer(),
 			gfm: true,
@@ -83,10 +87,12 @@
 			pedantic: false,
 			sanitize: false,
 			smartLists: true,
-			smartypants: false,
+			smartypants: false
+	{{if not .nocode}}		,
 			highlight: function (code, lang) {
 				return hljs.highlightAuto(code).value;
 			}
+	{{end}}
 		});
 	{{if .iswiki}}
 		function loadDoc(title) {
