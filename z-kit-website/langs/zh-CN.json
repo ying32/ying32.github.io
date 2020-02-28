@@ -55,6 +55,7 @@
 
 			"enabled": true,
 			"markdown": true,
+			"issponsor": true,
 
 			"includeFile1": "_sponsor.html",
 
