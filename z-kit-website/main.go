@@ -41,6 +41,14 @@ func readLangs() []interface{} {
 	return nil
 }
 
+func readWiki(lang string) []byte {
+	bs, err := ioutil.ReadFile(fmt.Sprintf("./langs/wiki.%s.txt", lang))
+	if err != nil {
+		return nil
+	}
+	return bs
+}
+
 func makeSite(root string, langName, langDir string, langs []interface{}) {
 	if langName == "" {
 		log.Println("未找到语言名。")
@@ -55,6 +63,7 @@ func makeSite(root string, langName, langDir string, langs []interface{}) {
 		log.Fatalln(err)
 	}
 	dataMap := datas.(map[string]interface{})
+	// 主页或者其他页生成
 	pages := dataMap["pages"].([]interface{})
 	if len(pages) > 0 {
 		for _, page := range pages {
@@ -77,4 +86,42 @@ func makeSite(root string, langName, langDir string, langs []interface{}) {
 			}
 		}
 	}
+	// wiki生成
+	//wikiConfig := readWiki(langName)
+	//if len(wikiConfig) > 0 {
+	//	var wikiPage = make(map[string]interface{})
+	//	wikiPage["lang"] = langName
+	//	wikiPage["langDir"] = langDir
+	//	wikiPage["langs"] = langs
+	//	wikiPage["footer"] = dataMap["footer"]
+	//	wikiPage["menubar"] = dataMap["menubar"]
+	//	wikiPage["markdown"] = true
+	//	wikiPage["iswiki"] = true
+	//
+	//	type wikiItem struct {
+	//		Categroy string
+	//		Subs     []string
+	//	}
+	//
+	//	first := make([]wikiItem, 0)
+	//	subs := make([]wikiItem, 0)
+	//	arr := bytes.Split(wikiConfig, []byte{'\n'})
+	//	var idx int
+	//	for _, line := range arr {
+	//		line = bytes.TrimSpace(line)
+	//		if bytes.HasPrefix(line, []byte{'#'}) {
+	//			first = append(first, string(line[1:]))
+	//		} else {
+	//			if idx == 0 {
+	//				// 主页
+	//
+	//			}
+	//			idx++
+	//		}
+	//		//fmt.Println(idx, string(line))
+	//	}
+	//	wikiPage["page"] = first
+	//	fmt.Println(first)
+	//}
+
 }

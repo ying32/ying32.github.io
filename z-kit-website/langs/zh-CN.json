@@ -34,21 +34,6 @@
 			"description3": "GoVCL是完全开源的、免费的、跨平台Go语言GUI库，底层绑定自Delphi VCL/Lazarus LCL",
 			"viewTheGitHub": "查看 GitHub 项目主页"
 	   },
-	   {
-		   "name": "index",
-		   "path": "wiki/",
-
-		   "enabled": true,
-		   "markdown": true,
-		   "iswiki": true,
-
-
-		   "includeFile1": "_wiki_home.html",
-		   "includeFile2": "_wiki_init_load.html",
-
-		   "title": "GoVCL | 中文WIKI",
-		   "description": "GoVCL | 中文WIKI"
-	   },
 		{
 			"name": "sponsor",
 			"path": "",
