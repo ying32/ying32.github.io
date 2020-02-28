@@ -30,9 +30,19 @@ func templateFormatdate(t time.Time) string {
 	return t.Format("2006-01-02")
 }
 
+func addTemplateFuncs() template.FuncMap {
+	return template.FuncMap{
+		"html":           templateHtml,
+		"trim":           strings.Trim,
+		"formatdate":     templateFormatdate,
+		"formatdatetime": templateFormatdatetime,
+		"include":        templateInclude,
+	}
+}
+
 func templateInclude(filename string, data map[string]interface{}) template.HTML {
 	var buf bytes.Buffer
-	t := template.New(filename).Funcs(template.FuncMap{"include": templateInclude}) //filename[strings.LastIndex(filename, "/")+1:])
+	t := template.New(filename).Funcs(addTemplateFuncs()) //filename[strings.LastIndex(filename, "/")+1:])
 	t, err := t.ParseFiles(templatePath + filename)
 	if err != nil {
 		log.Fatalln(err)
@@ -44,13 +54,6 @@ func templateInclude(filename string, data map[string]interface{}) template.HTML
 	return template.HTML(buf.Bytes())
 }
 
-var templateFuncMaps = template.FuncMap{
-	"html":           templateHtml,
-	"trim":           strings.Trim,
-	"formatdate":     templateFormatdate,
-	"formatdatetime": templateFormatdatetime,
-	"include":        templateInclude}
-
 func makeHtmlPage(root string, datas map[string]interface{}) {
 
 	file, ok := datas["name"].(string)
@@ -59,7 +62,7 @@ func makeHtmlPage(root string, datas map[string]interface{}) {
 		return
 	}
 	var buf bytes.Buffer
-	t := template.New(file).Funcs(templateFuncMaps)
+	t := template.New(file).Funcs(addTemplateFuncs())
 	bs, err := ioutil.ReadFile(templatePath + "_base.html")
 	if err != nil {
 		log.Println(err)
