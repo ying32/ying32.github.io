@@ -39,7 +39,7 @@ func NewMarkdown() *Markdown {
 		panic(err)
 	}
 	// marked
-	m.markedObj = m.vm.ToValue(m.vm.Get("marked").Export())
+	m.markedObj = m.vm.Get("marked")
 	if err := m.vm.ExportTo(m.markedObj, &m.marked); err != nil {
 		panic(err)
 	}
