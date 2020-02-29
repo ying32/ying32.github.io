@@ -48,6 +48,20 @@
 
 			"title": "GoVCL | 赞助GoVCL",
 			"description": ""
+		},
+		{
+			"name": "changelog",
+			"path": "",
+
+			"enabled": true,
+			"markdown": true,
+			"nocode": true,
+
+			"includeFile1": "_changelog.html",
+
+
+			"title": "GoVCL | 更新日志",
+			"description": ""
 		}
 	]
 }
