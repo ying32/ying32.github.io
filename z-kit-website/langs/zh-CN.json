@@ -22,7 +22,7 @@
 			"includeFile1": "_home.html",
 			"includeFile2": "_home_github.html",
 
-		    "title": "GoVCL | 跨平台的原生Go GUI开发库",
+		    "title": "跨平台的原生Go GUI开发库",
 		    "description": "govcl - 跨平台的原生Go GUI开发库",
 			"title2": "小而巧的跨平台原生GUI库",
 			"version": "当前版本：",
@@ -37,30 +37,20 @@
 		{
 			"name": "sponsor",
 			"path": "",
-
-			"enabled": true,
-			"markdown": true,
 			"issponsor": true,
-			"nocode": true,
-
-			"includeFile1": "_sponsor.html",
-
-
-			"title": "GoVCL | 赞助GoVCL",
+			"mardowncss": true,
+			"includeFile1": "_markdown.html",
+			"includeMdFile": "_sponsor_body.md",
+			"title": "赞助GoVCL",
 			"description": ""
 		},
 		{
 			"name": "changelog",
 			"path": "",
-
-			"enabled": true,
-			"markdown": true,
-			"nocode": true,
-
-			"includeFile1": "_changelog.html",
-
-
-			"title": "GoVCL | 更新日志",
+			"mardowncss": true,
+			"includeFile1": "_markdown.html",
+			"includeMdFile": "_changelog_body.md",
+			"title": "更新日志",
 			"description": ""
 		}
 	]

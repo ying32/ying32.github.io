@@ -32,11 +32,12 @@ func templateFormatdate(t time.Time) string {
 
 func addTemplateFuncs() template.FuncMap {
 	return template.FuncMap{
-		"html":           templateHtml,
-		"trim":           strings.Trim,
-		"formatdate":     templateFormatdate,
-		"formatdatetime": templateFormatdatetime,
-		"include":        templateInclude,
+		"html":            templateHtml,
+		"trim":            strings.Trim,
+		"formatdate":      templateFormatdate,
+		"formatdatetime":  templateFormatdatetime,
+		"include":         templateInclude,
+		"includeMarkdown": templateIncludeMarkdown,
 	}
 }
 
@@ -52,6 +53,20 @@ func templateInclude(filename string, data map[string]interface{}) template.HTML
 		log.Fatalln(err)
 	}
 	return template.HTML(buf.Bytes())
+}
+
+func templateIncludeMarkdown(filename string, data map[string]interface{}) template.HTML {
+	var buf bytes.Buffer
+	t := template.New(filename).Funcs(addTemplateFuncs())
+	t, err := t.ParseFiles(templatePath + filename)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	err = t.Execute(&buf, data)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return template.HTML(covToHTML(buf.String()))
 }
 
 func makeHtmlPage(root string, datas map[string]interface{}) {
