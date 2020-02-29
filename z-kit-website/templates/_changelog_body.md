@@ -121,44 +121,44 @@
 
  -- govcl --
 
-* 1、liblcl添加TApplication.RestoreTopMosts方法，用来兼容libvcl。
-* 2、自动绑定事件中，如果组件不支持某个事件则打印提示。
-* 3、"liblcl"源码更新至Lazarus 2.0版本LCL库，[Lazarus_2.0.0_release_notes](http://wiki.lazarus.freepascal.org/Lazarus_2.0.0_release_notes)、[Lazarus_2.0_fixes_branch](http://wiki.freepascal.org/Lazarus_2.0_fixes_branch)。
-* 4、添加一些TTreeView常量和结构。
-* 5、TListView的TListItem添加ListView属性。
-* 6、TTreeView的TNodeItem添加TreeView属性。
-* 7、添加一个treeview_checkbox例程，只适合用Windows。
-* 8、添加一个pagecontrolwizard演示例程(macOS和linux有bug)。
-* 9、调整Windows下dll搜索，当exe目录下有符合条件的liblcl.dll则优先加载。
-* 10、liblcl源代码已经采用[Lazarus2.0.2](https://forum.lazarus.freepascal.org/index.php/topic,45062.0.html?PHPSESSID=mgrsgl8c6kvr6hbr4v5rc1hrf0)编译
-* 11、macOS下的liblcl现在提供cocoa 64位的dylib
+* liblcl添加TApplication.RestoreTopMosts方法，用来兼容libvcl。
+* 自动绑定事件中，如果组件不支持某个事件则打印提示。
+* "liblcl"源码更新至Lazarus 2.0版本LCL库，[Lazarus_2.0.0_release_notes](http://wiki.lazarus.freepascal.org/Lazarus_2.0.0_release_notes)、[Lazarus_2.0_fixes_branch](http://wiki.freepascal.org/Lazarus_2.0_fixes_branch)。
+* 添加一些TTreeView常量和结构。
+* TListView的TListItem添加ListView属性。
+* TTreeView的TNodeItem添加TreeView属性。
+* 添加一个treeview_checkbox例程，只适合用Windows。
+* 添加一个pagecontrolwizard演示例程(macOS和linux有bug)。
+* 调整Windows下dll搜索，当exe目录下有符合条件的liblcl.dll则优先加载。
+* liblcl源代码已经采用[Lazarus2.0.2](https://forum.lazarus.freepascal.org/index.php/topic,45062.0.html?PHPSESSID=mgrsgl8c6kvr6hbr4v5rc1hrf0)编译
+* macOS下的liblcl现在提供cocoa 64位的dylib
 
  -- res2go --
 
-* 1、添加“-pkgname”选项。用于生成的Form相关的go文件包名，不包括main.go文件。
-* 2、添加“-watch”参数，用于监视“-path”目录的文件改变，并自动转换。
+* 添加“-pkgname”选项。用于生成的Form相关的go文件包名，不包括main.go文件。
+* 添加“-watch”参数，用于监视“-path”目录的文件改变，并自动转换。
 
 ## v1.2.2 
 
  -- govcl --
 
-* 1、自动绑定事件增加：当“afterBindSubComponentsEvents=true”时自动设置组件的名称。 
-* 2、libvcl: TThumbBarButton增加ButtonState属性。
-* 3、更加完善的mp3Player例子。 
-* 4、增加vcl.SelectDirectory3函数，用于简化vcl.SelectDirectory2函数。 
-* 5、添加“rtl.LibStringEncoding”和“rtl.LibVersion”两个函数，用于获取当前库信息。 
-* 6、修复“multilang”包，当前可执行文件目录不存在“Langs”目录时程序崩溃的错误。  
-* 7、多国语言支持TStrings类型本地化，例如：TComboBox.Items、TListBox.Items。  
-* 8、添加新的jsonToGo、jsonViewer例子。
+* 自动绑定事件增加：当“afterBindSubComponentsEvents=true”时自动设置组件的名称。 
+* libvcl: TThumbBarButton增加ButtonState属性。
+* 更加完善的mp3Player例子。 
+* 增加vcl.SelectDirectory3函数，用于简化vcl.SelectDirectory2函数。 
+* 添加“rtl.LibStringEncoding”和“rtl.LibVersion”两个函数，用于获取当前库信息。 
+* 修复“multilang”包，当前可执行文件目录不存在“Langs”目录时程序崩溃的错误。  
+* 多国语言支持TStrings类型本地化，例如：TComboBox.Items、TListBox.Items。  
+* 添加新的jsonToGo、jsonViewer例子。
   * jsonToGo是用于将一段json数据转为Go的结构，以方便json.Unmarshal填充。
   * jsonViewer是用于将一段json数据以树的形式显示
-* 9、添加一些剪切板格式常量。
+* 添加一些剪切板格式常量。
 
  -- res2go --
 
-* 1、添加“-pause”选项。主要用于集成在IDE内的。选项说明：结束后根据选项暂停，比如： -pause "ew"，表示有错或者警告，可选为“e”,“w”,“a” e=错误，w=警告，a=忽略其它选项，总是显示。  
-* 2、添加支持Delphi编译，已经测试在Delphi 10.3 社区版编译通过，并简单测试转换结果。  
-* 3、根据“.lpr”或“.dpr”文件中的内容动态删减“main.go”中“vcl.Application.CreateForm”。 
+* 添加“-pause”选项。主要用于集成在IDE内的。选项说明：结束后根据选项暂停，比如： -pause "ew"，表示有错或者警告，可选为“e”,“w”,“a” e=错误，w=警告，a=忽略其它选项，总是显示。  
+* 添加支持Delphi编译，已经测试在Delphi 10.3 社区版编译通过，并简单测试转换结果。  
+* 根据“.lpr”或“.dpr”文件中的内容动态删减“main.go”中“vcl.Application.CreateForm”。 
 
 ## v1.2.1  
 
@@ -166,66 +166,70 @@
 
  -- govcl --  
 
-* 1、govcl增加的“arm”编译约束。
-* 2、liblcl类补丁，兼容Delphi。
-* 3、添加linux下获取当前系统语言。
-* 4、win包添加新的winapi: SetForegroundWindow
-* 5、libvcl库添加新的png解码器“TPortableNetworkGraphic”，用来兼容liblcl。
-* 6、使用新的“hash”函数传递事件回调ID，解决上下文信息丢失问题。
-* 7、修改liblcl窗口默认宽度=678和高度=321。
-* 8、api包中不再直接公开eventCallbackMap、messageCallbackMap两个变量，并使用EventCallbackOf、MessageCallbackOf替代。
-* 9、api包DSynchronize函数，当执行完后删除事件ID。
-* 10、重构“事件关联”功能。
-* 11、“事件关联”增加tag字段用于res2go共享事件，支持多个事件共享。
-* 12、rtl包添加一个"IsNil"函数，用于判断interface{}为空。
-* 13、libvcl与liblcl移除TGoEvent类型，改用方法地址替代TGoEvent 。
-* 14、libvcl修改AllowDropFiles属性read方法不再使用变量。并修复样式改变的情况下失效问题。
-* 15、liblcl使用宏简化事件代码。
-* 16、添加一个新的TMiniWebview组件，支持liblcl/libvcl 32bit/64bit,  macOS32/cocoa接口。
-* 17、调整exts/tools包中mactool，如果存在则复制$GOPATH/bin/liblcl.dylib至当前可执行文件目录。
-* 18、liblcl:修复TCanvas.TextRect2。
-* 19、添加新方法：TCanvas.TextRect3。
-* 20、liblcl: TStringGrid、TDrawGrid、TValueListEditor添加OnDrawCell事件。
-* 21、添加新枚举类型TGridOptionLz，用于liblcl库Grid控件Options属性。因为无法兼容Delphi。
-* 22、添加一个新的drawgrid例子，见samples/grids/drawgrid。 
-* 23、在非Windows下“LazyProc”的Find方法增加互斥锁。  
-* 24、所有libvcl源代码文件编码变更为UTF-8。 	
-* 25、TApplication.CreateForm参数变化，详细参考注释。	
-* 26、正式移除标记为丢弃的方法: TApplication.CreateFormFromFile、TApplication.CreateFormFromStream、TApplication.CreateFormFromBytes。	
+* govcl增加的“arm”编译约束。
+* liblcl类补丁，兼容Delphi。
+* 添加linux下获取当前系统语言。
+* win包添加新的winapi: SetForegroundWindow
+* libvcl库添加新的png解码器“TPortableNetworkGraphic”，用来兼容liblcl。
+* 使用新的“hash”函数传递事件回调ID，解决上下文信息丢失问题。
+* 修改liblcl窗口默认宽度=678和高度=321。
+* api包中不再直接公开eventCallbackMap、messageCallbackMap两个变量，并使用EventCallbackOf、MessageCallbackOf替代。
+* api包DSynchronize函数，当执行完后删除事件ID。
+* 重构“事件关联”功能。
+* “事件关联”增加tag字段用于res2go共享事件，支持多个事件共享。
+* rtl包添加一个"IsNil"函数，用于判断interface{}为空。
+* libvcl与liblcl移除TGoEvent类型，改用方法地址替代TGoEvent 。
+* libvcl修改AllowDropFiles属性read方法不再使用变量。并修复样式改变的情况下失效问题。
+* liblcl使用宏简化事件代码。
+* 添加一个新的TMiniWebview组件，支持liblcl/libvcl 32bit/64bit,  macOS32/cocoa接口。
+* 调整exts/tools包中mactool，如果存在则复制$GOPATH/bin/liblcl.dylib至当前可执行文件目录。
+* liblcl:修复TCanvas.TextRect2。
+* 添加新方法：TCanvas.TextRect3。
+* liblcl: TStringGrid、TDrawGrid、TValueListEditor添加OnDrawCell事件。
+* 添加新枚举类型TGridOptionLz，用于liblcl库Grid控件Options属性。因为无法兼容Delphi。
+* 添加一个新的drawgrid例子，见samples/grids/drawgrid。 
+* 在非Windows下“LazyProc”的Find方法增加互斥锁。  
+* 所有libvcl源代码文件编码变更为UTF-8。 	
+* TApplication.CreateForm参数变化，详细参考注释。	
+* 正式移除标记为丢弃的方法: TApplication.CreateFormFromFile、TApplication.CreateFormFromStream、TApplication.CreateFormFromBytes。	
+
  ---	
+ 
  -- res2go --  	
- * 1、添加linux和macOS编译配置。  	
-* 2、修改：检查到不支持的组件后直接停止当前文件转换。  	
-* 3、添加检测环境变量“LANG”判断是否为中文系统。  	
-* 4、修复“-outbytes”选项保存时太慢的问题。  	
-* 4、修复没有“-outbytes”选项时不保存gfm文件问题。  	
-* 5、添加新选项“-usestr，默认为true”。  	
-* 6、增加支持共享事件导出（支持多个事件，见res2goTest例程）。  	
-* 7、添加新选项-origfn，生成的.go文件使用原始的delphi/lazarus单元名，默认为false。  	
-* 8、移除“-gui”选项。	
-* 9、修改：“-encrypt”默认为false。	
-* 10、更新res2go二进制，并添加res2go macOS二进制。	
+ 
+* 添加linux和macOS编译配置。  	
+* 修改：检查到不支持的组件后直接停止当前文件转换。  	
+* 添加检测环境变量“LANG”判断是否为中文系统。  	
+* 修复“-outbytes”选项保存时太慢的问题。  	
+* 修复没有“-outbytes”选项时不保存gfm文件问题。  	
+* 添加新选项“-usestr，默认为true”。  	
+* 增加支持共享事件导出（支持多个事件，见res2goTest例程）。  	
+* 添加新选项-origfn，生成的.go文件使用原始的delphi/lazarus单元名，默认为false。  	
+* 移除“-gui”选项。	
+* 修改：“-encrypt”默认为false。	
+* 更新res2go二进制，并添加res2go macOS二进制。	
+
  ---	
+ 
  ## v1.2.0  	
- 2018-11-05  	
-   * 1、修复liblcl在linux和macOS下在协程中使用vcl.ShowMessage或其它模态窗口时应用程序崩溃问题。bug提交来源于issues #14。  	
- 2018-11-03  	
-   * 1、限制govcl最要低要求go1.9.0；	
-  * 2、res2go增加新的选项“-outbytes”。 	
-  * 3、res2go添加新特性, 私有字段，详见“res2goTest”例子。	
-  * 4、修复了xunleidownloader例子中的bug。	
-  * 5、多国语言包修改："RegisterLibResouces"的调用移至包内init函数，以后不再需要手动注册了并移除“RegisterLibResouces”函数。	
-  * 6、“api.DSynchronize”增加互斥锁。防止多个go协程更新造成崩溃问题。	
-  * 7、res2go说明中增加集成到Delphi/Lazarus IDE的方法。	
-  * 8、res2go “输入”、“输出”默认目录使用相对路径。	
-  * 9、添加新组件：TSpinEdit。并更新stdcontrols例程用于演示新组件。	
-  * 10、“win”包增加资源相关的api和类型。	
-  * 11、res2go添加支持“TSpinEdit”组件导出。	
-  * 12、增加窗口的消息捕获事件“OnWndProc”。用法例子见“messageTest”。 	
-  * 13、添加一个新的“message”包，里面包含windows消息常量（linux、MacOS也可用）和VCL消息常量。用法例子见“messageTest”。 	
-  * 14、“win”包增加新api"GetModuleFileNameExW"。 	
-  * 15、更新windowsProcess和multilanguage例程。	
-  * 16、更新go编译约束。 
+ 	
+* 修复liblcl在linux和macOS下在协程中使用vcl.ShowMessage或其它模态窗口时应用程序崩溃问题。bug提交来源于issues #14。  	
+* 限制govcl最要低要求go1.9.0；	 
+* res2go增加新的选项“-outbytes”。 	
+* res2go添加新特性, 私有字段，详见“res2goTest”例子。	
+* 修复了xunleidownloader例子中的bug。	
+* 多国语言包修改："RegisterLibResouces"的调用移至包内init函数，以后不再需要手动注册了并移除“RegisterLibResouces”函数。	
+* “api.DSynchronize”增加互斥锁。防止多个go协程更新造成崩溃问题。	
+* res2go说明中增加集成到Delphi/Lazarus IDE的方法。	
+* res2go “输入”、“输出”默认目录使用相对路径。	
+* 添加新组件：TSpinEdit。并更新stdcontrols例程用于演示新组件。	
+* “win”包增加资源相关的api和类型。	
+* res2go添加支持“TSpinEdit”组件导出。	
+* 增加窗口的消息捕获事件“OnWndProc”。用法例子见“messageTest”。 	
+* 添加一个新的“message”包，里面包含windows消息常量（linux、MacOS也可用）和VCL消息常量。用法例子见“messageTest”。 	
+* “win”包增加新api"GetModuleFileNameExW"。 	
+* 更新windowsProcess和multilanguage例程。	
+* 更新go编译约束。 
 
  ---	
 ## 更早的日志请查看提交记录  
