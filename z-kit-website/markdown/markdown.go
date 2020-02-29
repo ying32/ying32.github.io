@@ -7,83 +7,89 @@ import (
 )
 
 var (
-	markdownToHTML func(str string, opts map[string]interface{}) string
-	sRW            sync.RWMutex
+	markObj = NewMarkdown()
 )
 
-//highlight: function (code, lang) {
-//return hljs.highlightAuto(code).value;
-//}
+var (
+	// 要执行的js文件
+	jsFiles = []struct {
+		Name string
+		Data string
+	}{
+		{"highlight.js", string(highlightJsBytes)},
+		{"marked.js", string(markedJsBytes)},
+	}
+)
 
-func initMarkdownJsVM() error {
-	vm := goja.New()
+type Markdown struct {
+	vm            *goja.Runtime
+	markedObj     goja.Value
+	marked        goja.Callable
+	hljsObj       goja.Value
+	highlightAuto goja.Callable
+	sRW           sync.RWMutex
+}
 
+func NewMarkdown() *Markdown {
+	m := new(Markdown)
+	m.vm = goja.New()
 	// 伪造一个window对象
-	vm.Set("window", vm.GlobalObject())
-
-	_, err := vm.RunScript("highlight.js", string(highlightJsBytes))
-	if err != nil {
-		return err
+	m.vm.Set("window", m.vm.GlobalObject())
+	if err := m.initScript(); err != nil {
+		panic(err)
 	}
-	_, err = vm.RunScript("marked.js", string(markedJsBytes))
-	if err != nil {
-		return err
-	}
-
-	marked := vm.ToValue(vm.Get("marked").Export())
-	var markedCall goja.Callable
-	if err = vm.ExportTo(marked, &markedCall); err != nil {
-		return err
+	// marked
+	m.markedObj = m.vm.ToValue(m.vm.Get("marked").Export())
+	if err := m.vm.ExportTo(m.markedObj, &m.marked); err != nil {
+		panic(err)
 	}
 
-	hljs := vm.Get("hljs")
-	var highlightAutoCall goja.Callable
-	if err := vm.ExportTo(hljs.ToObject(vm).Get("highlightAuto"), &highlightAutoCall); err != nil {
-		return err
+	// hljs
+	m.hljsObj = m.vm.Get("hljs")
+	if err := m.vm.ExportTo(m.hljsObj.ToObject(m.vm).Get("highlightAuto"), &m.highlightAuto); err != nil {
+		panic(err)
 	}
 
-	// 代码高亮的
-	// function (code, lang)
-	hljsHighlight := func(args goja.FunctionCall) goja.Value {
-		result, err := highlightAutoCall(hljs, args.Arguments[0])
-		if err == nil {
-			return result.ToObject(vm).Get("value")
-		}
-		return goja.Null()
-	}
+	return m
+}
 
-	markdownToHTML = func(str string, opts map[string]interface{}) string {
-		sRW.Lock()
-		defer sRW.Unlock()
-		if opts != nil {
-			// 如果选项中有高亮的，就替换掉
-			if _, ok := opts["highlight"]; ok {
-				opts["highlight"] = hljsHighlight
-			}
-		}
-		v, err := markedCall(marked, vm.ToValue(str), vm.ToValue(opts))
+func (m *Markdown) initScript() error {
+	for _, item := range jsFiles {
+		_, err := m.vm.RunScript(item.Name, item.Data)
 		if err != nil {
-			return ""
+			return err
 		}
-		return v.String()
 	}
-
 	return nil
 }
 
-func CovToHTML(str string, opts map[string]interface{}) string {
-	if markdownToHTML == nil {
-		return ""
+func (m *Markdown) hljsHighlight(args goja.FunctionCall) goja.Value {
+	result, err := m.highlightAuto(m.hljsObj, args.Arguments[0])
+	if err == nil {
+		return result.ToObject(m.vm).Get("value")
 	}
-	if opts == nil {
-		// {gfm: true, breaks: true, tables:true}
-		opts = map[string]interface{}{"gfm": true, "breaks": true, "tables": true}
-	}
-	return markdownToHTML(str, opts)
+	return goja.Null()
 }
 
-func init() {
-	if err := initMarkdownJsVM(); err != nil {
-		panic(err)
+func (m *Markdown) covToHTML(str string, opts map[string]interface{}) string {
+	m.sRW.Lock()
+	defer m.sRW.Unlock()
+	if opts != nil {
+		// 如果选项中有高亮的，就替换掉
+		if _, ok := opts["highlight"]; ok {
+			opts["highlight"] = m.hljsHighlight
+		}
 	}
+	v, err := m.marked(m.markedObj, m.vm.ToValue(str), m.vm.ToValue(opts))
+	if err != nil {
+		return ""
+	}
+	return v.String()
+}
+
+func CovToHTML(str string, opts map[string]interface{}) string {
+	if opts == nil {
+		opts = map[string]interface{}{"gfm": true, "breaks": true, "tables": true}
+	}
+	return markObj.covToHTML(str, opts)
 }
