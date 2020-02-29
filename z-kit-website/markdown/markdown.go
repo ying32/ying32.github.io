@@ -11,9 +11,21 @@ var (
 	sRW            sync.RWMutex
 )
 
+//highlight: function (code, lang) {
+//return hljs.highlightAuto(code).value;
+//}
+
 func initMarkdownJsVM() error {
 	vm := goja.New()
-	_, err := vm.RunScript("marked.js", string(markedJsBytes))
+
+	// 伪造一个window对象
+	vm.Set("window", vm.GlobalObject())
+
+	_, err := vm.RunScript("highlight.js", string(highlightJsBytes))
+	if err != nil {
+		return err
+	}
+	_, err = vm.RunScript("marked.js", string(markedJsBytes))
 	if err != nil {
 		return err
 	}
@@ -24,9 +36,31 @@ func initMarkdownJsVM() error {
 		return err
 	}
 
+	hljs := vm.Get("hljs")
+	var highlightAutoCall goja.Callable
+	if err := vm.ExportTo(hljs.ToObject(vm).Get("highlightAuto"), &highlightAutoCall); err != nil {
+		return err
+	}
+
+	// 代码高亮的
+	// function (code, lang)
+	hljsHighlight := func(args goja.FunctionCall) goja.Value {
+		result, err := highlightAutoCall(hljs, args.Arguments[0])
+		if err == nil {
+			return result.ToObject(vm).Get("value")
+		}
+		return goja.Null()
+	}
+
 	markdownToHTML = func(str string, opts map[string]interface{}) string {
 		sRW.Lock()
 		defer sRW.Unlock()
+		if opts != nil {
+			// 如果选项中有高亮的，就替换掉
+			if _, ok := opts["highlight"]; ok {
+				opts["highlight"] = hljsHighlight
+			}
+		}
 		v, err := markedCall(marked, vm.ToValue(str), vm.ToValue(opts))
 		if err != nil {
 			return ""
@@ -53,32 +87,3 @@ func init() {
 		panic(err)
 	}
 }
-
-// 生成字节的单元
-//func genres(filename string) {
-//
-//	baseName := path.Base(filename)
-//	if strings.Count(baseName, ".") > 0 {
-//		baseName = baseName[:strings.Index(baseName, ".")]
-//	}
-//
-//	bs, err := ioutil.ReadFile(filename)
-//	if err != nil {
-//		return
-//	}
-//	codeBytes := bytes.NewBufferString("package main\r\n\r\nvar (\r\n    " + baseName + "JsBytes = []byte {\r\n")
-//	for i, b := range bs {
-//		if i > 0 {
-//			codeBytes.WriteString(", ")
-//		}
-//		if i%12 == 0 {
-//			if i > 0 {
-//				codeBytes.WriteString("\r\n")
-//			}
-//			codeBytes.WriteString("        ")
-//		}
-//		codeBytes.WriteString("0x" + fmt.Sprintf("%.2X", b))
-//	}
-//	codeBytes.WriteString("}\r\n)\r\n")
-//	ioutil.WriteFile("../"+baseName+"js.go", codeBytes.Bytes(), 0775)
-//}
