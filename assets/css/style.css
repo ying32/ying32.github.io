@@ -35,7 +35,7 @@
 .bs-docs-footer a {
 	color:#b9b8bd;
 } 
- 
+
 .bs-docs-masthead {
 	background-image: url(/assets/images/banner.jpg);
 	background-size: auto 100%;
@@ -51,6 +51,10 @@
 	color:#cccccc;
 	font-size:11px;
 }
+ 
+.dropdown-menu > li >  a {
+    line-height: 2.5;
+} 
  
 .version a {
 	color:#cccccc;
