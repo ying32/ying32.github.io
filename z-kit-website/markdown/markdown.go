@@ -1,33 +1,57 @@
-package main
+package markdown
 
 import (
+	"sync"
+
 	"github.com/dop251/goja"
 )
 
-func covToHTML(str string) string {
-	if str == "" {
-		return ""
-	}
-	// marked($("#mdcontext").text(), {gfm: true, breaks: true, tables:true}
+var (
+	markdownToHTML func(str string, opts map[string]interface{}) string
+	sRW            sync.RWMutex
+)
+
+func initMarkdownJsVM() error {
 	vm := goja.New()
 	_, err := vm.RunScript("marked.js", string(markedJsBytes))
 	if err != nil {
-		return ""
+		return err
 	}
+
 	marked := vm.ToValue(vm.Get("marked").Export())
 	var markedCall goja.Callable
 	if err = vm.ExportTo(marked, &markedCall); err != nil {
+		return err
+	}
+
+	markdownToHTML = func(str string, opts map[string]interface{}) string {
+		if opts == nil {
+			// {gfm: true, breaks: true, tables:true}
+			opts = map[string]interface{}{"gfm": true, "breaks": true, "tables": true}
+		}
+		sRW.Lock()
+		defer sRW.Unlock()
+		v, err := markedCall(marked, vm.ToValue(str), vm.ToValue(opts))
+		if err != nil {
+			return ""
+		}
+		return v.String()
+	}
+
+	return nil
+}
+
+func CovToHTML(str string) string {
+	if markdownToHTML == nil {
 		return ""
 	}
-	// {gfm: true, breaks: true, tables:true}
-	getOpts := func() interface{} {
-		return map[string]interface{}{"gfm": true, "breaks": true, "tables": true}
+	return markdownToHTML(str, nil)
+}
+
+func init() {
+	if err := initMarkdownJsVM(); err != nil {
+		panic(err)
 	}
-	v, err := markedCall(marked, vm.ToValue(str), vm.ToValue(getOpts()))
-	if err != nil {
-		return ""
-	}
-	return v.String()
 }
 
 // 生成字节的单元

@@ -9,6 +9,8 @@ import (
 	"os"
 	"strings"
 	"time"
+
+	"./markdown"
 )
 
 const (
@@ -66,7 +68,7 @@ func templateIncludeMarkdown(filename string, data map[string]interface{}) templ
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return template.HTML(covToHTML(buf.String()))
+	return template.HTML(markdown.CovToHTML(buf.String()))
 }
 
 func makeHtmlPage(root string, datas map[string]interface{}) {
