@@ -25,10 +25,6 @@ func initMarkdownJsVM() error {
 	}
 
 	markdownToHTML = func(str string, opts map[string]interface{}) string {
-		if opts == nil {
-			// {gfm: true, breaks: true, tables:true}
-			opts = map[string]interface{}{"gfm": true, "breaks": true, "tables": true}
-		}
 		sRW.Lock()
 		defer sRW.Unlock()
 		v, err := markedCall(marked, vm.ToValue(str), vm.ToValue(opts))
@@ -41,11 +37,15 @@ func initMarkdownJsVM() error {
 	return nil
 }
 
-func CovToHTML(str string) string {
+func CovToHTML(str string, opts map[string]interface{}) string {
 	if markdownToHTML == nil {
 		return ""
 	}
-	return markdownToHTML(str, nil)
+	if opts == nil {
+		// {gfm: true, breaks: true, tables:true}
+		opts = map[string]interface{}{"gfm": true, "breaks": true, "tables": true}
+	}
+	return markdownToHTML(str, opts)
 }
 
 func init() {

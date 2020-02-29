@@ -68,7 +68,7 @@ func templateIncludeMarkdown(filename string, data map[string]interface{}) templ
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return template.HTML(markdown.CovToHTML(buf.String()))
+	return template.HTML(markdown.CovToHTML(buf.String(), nil))
 }
 
 func makeHtmlPage(root string, datas map[string]interface{}) {
