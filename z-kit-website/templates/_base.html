@@ -35,90 +35,19 @@
 	<script src="/assets/js/docs.min.js"></script>
 
 	<!-- pace -->
-	<link href="https://cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
-	<script src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-progressbar@1.0.4/themes/orange/pace-theme-flash.css">
+	<script src="//cdn.jsdelivr.net/npm/pace-progressbar@1.0.4/pace.min.js"></script>
 
 {{if .markdown}}
-	<!-- markdown -->
-	<script src="//cdn.jsdelivr.net/npm/marked@0.6.2/marked.min.js"></script>
-  {{if not .nocode}}
-	<script src="//cdn.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/moment@2.18.1/locale/zh-cn.min.js"></script>
-
 	<!-- 代码高亮 -->
 	<link href="//cdn.jsdelivr.net/npm/highlight.js@9.15.10/styles/googlecode.css" rel="stylesheet">
-	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/highlight.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/languages/go.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/highlight.js@9.15.1/languages/delphi.min.js"></script>
-  {{end}}
-{{end}}
-
-{{if or .mardown .mardowncss}}
 	<!-- markdown css -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.css">
+{{/*	<link href="//cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" rel="stylesheet">*/}}
 {{end}}
 
 	<link href="/assets/css/style.css" rel="stylesheet">
-
-{{if or .mardown .mardowncss}}
-	<style>
-		.markdown-body {
-			box-sizing: border-box;
-			min-width: 200px;
-		<!-- max-width: 980px; -->
-			margin: 0 auto;
-			padding: 45px;
-		}
-		@media (max-width: 767px) {
-			.markdown-body {
-				padding: 15px;
-			}
-		}
-		.markdown-body li p {
-			margin-top: 10px;
-		}
-		.markdown-body blockquote, .markdown-body dl, .markdown-body ol, .markdown-body p, .markdown-body pre, .markdown-body table, .markdown-body ul  {
-			margin-bottom: 10px;
-		}
-	</style>
-{{end}}
-
-{{if .markdown}}
-	<script>
-	{{if not .nocode}}
-		// 语言设置
-		moment.locale('zh-cn');
-
-		hljs.initHighlightingOnLoad();
-	{{end}}
-		marked.setOptions({
-			renderer: new marked.Renderer(),
-			gfm: true,
-			tables: true,
-			breaks: false,
-			pedantic: false,
-			sanitize: false,
-			smartLists: true,
-			smartypants: false
-	{{if not .nocode}}		,
-			highlight: function (code, lang) {
-				return hljs.highlightAuto(code).value;
-			}
-	{{end}}
-		});
-	{{if .iswiki}}
-		function loadDoc(title) {
-			$("#doctitle").html(title)
-			$.get("/wiki/cn-docs/"+title+".md",function(data, status){
-				// 默认的markdown文档
-				$("#mdcontext").html(marked(data, {gfm: true, breaks: true, tables:true}));
-			});
-		}
-	{{end}}
-	</script>
-
-{{end}}
-
+	<script src="/assets/js/global.js"></script>
 </head>
 <body class="bs-docs-home">
   <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
@@ -189,6 +118,14 @@
 	{{if ne .includeFile2 ""}}
 	  {{include .includeFile2 .}}
 	{{end}}
+{{end}}
+
+{{if .isHome}}
+<script>
+	(function(){
+		loadRepoInfo();
+	})()
+</script>
 {{end}}
 <!-- HTTPS -->
 <script src="https://jic.talkingdata.com/app/h5/v1?appid=127AF79D245A4C6889C128E6E088C2BE&vn=1.0&vc=1.0"></script>

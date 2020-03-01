@@ -116,6 +116,28 @@
 	margin-left:5px;
 }
 
+/* markdown */
+.markdown-body {
+	box-sizing: border-box;
+	min-width: 200px;
+/*  max-width: 980px;  */
+	margin: 0 auto;
+	padding: 45px;
+}
+
+@media (max-width: 767px) {
+	.markdown-body {
+		padding: 15px;
+	}
+}
+.markdown-body li p {
+	margin-top: 10px;
+}
+
+.markdown-body blockquote, .markdown-body dl, .markdown-body ol, .markdown-body p, .markdown-body pre, .markdown-body table, .markdown-body ul  {
+	margin-bottom: 10px;
+}
+
 
 /* https://v3.bootcss.com/examples/dashboard/dashboard.css */
 

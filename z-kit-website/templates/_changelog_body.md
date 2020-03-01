@@ -26,6 +26,7 @@
 * 增加：添加一个简易的markdown编辑器，用于演示。
 * 增加：liblcl：TGoFom添加兼容Delphi的方法ScaleForPPI、ScaleForCurrentDpi。
 * 增加：添加一个formscale例子。
+* 增加：Tools目录下添加一个libBuild工具，用于命令行构建libvcl或者liblcl。
 
  -- res2go --   
 

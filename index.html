@@ -35,19 +35,13 @@
 	<script src="/assets/js/docs.min.js"></script>
 
 	
-	<link href="https://cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
-	<script src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-
-
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-progressbar@1.0.4/themes/orange/pace-theme-flash.css">
+	<script src="//cdn.jsdelivr.net/npm/pace-progressbar@1.0.4/pace.min.js"></script>
 
 
 
 	<link href="/assets/css/style.css" rel="stylesheet">
-
-
-
-
-
+	<script src="/assets/js/global.js"></script>
 </head>
 <body class="bs-docs-home">
   <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
@@ -191,26 +185,13 @@
 
 
 
-	
-	  <script>
-(function(){
- 
-  $.get('https://api.github.com/repos/ying32/govcl/releases/latest', function(res){
-	  $('#btnDownload').attr("href", res.assets[0].browser_download_url);
-	  $("#versionInfo").html(res.tag_name);
-    }, 'json');
 
-  $.get('https://api.github.com/repos/ying32/govcl', function(res){
-      $('#repstar').html(res.stargazers_count);
-	  $('#repfork').html(res.forks_count);
-	  $('#lastupdate').html(res.pushed_at.substring(0, 10));
-	  
-    }, 'json');
-	
-	<!-- alert(navigator.language||navigator.userLanguage); -->
-})()
+
+<script>
+	(function(){
+		loadRepoInfo();
+	})()
 </script>
-	
 
 
 <script src="https://jic.talkingdata.com/app/h5/v1?appid=127AF79D245A4C6889C128E6E088C2BE&vn=1.0&vc=1.0"></script>

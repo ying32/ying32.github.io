@@ -19,7 +19,6 @@
 		   "isHome": true,
 
 			"includeFile1": "_home.html",
-			"includeFile2": "_home_github.html",
 
 		   "title": "GoVCL | Cross-platform native Go GUI development library",
 		   "description": "govcl - Cross-platform native Go GUI development library",
