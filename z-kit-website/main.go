@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"time"
 )
 
 func main() {
@@ -85,6 +86,7 @@ func makeSite(root string, langName, langDir string, langs []interface{}) {
 				pg["langs"] = langs
 				pg["footer"] = dataMap["footer"]
 				pg["menubar"] = dataMap["menubar"]
+				pg["year"] = time.Now().Year()
 				makeHtmlPage(root, pg)
 			}
 		}
@@ -128,3 +130,4 @@ func makeSite(root string, langName, langDir string, langs []interface{}) {
 	//}
 
 }
+
