@@ -44,6 +44,10 @@ func main() {
 		}
 	}
 
+	if !*debug {
+		updateSite()
+	}
+
 	if *debug {
 
 		go func() {
