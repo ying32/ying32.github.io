@@ -129,6 +129,10 @@
 	.markdown-body {
 		padding: 15px;
 	}
+	  
+  .pace  {
+	  display:none;
+  }
 }
 .markdown-body li p {
 	margin-top: 10px;
