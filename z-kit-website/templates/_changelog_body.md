@@ -19,8 +19,7 @@
 * 增加：`TCanvas`增加`Polygon`、`Polyline`、`PolyBezier`、`PolyBezierTo`(仅限libvcl)方法。  
 * 修改：`dylib`包移动到新的仓库`github/ying32/dylib`。   
 * 修复：修复libvcl的TMiniWebview不响应按键事件。 
-* 尝试：尝试解决windows下liblcl TMiniWebview不响应按键问题。 
-* 增加：添加一个Lazarus源代码修补工具。  
+* 尝试：尝试解决windows下liblcl TMiniWebview不响应按键问题。  
 * 修改：liblcl：Windows下的`TTrayIcon`创建时，默认加载`Application`的Icon。  
 * 增加：添加一个vcl.RegisterFormResource，用于`CreateForm`时自动查找对应资源。
 * 增加：添加一个简易的markdown编辑器，用于演示。
