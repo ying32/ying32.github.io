@@ -11,7 +11,7 @@ function loadRepoInfo() {
     $.get('https://api.github.com/repos/ying32/govcl', function(res){
         $('#repstar').html(res.stargazers_count);
         $('#repfork').html(res.forks_count);
-        $('#lastupdate').html(res.pushed_at.substring(0, 10));
+        $('#lastupdate').html(res.updated_at.substring(0, 10));
 
     }, 'json');
 

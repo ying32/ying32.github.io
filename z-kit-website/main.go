@@ -2,13 +2,24 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"time"
 )
 
+var (
+	debug = flag.Bool("debug", false, "")
+)
+
 func main() {
+	flag.Parse()
+
+	// debug
+	if *debug{
+
+	}
 
 	//genres("marked.min.js")
 
