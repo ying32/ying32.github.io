@@ -111,57 +111,41 @@
 <p><strong>Please use Google Translate if your native language is not Chinese.</strong>   </p>
 <p> -- govcl --    </p>
 <ul>
-<li><p>增加：liblcl：部分控件增加ParentBackground属性。  </p>
-</li>
-<li><p>修改：调整liblvcl、liblcl资源窗口构建部分。   </p>
-</li>
-<li><p>移除：移除掉原来自己处理缩放相关（vcl.Application.SetFormScaled无效了，待我有2k显示器后再测试这个问题）   </p>
-</li>
-<li><p>增加：liblcl添加支持Linux下Webbrowser组件（原TMiniWebview）。  </p>
-</li>
-<li><p>增加：添加一个listviewitemedit例子，用于双击项目直接编辑数据。  </p>
-</li>
-<li><p>增加：win包：添加一些windows下TListView API。  </p>
-</li>
-<li><p>增加：对types包中的一些类型定义增加了一些对应的方法函数。  </p>
-</li>
-<li><p>修改：调整go字符串与libvcl/liblcl交互的方式。  </p>
-</li>
-<li><p>增加：TMiniWebview增加一个SetIEVersion、GetIEVersion方法，并更新MiniWebview例子，限Windows。</p>
-</li>
-<li><p>增加：rtl包中增加了一些文件名相关的函数。  </p>
-</li>
-<li><p>增加：尝试支持windows 64位的内存dll加载模式。 </p>
-</li>
-<li><p>增加：TAction和TMenuItem组件添加AutoCheck属性。 </p>
-</li>
-<li><p>增加：TCanvas增加Polygon、Polyline、PolyBezier、PolyBezierTo(仅限libvcl)方法。  </p>
-</li>
-<li><p>修改：dylib包移动到github/ying32/dylib。   </p>
-</li>
-<li><p>修复: 修复libvcl的TMiniWebview不响应按键事件。 </p>
-</li>
-<li><p>尝试：尝试解决windows下liblcl TMiniWebview不响应按键问题。 </p>
-</li>
-<li><p>增加：添加一个Lazarus源代码修补工具。  </p>
-</li>
-<li><p>修改：liblcl：Windows下的TTrayIcon创建时，默认加载Application的Icon。  </p>
-</li>
-<li><p>增加：添加一个vcl.RegisterFormResource，用于CreateForm时自动查找对应资源。</p>
-</li>
-<li><p>增加：添加一个简易的markdown编辑器，用于演示。</p>
-</li>
-<li><p>增加：liblcl：TGoFom添加兼容Delphi的方法ScaleForPPI、ScaleForCurrentDpi。</p>
-</li>
-<li><p>增加：添加一个formscale例子。</p>
-</li>
-<li><p>增加：Tools目录下添加一个libBuild工具，用于命令行构建libvcl或者liblcl。</p>
-<p>-- res2go --   </p>
-</li>
-<li><p>删除：移除-outbytes选项，总是为True。</p>
-</li>
-<li><p>增加：增加注册当前Form资源，用于自动加载。</p>
-</li>
+<li>增加：liblcl：部分控件增加<code>ParentBackground</code>属性。  </li>
+<li>修改：调整liblvcl、liblcl资源窗口构建部分。   </li>
+<li>移除：移除掉原来自己处理缩放相关（vcl.Application.SetFormScaled无效了，待我有2k显示器后再测试这个问题）   </li>
+<li>增加：liblcl添加支持Linux下Webbrowser组件（原<code>TMiniWebview</code>）。  </li>
+<li>增加：添加一个<code>listviewitemedit</code>例子，用于双击项目直接编辑数据。  </li>
+<li>增加：<code>win</code>包：添加一些windows下TListView API。  </li>
+<li>增加：对<code>types</code>包中的一些类型定义增加了一些对应的方法函数。  </li>
+<li>修改：调整go字符串与libvcl/liblcl交互的方式。  </li>
+<li>增加：<code>TMiniWebview</code>增加一个<code>SetIEVersion</code>、<code>GetIEVersion</code>方法，并更新MiniWebview例子，限Windows。</li>
+<li>增加：<code>rtl</code>包中增加了一些文件名相关的函数。  </li>
+<li>增加：尝试支持windows 64位的内存dll加载模式。 </li>
+<li>增加：<code>TAction</code>和<code>TMenuItem</code>组件添加<code>AutoCheck</code>属性。 </li>
+<li>增加：<code>TCanvas</code>增加<code>Polygon</code>、<code>Polyline</code>、<code>PolyBezier</code>、<code>PolyBezierTo</code>(仅限libvcl)方法。  </li>
+<li>修改：<code>dylib</code>包移动到新的仓库<code>github/ying32/dylib</code>。   </li>
+<li>修复：修复libvcl的TMiniWebview不响应按键事件。 </li>
+<li>尝试：尝试解决windows下liblcl TMiniWebview不响应按键问题。 </li>
+<li>增加：添加一个Lazarus源代码修补工具。  </li>
+<li>修改：liblcl：Windows下的<code>TTrayIcon</code>创建时，默认加载<code>Application</code>的Icon。  </li>
+<li>增加：添加一个vcl.RegisterFormResource，用于<code>CreateForm</code>时自动查找对应资源。</li>
+<li>增加：添加一个简易的markdown编辑器，用于演示。</li>
+<li>增加：liblcl：<code>TGoFom</code>添加兼容Delphi的方法<code>ScaleForPPI</code>、<code>ScaleForCurrentDpi</code>。</li>
+<li>增加：添加一个<code>formscale</code>例子。</li>
+<li>增加：<code>Tools</code>目录下添加一个<code>libBuild</code>工具，用于命令行构建libvcl或者liblcl。</li>
+<li>修改：<code>exts/tools</code>包更改为<code>exts/macapp</code>包，同时更新macapp里包的打包方式和添加app图标。</li>
+<li>修改：windows下<code>TMiniWebview</code>不再屏蔽右键和鼠标点击选择功能。 </li>
+<li>增加：增加一个Windows下的<code>winappres</code>资源包，用于快速引用默认的syso文件。</li>
+<li>增加：<code>Tools</code>目录下添加一个<code>LazarusPatch</code>工具，用于对Lazarus源代码打补丁，以兼容Delphi或者其他的。  </li>
+<li>增加：<code>Tools</code>目录下添加一个<code>winRes</code>模板，用于生成windows下的syso文件。</li>
+<li>增加：编译liblcl时添加<code>USED_BY_LAZLOGGER_DUMMY</code>指令用于屏蔽lcl的调试信息。</li>
+</ul>
+<p> -- res2go --   </p>
+<ul>
+<li>删除：移除<code>-outbytes</code>选项，总是为<code>True</code>。</li>
+<li>增加：增加注册当前Form资源，用于自动加载。</li>
+<li>修改：<code>-outres</code>参数改为添加一个<code>winappres</code>包。</li>
 </ul>
 <h2 id="v127">v1.2.7</h2>
 <p> -- govcl --  </p>

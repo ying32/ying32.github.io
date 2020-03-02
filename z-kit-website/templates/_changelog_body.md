@@ -4,34 +4,42 @@
 
  -- govcl --    
 
-* 增加：liblcl：部分控件增加ParentBackground属性。  
+* 增加：liblcl：部分控件增加`ParentBackground`属性。  
 * 修改：调整liblvcl、liblcl资源窗口构建部分。   
 * 移除：移除掉原来自己处理缩放相关（vcl.Application.SetFormScaled无效了，待我有2k显示器后再测试这个问题）   
-* 增加：liblcl添加支持Linux下Webbrowser组件（原TMiniWebview）。  
-* 增加：添加一个listviewitemedit例子，用于双击项目直接编辑数据。  
-* 增加：win包：添加一些windows下TListView API。  
-* 增加：对types包中的一些类型定义增加了一些对应的方法函数。  
+* 增加：liblcl添加支持Linux下Webbrowser组件（原`TMiniWebview`）。  
+* 增加：添加一个`listviewitemedit`例子，用于双击项目直接编辑数据。  
+* 增加：`win`包：添加一些windows下TListView API。  
+* 增加：对`types`包中的一些类型定义增加了一些对应的方法函数。  
 * 修改：调整go字符串与libvcl/liblcl交互的方式。  
-* 增加：TMiniWebview增加一个SetIEVersion、GetIEVersion方法，并更新MiniWebview例子，限Windows。
-* 增加：rtl包中增加了一些文件名相关的函数。  
+* 增加：`TMiniWebview`增加一个`SetIEVersion`、`GetIEVersion`方法，并更新MiniWebview例子，限Windows。
+* 增加：`rtl`包中增加了一些文件名相关的函数。  
 * 增加：尝试支持windows 64位的内存dll加载模式。 
-* 增加：TAction和TMenuItem组件添加AutoCheck属性。 
-* 增加：TCanvas增加Polygon、Polyline、PolyBezier、PolyBezierTo(仅限libvcl)方法。  
-* 修改：dylib包移动到github/ying32/dylib。   
-* 修复: 修复libvcl的TMiniWebview不响应按键事件。 
+* 增加：`TAction`和`TMenuItem`组件添加`AutoCheck`属性。 
+* 增加：`TCanvas`增加`Polygon`、`Polyline`、`PolyBezier`、`PolyBezierTo`(仅限libvcl)方法。  
+* 修改：`dylib`包移动到新的仓库`github/ying32/dylib`。   
+* 修复：修复libvcl的TMiniWebview不响应按键事件。 
 * 尝试：尝试解决windows下liblcl TMiniWebview不响应按键问题。 
 * 增加：添加一个Lazarus源代码修补工具。  
-* 修改：liblcl：Windows下的TTrayIcon创建时，默认加载Application的Icon。  
-* 增加：添加一个vcl.RegisterFormResource，用于CreateForm时自动查找对应资源。
+* 修改：liblcl：Windows下的`TTrayIcon`创建时，默认加载`Application`的Icon。  
+* 增加：添加一个vcl.RegisterFormResource，用于`CreateForm`时自动查找对应资源。
 * 增加：添加一个简易的markdown编辑器，用于演示。
-* 增加：liblcl：TGoFom添加兼容Delphi的方法ScaleForPPI、ScaleForCurrentDpi。
-* 增加：添加一个formscale例子。
-* 增加：Tools目录下添加一个libBuild工具，用于命令行构建libvcl或者liblcl。
+* 增加：liblcl：`TGoFom`添加兼容Delphi的方法`ScaleForPPI`、`ScaleForCurrentDpi`。
+* 增加：添加一个`formscale`例子。
+* 增加：`Tools`目录下添加一个`libBuild`工具，用于命令行构建libvcl或者liblcl。
+* 修改：`exts/tools`包更改为`exts/macapp`包，同时更新macapp里包的打包方式和添加app图标。
+* 修改：windows下`TMiniWebview`不再屏蔽右键和鼠标点击选择功能。 
+* 增加：增加一个Windows下的`winappres`资源包，用于快速引用默认的syso文件。
+* 增加：`Tools`目录下添加一个`LazarusPatch`工具，用于对Lazarus源代码打补丁，以兼容Delphi或者其他的。  
+* 增加：`Tools`目录下添加一个`winRes`模板，用于生成windows下的syso文件。
+* 增加：编译liblcl时添加`USED_BY_LAZLOGGER_DUMMY`指令用于屏蔽lcl的调试信息。
+
 
  -- res2go --   
 
-* 删除：移除-outbytes选项，总是为True。
+* 删除：移除`-outbytes`选项，总是为`True`。
 * 增加：增加注册当前Form资源，用于自动加载。
+* 修改：`-outres`参数改为添加一个`winappres`包。
 
 ## v1.2.7  
 

@@ -2,10 +2,14 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
+	"net/http"
+	"os"
+	"path/filepath"
 	"time"
 )
 
@@ -17,9 +21,6 @@ func main() {
 	flag.Parse()
 
 	// debug
-	if *debug{
-
-	}
 
 	//genres("marked.min.js")
 
@@ -29,15 +30,65 @@ func main() {
 	if langs == nil {
 		panic("读语言列表失败。")
 	}
-	for _, lang := range langs {
-		switch lang.(type) {
-		case map[string]interface{}:
-			langName, _ := lang.(map[string]interface{})["lang"].(string)
-			langDir, _ := lang.(map[string]interface{})["langDir"].(string)
-			fmt.Println("生成：", langName, "，目录：", langDir)
 
-			makeSite(root, langName, langDir, langs)
+	updateSite := func() {
+		for _, lang := range langs {
+			switch lang.(type) {
+			case map[string]interface{}:
+				langName, _ := lang.(map[string]interface{})["lang"].(string)
+				langDir, _ := lang.(map[string]interface{})["langDir"].(string)
+				fmt.Println("生成：", langName, "，目录：", langDir)
+
+				makeSite(root, langName, langDir, langs)
+			}
 		}
+	}
+
+	if *debug {
+
+		go func() {
+			files := map[string]time.Time{}
+			haveMod := errors.New("有修改")
+			lfirst := true
+			for {
+				if err := filepath.Walk("./", func(path string, info os.FileInfo, err error) error {
+
+					if !info.IsDir() {
+						ext := filepath.Ext(info.Name())
+						if ext == ".go" || ext == ".exe" || ext == ".js" {
+							return nil
+						}
+					} else {
+						if info.Name() == "cndocs" {
+							return nil
+						}
+					}
+
+					if !info.IsDir() {
+						if v, ok := files[path]; ok {
+							if v != info.ModTime() {
+								files[path] = info.ModTime()
+								return haveMod
+							}
+						} else {
+							files[path] = info.ModTime()
+							if !lfirst {
+								return haveMod
+							}
+						}
+					}
+					return nil
+				}); err == haveMod {
+					updateSite()
+				}
+				lfirst = false
+				// 2秒检测一次
+				time.Sleep(time.Second * 1)
+			}
+		}()
+		http.Handle("/", http.FileServer(http.Dir("../")))
+
+		http.ListenAndServe(":8081", nil)
 	}
 }
 
@@ -141,4 +192,3 @@ func makeSite(root string, langName, langDir string, langs []interface{}) {
 	//}
 
 }
-
