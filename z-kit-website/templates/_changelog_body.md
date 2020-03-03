@@ -2,6 +2,12 @@
 **Please use Google Translate if your native language is not Chinese.**   
 
 
+ -- govcl --  
+ 
+ -- res2go --   
+
+## v1.2.8  
+
  -- govcl --    
 
 * 增加：liblcl：部分控件增加`ParentBackground`属性。  
