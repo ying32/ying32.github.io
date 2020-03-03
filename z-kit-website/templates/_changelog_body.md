@@ -32,6 +32,7 @@
 * 增加：`Tools`目录下添加一个`LazarusPatch`工具，用于对Lazarus源代码打补丁，以兼容Delphi或者其他的。  
 * 增加：`Tools`目录下添加一个`winRes`模板，用于生成windows下的syso文件。
 * 增加：编译liblcl时添加`USED_BY_LAZLOGGER_DUMMY`指令用于屏蔽lcl的调试信息。
+* 增加：liblcl兼容Delphi资源中的TListView的`ItemData`和TTreeView的`NodeData`，需要使用`Tools/LazarusPatch`打补丁后重新编译。   
 
 
  -- res2go --   
