@@ -4,8 +4,7 @@
 
 -- govcl --  
  
- * 增加：添加新的枚举类型:TDefaultMonitor  
- * 增加：TGoForm添加DefaultMonitor、Monitor属性   
+
  
  
 -- res2go --   
@@ -48,6 +47,9 @@
 * 增加：编译liblcl时添加`USED_BY_LAZLOGGER_DUMMY`指令用于屏蔽lcl的调试信息。
 * 增加：liblcl兼容Delphi资源中的TListView的`ItemData`和TTreeView的`NodeData`，需要使用`Tools/LazarusPatch`打补丁后重新编译。   
 * 更改：启用新的GoVCL图标，图标设计来自[Free Logo Design](https://www.freelogodesign.org/preview?lang=en&name=GoVCL&logo=2ffb4d90-2095-4daa-b334-389bbd40504c)  
+* 增加：添加新的枚举类型:TDefaultMonitor  
+* 增加：TGoForm添加DefaultMonitor、Monitor属性   
+* 增加：改变事件id的获取。    
 
  -- res2go --   
 
