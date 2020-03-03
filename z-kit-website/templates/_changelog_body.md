@@ -10,6 +10,7 @@
 
  -- govcl --    
 
+
 * 增加：liblcl：部分控件增加`ParentBackground`属性。  
 * 修改：调整liblvcl、liblcl资源窗口构建部分。   
 * 移除：移除掉原来自己处理缩放相关（vcl.Application.SetFormScaled无效了，待我有2k显示器后再测试这个问题）   
@@ -39,7 +40,7 @@
 * 增加：`Tools`目录下添加一个`winRes`模板，用于生成windows下的syso文件。
 * 增加：编译liblcl时添加`USED_BY_LAZLOGGER_DUMMY`指令用于屏蔽lcl的调试信息。
 * 增加：liblcl兼容Delphi资源中的TListView的`ItemData`和TTreeView的`NodeData`，需要使用`Tools/LazarusPatch`打补丁后重新编译。   
-
+* 更改：启用新的GoVCL图标，图标设计来自[Free Logo Design](https://www.freelogodesign.org/preview?lang=en&name=GoVCL&logo=2ffb4d90-2095-4daa-b334-389bbd40504c)  
 
  -- res2go --   
 
