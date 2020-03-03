@@ -2,12 +2,16 @@
 **Please use Google Translate if your native language is not Chinese.**   
 
 
- -- govcl --  
+-- govcl --  
  
  * 增加：添加新的枚举类型:TDefaultMonitor  
- * 增加：TGoForm添加DefaultMonitor、Monitor属性  
+ * 增加：TGoForm添加DefaultMonitor、Monitor属性   
  
- -- res2go --   
+ 
+-- res2go --   
+
+
+## 当前版本，master分支(Current version, master branch)
 
 ## v1.2.8  
 

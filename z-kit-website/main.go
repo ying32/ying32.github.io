@@ -20,10 +20,6 @@ var (
 func main() {
 	flag.Parse()
 
-	// debug
-
-	//genres("marked.min.js")
-
 	// 站点根目录
 	root := "../"
 	langs := readLangs()
