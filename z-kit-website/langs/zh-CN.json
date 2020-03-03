@@ -51,6 +51,15 @@
 			"includeMdFile": "_changelog_body.md",
 			"title": "更新日志",
 			"description": ""
+		},
+		{
+			"name": "about",
+			"path": "",
+			"markdown": true,
+			"includeFile1": "_markdown.html",
+			"includeMdFile": "_about_body.md",
+			"title": "关于",
+			"description": "about"
 		}
 	]
 }

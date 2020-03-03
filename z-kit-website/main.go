@@ -59,9 +59,12 @@ func main() {
 
 					if !info.IsDir() {
 						ext := filepath.Ext(info.Name())
-						if ext == ".go" || ext == ".exe" || ext == ".js" {
+						if ext != ".html" && ext != ".md" {
 							return nil
 						}
+						//if ext == ".go" || ext == ".exe" || ext == ".js" {
+						//	return nil
+						//}
 					} else {
 						if info.Name() == "cndocs" {
 							return nil

@@ -34,6 +34,15 @@
 			"description2": "Easy to use, write once, compile on multiple platforms",
 			"description3": "GoVCL is a completely open source, free, cross-platform Go language GUI library, and the underlying binding is from Delphi VCL / Lazarus LCL",
 			"viewTheGitHub": "View the GitHub"
+	   },
+	   {
+		   "name": "about",
+		   "path": "",
+		   "markdown": true,
+		   "includeFile1": "_markdown.html",
+		   "includeMdFile": "_about_body.md",
+		   "title": "About",
+		   "description": "about"
 	   }
 	]
 }

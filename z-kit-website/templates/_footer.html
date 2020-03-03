@@ -7,7 +7,7 @@
       <li><a href="https://github.com/ying32/govcl" target="_blank" rel="nofollow">GitHub {{.footer.repositoryTitle}}</a></li>
 	  <li><a href="https://gitee.com/ying32/govcl" target="_blank" rel="nofollow">Gitee {{.footer.repositoryTitle}}</a></li>
       <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank" rel="nofollow">{{.footer.exampleTitle}}</a></li>
-      <li><a href="https://github.com/ying32" target="_blank" rel="nofollow">{{.footer.aboutTitle}}</a></li>
+      <li><a href="/{{if ne .langDir ""}}{{.langDir}}/{{end}}about.html" rel="nofollow">{{.footer.aboutTitle}}</a></li>
         {{if not .issponsor}}
 	  <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sponsor"></use></svg> <a href="/sponsor.html" rel="nofollow" >{{.footer.sponsorTitle}}</a></li>
         {{end}}
