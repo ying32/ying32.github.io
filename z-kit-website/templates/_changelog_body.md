@@ -4,6 +4,9 @@
 
  -- govcl --  
  
+ * 增加：添加新的枚举类型:TDefaultMonitor  
+ * 增加：TGoForm添加DefaultMonitor、Monitor属性  
+ 
  -- res2go --   
 
 ## v1.2.8  
