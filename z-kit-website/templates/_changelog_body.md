@@ -18,38 +18,38 @@
 
 
 * 增加：liblcl：部分控件增加`ParentBackground`属性。  
-* 修改：调整liblvcl、liblcl资源窗口构建部分。   
-* 修改：Application.CreateForm方法今后不需要传入指定的字节数据了，res2go与UI设计器在保存时会添加注册相关的代码。  
-* 移除：移除掉原来自己处理缩放相关（vcl.Application.SetFormScaled无效了，待我有2k显示器后再测试这个问题）   
-* 增加：liblcl添加支持Linux下Webbrowser组件（原`TMiniWebview`）。  
-* 增加：添加一个`listviewitemedit`例子，用于双击项目直接编辑数据。  
-* 增加：`win`包：添加一些windows下TListView API。  
+* 修改：调整`liblvcl`、`liblcl`资源窗口构建部分。   
+* 修改：`Application.CreateForm`方法今后不需要传入指定的字节数据了，`res2go`与`UI设计器`在保存时会添加注册相关的代码。  
+* 移除：移除掉原来自己处理缩放相关（`vcl.Application.SetFormScaled`无效了，待我有2k显示器后再测试这个问题）。   
+* 增加：liblcl：`TMiniWebview`初步支持Linux。  
+* 增加：添加一个Windows下`listviewitemedit`例子，用于双击项目直接编辑数据。  
+* 增加：`win`包：添加一些Windows下TListView API。  
 * 增加：对`types`包中的一些类型定义增加了一些对应的方法函数。  
 * 修改：调整go字符串与libvcl/liblcl交互的方式。  
-* 增加：`TMiniWebview`增加一个`SetIEVersion`、`GetIEVersion`方法，并更新MiniWebview例子，限Windows。
+* 增加：Windows下的`TMiniWebview`增加`SetIEVersion`、`GetIEVersion`方法，并更新MiniWebview例子。
 * 增加：`rtl`包中增加了一些文件名相关的函数。  
-* 增加：尝试支持windows 64位的内存dll加载模式。 
+* 尝试：尝试支持Windows 64位的内存dll加载模式（未解决）。 
 * 增加：`TAction`和`TMenuItem`组件添加`AutoCheck`属性。 
-* 增加：`TCanvas`增加`Polygon`、`Polyline`、`PolyBezier`、`PolyBezierTo`(仅限libvcl)方法。  
+* 增加：`TCanvas`增加`Polygon`、`Polyline`、`PolyBezier`、`PolyBezierTo(仅限libvcl)`方法。  
 * 修改：`dylib`包移动到新的仓库`github/ying32/dylib`。   
-* 修复：修复libvcl的TMiniWebview不响应按键事件。 
-* 尝试：尝试解决windows下liblcl TMiniWebview不响应按键问题。  
+* 修复：修复libvcl的`TMiniWebview`不响应按键事件。 
+* 尝试：尝试解决windows下`liblcl TMiniWebview`不响应按键问题(未解决)。  
 * 修改：liblcl：Windows下的`TTrayIcon`创建时，默认加载`Application`的Icon。  
-* 增加：添加一个vcl.RegisterFormResource，用于`CreateForm`时自动查找对应资源。
+* 增加：添加一个`vcl.RegisterFormResource`，用于`CreateForm`时自动查找对应资源。
 * 增加：添加一个简易的markdown编辑器，用于演示。
 * 增加：liblcl：`TGoFom`添加兼容Delphi的方法`ScaleForPPI`、`ScaleForCurrentDpi`。
 * 增加：添加一个`formscale`例子。
 * 增加：`Tools`目录下添加一个`libBuild`工具，用于命令行构建libvcl或者liblcl。
 * 修改：`exts/tools`包更改为`exts/macapp`包，同时更新macapp里包的打包方式和添加app图标。
-* 修改：windows下`TMiniWebview`不再屏蔽右键和鼠标点击选择功能。 
+* 修改：Windows下`TMiniWebview`不再屏蔽右键和鼠标点击选择功能。 
 * 增加：增加一个Windows下的`winappres`资源包，用于快速引用默认的syso文件。
 * 增加：`Tools`目录下添加一个`LazarusPatch`工具，用于对Lazarus源代码打补丁，以兼容Delphi或者其他的。  
 * 增加：`Tools`目录下添加一个`winRes`模板，用于生成windows下的syso文件。
-* 增加：编译liblcl时添加`USED_BY_LAZLOGGER_DUMMY`指令用于屏蔽lcl的调试信息。
+* 增加：编译liblcl时添加`USED_BY_LAZLOGGER_DUMMY`指令用于屏蔽lcl的调试信息（似乎无效）。
 * 增加：liblcl兼容Delphi资源中的TListView的`ItemData`和TTreeView的`NodeData`，需要使用`Tools/LazarusPatch`打补丁后重新编译。   
-* 更改：启用新的GoVCL图标，图标设计来自[Free Logo Design](https://www.freelogodesign.org/preview?lang=en&name=GoVCL&logo=2ffb4d90-2095-4daa-b334-389bbd40504c)  
-* 增加：添加新的枚举类型:TDefaultMonitor  
-* 增加：TGoForm添加DefaultMonitor、Monitor属性   
+* 更改：启用新的GoVCL图标，图标设计来自[Free Logo Design](https://www.freelogodesign.org/preview?lang=en&name=GoVCL&logo=2ffb4d90-2095-4daa-b334-389bbd40504c)。  
+* 增加：添加新的枚举类型:`TDefaultMonitor`。  
+* 增加：`TGoForm`添加`DefaultMonitor`、`Monitor`属性。   
 * 增加：改变事件id的获取。    
 
  -- res2go --   
