@@ -95,10 +95,19 @@
 	background-color: #474752;
 }
 
+.bs-docs-nav .navbar-header .navbar-toggle:focus, .bs-docs-nav .navbar-header .navbar-toggle:hover {
+	background-color: #fff;
+	border-color: #fff;
+}
+
 .bs-docs-nav .navbar-toggle:hover {
 	background-color: #fff;
+	border-color: #fff;
 }
  
+.navbar-toggle {
+	border: 0px;
+} 
  
 .lead .btnsmall  {
 	width: auto;

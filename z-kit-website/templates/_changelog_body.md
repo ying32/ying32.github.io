@@ -4,7 +4,7 @@
 
 -- govcl --  
  
-
+* 增加：vcl包添加一个`RunApp`函数，用法参见`samples/basicResForm`例子。   
  
  
 -- res2go --   
