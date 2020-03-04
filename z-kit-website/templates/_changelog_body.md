@@ -19,6 +19,7 @@
 
 * 增加：liblcl：部分控件增加`ParentBackground`属性。  
 * 修改：调整liblvcl、liblcl资源窗口构建部分。   
+* 修改：Application.CreateForm方法今后不需要传入指定的字节数据了，res2go与UI设计器在保存时会添加注册相关的代码。  
 * 移除：移除掉原来自己处理缩放相关（vcl.Application.SetFormScaled无效了，待我有2k显示器后再测试这个问题）   
 * 增加：liblcl添加支持Linux下Webbrowser组件（原`TMiniWebview`）。  
 * 增加：添加一个`listviewitemedit`例子，用于双击项目直接编辑数据。  
