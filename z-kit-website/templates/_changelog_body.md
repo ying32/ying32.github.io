@@ -7,9 +7,9 @@
 * 增加：vcl包添加一个`RunApp`函数用于简化main函数中创建Form对象，用法参见`samples/basicResForm`例子。   
 * 增加：添加一个新的包`pkgs/libname`函数，用于加载指定位置的libvcl或者liblcl，用法参见`samples/customLibTest`例子。   
 * 变更：`vcl/exts/macapp`包移至`pkgs/macapp`。
-* 增加：`TCanvas`添加`Pixels`属性。  
+* 增加：`TCanvas`添加`Pixels`属性。   
 * 增加：添加一个新的`drawrose`例子。  
-* 修复：修复Windows下`TMiniWebview`在64位系统中不能设置IE版本。 
+* 修复：修复Windows下`TMiniWebview`在64位程序不能设置IE版本。 
  
 -- res2go --   
 
