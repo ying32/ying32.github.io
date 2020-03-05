@@ -9,6 +9,7 @@
 * 变更：`vcl/exts/macapp`包移至`pkgs/macapp`。
 * 增加：`TCanvas`添加`Pixels`属性。  
 * 增加：添加一个新的`drawrose`例子。  
+* 修复：修复Windows下`TMiniWebview`在64位系统中不能设置IE版本。 
  
 -- res2go --   
 
