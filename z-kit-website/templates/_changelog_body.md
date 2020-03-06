@@ -16,6 +16,8 @@
 * 变更：`vcl/exts/skinh`包移到`pkgs/skinh`。
 * 变更：`vcl/exts/wke`包移到`pkgs/wke`。
 * 变更：`vcl/exts/miniblink`包移到`pkgs/miniblink`。
+* 变更：`vcl/exts/winappres`包移到`pkgs/winappres`。
+* 变更：`vcl/exts/multilang`包移到`vcl/multilang`。
  
 -- res2go --   
 
