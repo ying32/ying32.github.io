@@ -9,7 +9,13 @@
 * 变更：`vcl/exts/macapp`包移至`pkgs/macapp`。
 * 增加：`TCanvas`添加`Pixels`属性。   
 * 增加：添加一个新的`drawrose`例子。  
-* 修复：修复Windows下`TMiniWebview`在64位程序不能设置IE版本。 
+* 修复：修复Windows下`TMiniWebview`在64位程序中不能设置IE版本。 
+* 增加：`win`包中增加一个`GoPtrStr`函数。
+* 变更：`vcl/samples/mp3Player/bass`包移到`pkgs/bass`。
+* 变更：`vcl/samples/simplelibvlc/libvlc`包移到`pkgs/libvlc`。
+* 变更：`vcl/exts/skinh`包移到`pkgs/skinh`。
+* 变更：`vcl/exts/wke`包移到`pkgs/wke`。
+* 变更：`vcl/exts/miniblink`包移到`pkgs/miniblink`。
  
 -- res2go --   
 
