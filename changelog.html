@@ -110,7 +110,14 @@
                     <h2 id="下个版本，dev分支next-version-dev-branch">下个版本，dev分支(Next version, dev branch)</h2>
 <p><strong>Please use Google Translate if your native language is not Chinese.</strong>   </p>
 <p>-- govcl --  </p>
+<p>-- res2go --   </p>
+<h2 id="当前版本，master分支current-version-master-branch">当前版本，master分支(Current version, master branch)</h2>
+<h2 id="v129">v1.2.9</h2>
+<p>-- govcl --  </p>
 <ul>
+<li>增加：添加新的枚举类型:<code>TDefaultMonitor</code>。   </li>
+<li>增加：<code>TGoForm</code>添加<code>DefaultMonitor</code>、<code>Monitor</code>属性。   </li>
+<li>增加：改变事件id的获取。    </li>
 <li>增加：vcl包添加一个<code>RunApp</code>函数用于简化main函数中创建Form对象，用法参见<code>samples/basicResForm</code>例子。   </li>
 <li>增加：添加一个新的包<code>pkgs/libname</code>函数，用于加载指定位置的libvcl或者liblcl，用法参见<code>samples/customLibTest</code>例子。   </li>
 <li>变更：<code>vcl/exts/macapp</code>包移至<code>pkgs/macapp</code>。</li>
@@ -127,85 +134,49 @@
 <li>变更：<code>vcl/exts/multilang</code>包移到<code>vcl/multilang</code>。</li>
 </ul>
 <p>-- res2go --   </p>
-<h2 id="当前版本，master分支current-version-master-branch">当前版本，master分支(Current version, master branch)</h2>
+<ul>
+<li>更新：更新<code>winappres</code>包路径。</li>
+</ul>
 <h2 id="v128">v1.2.8</h2>
 <p> -- govcl --    </p>
 <ul>
-<li><p>增加：liblcl：部分控件增加<code>ParentBackground</code>属性。  </p>
-</li>
-<li><p>修改：调整<code>liblvcl</code>、<code>liblcl</code>资源窗口构建部分。   </p>
-</li>
-<li><p>修改：<code>Application.CreateForm</code>方法今后不需要传入指定的字节数据了，<code>res2go</code>与<code>UI设计器</code>在保存时会添加注册相关的代码。  </p>
-</li>
-<li><p>移除：移除掉原来自己处理缩放相关（<code>vcl.Application.SetFormScaled</code>无效了，待我有2k显示器后再测试这个问题）。   </p>
-</li>
-<li><p>增加：liblcl：<code>TMiniWebview</code>初步支持Linux。  </p>
-</li>
-<li><p>增加：添加一个Windows下<code>listviewitemedit</code>例子，用于双击项目直接编辑数据。  </p>
-</li>
-<li><p>增加：<code>win</code>包：添加一些Windows下TListView API。  </p>
-</li>
-<li><p>增加：对<code>types</code>包中的一些类型定义增加了一些对应的方法函数。  </p>
-</li>
-<li><p>修改：调整go字符串与libvcl/liblcl交互的方式。  </p>
-</li>
-<li><p>增加：Windows下的<code>TMiniWebview</code>增加<code>SetIEVersion</code>、<code>GetIEVersion</code>方法，并更新MiniWebview例子。</p>
-</li>
-<li><p>增加：<code>rtl</code>包中增加了一些文件名相关的函数。  </p>
-</li>
-<li><p>尝试：尝试支持Windows 64位的内存dll加载模式（未解决）。 </p>
-</li>
-<li><p>增加：<code>TAction</code>和<code>TMenuItem</code>组件添加<code>AutoCheck</code>属性。 </p>
-</li>
-<li><p>增加：<code>TCanvas</code>增加<code>Polygon</code>、<code>Polyline</code>、<code>PolyBezier</code>、<code>PolyBezierTo(仅限libvcl)</code>方法。  </p>
-</li>
-<li><p>修改：<code>dylib</code>包移动到新的仓库<code>github/ying32/dylib</code>。   </p>
-</li>
-<li><p>修复：修复libvcl的<code>TMiniWebview</code>不响应按键事件。 </p>
-</li>
-<li><p>尝试：尝试解决windows下<code>liblcl TMiniWebview</code>不响应按键问题(未解决)。  </p>
-</li>
-<li><p>修改：liblcl：Windows下的<code>TTrayIcon</code>创建时，默认加载<code>Application</code>的Icon。  </p>
-</li>
-<li><p>增加：添加一个<code>vcl.RegisterFormResource</code>，用于<code>CreateForm</code>时自动查找对应资源。</p>
-</li>
-<li><p>增加：添加一个简易的markdown编辑器，用于演示。</p>
-</li>
-<li><p>增加：liblcl：<code>TGoFom</code>添加兼容Delphi的方法<code>ScaleForPPI</code>、<code>ScaleForCurrentDpi</code>。</p>
-</li>
-<li><p>增加：添加一个<code>formscale</code>例子。</p>
-</li>
-<li><p>增加：<code>Tools</code>目录下添加一个<code>libBuild</code>工具，用于命令行构建libvcl或者liblcl。</p>
-</li>
-<li><p>修改：<code>exts/tools</code>包更改为<code>exts/macapp</code>包，同时更新macapp里包的打包方式和添加app图标。</p>
-</li>
-<li><p>修改：Windows下<code>TMiniWebview</code>不再屏蔽右键和鼠标点击选择功能。 </p>
-</li>
-<li><p>增加：增加一个Windows下的<code>winappres</code>资源包，用于快速引用默认的syso文件。</p>
-</li>
-<li><p>增加：<code>Tools</code>目录下添加一个<code>LazarusPatch</code>工具，用于对Lazarus源代码打补丁，以兼容Delphi或者其他的。  </p>
-</li>
-<li><p>增加：<code>Tools</code>目录下添加一个<code>winRes</code>模板，用于生成windows下的syso文件。</p>
-</li>
-<li><p>增加：编译liblcl时添加<code>USED_BY_LAZLOGGER_DUMMY</code>指令用于屏蔽lcl的调试信息（似乎无效）。</p>
-</li>
-<li><p>增加：liblcl兼容Delphi资源中的TListView的<code>ItemData</code>和TTreeView的<code>NodeData</code>，需要使用<code>Tools/LazarusPatch</code>打补丁后重新编译。   </p>
-</li>
-<li><p>更改：启用新的GoVCL图标，图标设计来自<a href="https://www.freelogodesign.org/preview?lang=en&amp;name=GoVCL&amp;logo=2ffb4d90-2095-4daa-b334-389bbd40504c">Free Logo Design</a>。  </p>
-</li>
-<li><p>增加：添加新的枚举类型:<code>TDefaultMonitor</code>。  </p>
-</li>
-<li><p>增加：<code>TGoForm</code>添加<code>DefaultMonitor</code>、<code>Monitor</code>属性。   </p>
-</li>
-<li><p>增加：改变事件id的获取。    </p>
-<p>-- res2go --   </p>
-</li>
-<li><p>删除：移除<code>-outbytes</code>选项，总是为<code>True</code>。</p>
-</li>
-<li><p>增加：增加注册当前Form资源，用于自动加载。</p>
-</li>
-<li><p>修改：<code>-outres</code>参数改为添加一个<code>winappres</code>包。</p>
-</li>
+<li>增加：liblcl：部分控件增加<code>ParentBackground</code>属性。  </li>
+<li>修改：调整<code>liblvcl</code>、<code>liblcl</code>资源窗口构建部分。   </li>
+<li>修改：<code>Application.CreateForm</code>方法今后不需要传入指定的字节数据了，<code>res2go</code>与<code>UI设计器</code>在保存时会添加注册相关的代码。  </li>
+<li>移除：移除掉原来自己处理缩放相关（<code>vcl.Application.SetFormScaled</code>无效了，待我有2k显示器后再测试这个问题）。   </li>
+<li>增加：liblcl：<code>TMiniWebview</code>初步支持Linux。  </li>
+<li>增加：添加一个Windows下<code>listviewitemedit</code>例子，用于双击项目直接编辑数据。  </li>
+<li>增加：<code>win</code>包：添加一些Windows下TListView API。  </li>
+<li>增加：对<code>types</code>包中的一些类型定义增加了一些对应的方法函数。  </li>
+<li>修改：调整go字符串与libvcl/liblcl交互的方式。  </li>
+<li>增加：Windows下的<code>TMiniWebview</code>增加<code>SetIEVersion</code>、<code>GetIEVersion</code>方法，并更新MiniWebview例子。</li>
+<li>增加：<code>rtl</code>包中增加了一些文件名相关的函数。  </li>
+<li>尝试：尝试支持Windows 64位的内存dll加载模式（未解决）。 </li>
+<li>增加：<code>TAction</code>和<code>TMenuItem</code>组件添加<code>AutoCheck</code>属性。 </li>
+<li>增加：<code>TCanvas</code>增加<code>Polygon</code>、<code>Polyline</code>、<code>PolyBezier</code>、<code>PolyBezierTo(仅限libvcl)</code>方法。  </li>
+<li>修改：<code>dylib</code>包移动到新的仓库<code>github/ying32/dylib</code>。   </li>
+<li>修复：修复libvcl的<code>TMiniWebview</code>不响应按键事件。 </li>
+<li>尝试：尝试解决windows下<code>liblcl TMiniWebview</code>不响应按键问题(未解决)。  </li>
+<li>修改：liblcl：Windows下的<code>TTrayIcon</code>创建时，默认加载<code>Application</code>的Icon。  </li>
+<li>增加：添加一个<code>vcl.RegisterFormResource</code>，用于<code>CreateForm</code>时自动查找对应资源。</li>
+<li>增加：添加一个简易的markdown编辑器，用于演示。</li>
+<li>增加：liblcl：<code>TGoFom</code>添加兼容Delphi的方法<code>ScaleForPPI</code>、<code>ScaleForCurrentDpi</code>。</li>
+<li>增加：添加一个<code>formscale</code>例子。</li>
+<li>增加：<code>Tools</code>目录下添加一个<code>libBuild</code>工具，用于命令行构建libvcl或者liblcl。</li>
+<li>修改：<code>exts/tools</code>包更改为<code>exts/macapp</code>包，同时更新macapp里包的打包方式和添加app图标。</li>
+<li>修改：Windows下<code>TMiniWebview</code>不再屏蔽右键和鼠标点击选择功能。 </li>
+<li>增加：增加一个Windows下的<code>winappres</code>资源包，用于快速引用默认的syso文件。</li>
+<li>增加：<code>Tools</code>目录下添加一个<code>LazarusPatch</code>工具，用于对Lazarus源代码打补丁，以兼容Delphi或者其他的。  </li>
+<li>增加：<code>Tools</code>目录下添加一个<code>winRes</code>模板，用于生成windows下的syso文件。</li>
+<li>增加：编译liblcl时添加<code>USED_BY_LAZLOGGER_DUMMY</code>指令用于屏蔽lcl的调试信息（似乎无效）。</li>
+<li>增加：liblcl兼容Delphi资源中的TListView的<code>ItemData</code>和TTreeView的<code>NodeData</code>，需要使用<code>Tools/LazarusPatch</code>打补丁后重新编译。   </li>
+<li>更改：启用新的GoVCL图标，图标设计来自<a href="https://www.freelogodesign.org/preview?lang=en&amp;name=GoVCL&amp;logo=2ffb4d90-2095-4daa-b334-389bbd40504c">Free Logo Design</a>。  </li>
+</ul>
+<p> -- res2go --   </p>
+<ul>
+<li>删除：移除<code>-outbytes</code>选项，总是为<code>True</code>。</li>
+<li>增加：增加注册当前Form资源，用于自动加载。</li>
+<li>修改：<code>-outres</code>参数改为添加一个<code>winappres</code>包。</li>
 </ul>
 <h2 id="v127">v1.2.7</h2>
 <p> -- govcl --  </p>

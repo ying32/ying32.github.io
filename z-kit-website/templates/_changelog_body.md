@@ -1,9 +1,19 @@
 ## 下个版本，dev分支(Next version, dev branch)
 **Please use Google Translate if your native language is not Chinese.**   
 
+-- govcl --  
+
+-- res2go --   
+
+## 当前版本，master分支(Current version, master branch)
+
+## v1.2.9  
 
 -- govcl --  
  
+* 增加：添加新的枚举类型:`TDefaultMonitor`。   
+* 增加：`TGoForm`添加`DefaultMonitor`、`Monitor`属性。   
+* 增加：改变事件id的获取。    
 * 增加：vcl包添加一个`RunApp`函数用于简化main函数中创建Form对象，用法参见`samples/basicResForm`例子。   
 * 增加：添加一个新的包`pkgs/libname`函数，用于加载指定位置的libvcl或者liblcl，用法参见`samples/customLibTest`例子。   
 * 变更：`vcl/exts/macapp`包移至`pkgs/macapp`。
@@ -21,13 +31,11 @@
  
 -- res2go --   
 
-
-## 当前版本，master分支(Current version, master branch)
+* 更新：更新`winappres`包路径。
 
 ## v1.2.8  
 
  -- govcl --    
-
 
 * 增加：liblcl：部分控件增加`ParentBackground`属性。  
 * 修改：调整`liblvcl`、`liblcl`资源窗口构建部分。   
@@ -60,9 +68,7 @@
 * 增加：编译liblcl时添加`USED_BY_LAZLOGGER_DUMMY`指令用于屏蔽lcl的调试信息（似乎无效）。
 * 增加：liblcl兼容Delphi资源中的TListView的`ItemData`和TTreeView的`NodeData`，需要使用`Tools/LazarusPatch`打补丁后重新编译。   
 * 更改：启用新的GoVCL图标，图标设计来自[Free Logo Design](https://www.freelogodesign.org/preview?lang=en&name=GoVCL&logo=2ffb4d90-2095-4daa-b334-389bbd40504c)。  
-* 增加：添加新的枚举类型:`TDefaultMonitor`。  
-* 增加：`TGoForm`添加`DefaultMonitor`、`Monitor`属性。   
-* 增加：改变事件id的获取。    
+ 
 
  -- res2go --   
 
