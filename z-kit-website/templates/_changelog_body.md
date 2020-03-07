@@ -3,6 +3,8 @@
 
 -- govcl --  
 
+* 修改：liblcl：TListView、TTreeView一些默认属性修改。
+
 -- res2go --   
 
 ## 当前版本，master分支(Current version, master branch)
