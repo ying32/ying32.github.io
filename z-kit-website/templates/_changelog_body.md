@@ -7,9 +7,10 @@
 * 修复：修复`macapp`打包时执行命令传入的参数会在某些时候不正确。  
 * 修改：Linux下的TMiniWebview调用Navigate时不再设置控件焦点。  
 * 修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  
-* 增加：增加一个使用[Go Graphics - 2D](github.com/fogleman/gg)绘制并显示到GoVCL的控件上，例了见`samples/drawusegg`，演示视频见`samples/drawusegg/video.mp4`。 
+* 增加：使用[Go Graphics - 2D](github.com/fogleman/gg)绘制并显示到GoVCL的控件上，例子见`samples/drawusegg`，演示视频见`samples/drawusegg/video.mp4`。 
+* 增加：使用[Go Image Filtering Toolkit](https://github.com/disintegration/gift)处理图片滤镜并显示到GoVCL的控件上，子见`drawfilterusegift`，演示视频见`drawfilterusegift/video.mp4`。 
 
--- res2go --   
+-- res2go --    
 
 ## 当前版本，master分支(Current version, master branch)
 
