@@ -155,7 +155,7 @@
 /* https://v3.bootcss.com/examples/dashboard/dashboard.css */
 
 .main {
-  padding: 80px;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .main {
