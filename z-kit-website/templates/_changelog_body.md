@@ -4,6 +4,8 @@
 -- govcl --  
 
 * 修改：liblcl：TListView、TTreeView一些默认属性修改。
+* 修复：修复`macapp`打包时执行命令传入的参数会在某些时候不正确。  
+* 修改：Linux下的TMiniWebview调用Navigate时不再设置控件焦点。  
 
 -- res2go --   
 
