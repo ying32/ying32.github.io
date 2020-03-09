@@ -9,6 +9,9 @@
 * 修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  
 * 增加：使用[Go Graphics - 2D](github.com/fogleman/gg)绘制并显示到GoVCL的控件上，例子见`samples/drawusegg`，演示视频见`samples/drawusegg/video.mp4`。 
 * 增加：使用[Go Image Filtering Toolkit](https://github.com/disintegration/gift)处理图片滤镜并显示到GoVCL的控件上，子见`drawfilterusegift`，演示视频见`drawfilterusegift/video.mp4`。 
+* 增加：`TForm`增加`InheritedWndProc`方法。
+* 修改：改变`TForm`的`OnWndPro`c回调函数，移除`handled`参数。
+
 
 -- res2go --    
 
