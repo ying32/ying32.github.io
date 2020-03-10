@@ -21,6 +21,7 @@
 * 添加一个`vcl.LclLoaded`函数。
 * `bitmap`包添加新的函数`ToBitmap2`。
 * `TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
+* 重构事件中ID的获取。
 
 -- res2go --    
 
