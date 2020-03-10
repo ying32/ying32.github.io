@@ -8,9 +8,9 @@
 * 修改：Linux下的TMiniWebview调用Navigate时不再设置控件焦点。  
 * 修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  
 * 增加：使用[Go Graphics - 2D](github.com/fogleman/gg)绘制并显示到GoVCL的控件上，例子见`samples/drawusegg`，演示视频见`samples/drawusegg/video.mp4`。 
-* 增加：使用[Go Image Filtering Toolkit](https://github.com/disintegration/gift)处理图片滤镜并显示到GoVCL的控件上，子见`samples/drawfilterusegift`，演示视频见`samples/drawfilterusegift/video.mp4`。 
-* 增加：`TForm`增加`InheritedWndProc`方法。
-* 修改：改变`TForm`的`OnWndPro`c回调函数，移除`handled`参数。 
+* 增加：使用[Go Image Filtering Toolkit](https://github.com/disintegration/gift)处理图片滤镜并显示到GoVCL的控件上，例子见`samples/drawfilterusegift`，演示视频见`samples/drawfilterusegift/video.mp4`。 
+* 增加：`TForm`增加`InheritedWndProc`方法，用于在`Form`的`OnWndProc`中使用。
+* 修改：改变`TForm`的`OnWndProc`回调函数，移除`handled`参数。 
 * 增加：添加一个`vcl/bitmap`包，用于将Go的Image转为VCL/LCL的图像。 
 * 增加：使用[Charts for Go](https://github.com/vdobler/chart)绘制图表并显示到GoVCL的控件上，例子见`samples/drawchart`。 
 * 增加：`types`包中添加新的类型`TSet`，并添加相关函数`NewSet`、方法`TSet.Include`、`TSet.Exclude`、`TSet.In`，用于简化Delphi/Lazarus的集合操作。
@@ -20,6 +20,7 @@
 * `TBitmap`添加新的属性`TransparentMode`、`AlphaFormat`(仅libvcl)。
 * 添加一个`vcl.LclLoaded`函数。
 * `bitmap`包添加新的函数`ToBitmap2`。
+* `TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
 
 -- res2go --    
 
