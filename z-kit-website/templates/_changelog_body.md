@@ -17,6 +17,9 @@
 * 丢弃：`rtl.Include`、`rtl.Exclude`、`rtl.InSets`标记为`Deprecated`。  
 * 增加：添加`locales`包及默认的子包`zh_CN`用于本地化一些对话框内的文本。  
 * 修改：修改`samples/menu`例子，增加在macOS下的Application菜单中添加项目。  
+* `TBitmap`添加新的属性`TransparentMode`、`AlphaFormat`(仅libvcl)。
+* 添加一个`vcl.LclLoaded`函数。
+* `bitmap`包添加新的函数`ToBitmap2`。
 
 -- res2go --    
 
