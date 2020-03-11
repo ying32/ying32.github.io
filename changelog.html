@@ -117,22 +117,23 @@
 <li>修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  </li>
 <li>增加：使用<a href="github.com/fogleman/gg">Go Graphics - 2D</a>绘制并显示到GoVCL的控件上，例子见<code>samples/drawusegg</code>，演示视频见<code>samples/drawusegg/video.mp4</code>。 </li>
 <li>增加：使用<a href="https://github.com/disintegration/gift">Go Image Filtering Toolkit</a>处理图片滤镜并显示到GoVCL的控件上，例子见<code>samples/drawfilterusegift</code>，演示视频见<code>samples/drawfilterusegift/video.mp4</code>。 </li>
-<li>增加：<code>TForm</code>增加<code>InheritedWndProc</code>方法，用于在<code>Form</code>的<code>OnWndProc</code>中使用。</li>
+<li>增加：<code>TForm</code>增加<code>InheritedWndProc</code>方法，用于在<code>TForm</code>的<code>OnWndProc</code>中使用。</li>
 <li>修改：改变<code>TForm</code>的<code>OnWndProc</code>回调函数，移除<code>handled</code>参数。 </li>
 <li>增加：添加一个<code>vcl/bitmap</code>包，用于将Go的Image转为VCL/LCL的图像。 </li>
 <li>增加：使用<a href="https://github.com/vdobler/chart">Charts for Go</a>绘制图表并显示到GoVCL的控件上，例子见<code>samples/drawchart</code>。 </li>
 <li>增加：<code>types</code>包中添加新的类型<code>TSet</code>，并添加相关函数<code>NewSet</code>、方法<code>TSet.Include</code>、<code>TSet.Exclude</code>、<code>TSet.In</code>，用于简化Delphi/Lazarus的集合操作，原来使用了的可能需要修改为新的方式。</li>
 <li>丢弃：<code>rtl.Include</code>、<code>rtl.Exclude</code>、<code>rtl.InSets</code>标记为<code>Deprecated</code>。  </li>
-<li>增加：添加<code>locales</code>包及默认的子包<code>zh_CN</code>用于本地化一些对话框内的文本。  </li>
+<li>增加：添加<code>vcl/locales</code>包及默认的子包<code>zh_CN</code>用于本地化一些对话框内的文本。  </li>
 <li>修改：修改<code>samples/menu</code>例子，增加在macOS下的Application菜单中添加项目。  </li>
 <li>增加：<code>TBitmap</code>添加新的属性<code>TransparentMode</code>、<code>AlphaFormat</code>(仅libvcl)。</li>
 <li>增加：添加一个<code>vcl.LclLoaded</code>函数。</li>
-<li>增加：<code>bitmap</code>包添加新的函数<code>ToBitmap2</code>、<code>ToGoImage</code>。</li>
+<li>增加：<code>vcl/bitmap</code>包添加新的函数<code>ToBitmap2</code>、<code>ToGoImage</code>。</li>
 <li>增加：<code>TBitmap</code>添加<code>BeginUpdate</code>、<code>EndUpdate</code>和<code>Clear</code>方法(仅liblcl有效)。</li>
 <li>修改：重构事件中ID的获取。</li>
 <li>添加：所有对象添加<code>Is</code>和<code>As</code>方法，用于简化对象的判断和对象的动态转换。</li>
 <li>修改：所有对象都添加一个<code>As&lt;classname&gt;</code>函数，用于动态转换对象。所有对象的<code>&lt;classname&gt;FromInst</code>, <code>&lt;classname&gt;FromObj</code>, <code>&lt;classname&gt;FromUnsafePointer</code>标记为弃用。</li>
 <li>添加：<code>TStrings</code>和<code>TStringList</code>添加<code>S</code>和<code>SetS</code>用于简化原来的<code>Strings</code>和<code>SetStrings</code>方法。</li>
+<li>修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。</li>
 </ul>
 <p>-- res2go --    </p>
 <h2 id="当前版本，master分支current-version-master-branch">当前版本，master分支(Current version, master branch)</h2>

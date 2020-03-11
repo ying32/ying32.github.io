@@ -9,22 +9,23 @@
 * 修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  
 * 增加：使用[Go Graphics - 2D](github.com/fogleman/gg)绘制并显示到GoVCL的控件上，例子见`samples/drawusegg`，演示视频见`samples/drawusegg/video.mp4`。 
 * 增加：使用[Go Image Filtering Toolkit](https://github.com/disintegration/gift)处理图片滤镜并显示到GoVCL的控件上，例子见`samples/drawfilterusegift`，演示视频见`samples/drawfilterusegift/video.mp4`。 
-* 增加：`TForm`增加`InheritedWndProc`方法，用于在`Form`的`OnWndProc`中使用。
+* 增加：`TForm`增加`InheritedWndProc`方法，用于在`TForm`的`OnWndProc`中使用。
 * 修改：改变`TForm`的`OnWndProc`回调函数，移除`handled`参数。 
 * 增加：添加一个`vcl/bitmap`包，用于将Go的Image转为VCL/LCL的图像。 
 * 增加：使用[Charts for Go](https://github.com/vdobler/chart)绘制图表并显示到GoVCL的控件上，例子见`samples/drawchart`。 
 * 增加：`types`包中添加新的类型`TSet`，并添加相关函数`NewSet`、方法`TSet.Include`、`TSet.Exclude`、`TSet.In`，用于简化Delphi/Lazarus的集合操作，原来使用了的可能需要修改为新的方式。
 * 丢弃：`rtl.Include`、`rtl.Exclude`、`rtl.InSets`标记为`Deprecated`。  
-* 增加：添加`locales`包及默认的子包`zh_CN`用于本地化一些对话框内的文本。  
+* 增加：添加`vcl/locales`包及默认的子包`zh_CN`用于本地化一些对话框内的文本。  
 * 修改：修改`samples/menu`例子，增加在macOS下的Application菜单中添加项目。  
 * 增加：`TBitmap`添加新的属性`TransparentMode`、`AlphaFormat`(仅libvcl)。
 * 增加：添加一个`vcl.LclLoaded`函数。
-* 增加：`bitmap`包添加新的函数`ToBitmap2`、`ToGoImage`。
+* 增加：`vcl/bitmap`包添加新的函数`ToBitmap2`、`ToGoImage`。
 * 增加：`TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
 * 修改：重构事件中ID的获取。
 * 添加：所有对象添加`Is`和`As`方法，用于简化对象的判断和对象的动态转换。
 * 修改：所有对象都添加一个`As<classname>`函数，用于动态转换对象。所有对象的`<classname>FromInst`, `<classname>FromObj`, `<classname>FromUnsafePointer`标记为弃用。
 * 添加：`TStrings`和`TStringList`添加`S`和`SetS`用于简化原来的`Strings`和`SetStrings`方法。
+* 修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。
 
 -- res2go --    
 
