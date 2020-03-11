@@ -1,6 +1,7 @@
 **不在乎y(ying32)**   
 
-一个迷茫的人，没事写写代码，也不是什么大神。  
+一个迷茫的人，没事写写代码，也不是什么大神。   
+学习Go却“跑偏了”，净瞎折腾GUI去了，唉。 
 <br />
 
 ![logo](/assets/images/logo1.png)  
@@ -12,5 +13,5 @@ GoVCL从开始到现在都不是为了大型项目准备的，更不是为了需
 <br />
 <br />
 
-* Github： https://github.com/ying32 
-* Gitee: https://gitee.com/ying32 
+* Github：https://github.com/ying32 
+* Gitee：https://gitee.com/ying32 
