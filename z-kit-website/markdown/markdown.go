@@ -89,7 +89,7 @@ func (m *Markdown) covToHTML(str string, opts map[string]interface{}) string {
 
 func CovToHTML(str string, opts map[string]interface{}) string {
 	if opts == nil {
-		opts = map[string]interface{}{"gfm": true, "breaks": true, "tables": true}
+		opts = map[string]interface{}{"gfm": true, "breaks": true, "tables": true, "highlight": true}
 	}
 	return markObj.covToHTML(str, opts)
 }

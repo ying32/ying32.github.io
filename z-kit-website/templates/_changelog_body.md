@@ -23,6 +23,7 @@
 * 增加：`TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
 * 修改：重构事件中ID的获取。
 * 添加：所有对象添加一个`Is`方法，此方法为`InheritsFrom`的别名。
+* 修改：所有对象都添加一个`As<classname>`函数，用于动态转换对象。所有对象的`<classname>FromInst`, `<classname>FromObj`, `<classname>FromUnsafePointer`标记为弃用。
 
 -- res2go --    
 

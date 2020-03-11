@@ -18,7 +18,7 @@
 		    "name": "index",
 		    "isHome": true,
 			"path": "",
-
+			"markdown": false,
 			"includeFile1": "_home.html",
 
 		    "title": "跨平台的原生Go GUI开发库",
