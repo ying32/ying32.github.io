@@ -19,7 +19,7 @@
 * 修改：修改`samples/menu`例子，增加在macOS下的Application菜单中添加项目。  
 * 增加：`TBitmap`添加新的属性`TransparentMode`、`AlphaFormat`(仅libvcl)。
 * 增加：添加一个`vcl.LclLoaded`函数。
-* 增加：`bitmap`包添加新的函数`ToBitmap2`。
+* 增加：`bitmap`包添加新的函数`ToBitmap2`、`ToGoImage`。
 * 增加：`TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
 * 修改：重构事件中ID的获取。
 * 添加：所有对象添加一个`Is`方法，此方法为`InheritsFrom`的别名。
