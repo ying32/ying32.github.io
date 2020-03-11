@@ -3,9 +3,9 @@
 
 -- govcl --  
 
-* 修改：liblcl：TListView、TTreeView一些默认属性修改，`ScrollBars`默认为`ssAutoBoth`，TTreeView的`TreeLinePenStyle`默认值为`psSolid`。
+* 修改：liblcl：`TListView`、`TTreeView`一些默认属性修改，`ScrollBars`默认为`ssAutoBoth`，TTreeView的`TreeLinePenStyle`默认值为`psSolid`。
 * 修复：修复`macapp`打包时执行命令传入的参数会在某些时候不正确。  
-* 修改：Linux下的TMiniWebview调用Navigate时不再设置控件焦点。  
+* 修改：Linux下的`TMiniWebview`调用`Navigate`时不再设置控件焦点。  
 * 修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  
 * 增加：使用[Go Graphics - 2D](github.com/fogleman/gg)绘制并显示到GoVCL的控件上，例子见`samples/drawusegg`，演示视频见`samples/drawusegg/video.mp4`。 
 * 增加：使用[Go Image Filtering Toolkit](https://github.com/disintegration/gift)处理图片滤镜并显示到GoVCL的控件上，例子见`samples/drawfilterusegift`，演示视频见`samples/drawfilterusegift/video.mp4`。 
@@ -22,7 +22,7 @@
 * 增加：`vcl/bitmap`包添加新的函数`ToBitmap2`、`ToGoImage`。
 * 增加：`TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
 * 修改：重构事件中ID的获取。
-* 添加：所有对象添加`Is`和`As`方法，用于简化对象的判断和对象的动态转换，如：`button.Is().Control()`，`sender.As().Button()`。
+* 添加：所有对象添加`Is`，用于简化对象的判断和对象的动态转换，如：`button.Is().Control()`。
 * 修改：所有对象都添加一个`As<classname>`函数，用于动态转换对象，如：`vcl.AsButton(sender)`。所有对象的`<classname>FromInst`, `<classname>FromObj`, `<classname>FromUnsafePointer`标记为弃用。
 * 添加：`TStrings`和`TStringList`添加`S`和`SetS`用于简化原来的`Strings`和`SetStrings`方法。
 * 修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。

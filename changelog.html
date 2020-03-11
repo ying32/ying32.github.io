@@ -111,9 +111,9 @@
 <p><strong>Please use Google Translate if your native language is not Chinese.</strong>   </p>
 <p>-- govcl --  </p>
 <ul>
-<li>修改：liblcl：TListView、TTreeView一些默认属性修改，<code>ScrollBars</code>默认为<code>ssAutoBoth</code>，TTreeView的<code>TreeLinePenStyle</code>默认值为<code>psSolid</code>。</li>
+<li>修改：liblcl：<code>TListView</code>、<code>TTreeView</code>一些默认属性修改，<code>ScrollBars</code>默认为<code>ssAutoBoth</code>，TTreeView的<code>TreeLinePenStyle</code>默认值为<code>psSolid</code>。</li>
 <li>修复：修复<code>macapp</code>打包时执行命令传入的参数会在某些时候不正确。  </li>
-<li>修改：Linux下的TMiniWebview调用Navigate时不再设置控件焦点。  </li>
+<li>修改：Linux下的<code>TMiniWebview</code>调用<code>Navigate</code>时不再设置控件焦点。  </li>
 <li>修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  </li>
 <li>增加：使用<a href="github.com/fogleman/gg">Go Graphics - 2D</a>绘制并显示到GoVCL的控件上，例子见<code>samples/drawusegg</code>，演示视频见<code>samples/drawusegg/video.mp4</code>。 </li>
 <li>增加：使用<a href="https://github.com/disintegration/gift">Go Image Filtering Toolkit</a>处理图片滤镜并显示到GoVCL的控件上，例子见<code>samples/drawfilterusegift</code>，演示视频见<code>samples/drawfilterusegift/video.mp4</code>。 </li>
@@ -130,7 +130,7 @@
 <li>增加：<code>vcl/bitmap</code>包添加新的函数<code>ToBitmap2</code>、<code>ToGoImage</code>。</li>
 <li>增加：<code>TBitmap</code>添加<code>BeginUpdate</code>、<code>EndUpdate</code>和<code>Clear</code>方法(仅liblcl有效)。</li>
 <li>修改：重构事件中ID的获取。</li>
-<li>添加：所有对象添加<code>Is</code>和<code>As</code>方法，用于简化对象的判断和对象的动态转换，如：<code>button.Is().Control()</code>，<code>sender.As().Button()</code>。</li>
+<li>添加：所有对象添加<code>Is</code>，用于简化对象的判断和对象的动态转换，如：<code>button.Is().Control()</code>。</li>
 <li>修改：所有对象都添加一个<code>As&lt;classname&gt;</code>函数，用于动态转换对象，如：<code>vcl.AsButton(sender)</code>。所有对象的<code>&lt;classname&gt;FromInst</code>, <code>&lt;classname&gt;FromObj</code>, <code>&lt;classname&gt;FromUnsafePointer</code>标记为弃用。</li>
 <li>添加：<code>TStrings</code>和<code>TStringList</code>添加<code>S</code>和<code>SetS</code>用于简化原来的<code>Strings</code>和<code>SetStrings</code>方法。</li>
 <li>修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。</li>
