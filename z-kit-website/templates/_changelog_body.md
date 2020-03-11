@@ -24,6 +24,7 @@
 * 修改：重构事件中ID的获取。
 * 添加：所有对象添加`Is`和`As`方法，用于简化对象的判断和对象的动态转换。
 * 修改：所有对象都添加一个`As<classname>`函数，用于动态转换对象。所有对象的`<classname>FromInst`, `<classname>FromObj`, `<classname>FromUnsafePointer`标记为弃用。
+* 添加：`TStrings`和`TStringList`添加`S`和`SetS`用于简化原来的`Strings`和`SetStrings`方法。
 
 -- res2go --    
 
