@@ -13,7 +13,7 @@
 * 修改：改变`TForm`的`OnWndProc`回调函数，移除`handled`参数。 
 * 增加：添加一个`vcl/bitmap`包，用于将Go的Image转为VCL/LCL的图像。 
 * 增加：使用[Charts for Go](https://github.com/vdobler/chart)绘制图表并显示到GoVCL的控件上，例子见`samples/drawchart`。 
-* 增加：`types`包中添加新的类型`TSet`，并添加相关函数`NewSet`、方法`TSet.Include`、`TSet.Exclude`、`TSet.In`，用于简化Delphi/Lazarus的集合操作。
+* 增加：`types`包中添加新的类型`TSet`，并添加相关函数`NewSet`、方法`TSet.Include`、`TSet.Exclude`、`TSet.In`，用于简化Delphi/Lazarus的集合操作，原来使用了的可能需要修改为新的方式。
 * 丢弃：`rtl.Include`、`rtl.Exclude`、`rtl.InSets`标记为`Deprecated`。  
 * 增加：添加`locales`包及默认的子包`zh_CN`用于本地化一些对话框内的文本。  
 * 修改：修改`samples/menu`例子，增加在macOS下的Application菜单中添加项目。  
