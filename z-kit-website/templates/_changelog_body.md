@@ -3,7 +3,7 @@
 
 -- govcl --  
 
-* 修改：liblcl：TListView、TTreeView一些默认属性修改。
+* 修改：liblcl：TListView、TTreeView一些默认属性修改，`ScrollBars`默认为`ssAutoBoth`，TTreeView的`TreeLinePenStyle`默认值为`psSolid`。
 * 修复：修复`macapp`打包时执行命令传入的参数会在某些时候不正确。  
 * 修改：Linux下的TMiniWebview调用Navigate时不再设置控件焦点。  
 * 修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  
@@ -17,11 +17,12 @@
 * 丢弃：`rtl.Include`、`rtl.Exclude`、`rtl.InSets`标记为`Deprecated`。  
 * 增加：添加`locales`包及默认的子包`zh_CN`用于本地化一些对话框内的文本。  
 * 修改：修改`samples/menu`例子，增加在macOS下的Application菜单中添加项目。  
-* `TBitmap`添加新的属性`TransparentMode`、`AlphaFormat`(仅libvcl)。
-* 添加一个`vcl.LclLoaded`函数。
-* `bitmap`包添加新的函数`ToBitmap2`。
-* `TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
-* 重构事件中ID的获取。
+* 增加：`TBitmap`添加新的属性`TransparentMode`、`AlphaFormat`(仅libvcl)。
+* 增加：添加一个`vcl.LclLoaded`函数。
+* 增加：`bitmap`包添加新的函数`ToBitmap2`。
+* 增加：`TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
+* 修改：重构事件中ID的获取。
+* 添加：所有对象添加一个`Is`方法，此方法为`InheritsFrom`的别名。
 
 -- res2go --    
 
