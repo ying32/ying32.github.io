@@ -27,6 +27,7 @@
 * 添加：`TStrings`和`TStringList`添加`S`和`SetS`用于简化原来的`Strings`和`SetStrings`方法。
 * 修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。 
 * 添加：liblcl：`TMiniwebview`初步支持Linux下的gtk3。
+* 添加：`THeaderControl`添加`Sections`属性。
 
 > 本次的更新会造成生成的可执行文件增大500kb左右。
 
