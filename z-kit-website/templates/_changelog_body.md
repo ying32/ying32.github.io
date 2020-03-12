@@ -3,7 +3,7 @@
 
 -- govcl --  
 
-* 修改：liblcl：`TListView`、`TTreeView`一些默认属性修改，`ScrollBars`默认为`ssAutoBoth`，TTreeView的`TreeLinePenStyle`默认值为`psSolid`。
+* 修改：liblcl：`TListView`、`TTreeView`一些默认属性修改，`ScrollBars`默认为`ssAutoBoth`。非Windows下TTreeView的`TreeLinePenStyle`默认值为`psSolid`。`TTreeView.ExpandSignType`默认为`tvestArrowFill`.。
 * 修复：修复`macapp`打包时执行命令传入的参数会在某些时候不正确。  
 * 修改：Linux下的`TMiniWebview`调用`Navigate`时不再设置控件焦点。  
 * 修改：修改自动绑定事件当没有找到事件类型时，检测事件类型起始是否为“0-9,_”，如果是则不打印错误提示。  
