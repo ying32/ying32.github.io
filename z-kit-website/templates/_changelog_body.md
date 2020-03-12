@@ -21,11 +21,12 @@
 * 增加：添加一个`vcl.LclLoaded`函数。
 * 增加：`vcl/bitmap`包添加新的函数`ToBitmap2`、`ToGoImage`。
 * 增加：`TBitmap`添加`BeginUpdate`、`EndUpdate`和`Clear`方法(仅liblcl有效)。
-* 修改：重构事件中ID的获取。
+* 修改：重构事件中ID的获取（主要是解决以前在某些情况下造成事件关联不对的问题）。
 * 添加：所有对象添加`Is`，用于简化对象的判断，如：`button.Is().Control()`。
 * 修改：所有对象都添加一个`As<classname>`函数，用于动态转换对象，如：`vcl.AsButton(sender)`。所有对象的`<classname>FromInst`, `<classname>FromObj`, `<classname>FromUnsafePointer`标记为弃用。
 * 添加：`TStrings`和`TStringList`添加`S`和`SetS`用于简化原来的`Strings`和`SetStrings`方法。
-* 修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。
+* 修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。 
+* 添加：liblcl：`TMiniwebview`初步支持Linux下的gtk3。
 
 > 本次的更新会造成生成的可执行文件增大500kb左右。
 
