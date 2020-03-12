@@ -130,7 +130,7 @@
 <li>增加：<code>vcl/bitmap</code>包添加新的函数<code>ToBitmap2</code>、<code>ToGoImage</code>。</li>
 <li>增加：<code>TBitmap</code>添加<code>BeginUpdate</code>、<code>EndUpdate</code>和<code>Clear</code>方法(仅liblcl有效)。</li>
 <li>修改：重构事件中ID的获取。</li>
-<li>添加：所有对象添加<code>Is</code>，用于简化对象的判断和对象的动态转换，如：<code>button.Is().Control()</code>。</li>
+<li>添加：所有对象添加<code>Is</code>，用于简化对象的判断，如：<code>button.Is().Control()</code>。</li>
 <li>修改：所有对象都添加一个<code>As&lt;classname&gt;</code>函数，用于动态转换对象，如：<code>vcl.AsButton(sender)</code>。所有对象的<code>&lt;classname&gt;FromInst</code>, <code>&lt;classname&gt;FromObj</code>, <code>&lt;classname&gt;FromUnsafePointer</code>标记为弃用。</li>
 <li>添加：<code>TStrings</code>和<code>TStringList</code>添加<code>S</code>和<code>SetS</code>用于简化原来的<code>Strings</code>和<code>SetStrings</code>方法。</li>
 <li>修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。</li>
