@@ -60,6 +60,15 @@
 			"includeMdFile": "_about_body.md",
 			"title": "关于",
 			"description": "about"
+		},
+		{
+			"name": "translate",
+			"path": "",
+			"markdown": true,
+			"includeFile1": "_markdown.html",
+			"includeMdFile": "_translate_body.md",
+			"title": "Help me translate",
+			"description": "translate"
 		}
 	]
 }
