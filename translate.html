@@ -109,43 +109,22 @@
             <h1 class="page-header">Help me translate</h1>
             <div class="row placeholders">
                 <article class="markdown-body">
-                    <h1 id="如果你愿意，可以帮助我翻译官方主页的语言。">如果你愿意，可以帮助我翻译官方主页的语言。</h1>
-<h3 id="步骤：">步骤：</h3>
+                    <p><strong>If you want, you can help me translate the language of the official homepage.</strong>  </p>
+<h3 id="step">step:</h3>
 <ul>
-<li><ol>
-<li>Clone the repository <code>git clone https://github.com/ying32/ying32.github.io</code></li>
-</ol>
+<li><p>1, Clone the repository <code>git clone https://github.com/ying32/ying32.github.io</code></p>
 </li>
-<li><ol start="2">
-<li>Edit the <code>z-kit-website/langs.json</code> file to add the language in the original format.<pre><code class="language-json">[
-{
-  <span class="hljs-attr">"lang"</span>: <span class="hljs-string">"zh-CN"</span>,
-  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"简体中文"</span>,
-  <span class="hljs-attr">"langDir"</span>: <span class="hljs-string">""</span>
-},
-{
-  <span class="hljs-attr">"lang"</span>: <span class="hljs-string">"en-US"</span>,
-  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"English"</span>,
-  <span class="hljs-attr">"langDir"</span>: <span class="hljs-string">"en"</span>
-}</code></pre>
+<li><p>2, Edit the <code>z-kit-website/langs.json</code> file to add the language in the original format.</p>
 </li>
-</ol>
+<li><p>3, Copy <code>z-kit-website/langs/en-US.json</code> and change the file name to the language name defined in langs.json.</p>
+</li>
+<li><p>4, Compile and generate a static html file.</p>
+<pre><code class="language-bash"><span class="hljs-keyword">go</span> build&amp;&amp;z-kit-website</code></pre>
 </li>
 </ul>
-<p>]</p>
-<pre><code><span class="hljs-bullet">
-* </span><span class="hljs-bullet">3. </span>Copy <span class="hljs-code">`z-kit-website/langs/en-US.json`</span> and change the file name to the language name defined in langs.json.
-<span class="hljs-bullet">
-* </span><span class="hljs-bullet">4. </span>Compile and generate a static html file.
-<span class="hljs-code">```bash
-go build&amp;&amp;z-kit-website
-
-// or preview
-go build&amp;&amp;z-kit-website --debug</span></code></pre><ul>
-<li><ol start="5">
-<li>PullRequests to <code>https://github.com/ying32/ying32.github.io</code>.</li>
-</ol>
-</li>
+<p>// or preview<br>go build&amp;&amp;z-kit-website --debug<br>```</p>
+<ul>
+<li>5, PullRequests to <code>https://github.com/ying32/ying32.github.io</code>.</li>
 </ul>
 
                 </article>
