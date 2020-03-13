@@ -125,7 +125,7 @@
 <li>增加：使用<a href="https://github.com/vdobler/chart">Charts for Go</a>绘制图表并显示到GoVCL的控件上，例子见<code>samples/drawchart</code>。 </li>
 <li>增加：<code>types</code>包中添加新的类型<code>TSet</code>，并添加相关函数<code>NewSet</code>、方法<code>TSet.Include</code>、<code>TSet.Exclude</code>、<code>TSet.In</code>，如：<code>style := types.NewSet(types.xx)，style.Include(types.xxx)，style.In(types.xx)</code>。用于简化Delphi/Lazarus的集合操作，原来使用了的可能需要修改为新的方式。</li>
 <li>丢弃：<code>rtl.Include</code>、<code>rtl.Exclude</code>、<code>rtl.InSets</code>标记为<code>Deprecated</code>。  </li>
-<li>增加：添加<code>vcl/locales</code>包及默认的子包<code>zh_CN</code>用于本地化一些对话框内的文本。  </li>
+<li>增加：添加<code>vcl/locales</code>包及默认的子包<code>zh_CN</code>用于本地化一些对话框内的文本(macOS下的有些暂时没办法，因为被写死了，所以不好翻译)。  </li>
 <li>修改：修改<code>samples/menu</code>例子，增加在macOS下的Application菜单中添加项目。  </li>
 <li>增加：<code>TBitmap</code>添加新的属性<code>TransparentMode</code>、<code>AlphaFormat</code>(仅libvcl)。</li>
 <li>增加：添加一个<code>vcl.LclLoaded</code>函数。</li>
