@@ -43,7 +43,7 @@
 -- govcl --  
  
 * 增加：添加新的枚举类型:`TDefaultMonitor`。   
-* 增加：`TGoForm`添加`DefaultMonitor`、`Monitor`属性。   
+* 增加：`TForm`添加`DefaultMonitor`、`Monitor`属性。   
 * 增加：改变事件id的获取。    
 * 增加：vcl包添加一个`RunApp`函数用于简化main函数中创建Form对象，用法参见`samples/basicResForm`例子。   
 * 增加：添加一个新的包`pkgs/libname`函数，用于加载指定位置的libvcl或者liblcl，用法参见`samples/customLibTest`例子。   
@@ -88,7 +88,7 @@
 * 修改：liblcl：Windows下的`TTrayIcon`创建时，默认加载`Application`的Icon。  
 * 增加：添加一个`vcl.RegisterFormResource`，用于`CreateForm`时自动查找对应资源。
 * 增加：添加一个简易的markdown编辑器，用于演示。
-* 增加：liblcl：`TGoFom`添加兼容Delphi的方法`ScaleForPPI`、`ScaleForCurrentDpi`。
+* 增加：liblcl：`TFom`添加兼容Delphi的方法`ScaleForPPI`、`ScaleForCurrentDpi`。
 * 增加：添加一个`formscale`例子。
 * 增加：`Tools`目录下添加一个`libBuild`工具，用于命令行构建libvcl或者liblcl。
 * 修改：`exts/tools`包更改为`exts/macapp`包，同时更新macapp里包的打包方式和添加app图标。
