@@ -1,1 +1,1 @@
-exclude: ["z-kit-website"]
+exclude: ["z-kit-website", "README.md", "CNAME"]

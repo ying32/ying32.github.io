@@ -28,7 +28,7 @@
 * 修改：调整自动绑定事件，当不使用资源构TForm或者没有找到对应TForm资源时默认在创建完后绑定子组件事件。 
 * 添加：liblcl：`TMiniwebview`初步支持Linux下的gtk3。
 * 添加：`THeaderControl`添加`Sections`属性。 
-* 添加：添加一些容器控件的`OnAlignPosition`事件，用法参见`samples/layout`。
+* 添加：添加一些容器控件的`OnAlignPosition`事件，当子控件的`Align`属性为`AlCustom`时会触发父控件的`OnAlignPosition`事件，用法参见`samples/layout`。
 
 > 本次的更新会造成生成的可执行文件增大500kb左右。
 
