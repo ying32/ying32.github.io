@@ -29,6 +29,7 @@
 * 添加：liblcl：`TMiniwebview`初步支持Linux下的gtk3。
 * 添加：`THeaderControl`添加`Sections`属性。 
 * 添加：添加一些容器控件的`OnAlignPosition`事件，当子控件的`Align`属性为`AlCustom`时会触发父控件的`OnAlignPosition`事件，用法参见`samples/layout`。
+* 添加：添加一个`samples/listboxcustomdraw2`，`TListBox`自绘演示。
 
 > 本次的更新会造成生成的可执行文件增大500kb左右。
 
