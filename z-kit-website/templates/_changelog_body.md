@@ -32,7 +32,7 @@
 * 添加：添加一个`samples/listboxcustomdraw2`，`TListBox`自绘演示。
 * 添加：`TCheckListBox`、`TColorListBox`、`TListBox`控件添加`ItemAtPos`、`ItemRect`方法。
 
-> 本次的更新会造成生成的可执行文件增大500kb左右。
+> 本次的更新会造成生成的可执行文件增大400kb左右。
 
 -- res2go --    
 
