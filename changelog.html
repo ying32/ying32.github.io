@@ -129,7 +129,7 @@
 <li>增加：<code>TBitmap</code>添加新的属性<code>TransparentMode</code>、<code>AlphaFormat</code>(仅libvcl)。</li>
 <li>增加：添加一个<code>vcl.LclLoaded</code>函数。</li>
 <li>增加：<code>vcl/bitmap</code>包添加新的函数<code>ToBitmap2</code>、<code>ToGoImage</code>。</li>
-<li>增加：<code>TBitmap</code>添加<code>BeginUpdate</code>、<code>EndUpdate</code>和<code>Clear</code>方法(仅liblcl有效)。</li>
+<li>增加：<code>TBitmap</code>添加<code>BeginUpdate</code>、<code>EndUpdate</code>和<code>Clear</code>方法(仅liblcl有效),<code>LoadFromDevice</code>。</li>
 <li>修改：重构事件中ID的获取（主要是解决以前在某些情况下造成事件关联不对的问题）。</li>
 <li>添加：所有对象添加<code>Is</code>，用于简化对象的判断，如：<code>button.Is().Control()</code>。</li>
 <li>修改：所有对象都添加一个<code>As&lt;classname&gt;</code>函数，用于动态转换对象，如：<code>vcl.AsButton(sender)</code>。所有对象的<code>&lt;classname&gt;FromInst</code>, <code>&lt;classname&gt;FromObj</code>, <code>&lt;classname&gt;FromUnsafePointer</code>标记为弃用。</li>
