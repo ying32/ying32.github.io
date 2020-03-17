@@ -32,6 +32,7 @@
 * 添加：添加一个`samples/listboxcustomdraw2`，`TListBox`自绘演示。
 * 添加：`TCheckListBox`、`TColorListBox`、`TListBox`控件添加`ItemAtPos`、`ItemRect`方法。
 * 添加：添加`intfTest`例子，暂时只演示了跨平台的屏幕截图。
+* 添加：添加`nswindowTest`例子，测试操作NSWindow，并演示一个macOS下的无标题栏样式窗口。
 
 > 本次的更新会造成生成的可执行文件增大400kb左右。
 
