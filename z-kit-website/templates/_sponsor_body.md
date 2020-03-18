@@ -2,7 +2,7 @@
 
 * 微信  
 
-![wechatpay](https://ying32.github.io/assets/images/wechatpay.jpg)  
+![wechatpay](/assets/images/wechatpay.jpg)  
 
 ### 赞助名单  
 
