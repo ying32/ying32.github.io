@@ -34,6 +34,7 @@
 * 添加：添加`intfTest`例子，暂时只演示了跨平台的屏幕截图。
 * 添加：添加`nswindowTest`例子，测试操作`NSWindow`，并演示一个macOS下的无标题栏样式窗口。
 * 添加：添加一些平台相关的接口，比如：linux下获取`GdkWindow`，`GtkWidget`, `X11 Window Id`，macOS下`NSObject`，`NSWindow`。
+* 添加：添加一个新的控件`TXButton`，演示例子见`samples/xbuttonTest`
 
 > 本次的更新会造成生成的可执行文件增大400kb左右。
 
