@@ -17,10 +17,13 @@ https://z-kit.cc/
 
 ```bash
 
-go build&&z-kit-website
+go build
 
-// or preview
-go build&&z-kit-website --debug
+// convert
+z-kit-website
+
+// Monitor file changes and provide previews.
+z-kit-website --debug  // http://localhost:8081
 
 ```
 
