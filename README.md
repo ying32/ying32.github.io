@@ -1,4 +1,4 @@
-official website of GOVCL
+Official website of GOVCL
 
 https://z-kit.cc/
 
@@ -13,12 +13,15 @@ https://z-kit.cc/
 
 * 3, Copy `z-kit-website/langs/en-US.json` and change the file name to the language name defined in langs.json.
 
-* 4, Compile and generate a static html file.
+* 4, Compile and generate static HTML files.
+
 ```bash
+
 go build&&z-kit-website
 
 // or preview
 go build&&z-kit-website --debug
+
 ```
 
 * 5, PullRequests to `https://github.com/ying32/ying32.github.io`.
