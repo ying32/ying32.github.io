@@ -3,6 +3,8 @@
 
 -- govcl --  
 
+* 添加：`Colors`包添加`RGB`和`RGBToBGR`函数。
+
 -- res2go --    
 
 ## 当前版本，master分支(Current version, master branch)
