@@ -3,6 +3,15 @@
 
 -- govcl --  
 
+-- res2go --    
+
+## 当前版本，master分支(Current version, master branch)
+
+
+## v1.2.10  
+
+-- govcl --  
+
 * 修改：liblcl：`TListView`、`TTreeView`一些默认属性修改，`ScrollBars`默认为`ssAutoBoth`。非Windows下TTreeView的`TreeLinePenStyle`默认值为`psSolid`。`TTreeView.ExpandSignType`默认为`tvestArrowFill`.。
 * 修复：修复`macapp`打包时执行命令传入的参数会在某些时候不正确。  
 * 修改：Linux下的`TMiniWebview`调用`Navigate`时不再设置控件焦点。  
@@ -41,7 +50,6 @@
 
 -- res2go --    
 
-## 当前版本，master分支(Current version, master branch)
 
 ## v1.2.9  
 
