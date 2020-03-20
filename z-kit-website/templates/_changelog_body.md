@@ -5,6 +5,7 @@
 
 * 添加：`Colors`包添加`RGB`和`RGBToBGR`函数。 
 * 修改：`nswindowTest`例子增加直接使用`objective-c`操作`NSWindow`。  
+* 添加：添加一个`winappres/uac`包，默认的资源。
 
 -- res2go --    
 
