@@ -8,6 +8,7 @@
 * 添加：添加一个`winappres/uac`包，默认的资源。
 * 添加：`win`包添加`ShellExecuteEx`和`RunAsAdministrator`函数和一些`ShellExecuteEx`所用到的常量和结构。
 * 修复：修复`win.ResourceToBytes`的命名错误。
+* 修改：当`As<classname>`转换时，类实例指针为0则返回nil。
 
 -- res2go --    
 
