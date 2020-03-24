@@ -9,6 +9,7 @@
 * 添加：`win`包添加`ShellExecuteEx`和`RunAsAdministrator`函数和一些`ShellExecuteEx`所用到的常量和结构。
 * 修复：修复`win.ResourceToBytes`的命名错误。
 * 修改：当`As<classname>`转换时，不再先分配内存，如果类实例指针为0则返回nil，否则分配内存后再返回。
+* 修改：自动绑定事件：过滤首字母不为"A-Z"的字段。
 
 -- res2go --    
 
