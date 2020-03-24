@@ -4,7 +4,7 @@
 ## 下个版本，dev分支(Next version, dev branch)
 **Please use Google Translate if your native language is not Chinese.**   
 
-## v2.0.0
+## next v2.0.0
 
 -- govcl --  
 
@@ -12,10 +12,13 @@
 
 -- res2go --    
 
-## 下个版本，last-vcl-support分支(Next version, last-vcl-support branch)
-**Please use Google Translate if your native language is not Chinese.**   
+## 当前版本，master分支(Current version, master branch)
+
+## v1.2.10.1  
 
 -- govcl --  
+
+**最后一个支持`Delphi/VCL`的版本。**  
 
 * 添加：`Colors`包添加`RGB`和`RGBToBGR`函数。 
 * 修改：`nswindowTest`例子增加直接使用`objective-c`操作`NSWindow`。  
@@ -25,10 +28,7 @@
 * 修改：当`As<classname>`转换时，不再先分配内存，如果类实例指针为0则返回nil，否则分配内存后再返回。
 * 修改：自动绑定事件：过滤首字母不为"A-Z"的字段。
 
--- res2go --    
-
-## 当前版本，master分支(Current version, master branch)
-
+-- res2go --   
 
 ## v1.2.10  
 
