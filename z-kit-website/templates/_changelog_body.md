@@ -14,7 +14,7 @@
 
 ## 当前版本，master分支(Current version, master branch)
 
-## v1.2.10.1  
+## v1.2.10.2  
 
 -- govcl --  
 
