@@ -1,3 +1,5 @@
+**预计2.0版本开始将剔除`vcl`的支持，专注于`lcl`的跨平台方案。**  
+
 ## 下个版本，dev分支(Next version, dev branch)
 **Please use Google Translate if your native language is not Chinese.**   
 
