@@ -4,6 +4,17 @@
 ## 下个版本，dev分支(Next version, dev branch)
 **Please use Google Translate if your native language is not Chinese.**   
 
+## v2.0.0
+
+-- govcl --  
+
+移除：移除`Delphi/VCL`的支持，只专注`Lazarus/LCL`的跨平台方案。  
+
+-- res2go --    
+
+## 下个版本，last-vcl-support分支(Next version, last-vcl-support branch)
+**Please use Google Translate if your native language is not Chinese.**   
+
 -- govcl --  
 
 * 添加：`Colors`包添加`RGB`和`RGBToBGR`函数。 
