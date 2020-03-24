@@ -1,4 +1,5 @@
-**预计2.0版本开始将剔除`vcl`的支持，专注于`lcl`的跨平台方案。**  
+**计划govcl 2.0版本开始将移除`vcl`的支持，只专注于`lcl`的跨平台方案。最后一个支持vcl版本的分支：[last-vcl-support](https://github.com/ying32/govcl/tree/last-vcl-support/)。**   
+**It is planned that the govcl 2.0 version will remove the support of `vcl` and only focus on the` lcl` cross-platform solution. The last branch that supports the vcl version: [last-vcl-support] (https://github.com/ying32/govcl/tree/last-vcl-support/).** 
 
 ## 下个版本，dev分支(Next version, dev branch)
 **Please use Google Translate if your native language is not Chinese.**   
