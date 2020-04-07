@@ -10,6 +10,7 @@
 
 移除：移除`Delphi/VCL`的支持，只专注`Lazarus/LCL`的跨平台方案。  
 修复：修复一些类的构造函数参数缺失问题。
+修改：调整`vcl.RunApp`支持传入`func()`。
 
 -- res2go --    
 
