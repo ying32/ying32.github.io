@@ -8,11 +8,11 @@
 
 -- govcl --  
 
-移除：移除`Delphi/VCL`的支持，只专注`Lazarus/LCL`的跨平台方案。    
-修复：修复一些类的构造函数参数缺失问题。    
-修改：`vcl.RunApp`支持传入`func()`。    
-添加：`rtl`包中`intf.go`添加一些与`SendMessage`或者`PostMessage`参数相关的函数。    
-修复：修复`types`包中的`WPARAM`类型命名错误。    
+* 移除：移除`Delphi/VCL`的支持，只专注`Lazarus/LCL`的跨平台方案。    
+* 修复：修复一些类的构造函数参数缺失问题。    
+* 修改：`vcl.RunApp`支持传入`func()`。    
+* 添加：`rtl`包中`intf.go`添加一些与`SendMessage`或者`PostMessage`参数相关的函数。    
+* 修复：修复`types`包中的`WPARAM`类型命名错误。    
 
 -- res2go --    
 
