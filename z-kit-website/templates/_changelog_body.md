@@ -22,6 +22,8 @@
 * 添加：`rtl`包中`intf.go`添加一些与`SendMessage`或者`PostMessage`参数相关的函数。    
 * 修复：修复`types`包中的`WPARAM`类型命名错误。    
 
+> 本次的更新会造成生成的可执行文件`减小2.7M`左右。
+
 ## v1.2.10.2  
 
 -- govcl --  
