@@ -16,7 +16,11 @@
 
 -- res2go --    
 
-## 当前版本，master分支(Current version, master branch)
+## 当前版本，master、last-vcl-support分支(Current version, master and last-vcl-support branch)
+
+* 修改：`vcl.RunApp`支持传入`func()`。    
+* 添加：`rtl`包中`intf.go`添加一些与`SendMessage`或者`PostMessage`参数相关的函数。    
+* 修复：修复`types`包中的`WPARAM`类型命名错误。    
 
 ## v1.2.10.2  
 
