@@ -55,7 +55,7 @@
 * 增加：`types`包中添加新的类型`TSet`，并添加相关函数`NewSet`、方法`TSet.Include`、`TSet.Exclude`、`TSet.In`，如：`style := types.NewSet(types.xx)，style.Include(types.xxx)，style.In(types.xx)`。用于简化Delphi/Lazarus的集合操作，原来使用了的可能需要修改为新的方式。
 * 丢弃：`rtl.Include`、`rtl.Exclude`、`rtl.InSets`标记为`Deprecated`。  
 * 增加：添加`vcl/locales`包及默认的子包`zh_CN`用于本地化一些对话框内的文本(macOS下的有些暂时没办法，因为被写死了，所以不好翻译)。  
-                                                       * 修改：修改`samples/menu`例子，增加在macOS下的Application菜单中添加项目。  
+* 修改：修改`samples/menu`例子，增加在macOS下的Application菜单中添加项目。  
 * 增加：`TBitmap`添加新的属性`TransparentMode`、`AlphaFormat`(仅libvcl)。
 * 增加：添加一个`vcl.LclLoaded`函数。
 * 增加：`vcl/bitmap`包添加新的函数`ToBitmap2`、`ToGoImage`。
