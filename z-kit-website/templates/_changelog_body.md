@@ -4,7 +4,15 @@
 ## 下个版本，dev分支(Next version, dev branch)
 **Please use Google Translate if your native language is not Chinese.**   
 
-## next v2.0.0
+## next v2.0.x
+
+-- govcl --  
+
+-- res2go --    
+
+## 当前版本，master分支(Current version, master branch)
+
+## v2.0.0
 
 -- govcl --  
 
@@ -14,16 +22,21 @@
 * 添加：`rtl`包中`intf.go`添加一些与`SendMessage`或者`PostMessage`参数相关的函数。    
 * 修复：修复`types`包中的`WPARAM`类型命名错误。    
 * 修改：将所有枚举类型的值更改为lcl的。    
+* 增加：`TListView`增加`OnDataHint`事件。
+* 修改：`liblcl`源码使用`lazarus 2.0.8`编译，相关修复列表：[Lazarus_2.0_fixes_branch](https://wiki.freepascal.org/Lazarus_2.0_fixes_branch#Fixes_for_2.0.8_.28merged.29)。
+
+> 本次的更新会造成生成的可执行文件`减小2.7M`左右。
 
 -- res2go --    
 
-## 当前版本，master、last-vcl-support分支(Current version, master and last-vcl-support branch)
+* 修改：使用lazarus 2.0.8重新编译。
+
+## last-vcl-support分支(last-vcl-support branch)
 
 * 修改：`vcl.RunApp`支持传入`func()`。    
 * 添加：`rtl`包中`intf.go`添加一些与`SendMessage`或者`PostMessage`参数相关的函数。    
 * 修复：修复`types`包中的`WPARAM`类型命名错误。    
 
-> 本次的更新会造成生成的可执行文件`减小2.7M`左右。
 
 ## v1.2.10.2  
 
