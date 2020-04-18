@@ -5,7 +5,7 @@
 
 -- govcl --  
 
-* 添加：添加一个`TRichEdit`组件。
+* 添加：尝试添加一个`TRichEdit`组件。
 * 添加：添加一个`richedit`例子。
 * 更新：更新`redisViewer`例子。
 
