@@ -71,12 +71,18 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages" target="_blank">{{.menubar.docTitle}}</a></li>
+		  <li><a href="https://gitee.com/ying32/govcl/wikis/pages">{{.menubar.docTitle}}</a></li>
 	    {{if eq .lang "zh-CN"}}
 		<!--  <li><a href="/wiki">中文文档(测试)</a></li> -->
 		{{end}}
-		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" target="_blank">{{.menubar.exampleTitle}}</a></li>
-		  
+		  <li><a href="https://github.com/ying32/govcl/tree/master/samples">{{.menubar.exampleTitle}}</a></li>
+
+		{{if eq .lang "zh-CN"}}
+		  <li><a href="https://gitee.com/ying32/govcl/blob/master/Screenshot/README.md">{{.menubar.screenshot}}</a></li>
+		{{else}}
+			<li><a href="https://github.com/ying32/govcl/blob/master/Screenshot/README.md">{{.menubar.screenshot}}</a></li>
+		{{end}}
+
           <!--<li class="dropdown">
 			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">更多项目 <b class="caret"></b></a>
 			<ul role="menu" class="dropdown-menu" style="">
@@ -88,7 +94,7 @@
 			</ul>
 		  </li> -->
 		  
-		  <li><a href="https://video.0-w.cc/videos/1" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg> {{.menubar.videoTitle}}</a></li>
+		  <li><a href="https://video.0-w.cc/videos/1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg> {{.menubar.videoTitle}}</a></li>
 	    {{if eq .lang "zh-CN"}}
 		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg> 加入QQ群</a></li>
 		{{end}}
