@@ -9,6 +9,7 @@
 * 添加：添加一个`richedit`例子。
 * 更新：更新`redisViewer`例子。
 * 删除：删除`pkgs/skinh`包，及相关例子。
+* 添加：补充一些LCL控件的属性。
 
 -- res2go --    
 
