@@ -9,7 +9,14 @@
 * 添加：添加一个`richedit`例子。
 * 更新：更新`redisViewer`例子。
 * 删除：删除`pkgs/skinh`包，及相关例子。
-* 添加：补充一些LCL控件的属性。
+* 添加：补充一些`LCL控件`的属性。
+* 添加：添加新的组件`TSelectDirectoryDialog`。
+* 添加：添加所有基于`TControl`的控件属性：`AnchorSideLeft`、`AnchorSideTop`、`AnchorSideRight`、`AnchorSideBottom`、`ClientOrigin`、`ChildSizing`、`BorderSpacing`、`AnchorSide`。
+* 添加：添加所有基于`TControl`的控件方法：`AnchorToNeighbour`、`AnchorParallel`、`AnchorHorizontalCenterTo`、`AnchorVerticalCenterTo`、`AnchorSame`、`AnchorAsAlign`、`AnchorClient`。
+* 删除：移除所有基于`TControl`的控件属性：`Margins`。
+* 改变：重命名工程`lcl.lpr`到`liblcl.lpr`。
+
+> 本次的更新会造成生成的可执行文件`增加1M`左右。
 
 -- res2go --    
 
