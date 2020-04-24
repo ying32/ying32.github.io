@@ -15,6 +15,7 @@
 * 添加：添加所有基于`TControl`的控件方法：`AnchorToNeighbour`、`AnchorParallel`、`AnchorHorizontalCenterTo`、`AnchorVerticalCenterTo`、`AnchorSame`、`AnchorAsAlign`、`AnchorClient`。
 * 删除：移除所有基于`TControl`的控件属性：`Margins`。
 * 改变：重命名工程`lcl.lpr`到`liblcl.lpr`。
+* 添加：`IControl`添加一些属性和方法接口。
 
 > 本次的更新会造成生成的可执行文件`增加1M`左右。
 
