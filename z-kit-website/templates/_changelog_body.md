@@ -40,6 +40,8 @@
 
 -- res2go --    
 
+* 增加：增加`TSelectDirectoryDialog`导出。
+
 * 修改：使用lazarus 2.0.8重新编译。
 
 ## last-vcl-support分支(last-vcl-support branch)
