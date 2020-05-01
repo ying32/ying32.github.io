@@ -16,6 +16,8 @@
 * 删除：移除所有基于`TControl`的控件属性：`Margins`。
 * 改变：重命名工程`lcl.lpr`到`liblcl.lpr`。
 * 添加：`IControl`添加一些属性和方法接口。
+* 添加：添加一个`fileshelltree`例子。
+* 修改：调整`DSynchronize`函数，当前是主线程时则不使用线程同步。  
 
 > 本次的更新会造成生成的可执行文件`增加1M`左右。
 
