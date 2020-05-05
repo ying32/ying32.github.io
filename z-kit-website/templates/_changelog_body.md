@@ -27,6 +27,10 @@
 
 ## 当前版本，master分支(Current version, master branch)
 
+## v2.0.1
+
+* 修复：删除了go.mod文件，修复因为go.mod引起的不能拉取代码问题。
+
 ## v2.0.0
 
 -- govcl --  
