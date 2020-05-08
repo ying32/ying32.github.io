@@ -11,7 +11,8 @@
 		"docTitle": "Chinese doc",
 		"exampleTitle": "Example",
 		"screenshot": "Screenshots",
-		"videoTitle": "Video tutorial (third party)"
+		"videoTitle": "Video tutorial (third party)",
+		"ide": "UI Designer"
 	},
 
    "pages": [
@@ -44,6 +45,37 @@
 		   "includeMdFile": "_about_body.md",
 		   "title": "About",
 		   "description": "about"
+	   },
+	   {
+		   "name": "doc",
+		   "path": "",
+		   "includeFile1": "_iframe.html",
+		   "iframeURL": "https://gitee.com/ying32/govcl/wikis/pages",
+		   "title": "Chinese doc",
+		   "description": "document"
+	   },
+	   {
+		   "name": "screenshot",
+		   "path": "",
+		   "includeFile1": "_iframe.html",
+		   "iframeURL": "https://github.com/ying32/govcl/tree/master/Screenshot",
+		   "title": "Screenshots",
+		   "description": "Screenshots"
+	   },
+	   {
+		   "name": "ide",
+		   "path": "",
+		   "includeFile1": "_markdown.html",
+		   "includeMdFile": "_ide_body.md",
+		   "title": "UI Designer",
+		   "description": "mini IDE govcl designer",
+		   "readme1": "The UI designer is not part of the GoVCL project, it's just that I provide it to users to simplify the design of the UI, so there is no intention of open source.",
+		   "code": "code",
+		   "design": "design",
+		   "info1": "1. Status: under development ...",
+		   "info2": "2. Release time: No plan.",
+		   "info3": "3. Whether to charge: not decided.",
+		   "info4": "4. Cross-platform: yes"
 	   }
 	]
 }

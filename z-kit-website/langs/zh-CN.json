@@ -11,7 +11,8 @@
 		"docTitle": "中文文档",
 		"exampleTitle": "示例",
 		"screenshot": "屏幕截图",
-		"videoTitle": "视频教程(第三方)"
+		"videoTitle": "视频教程(第三方)",
+		"ide": "UI设计器"
 	},
 
 	"pages": [
@@ -70,6 +71,37 @@
 			"includeMdFile": "_translate_body.md",
 			"title": "Help me translate",
 			"description": "translate"
+		},
+		{
+			"name": "doc",
+			"path": "",
+			"includeFile1": "_iframe.html",
+			"iframeURL": "https://gitee.com/ying32/govcl/wikis/pages",
+			"title": "中文文档",
+			"description": "文档"
+		},
+		{
+			"name": "screenshot",
+			"path": "",
+			"includeFile1": "_iframe.html",
+			"iframeURL": "https://gitee.com/ying32/govcl/blob/master/Screenshot/README.md",
+			"title": "屏幕截图",
+			"description": "屏幕截图"
+		},
+		{
+			"name": "ide",
+			"path": "",
+			"includeFile1": "_markdown.html",
+			"includeMdFile": "_ide_body.md",
+			"title": "UI设计器",
+			"description": "mini IDE govcl designer",
+			"readme1": "UI设计器不属于GoVCL项目的一部分，仅仅只是我提供给使用者来简化UI的设计，所以没有开源的打算。",
+			"code": "代码",
+			"design": "设计",
+			"info1": "1、状态：开发中...  ",
+			"info2": "2、发布时间：没有计划。",
+			"info3": "3、是否收费：未决定。",
+			"info4": "4、是否跨平台：是"
 		}
 	]
 }

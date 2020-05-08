@@ -32,6 +32,13 @@ func templateFormatdate(t time.Time) string {
 	return t.Format("2006-01-02")
 }
 
+func templateLangDirFile(str, htmlfile string) string {
+	if str == "" {
+		return htmlfile
+	}
+	return str + "/" + htmlfile
+}
+
 func addTemplateFuncs() template.FuncMap {
 	return template.FuncMap{
 		"html":            templateHtml,
@@ -40,6 +47,7 @@ func addTemplateFuncs() template.FuncMap {
 		"formatdatetime":  templateFormatdatetime,
 		"include":         templateInclude,
 		"includeMarkdown": templateIncludeMarkdown,
+		"langDirFile":     templateLangDirFile,
 	}
 }
 
