@@ -133,7 +133,7 @@
 <li>修改：调整<code>DSynchronize</code>函数，当前是主线程时则不使用线程同步。  </li>
 <li>修改：当copyStr的strLen参数为0时直接返回空字符串。</li>
 <li>修复：修复一些控件在设计时状态下绘制不正确。</li>
-<li>修复：修复动态创建的某些文本控件不会清除默认值。</li>
+<li>禁用：禁用<code>CreateForm</code>的&quot;afterBindSubComponentsEvents&quot;，因为有冲突。</li>
 </ul>
 <blockquote>
 <p>本次的更新会造成生成的可执行文件<code>增加1M</code>左右。</p>
