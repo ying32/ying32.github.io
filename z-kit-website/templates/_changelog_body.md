@@ -22,6 +22,7 @@
 * 修改：当copyStr的strLen参数为0时直接返回空字符串。
 * 修复：修复一些控件在设计时状态下绘制不正确。
 * 禁用：禁用`CreateForm`的"afterBindSubComponentsEvents"，因为有冲突。
+* 修复：修复在macOS下因为Lazarus控件`GetTextLen`方法返回错误的长度(似乎返回的是一个Unicode UTF16的长度，正确的应该返回UTF-8的长度，而且只有macOS下才有)。
 
 
 > 本次的更新会造成生成的可执行文件`增加1M`左右。
