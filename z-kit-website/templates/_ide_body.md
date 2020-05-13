@@ -12,28 +12,25 @@
  * Windows
  
    * {{.design}}  
-   ![{{.design}}  ](/assets/images/ide/ide1_windows.jpg)  
-   
+   <a href="/assets/images/ide/ide1_windows.jpg" target="_blank"><img width="1000" src="/assets/images/ide/ide1_windows.jpg" alt="{{.design}}"/></a>
+ 
    * {{.code}}  
-   ![{{.code}}  ](/assets/images/ide/ide2_windows.jpg)  
-   
+   <a href="/assets/images/ide/ide2_windows.jpg" target="_blank"><img width="1000" src="/assets/images/ide/ide2_windows.jpg" alt="{{.code}}"/></a>
    
    
  * Linux
-    * {{.design}}  
-    ![{{.design}} ](/assets/images/ide/ide1_linux.jpg)  
-    
-    * {{.code}}  
-    ![{{.code}} ](/assets/images/ide/ide2_linux.jpg)  
-    
-    
+   * {{.design}}  
+   <a href="/assets/images/ide/ide1_linux.jpg" target="_blank"><img width="1000" src="/assets/images/ide/ide1_linux.jpg" alt="{{.design}}"/></a>
  
+   * {{.code}}  
+   <a href="/assets/images/ide/ide2_linux.jpg" target="_blank"><img width="1000" src="/assets/images/ide/ide2_linux.jpg" alt="{{.code}}"/></a>
+   
  
  * macOS
-    * {{.design}}  
-    ![{{.design}}  ](/assets/images/ide/ide1_macOS.jpg)  
-    
-    * {{.code}}  
-    ![{{.code}}  ](/assets/images/ide/ide2_macOS.jpg)  
-    
+   * {{.design}}  
+   <a href="/assets/images/ide/ide1_macOS.jpg" target="_blank"><img width="1000" src="/assets/images/ide/ide1_macOS.jpg" alt="{{.design}}"/></a>
+ 
+   * {{.code}}  
+   <a href="/assets/images/ide/ide2_macOS.jpg" target="_blank"><img width="1000" src="/assets/images/ide/ide2_macOS.jpg" alt="{{.code}}"/></a>
+   
     
