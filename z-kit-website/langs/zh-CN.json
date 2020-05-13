@@ -96,6 +96,7 @@
 			"title": "UI设计器",
 			"description": "mini IDE govcl designer",
 			"readme1": "UI设计器不属于GoVCL项目的一部分，仅仅只是我提供给使用者来简化UI的设计，所以没有开源的打算。",
+			"readme2": "你也可以使用Lazarus的UI设计器配合[res2go](https://github.com/ying32/govcl/tree/master/Tools/res2go)来生成UI。",
 			"code": "代码",
 			"design": "设计",
 			"info1": "1、状态：开发中...  ",

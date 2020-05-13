@@ -70,6 +70,7 @@
 		   "title": "UI Designer",
 		   "description": "mini IDE govcl designer",
 		   "readme1": "The UI designer is not part of the GoVCL project, it's just that I provide it to users to simplify the design of the UI, so there is no intention of open source.",
+		   "readme2": "You can also use Lazarus UI designer with [res2go](https://github.com/ying32/govcl/tree/master/Tools/res2go) to generate UI.",
 		   "code": "code",
 		   "design": "design",
 		   "info1": "1. Status: under development ...",
