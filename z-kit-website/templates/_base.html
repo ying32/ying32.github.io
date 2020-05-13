@@ -75,13 +75,11 @@
 	    {{if eq .lang "zh-CN"}}
 		<!--  <li><a href="/wiki">中文文档(测试)</a></li> -->
 		{{end}}
-		  <li><a href="https://github.com/ying32/govcl/tree/master/samples">{{.menubar.exampleTitle}}</a></li>
+		  <li><a href="https://github.com/ying32/govcl/tree/master/samples">{{.menubar.exampleTitle}}</a></li> 
 
-		{{if eq .lang "zh-CN"}}
+
 		  <li><a href="/{{langDirFile .langDir "screenshot.html"}}">{{.menubar.screenshot}}</a></li>
-        {{else}}
-	      <li><a href="https://github.com/ying32/govcl/blob/master/Screenshot/README.md">{{.menubar.screenshot}}</a></li>
-		{{end}}
+
 		  <li><a href="/{{langDirFile .langDir "ide.html"}}">{{.menubar.ide}}</a></li>
           <!--<li class="dropdown">
 			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">更多项目 <b class="caret"></b></a>

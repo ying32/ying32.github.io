@@ -8,7 +8,7 @@
 	},
 
 	"menubar": {
-		"docTitle": "中文文档",
+		"docTitle": "文档",
 		"exampleTitle": "示例",
 		"screenshot": "屏幕截图",
 		"videoTitle": "视频教程(第三方)",
@@ -77,14 +77,14 @@
 			"path": "",
 			"includeFile1": "_iframe.html",
 			"iframeURL": "https://gitee.com/ying32/govcl/wikis/pages",
-			"title": "中文文档",
+			"title": "文档",
 			"description": "文档"
 		},
 		{
 			"name": "screenshot",
 			"path": "",
-			"includeFile1": "_iframe.html",
-			"iframeURL": "https://gitee.com/ying32/govcl/blob/master/Screenshot/README.md",
+			"includeFile1": "_markdown.html",
+			"includeMdFile": "_screenshots_body.md",
 			"title": "屏幕截图",
 			"description": "屏幕截图"
 		},
