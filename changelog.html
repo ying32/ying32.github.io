@@ -136,7 +136,8 @@
 <li>禁用：禁用<code>CreateForm</code>的&quot;afterBindSubComponentsEvents&quot;，因为有冲突。</li>
 <li>修复：修复在macOS下因为Lazarus控件<code>GetTextLen</code>方法返回错误的长度(似乎返回的是一个Unicode UTF16的长度，正确的应该返回UTF-8的长度，而且只有macOS下才有)。 </li>
 <li>添加：<code>rtl</code>包中添加<code>MainThreadId</code>和<code>CurrentThradId</code>函数。</li>
-<li>修复：修复Windows下TMiniWebview边距不正确。  </li>
+<li>修复：修复<code>Windows</code>下<code>TMiniWebview</code>边距不正确。  </li>
+<li>修复：调整并修复在某些情况下字符串内存被释放。</li>
 </ul>
 <blockquote>
 <p>本次的更新会造成生成的可执行文件<code>增加1M</code>左右。</p>

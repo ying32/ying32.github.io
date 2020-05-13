@@ -24,7 +24,8 @@
 * 禁用：禁用`CreateForm`的"afterBindSubComponentsEvents"，因为有冲突。
 * 修复：修复在macOS下因为Lazarus控件`GetTextLen`方法返回错误的长度(似乎返回的是一个Unicode UTF16的长度，正确的应该返回UTF-8的长度，而且只有macOS下才有)。 
 * 添加：`rtl`包中添加`MainThreadId`和`CurrentThradId`函数。
-* 修复：修复Windows下TMiniWebview边距不正确。  
+* 修复：修复`Windows`下`TMiniWebview`边距不正确。  
+* 修复：调整并修复在某些情况下字符串内存被释放。
 
 
 > 本次的更新会造成生成的可执行文件`增加1M`左右。
