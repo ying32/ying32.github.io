@@ -118,22 +118,21 @@
 <p>-- govcl --  </p>
 <ul>
 <li>限制：当前版本限制<code>liblcl</code>二进制<code>最低</code>版本为<code>2.0.2</code>(因为liblcl中有改变)。  </li>
-<li>添加：尝试添加一个<code>TRichEdit</code>组件（macOS下还有问题，需要再看看）。</li>
+<li>添加：尝试添加一个<code>TRichEdit</code>组件（一个第三方组件，macOS下动态创建的还有问题，原因不明）。</li>
 <li>添加：添加一个<code>richedit</code>例子。</li>
-<li>更新：更新<code>redisViewer</code>例子。</li>
-<li>删除：删除<code>pkgs/skinh</code>包，及相关例子。</li>
-<li>添加：补充一些<code>LCL控件</code>的属性。</li>
-<li>添加：添加新的组件<code>TSelectDirectoryDialog</code>。</li>
+<li>删除：删除<code>pkgs/skinh</code>包，及相关例子，因为这个只能在Windows 32bit下使用，还是一个第三方的，效果也不好。</li>
+<li>添加：补充一些<code>LCL控件</code>的属性，主要是原来<code>Delphi/VCL</code>控件没有的属性。</li>
+<li>添加：添加新的组件：<code>TSelectDirectoryDialog</code>。</li>
 <li>添加：添加所有基于<code>TControl</code>的控件属性：<code>AnchorSideLeft</code>、<code>AnchorSideTop</code>、<code>AnchorSideRight</code>、<code>AnchorSideBottom</code>、<code>ClientOrigin</code>、<code>ChildSizing</code>、<code>BorderSpacing</code>、<code>AnchorSide</code>。</li>
 <li>添加：添加所有基于<code>TControl</code>的控件方法：<code>AnchorToNeighbour</code>、<code>AnchorParallel</code>、<code>AnchorHorizontalCenterTo</code>、<code>AnchorVerticalCenterTo</code>、<code>AnchorSame</code>、<code>AnchorAsAlign</code>、<code>AnchorClient</code>。</li>
-<li>删除：移除所有基于<code>TControl</code>的控件属性：<code>Margins</code>。</li>
+<li>删除：移除所有基于<code>TControl</code>的控件属性：<code>Margins</code>，因为不再需要兼容<code>Delphi/VCL</code>了，用<code>BorderSpacing</code>属性替代即可。</li>
 <li>改变：重命名工程<code>lcl.lpr</code>到<code>liblcl.lpr</code>。</li>
 <li>添加：<code>IControl</code>添加一些属性和方法接口。</li>
 <li>添加：添加一个<code>fileshelltree</code>例子。</li>
-<li>修改：调整<code>DSynchronize</code>函数，当前是主线程时则不使用线程同步。  </li>
-<li>修改：当copyStr的strLen参数为0时直接返回空字符串。</li>
+<li>修改：修改导出的函数<code>DSynchronize</code>，当前是主线程时则不使用线程同步，而是直接调用。  </li>
+<li>修改：当copyStr的strLen参数为0时直接返回空字符串(位于api包中)。</li>
 <li>修复：修复一些控件在设计时状态下绘制不正确。</li>
-<li>禁用：禁用<code>CreateForm</code>的&quot;afterBindSubComponentsEvents&quot;，因为有冲突。</li>
+<li>禁用：禁用<code>Application.CreateForm</code>的&quot;afterBindSubComponentsEvents&quot;，因为有冲突。</li>
 <li>修复：修复在macOS下因为Lazarus控件<code>GetTextLen</code>方法返回错误的长度(似乎返回的是一个Unicode UTF16的长度，正确的应该返回UTF-8的长度，而且只有macOS下才有)。 </li>
 <li>添加：<code>rtl</code>包中添加<code>MainThreadId</code>和<code>CurrentThradId</code>函数。</li>
 <li>修复：修复<code>Windows</code>下<code>TMiniWebview</code>边距不正确。  </li>

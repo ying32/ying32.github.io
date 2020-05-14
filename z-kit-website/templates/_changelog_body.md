@@ -6,22 +6,21 @@
 -- govcl --  
 
 * 限制：当前版本限制`liblcl`二进制`最低`版本为`2.0.2`(因为liblcl中有改变)。  
-* 添加：尝试添加一个`TRichEdit`组件（macOS下还有问题，需要再看看）。
+* 添加：尝试添加一个`TRichEdit`组件（一个第三方组件，macOS下动态创建的还有问题，原因不明）。
 * 添加：添加一个`richedit`例子。
-* 更新：更新`redisViewer`例子。
-* 删除：删除`pkgs/skinh`包，及相关例子。
-* 添加：补充一些`LCL控件`的属性。
-* 添加：添加新的组件`TSelectDirectoryDialog`。
+* 删除：删除`pkgs/skinh`包，及相关例子，因为这个只能在Windows 32bit下使用，还是一个第三方的，效果也不好。
+* 添加：补充一些`LCL控件`的属性，主要是原来`Delphi/VCL`控件没有的属性。
+* 添加：添加新的组件：`TSelectDirectoryDialog`。
 * 添加：添加所有基于`TControl`的控件属性：`AnchorSideLeft`、`AnchorSideTop`、`AnchorSideRight`、`AnchorSideBottom`、`ClientOrigin`、`ChildSizing`、`BorderSpacing`、`AnchorSide`。
 * 添加：添加所有基于`TControl`的控件方法：`AnchorToNeighbour`、`AnchorParallel`、`AnchorHorizontalCenterTo`、`AnchorVerticalCenterTo`、`AnchorSame`、`AnchorAsAlign`、`AnchorClient`。
-* 删除：移除所有基于`TControl`的控件属性：`Margins`。
+* 删除：移除所有基于`TControl`的控件属性：`Margins`，因为不再需要兼容`Delphi/VCL`了，用`BorderSpacing`属性替代即可。
 * 改变：重命名工程`lcl.lpr`到`liblcl.lpr`。
 * 添加：`IControl`添加一些属性和方法接口。
 * 添加：添加一个`fileshelltree`例子。
-* 修改：调整`DSynchronize`函数，当前是主线程时则不使用线程同步。  
-* 修改：当copyStr的strLen参数为0时直接返回空字符串。
+* 修改：修改导出的函数`DSynchronize`，当前是主线程时则不使用线程同步，而是直接调用。  
+* 修改：当copyStr的strLen参数为0时直接返回空字符串(位于api包中)。
 * 修复：修复一些控件在设计时状态下绘制不正确。
-* 禁用：禁用`CreateForm`的"afterBindSubComponentsEvents"，因为有冲突。
+* 禁用：禁用`Application.CreateForm`的"afterBindSubComponentsEvents"，因为有冲突。
 * 修复：修复在macOS下因为Lazarus控件`GetTextLen`方法返回错误的长度(似乎返回的是一个Unicode UTF16的长度，正确的应该返回UTF-8的长度，而且只有macOS下才有)。 
 * 添加：`rtl`包中添加`MainThreadId`和`CurrentThradId`函数。
 * 修复：修复`Windows`下`TMiniWebview`边距不正确。  
