@@ -16,12 +16,12 @@
 * 删除：移除所有基于`TControl`的控件属性：`Margins`，因为不再需要兼容`Delphi/VCL`了，用`BorderSpacing`属性替代即可。
 * 改变：重命名工程`lcl.lpr`到`liblcl.lpr`。
 * 添加：`IControl`添加一些属性和方法接口。
-* 添加：添加一个`fileshelltree`例子。
+* 添加：添加一个`fileshelltree`例子（以树的形式显示当前目录及子目录）。
 * 修改：修改导出的函数`DSynchronize`，当前是主线程时则不使用线程同步，而是直接调用。  
 * 修改：当copyStr的strLen参数为0时直接返回空字符串(位于api包中)。
 * 修复：修复一些控件在设计时状态下绘制不正确。
-* 禁用：禁用`Application.CreateForm`的"afterBindSubComponentsEvents"，因为有冲突。
-* 修复：修复在macOS下因为Lazarus控件`GetTextLen`方法返回错误的长度(似乎返回的是一个Unicode UTF16的长度，正确的应该返回UTF-8的长度，而且只有macOS下才有)。 
+* 禁用：禁用`Application.CreateForm`的"afterBindSubComponentsEvents"，因为有冲突，感谢`cyanBone`。
+* 修复：修复在macOS下因为Lazarus控件`GetTextLen`方法返回错误的长度(似乎返回的是一个Unicode UTF16的长度，正确的应该返回UTF-8的长度，而且只有macOS下才有)，感谢`cyanBone`。 
 * 添加：`rtl`包中添加`MainThreadId`和`CurrentThradId`函数。
 * 修复：修复`Windows`下`TMiniWebview`边距不正确。  
 * 修复：调整并修复在某些情况下字符串内存被释放。
