@@ -55,7 +55,7 @@ func main() {
 
 					if !info.IsDir() {
 						ext := filepath.Ext(info.Name())
-						if ext != ".html" && ext != ".md" {
+						if ext != ".html" && ext != ".md" && ext != ".json" {
 							return nil
 						}
 						//if ext == ".go" || ext == ".exe" || ext == ".js" {

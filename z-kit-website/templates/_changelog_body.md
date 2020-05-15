@@ -1,7 +1,16 @@
 ## 下个版本，dev分支(Next version, dev branch)
 **Please use Google Translate if your native language is not Chinese.**   
 
+
 ## next v2.0.x
+
+-- govcl --  
+
+-- res2go --    
+
+## 当前版本，master分支(Current version, master branch)
+
+## v2.0.2
 
 -- govcl --  
 
@@ -31,7 +40,6 @@
 
 -- res2go --    
 
-## 当前版本，master分支(Current version, master branch)
 
 ## v2.0.1
 
