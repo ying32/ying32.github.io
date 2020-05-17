@@ -7,6 +7,7 @@
 -- govcl --  
 
 * 添加：TTreeView添加`AlphaSort`方法。
+* 修复：修复一些枚举常量未导出问题。
 
 -- res2go --    
 
