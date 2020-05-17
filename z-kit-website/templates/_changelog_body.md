@@ -6,6 +6,8 @@
 
 -- govcl --  
 
+* 添加：TTreeView添加`AlphaSort`方法。
+
 -- res2go --    
 
 > 注：res2go工具将不再提供预编译二进制了，可以自行编译，方法参考`Tools\res2go\src`中的`README.md`（不提供的原因：1、编译超简单。2、因为你要用到res2go，就说明你已经安装了Lazarus了，已经具备编译条件了。）。
