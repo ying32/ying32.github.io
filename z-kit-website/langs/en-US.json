@@ -74,9 +74,9 @@
 		   "code": "code",
 		   "design": "design",
 		   "info1": "1. Status: under development ...",
-		   "info2": "2. Release time: No plan.",
-		   "info3": "3. Whether to charge: not decided.",
-		   "info4": "4. Cross-platform: yes"
+		   "info2": "2. Release time: No plan",
+		   "info3": "3. Whether to charge: Yes (Charge Mode: To be determined)",
+		   "info4": "4. Cross-platform: Yes"
 	   }
 	]
 }
