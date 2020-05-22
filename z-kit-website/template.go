@@ -79,7 +79,7 @@ func templateIncludeMarkdown(filename string, data map[string]interface{}) templ
 	return template.HTML(markdown.CovToHTML(buf.String(), nil))
 }
 
-func makeHtmlPage(root string, datas map[string]interface{}) {
+func makeHtmlPage(root string, datas map[string]interface{}, addToSiteMap func(page string)) {
 
 	file, ok := datas["name"].(string)
 	if !ok {
@@ -120,10 +120,14 @@ func makeHtmlPage(root string, datas map[string]interface{}) {
 		root += path
 	}
 
-	fmt.Println("--------", root+file+".html")
+	pageURL := root + file + ".html"
+	fmt.Println("--------", pageURL)
 	if _, err := os.Stat(root); err != nil {
 		os.MkdirAll(root, 0775)
 	}
+	if addToSiteMap != nil {
+		addToSiteMap(pageURL)
+	}
 
-	ioutil.WriteFile(root+file+".html", buf.Bytes(), 0777)
+	ioutil.WriteFile(pageURL, buf.Bytes(), 0777)
 }

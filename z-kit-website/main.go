@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"errors"
 	"flag"
@@ -17,6 +18,10 @@ var (
 	debug = flag.Bool("debug", false, "")
 )
 
+const (
+	domain = "https://z-kit.cc/"
+)
+
 func main() {
 	flag.Parse()
 
@@ -28,6 +33,33 @@ func main() {
 	}
 
 	updateSite := func() {
+
+		siteMap := bytes.NewBuffer(nil)
+		siteMap.WriteString(`<?xml version="1.0" encoding="UTF-8"?>`)
+		siteMap.WriteByte(10)
+		siteMap.WriteString(`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`)
+		siteMap.WriteByte(10)
+		addToSiteMap := func(pageURL string) {
+			siteMap.WriteString(`<url>`)
+			siteMap.WriteByte(10)
+			// loc
+			siteMap.WriteString(`<loc>`)
+			siteMap.WriteString(domain)
+			siteMap.WriteString(pageURL[3:])
+			siteMap.WriteString(`</loc>`)
+			siteMap.WriteByte(10)
+			// lastmod
+			siteMap.WriteString(`<lastmod>`)
+			siteMap.WriteString(time.Now().Format(time.RFC3339)) //"2006-01-02 15:04:05"))
+			siteMap.WriteString(`</lastmod>`)
+			siteMap.WriteByte(10)
+			// changefreq
+			siteMap.WriteString(`<changefreq>daily</changefreq>`)
+			siteMap.WriteByte(10)
+			siteMap.WriteString(`</url>`)
+			siteMap.WriteByte(10)
+		}
+
 		for _, lang := range langs {
 			switch lang.(type) {
 			case map[string]interface{}:
@@ -35,9 +67,14 @@ func main() {
 				langDir, _ := lang.(map[string]interface{})["langDir"].(string)
 				fmt.Println("生成：", langName, "，目录：", langDir)
 
-				makeSite(root, langName, langDir, langs)
+				makeSite(root, langName, langDir, langs, addToSiteMap)
 			}
 		}
+
+		siteMap.WriteString(`</urlset>`)
+
+		// 保存map
+		ioutil.WriteFile(root+"sitemap.xml", siteMap.Bytes(), 0664)
 	}
 
 	if !*debug {
@@ -118,7 +155,7 @@ func readWiki(lang string) []byte {
 	return bs
 }
 
-func makeSite(root string, langName, langDir string, langs []interface{}) {
+func makeSite(root string, langName, langDir string, langs []interface{}, addToSiteMap func(page string)) {
 	if langName == "" {
 		log.Println("未找到语言名。")
 	}
@@ -152,7 +189,7 @@ func makeSite(root string, langName, langDir string, langs []interface{}) {
 				pg["footer"] = dataMap["footer"]
 				pg["menubar"] = dataMap["menubar"]
 				pg["year"] = time.Now().Year()
-				makeHtmlPage(root, pg)
+				makeHtmlPage(root, pg, addToSiteMap)
 			}
 		}
 	}
