@@ -76,7 +76,8 @@
 		   "info1": "1. Status: under development ...",
 		   "info2": "2. Release time: No plan",
 		   "info3": "3. Whether to charge: Yes (Charge Mode: To be determined)",
-		   "info4": "4. Cross-platform: Yes"
+		   "info4": "4. Cross-platform: Yes",
+		   "aboutide": "[More information about the designer can be found in About](https://z-kit.cc/about.html)"
 	   }
 	]
 }
