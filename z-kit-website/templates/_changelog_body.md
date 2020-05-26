@@ -8,6 +8,7 @@
 
 * 添加：TTreeView添加`AlphaSort`方法。
 * 修复：修复一些枚举常量未导出问题。
+* 添加：TRadioButton和TCheckBox添加OnChange事件。
 
 -- res2go --    
 
