@@ -98,7 +98,7 @@ func makeHtmlPage(root string, datas map[string]interface{}, addToSiteMap func(p
 		log.Println(err)
 		return
 	}
-	datas["lastupdatetime"] = time.Now().Format("2006-01-02 15:04:05")
+	datas["lastupdatetime"] = time.Now().Format("2006-01-02") //"2006-01-02 15:04:05")
 	err = t.Execute(&buf, datas)
 	if err != nil {
 		log.Println(err)

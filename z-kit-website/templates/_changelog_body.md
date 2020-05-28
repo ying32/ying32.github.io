@@ -8,7 +8,8 @@
 
 * 添加：TTreeView添加`AlphaSort`方法。
 * 修复：修复一些枚举常量未导出问题。
-* 添加：TRadioButton和TCheckBox添加OnChange事件。
+* 添加：TRadioButton和TCheckBox添加OnChange事件。  
+* 增加：`TMiniWebView`：`ExecuteScript`和`ExecuteJS`方法支持返回值。
 
 -- res2go --    
 
