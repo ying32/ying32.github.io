@@ -10,8 +10,9 @@
 * 修复：修复一些枚举常量未导出问题。
 * 添加：TRadioButton和TCheckBox添加OnChange事件。  
 * 增加：`TMiniWebView`：`ExecuteScript`和`ExecuteJS`方法支持返回值。
-* 增加：`TApplication`添加新的属性：`SingleInstanceEnabled`,`Location`,`StopOnException`,`ExceptionExitCode`
-* 增加：部分控件添加`Showing`属性。
+* 增加：`TApplication`添加新的属性：`SingleInstanceEnabled`,`Location`,`StopOnException`,`ExceptionExitCode`。
+* 增加：部分控件添加`Showing`属性。  
+* 增加：`win`包中新添加一些Windows API、常量、类型。
 
 -- res2go --    
 
