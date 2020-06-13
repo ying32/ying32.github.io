@@ -16,6 +16,7 @@
 * 删除：移除Application.SetFormScaled
 * 增加：添加Application.Handle和Application.SetHandle，仅Windows有效。
 * 增加：添加一些其它接口。
+* 增加：增加一个`Windows\nppPlugins`例子，主要测试在第三方程序中使用`govcl`的可行性。
 
 -- res2go --    
 
