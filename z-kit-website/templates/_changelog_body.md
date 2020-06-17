@@ -17,8 +17,9 @@
 * 增加：添加Application.Handle和Application.SetHandle，仅Windows有效。
 * 增加：添加一些其它接口。
 * 增加：增加一个`Windows\nppPlugins`例子，主要测试在第三方程序中使用`govcl`的可行性。  
-* 增加：添加一个生成liblcl C语言头文件工具（Tools/makeCHeader）。
+* 增加：添加一个生成liblcl C语言头文件工具（Tools/makeCHeader），并提供完整的c语言头文件，位于`Tools\makeCHeader\test\liblcl.h`，方便其他支持c的语言调用liblcl。
 * 修改：macOS限制目标系统版本为10.8。
+* 删除：移除TMessageEventg事件。
 
 -- res2go --    
 
