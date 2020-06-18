@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus delphi">
 	<meta name="author" content="不在乎y(ying32)">
-	<meta name="lastupdatetime" content="2020-06-17">
+	<meta name="lastupdatetime" content="2020-06-18">
 
 	<title>GoVCL | 更新日志</title>
 
@@ -116,21 +116,23 @@
 <li>修复：修复一些枚举常量未导出问题。</li>
 <li>添加：TRadioButton和TCheckBox添加OnChange事件。  </li>
 <li>增加：<code>TMiniWebView</code>：<code>ExecuteScript</code>和<code>ExecuteJS</code>方法支持返回值。</li>
-<li>增加：<code>TApplication</code>添加新的属性：<code>SingleInstanceEnabled</code>,<code>Location</code>,<code>StopOnException</code>,<code>ExceptionExitCode</code>。</li>
+<li>增加：<code>TApplication</code>预添加新的属性：<code>SingleInstanceEnabled</code>,<code>Location</code>,<code>StopOnException</code>,<code>ExceptionExitCode</code>(暂时无效)。</li>
 <li>增加：部分控件添加<code>Showing</code>属性。  </li>
 <li>增加：<code>win</code>包中新添加一些Windows API、常量、类型。</li>
-<li>删除：移除Application.SetFormScaled</li>
+<li>删除：移除Application.SetFormScaled，使用原生的<code>Application.SetScaled</code>。</li>
 <li>增加：添加Application.Handle和Application.SetHandle，仅Windows有效。</li>
 <li>增加：添加一些其它接口。</li>
 <li>增加：增加一个<code>Windows\nppPlugins</code>例子，主要测试在第三方程序中使用<code>govcl</code>的可行性。  </li>
 <li>增加：添加一个生成liblcl C语言头文件工具（Tools/makeCHeader），并提供完整的c语言头文件，位于<code>Tools\makeCHeader\test\liblcl.h</code>，方便其他支持c的语言调用liblcl。</li>
 <li>修改：macOS限制目标系统版本为10.8。</li>
 <li>删除：移除TMessageEventg事件。</li>
+<li>新增：新增控件：TCheckGroup、TToggleBox。</li>
 </ul>
 <p>-- res2go --    </p>
 <ul>
 <li>修复：修复在非Windows系统下的控台中显示乱码问题。</li>
 <li>修复：修复<code>-scale</code>选项。</li>
+<li>增加：支持导出控件：TCheckGroup、TToggleBox。</li>
 </ul>
 <blockquote>
 <p>注：res2go工具将不再提供预编译二进制了，可以自行编译，方法参考<code>Tools\res2go\src</code>中的<code>README.md</code>（不提供的原因：1、编译超简单。2、因为你要用到res2go，就说明你已经安装了Lazarus了，已经具备编译条件了。）。</p>

@@ -10,21 +10,23 @@
 * 修复：修复一些枚举常量未导出问题。
 * 添加：TRadioButton和TCheckBox添加OnChange事件。  
 * 增加：`TMiniWebView`：`ExecuteScript`和`ExecuteJS`方法支持返回值。
-* 增加：`TApplication`添加新的属性：`SingleInstanceEnabled`,`Location`,`StopOnException`,`ExceptionExitCode`。
+* 增加：`TApplication`预添加新的属性：`SingleInstanceEnabled`,`Location`,`StopOnException`,`ExceptionExitCode`(暂时无效)。
 * 增加：部分控件添加`Showing`属性。  
 * 增加：`win`包中新添加一些Windows API、常量、类型。
-* 删除：移除Application.SetFormScaled
+* 删除：移除Application.SetFormScaled，使用原生的`Application.SetScaled`。
 * 增加：添加Application.Handle和Application.SetHandle，仅Windows有效。
 * 增加：添加一些其它接口。
 * 增加：增加一个`Windows\nppPlugins`例子，主要测试在第三方程序中使用`govcl`的可行性。  
 * 增加：添加一个生成liblcl C语言头文件工具（Tools/makeCHeader），并提供完整的c语言头文件，位于`Tools\makeCHeader\test\liblcl.h`，方便其他支持c的语言调用liblcl。
 * 修改：macOS限制目标系统版本为10.8。
 * 删除：移除TMessageEventg事件。
+* 新增：新增控件：TCheckGroup、TToggleBox。
 
 -- res2go --    
 
 * 修复：修复在非Windows系统下的控台中显示乱码问题。
 * 修复：修复`-scale`选项。
+* 增加：支持导出控件：TCheckGroup、TToggleBox。
 
 > 注：res2go工具将不再提供预编译二进制了，可以自行编译，方法参考`Tools\res2go\src`中的`README.md`（不提供的原因：1、编译超简单。2、因为你要用到res2go，就说明你已经安装了Lazarus了，已经具备编译条件了。）。
 
