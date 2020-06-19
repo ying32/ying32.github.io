@@ -21,6 +21,7 @@
 * 修改：macOS限制目标系统版本为10.8。
 * 删除：移除TMessageEventg事件。
 * 新增：新增控件：TCheckGroup、TToggleBox。
+* 增加：更新liblcl源代码，预添加异常处理机制（未启用，主要是因为考虑到生成的dll文件大小会增加不少）。
 
 -- res2go --    
 
