@@ -38,6 +38,16 @@
 			"viewTheGitHub": "View the GitHub"
 	   },
 	   {
+		   "name": "sponsor",
+		   "path": "",
+		   "issponsor": true,
+		   "markdown": true,
+		   "includeFile1": "_markdown.html",
+		   "includeMdFile": "_sponsor_body_en.md",
+		   "title": "Sponsor GoVCL",
+		   "description": ""
+	   },
+	   {
 		   "name": "about",
 		   "path": "",
 		   "markdown": true,
