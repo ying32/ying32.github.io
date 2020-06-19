@@ -42,7 +42,7 @@
 		   "path": "",
 		   "markdown": true,
 		   "includeFile1": "_markdown.html",
-		   "includeMdFile": "_about_body.md",
+		   "includeMdFile": "_about_body_en.md",
 		   "title": "About",
 		   "description": "about"
 	   },
