@@ -21,6 +21,7 @@
 * 删除：移除TMessageEventg事件。
 * 新增：新增控件：TCheckGroup、TToggleBox。
 * 增加：更新liblcl源代码，预添加异常处理机制（未启用，主要是因为考虑到生成的dll文件大小会增加不少）。
+* 替换：因为一些其他的原因，决定替换原来的`TGuage`组件内部为一个第三方的`TATGuage`，组件包：[ATFlatControls](https://github.com/Alexey-T/ATFlatControls)。
 
 -- res2go --    
 
