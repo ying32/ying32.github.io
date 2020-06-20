@@ -17,3 +17,18 @@ function loadRepoInfo() {
 
     <!-- alert(navigator.language||navigator.userLanguage); -->
 }
+
+function setShowQQGroupQrCode() {
+    var qqgroup = $("#qq_group");
+    qqgroup.hover(function(){
+        var qrcode = $("#qq_group_qrcode");
+        qrcode.fadeIn(500);
+        qrcode.css("z-index",200);
+
+        qrcode.css("left", qqgroup.offset().left + (qqgroup.width()  - qrcode.width()) / 2);
+        qrcode.css("top", 60);
+    },function(){
+        $("#qq_group_qrcode").fadeOut(0);
+        $("#qq_group_qrcode").css("z-index",50);
+    });
+}

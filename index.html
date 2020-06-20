@@ -8,7 +8,7 @@
 	<meta name="description" content="govcl - 跨平台的原生Go GUI开发库">
 	<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus delphi">
 	<meta name="author" content="不在乎y(ying32)">
-	<meta name="lastupdatetime" content="2020-06-19">
+	<meta name="lastupdatetime" content="2020-06-20">
 
 	<title>GoVCL | 跨平台的原生Go GUI开发库</title>
 
@@ -46,7 +46,8 @@
 </head>
 <body class="bs-docs-home">
   <a id="skippy" class="sr-only sr-only-focusable" href="https://github.com/ying32"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
- 
+
+
 <header class="navbar navbar-static-top bs-docs-nav navbar-fixed-top" id="top">
   <div class="container">
     <div class="navbar-header">
@@ -74,7 +75,7 @@
 		  
 		  <li><a href="https://video.0-w.cc/videos/1" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '视频教程'])"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg> 视频教程(第三方)</a></li>
 	    
-		  <li><a href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '加入QQ群'])"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg> 加入QQ群</a></li>
+		  <li><a id="qq_group" href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '加入QQ群'])"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg> 加入QQ群</a></li>
 		
 		  <li class="dropdown">
 			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-language"></use></svg> Language<b class="caret"></b></a>
@@ -89,8 +90,12 @@
 		  </li> 
       </ul>
     </nav>
+	  
+	<img id="qq_group_qrcode" src="/assets/images/qqgroup_qrcode.png" style="display: none; position: absolute;" >
+	  
   </div>
 </header>
+
 
 
 	
@@ -198,6 +203,12 @@
 </script>
 
 
+
+<script>
+	setShowQQGroupQrCode();
+</script>
+
+  
 
   
 
