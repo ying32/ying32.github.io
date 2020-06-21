@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus delphi">
 	<meta name="author" content="不在乎y(ying32)">
-	<meta name="lastupdatetime" content="2020-06-21">
+	<meta name="lastupdatetime" content="2020-06-22">
 
 	<title>GoVCL | 更新日志</title>
 
@@ -132,7 +132,9 @@
 <li>删除：移除TMessageEventg事件。</li>
 <li>新增：新增控件：TCheckGroup、TToggleBox。</li>
 <li>增加：更新liblcl源代码，预添加异常处理机制（未启用，主要是因为考虑到生成的dll文件大小会增加不少）。</li>
-<li>替换：因为一些其他的原因，决定替换原来的<code>TGuage</code>组件内部为一个第三方的<code>TATGuage</code>，组件包：<a href="https://github.com/Alexey-T/ATFlatControls">ATFlatControls</a>。</li>
+<li>替换：因为一些其他的原因，决定替换原来的<code>TGuage</code>组件内部为一个第三方的<code>TATGuage</code>，组件包：<a href="https://github.com/Alexey-T/ATFlatControls">ATFlatControls</a>。  </li>
+<li>添加：添加工具<code>Tools/genbinres</code>，用于将<code>liblcl-x.x.x.zip</code>格式的liblcl预编译二进制生成<code>github.com/ying32/liblclbinres</code>包，以便将liblcl打包到可执行文件中。  </li>
+<li>添加：添加编译约束指令<code>tempdll</code>，用于将liblcl打包到可执行文件中，然后运行时释放到临时目录中。</li>
 </ul>
 <p>-- res2go --    </p>
 <ul>
