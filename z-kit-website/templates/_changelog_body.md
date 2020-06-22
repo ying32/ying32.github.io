@@ -23,7 +23,7 @@
 * 增加：更新liblcl源代码，预添加异常处理机制（未启用，主要是因为考虑到生成的dll文件大小会增加不少）。
 * 替换：因为一些其他的原因，决定替换原来的`TGuage`组件内部为一个第三方的`TATGuage`，组件包：[ATFlatControls](https://github.com/Alexey-T/ATFlatControls)。  
 * 添加：添加工具`Tools/genbinres`，用于将`liblcl-x.x.x.zip`格式的liblcl预编译二进制生成`github.com/ying32/liblclbinres`包，以便将liblcl打包到可执行文件中。  
-* 添加：添加编译约束指令`tempdll`，用于将liblcl打包到可执行文件中，然后运行时释放到临时目录中。
+* 添加：添加编译约束指令`tempdll`，用于将liblcl打包到可执行文件中，然后运行时释放到临时目录中，[使用说明](https://gitee.com/ying32/govcl/wikis/pages?sort_id=2364531&doc_id=102420)。
 
 -- res2go --    
 
