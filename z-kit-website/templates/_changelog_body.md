@@ -6,10 +6,12 @@
 
 -- govcl --  
 
+* 修复：修复新添加的组件未注册问题。 
+
 -- res2go --    
 
 
-## 当前版本，master分支(Current version, master branch)  
+## 当前版本，master分支(Current version, master branch)   
 
 ## v2.0.3
 
