@@ -7,10 +7,11 @@
 -- govcl --  
 
 * 修复：修复新添加的组件未注册问题。 
-* `TMovedEvent`由3个参数变更为4个参数，添加`isColumn`参数。
-* `TStringGrid`和`TDrawGrid`移除`SetOnColumnMoved`和`SetOnRowMoved`方法，并添加新的方法：`SetOnColRowMoved`
-* 更新liblcl事件回调。
-* 更新liblcl.h头文件。
+* 修改：`TMovedEvent`由3个参数变更为4个参数，添加`isColumn`参数。
+* 变更：`TStringGrid`和`TDrawGrid`移除`SetOnColumnMoved`和`SetOnRowMoved`方法，并添加新的方法：`SetOnColRowMoved`
+* 修改：更新liblcl事件回调。
+* 修改：更新liblcl.h头文件。
+* 添加：`TPrinter`添加`SetPrinter`方法。
 
 -- res2go --    
 
