@@ -6,6 +6,7 @@
 
 -- govcl --  
 
+* 限制：要求liblcl二进制版本>=2.0.4
 * 修复：修复新添加的组件未注册问题。 
 * 修改：`TMovedEvent`由3个参数变更为4个参数，添加`isColumn`参数。
 * 变更：`TStringGrid`和`TDrawGrid`移除`SetOnColumnMoved`和`SetOnRowMoved`方法，并添加新的方法：`SetOnColRowMoved`
