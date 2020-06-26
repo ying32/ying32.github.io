@@ -43,9 +43,19 @@
 		   "issponsor": true,
 		   "markdown": true,
 		   "includeFile1": "_markdown.html",
-		   "includeMdFile": "_sponsor_body_en.md",
+		   "includeMdFile": "_sponsor_body.md",
 		   "title": "Sponsor GoVCL",
-		   "description": ""
+		   "description": "",
+		   "sponsorlist": "Sponsor List",
+		   "sponsor": "sponsor",
+		   "Amount": "amount of money",
+		   "time": "time",
+		   "Sponsorship":"sponsorship",
+		   "comment": "comment",
+		   "wechatpay": "WeChat Pay",
+		   "alipay": "AliPay",
+		   "other": "Other",
+		   "thanks": "Thanks to the above friends for their generous support."
 	   },
 	   {
 		   "name": "about",

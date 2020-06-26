@@ -43,7 +43,17 @@
 			"includeFile1": "_markdown.html",
 			"includeMdFile": "_sponsor_body.md",
 			"title": "赞助GoVCL",
-			"description": ""
+			"description": "",
+			"sponsorlist": "赞助名单",
+			"sponsor": "赞助者",
+			"Amount": "金额",
+			"time": "赞助时间",
+			"Sponsorship":"来源",
+			"comment": "附言",
+			"wechatpay": "微信",
+			"alipay": "支付宝",
+			"other": "其他",
+			"thanks": "感谢以上小伙伴的慷慨支持。"
 		},
 		{
 			"name": "changelog",
