@@ -27,9 +27,6 @@
 * 从资源中加载窗口(resouce form)   
 ![basicResForm_Windows](/assets/images/screenshots/basicResForm_windows.jpg)   
 
-* libvcl MiniWebview   
-![miniweb_libvcl_win](/assets/images/screenshots/miniweb_libvcl_win.jpg) 
-
 * liblcl MiniWebview 
 ![miniweb_liblcl_win](/assets/images/screenshots/miniweb_liblcl_win.jpg) 
 
