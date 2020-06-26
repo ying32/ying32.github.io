@@ -6,30 +6,43 @@
 
 ## Windows
 
-* test1  
-![govcl 1](/assets/images/screenshots/govcl-win-1.jpg)     
-* test2  
-![govcl 2](/assets/images/screenshots/govcl-win-2.jpg)      
-* 自绘(custom draw)    
+* govcl  
+![govcl](/assets/images/screenshots/govcl-win-1.jpg)     
+
+* govcl  
+![govcl](/assets/images/screenshots/govcl-win-2.jpg)      
+
+* draw
 ![custom draw](/assets/images/screenshots/draw-win.jpg)  
-* ListView   
+
+* listview   
 ![ListView](/assets/images/screenshots/listview.jpg)  
-* 标准控件(standard control)    
+
+* standard control    
 ![标准控件](/assets/images/screenshots/std.jpg)   
-* 四态图像按钮(image button)  
+
+* imagebutton 
 ![图像按钮](/assets/images/screenshots/imagebutton.jpg)    
+
 * 从资源中加载窗口(resouce form)   
 ![basicResForm_Windows](/assets/images/screenshots/basicResForm_windows.jpg)   
+
 * libvcl MiniWebview   
 ![miniweb_libvcl_win](/assets/images/screenshots/miniweb_libvcl_win.jpg) 
+
 * liblcl MiniWebview 
 ![miniweb_liblcl_win](/assets/images/screenshots/miniweb_liblcl_win.jpg) 
+
 * 基于bass的mp3Player   
 ![mp3Player_win](/assets/images/screenshots/mp3Player_win.jpg)    
 
 ![](/assets/images/screenshots/windowsjsonviewer.jpg)   
+
 ![](/assets/images/screenshots/windwosgdiplus.jpg)   
+
 ![](/assets/images/screenshots/windwosprocesslist.jpg)   
+
+![](/assets/images/screenshots/listboxcustomdraw2.jpg)   
 
 ---
 ## Linux
