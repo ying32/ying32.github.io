@@ -12,7 +12,8 @@
 * 变更：`TStringGrid`和`TDrawGrid`移除`SetOnColumnMoved`和`SetOnRowMoved`方法，并添加新的方法：`SetOnColRowMoved`
 * 修改：更新liblcl事件回调。
 * 修改：更新liblcl.h头文件。
-* 添加：`TPrinter`添加`SetPrinter`方法。
+* 添加：`TPrinter`添加`SetPrinter`方法。 
+* 实现：Linux:Gtk2:TMiniWebview:支持`LoadHTML`和`ExecuteJS`方法。
 
 -- res2go --    
 
