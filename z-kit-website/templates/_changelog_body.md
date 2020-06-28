@@ -15,7 +15,7 @@
 * 添加：`TPrinter`添加`SetPrinter`方法。 
 * 实现：Linux:Gtk2:TMiniWebview:支持`LoadHTML`和`ExecuteJS`方法。  
 * 添加：添加新的包：`pkgs/wintaskbar`；添加新的例子：`windows/taskbar`。
-* 修改：Windows下使用LCL默认字体。
+* 修改：liblcl:Windows下使用LCL默认字体。
 
 -- res2go --    
 
