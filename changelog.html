@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus delphi">
 	<meta name="author" content="不在乎y(ying32)">
-	<meta name="lastupdatetime" content="2020-06-29">
+	<meta name="lastupdatetime" content="2020-06-30">
 
 	<title>GoVCL | 更新日志</title>
 
@@ -131,6 +131,7 @@
 <p>-- res2go --    </p>
 <h2 id="最新发布latest-release">最新发布(Latest release)</h2>
 <h2 id="v203">v2.0.3</h2>
+<p>2020年6月22日   </p>
 <p>-- govcl --  </p>
 <ul>
 <li>添加：TTreeView添加<code>AlphaSort</code>方法。</li>
@@ -162,6 +163,7 @@
 <p>注：res2go工具将不再提供预编译二进制了，可以自行编译，方法参考<code>Tools\res2go\src</code>中的<code>README.md</code>（不提供的原因：1、编译超简单。2、因为你要用到res2go，就说明你已经安装了Lazarus了，已经具备编译条件了。）。</p>
 </blockquote>
 <h2 id="v202">v2.0.2</h2>
+<p>2020年5月15日   </p>
 <p>-- govcl --  </p>
 <ul>
 <li>限制：当前版本限制<code>liblcl</code>二进制<code>最低</code>版本为<code>2.0.2</code>(因为liblcl中有改变)。  </li>
@@ -190,10 +192,12 @@
 </blockquote>
 <p>-- res2go --    </p>
 <h2 id="v201">v2.0.1</h2>
+<p>2020年5月6日   </p>
 <ul>
 <li>修复：删除了go.mod文件，修复因为go.mod引起的不能拉取代码问题。</li>
 </ul>
 <h2 id="v200">v2.0.0</h2>
+<p>2020年4月16日   </p>
 <p>-- govcl --  </p>
 <ul>
 <li>移除：移除<code>Delphi/VCL</code>的支持，只专注<code>Lazarus/LCL</code>的跨平台方案。    </li>
@@ -222,6 +226,7 @@
 <li>修复：修复<code>types</code>包中的<code>WPARAM</code>类型命名错误。    </li>
 </ul>
 <h2 id="v12102">v1.2.10.2</h2>
+<p>2020年3月25日   </p>
 <p>-- govcl --  </p>
 <p><strong>最后一个支持<code>Delphi/VCL</code>的版本: <a href="https://github.com/ying32/govcl/tree/last-vcl-support/">last-vcl-support</a>。</strong>  </p>
 <ul>
@@ -235,6 +240,7 @@
 </ul>
 <p>-- res2go --   </p>
 <h2 id="v1210">v1.2.10</h2>
+<p>2020年3月20日   </p>
 <p>-- govcl --  </p>
 <ul>
 <li>修改：liblcl：<code>TListView</code>、<code>TTreeView</code>一些默认属性修改，<code>ScrollBars</code>默认为<code>ssAutoBoth</code>。非Windows下TTreeView的<code>TreeLinePenStyle</code>默认值为<code>psSolid</code>。<code>TTreeView.ExpandSignType</code>默认为<code>tvestArrowFill</code>.。</li>
@@ -276,6 +282,7 @@
 </blockquote>
 <p>-- res2go --    </p>
 <h2 id="v129">v1.2.9</h2>
+<p>2020年3月6日   </p>
 <p>-- govcl --  </p>
 <ul>
 <li>增加：添加新的枚举类型:<code>TDefaultMonitor</code>。   </li>
@@ -301,6 +308,7 @@
 <li>更新：更新<code>winappres</code>包路径。</li>
 </ul>
 <h2 id="v128">v1.2.8</h2>
+<p>2020年3月3日   </p>
 <p> -- govcl --    </p>
 <ul>
 <li>增加：liblcl：部分控件增加<code>ParentBackground</code>属性。  </li>
@@ -342,6 +350,7 @@
 <li>修改：<code>-outres</code>参数改为添加一个<code>winappres</code>包。</li>
 </ul>
 <h2 id="v127">v1.2.7</h2>
+<p>2020年1月20日   </p>
 <p> -- govcl --  </p>
 <ul>
 <li><p>修复：修复go版本&gt;=1.13时，liblcl中字符串被GC回收问题。</p>
@@ -361,6 +370,7 @@
 </li>
 </ul>
 <h2 id="v1264">v1.2.6.4</h2>
+<p>2019年8月21日   </p>
 <p> -- govcl --  </p>
 <ul>
 <li><p>删除：libvcl/liblcl：不再导出&quot;DGetParam&quot;函数，使用go原生获取。  </p>
@@ -398,6 +408,7 @@
 </li>
 </ul>
 <h2 id="v125">v1.2.5</h2>
+<p>2019年7月1日   </p>
 <p> -- govcl --  </p>
 <ul>
 <li><p>新增：增加一个listviewadv1例子。  </p>
@@ -429,6 +440,7 @@
 </li>
 </ul>
 <h2 id="v124">v1.2.4</h2>
+<p>2019年6月3日  </p>
 <p> -- govcl --</p>
 <ul>
 <li><p>修复： Windows下liblcl某些控件不能正确应用Windows Theme问题。</p>
@@ -468,6 +480,7 @@
 </li>
 </ul>
 <h2 id="v123">v1.2.3</h2>
+<p>2019年5月13日  </p>
 <p> -- govcl --</p>
 <ul>
 <li><p>liblcl添加TApplication.RestoreTopMosts方法，用来兼容libvcl。</p>
@@ -499,6 +512,7 @@
 </li>
 </ul>
 <h2 id="v122">v1.2.2</h2>
+<p>2018年12月1日  </p>
 <p> -- govcl --</p>
 <ul>
 <li><p>自动绑定事件增加：当“afterBindSubComponentsEvents=true”时自动设置组件的名称。 </p>
@@ -532,7 +546,7 @@
 </li>
 </ul>
 <h2 id="v121">v1.2.1</h2>
-<p>2018-11-20  </p>
+<p>2018年11月20日    </p>
 <p> -- govcl --  </p>
 <ul>
 <li><p>govcl增加的“arm”编译约束。</p>
@@ -612,6 +626,7 @@
 <li><p>更新res2go二进制，并添加res2go macOS二进制。    </p>
 <hr>
 <h2 id="v120">v1.2.0</h2>
+<p>2018年11月5日  </p>
 </li>
 <li><p>修复liblcl在linux和macOS下在协程中使用vcl.ShowMessage或其它模态窗口时应用程序崩溃问题。bug提交来源于issues #14。      </p>
 </li>
