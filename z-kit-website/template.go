@@ -48,7 +48,12 @@ func addTemplateFuncs() template.FuncMap {
 		"include":         templateInclude,
 		"includeMarkdown": templateIncludeMarkdown,
 		"langDirFile":     templateLangDirFile,
+		"covToHTML":       conToHTML,
 	}
+}
+
+func conToHTML(s string) template.HTML {
+	return template.HTML(markdown.CovToHTML(s, nil))
 }
 
 func templateInclude(filename string, data map[string]interface{}) template.HTML {

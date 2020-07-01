@@ -34,7 +34,7 @@
 			"downloadGoVCL": "Download GoVCL",
 			"preCompiledGUILibrary": "Pre-compiled GUI library",
 			"description2": "Easy to use, write once, compile on multiple platforms",
-			"description3": "GoVCL is a completely open source, free, cross-platform Go language GUI library, and the underlying binding is from Lazarus LCL",
+			"description3": "GoVCL is a completely open source, free, cross-platform Go language GUI library. The core binding is [liblcl](https://github.com/ying32/liblcl), a common cross-platform GUI library created by [Lazarus](https://www.lazarus-ide.org/)",
 			"viewTheGitHub": "View the GitHub"
 	   },
 	   {
