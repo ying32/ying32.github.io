@@ -51,8 +51,8 @@
 | q*s | ￥100 | 2020-06-07 18:08:14 |  {{.wechatpay}} | 群主动作好快！  |  
 | y*h | ￥100 | 2020-06-09 15:48:54 |  {{.wechatpay}} | 群主牛逼  |  
 | 大白菜(9****8) | ￥100 | 2020-06-11 21:50 |  {{.alipay}} |   |  
-| 大白菜(9****8) | ￥100 | 2020-06-12 05:47 |  {{.alipay}} |   |   
+| 大白菜(9****8) | ￥100 | 2020-06-12 05:47 |  {{.alipay}} |   |    
 | *慌 | ￥88 | 2020-06-21 15:50:04 |  {{.wechatpay}} |   |  
-
+| [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2020-07-03 |   |   |  
 
 **{{.thanks}}** 
