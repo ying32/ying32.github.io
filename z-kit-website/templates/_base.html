@@ -95,8 +95,9 @@
 		  <li class="dropdown">
 			<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-language"></use></svg> Language<b class="caret"></b></a>
 			<ul role="menu" class="dropdown-menu" style="">
+			{{$obj := . }}
 			{{range .langs}}
-				<li><a href="/{{.langDir}}">{{.title}}</a></li>
+				<li><a href="/{{currentFile .langDir $obj.name}}">{{.title}}</a></li>
 			{{end}}
 				<!--<li class="divider"></li>
 				<li><a href="/translate.html">Help me translate</a></li>-->
@@ -109,6 +110,7 @@
 	  {{end}}
   </div>
 </header>
+
 
 
 {{if .includeFile1}}

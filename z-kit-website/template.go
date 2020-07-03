@@ -32,11 +32,21 @@ func templateFormatdate(t time.Time) string {
 	return t.Format("2006-01-02")
 }
 
-func templateLangDirFile(str, htmlfile string) string {
-	if str == "" {
-		return htmlfile
+func templateLangDirFile(lang, htmlFile string) string {
+	if lang == "" {
+		return htmlFile
 	}
-	return str + "/" + htmlfile
+	return lang + "/" + htmlFile
+}
+
+func templateCurrentFile(lang, name string) string {
+	if strings.ToLower(name) == "index" {
+		return lang
+	}
+	if lang == "" {
+		return name + ".html"
+	}
+	return lang + "/" + name + ".html"
 }
 
 func addTemplateFuncs() template.FuncMap {
@@ -48,6 +58,7 @@ func addTemplateFuncs() template.FuncMap {
 		"include":         templateInclude,
 		"includeMarkdown": templateIncludeMarkdown,
 		"langDirFile":     templateLangDirFile,
+		"currentFile":     templateCurrentFile,
 		"covToHTML":       conToHTML,
 	}
 }
@@ -103,6 +114,7 @@ func makeHtmlPage(root string, datas map[string]interface{}, addToSiteMap func(p
 		log.Println(err)
 		return
 	}
+
 	datas["lastupdatetime"] = time.Now().Format("2006-01-02") //"2006-01-02 15:04:05")
 	err = t.Execute(&buf, datas)
 	if err != nil {
