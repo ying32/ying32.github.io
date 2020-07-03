@@ -8,10 +8,9 @@
 
 * 限制：要求liblcl二进制版本>=2.0.4
 * 修复：修复新添加的组件未注册问题。 
-* 修改：`TMovedEvent`由3个参数变更为4个参数，添加`isColumn`参数。
+* 修改：`TMovedEvent`事件由3个参数变更为4个参数，添加`isColumn`参数。
 * 变更：`TStringGrid`和`TDrawGrid`移除`SetOnColumnMoved`和`SetOnRowMoved`方法，并添加新的方法：`SetOnColRowMoved`
 * 修改：更新liblcl事件回调。
-* 修改：更新liblcl.h头文件。
 * 添加：`TPrinter`添加`SetPrinter`方法。 
 * 实现：Linux:Gtk2:TMiniWebview:支持`LoadHTML`和`ExecuteJS`方法。  
 * 添加：添加新的包：`pkgs/wintaskbar`；添加新的例子：`windows/taskbar`。
