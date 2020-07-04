@@ -32,11 +32,11 @@ func templateFormatdate(t time.Time) string {
 	return t.Format("2006-01-02")
 }
 
-func templateLangDirFile(lang, htmlFile string) string {
+func templateLangDirFile(lang, htmlfile string) string {
 	if lang == "" {
-		return htmlFile
+		return htmlfile
 	}
-	return lang + "/" + htmlFile
+	return lang + "/" + htmlfile
 }
 
 func templateCurrentFile(lang, name string) string {
