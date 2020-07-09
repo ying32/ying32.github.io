@@ -30,7 +30,7 @@
 * 添加：添加新的包：`pkgs/wintaskbar`；添加新的例子：`windows/taskbar`。
 * 修改：liblcl:Windows下使用LCL默认字体。 
 * 增加：`vcl`包添加新的函数：`FindControl`,`FindLCLControl`,`FindOwnerControl`,`FindControlAtPosition`,`FindLCLWindow`,`FindDragTarget`。
-* 迁移：移到liblcl源代码和makeCHeader工具到新的仓库：https://github.com/ying32/liblcl。
+* 迁移：移动liblcl源代码和makeCHeader工具到新的仓库：https://github.com/ying32/liblcl。
 * 修改：重命名包名：multilang -> i18n。
 * 增加：`TForm`和`TScreen`增加`ActiveControl`属性。
 * 增加：`TForm`、`TLabel`、`TStaticText`增加`FocusControl`属性。 
