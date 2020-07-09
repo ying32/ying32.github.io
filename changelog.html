@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="go gui golang goui govcl vcl lcl lazarus delphi">
 	<meta name="author" content="不在乎y(ying32)">
-	<meta name="lastupdatetime" content="2020-07-09">
+	<meta name="lastupdatetime" content="2020-07-10">
 
 	<title>GoVCL | 更新日志</title>
 
@@ -118,7 +118,14 @@
 <p><strong>Please use Google Translate if your native language is not Chinese.</strong>   </p>
 <h2 id="next-v20x">next v2.0.x</h2>
 <p>-- govcl --  </p>
+<p>-- res2go --    </p>
+<hr>
+<h2 id="最新发布the-latest-release">最新发布(The Latest release)</h2>
+<h2 id="v204">v2.0.4</h2>
+<p>2020年7月10日   </p>
+<p>-- govcl --  </p>
 <ul>
+<li>修改：liblcl：切换至Lazarus 2.0.10版本编译，<a href="https://wiki.lazarus.freepascal.org/Lazarus_2.0_fixes_branch#Fixes_for_2.0.10_.28merged.29">Fixes for 2.0.10</a> 。</li>
 <li>限制：要求liblcl二进制版本&gt;=2.0.4</li>
 <li>修复：修复新添加的组件未注册问题。 </li>
 <li>修改：<code>TMovedEvent</code>事件由3个参数变更为4个参数，添加<code>isColumn</code>参数。</li>
@@ -132,13 +139,16 @@
 <li>迁移：移到liblcl源代码和makeCHeader工具到新的仓库：<a href="https://github.com/ying32/liblcl%E3%80%82">https://github.com/ying32/liblcl。</a></li>
 <li>修改：重命名包名：multilang -&gt; i18n。</li>
 <li>增加：<code>TForm</code>和<code>TScreen</code>增加<code>ActiveControl</code>属性。</li>
-<li>增加：<code>TForm</code>、<code>TLabel</code>、<code>TStaticText</code>增加<code>FocusControl</code>属性。</li>
+<li>增加：<code>TForm</code>、<code>TLabel</code>、<code>TStaticText</code>增加<code>FocusControl</code>属性。 </li>
+<li>修改：<code>SelectDirectory2</code>参数变更，因为不再需要兼容Delphi。</li>
+<li>移除：删除<code>TSelectDirExtOpt</code>类型及其枚举值，因为不再需要兼容Delphi。</li>
+<li>移除：删除<code>TSelectDirExtOpts</code>类型，因为不再需要兼容Delphi。     </li>
+<li>修改：<code>TTreeView</code>的折叠箭头使用LCL默认值。</li>
 </ul>
 <p>-- res2go --    </p>
 <ul>
 <li>增加：支持更多的事件。</li>
 </ul>
-<h2 id="最新发布latest-release">最新发布(Latest release)</h2>
 <h2 id="v203">v2.0.3</h2>
 <p>2020年6月22日   </p>
 <p>-- govcl --  </p>

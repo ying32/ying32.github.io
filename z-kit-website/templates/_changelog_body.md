@@ -4,8 +4,22 @@
 
 ## next v2.0.x
 
+
 -- govcl --  
 
+-- res2go --    
+
+----
+
+## 最新发布(The Latest release)   
+
+## v2.0.4  
+
+2020年7月10日   
+
+-- govcl --  
+
+* 修改：liblcl：切换至Lazarus 2.0.10版本编译，[Fixes for 2.0.10](https://wiki.lazarus.freepascal.org/Lazarus_2.0_fixes_branch#Fixes_for_2.0.10_.28merged.29) 。
 * 限制：要求liblcl二进制版本>=2.0.4
 * 修复：修复新添加的组件未注册问题。 
 * 修改：`TMovedEvent`事件由3个参数变更为4个参数，添加`isColumn`参数。
@@ -19,16 +33,17 @@
 * 迁移：移到liblcl源代码和makeCHeader工具到新的仓库：https://github.com/ying32/liblcl。
 * 修改：重命名包名：multilang -> i18n。
 * 增加：`TForm`和`TScreen`增加`ActiveControl`属性。
-* 增加：`TForm`、`TLabel`、`TStaticText`增加`FocusControl`属性。
+* 增加：`TForm`、`TLabel`、`TStaticText`增加`FocusControl`属性。 
+* 修改：`SelectDirectory2`参数变更，因为不再需要兼容Delphi。
+* 移除：删除`TSelectDirExtOpt`类型及其枚举值，因为不再需要兼容Delphi。
+* 移除：删除`TSelectDirExtOpts`类型，因为不再需要兼容Delphi。     
+* 修改：`TTreeView`的折叠箭头使用LCL默认值。
      
-
 
 -- res2go --    
 
 * 增加：支持更多的事件。
 
-
-## 最新发布(Latest release)   
 
 ## v2.0.3  
 
