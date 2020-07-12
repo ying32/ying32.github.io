@@ -7,6 +7,8 @@
 
 -- govcl --  
 
+* 添加：`TListView`、`TTreeView`、`TListItem`、`TTreeNode`添加一些新的方法和属性。  
+
 -- res2go --    
 
 ----
