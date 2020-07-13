@@ -8,6 +8,7 @@
 -- govcl --  
 
 * 添加：`TListView`、`TTreeView`、`TListItem`、`TTreeNode`添加一些新的方法和属性。  
+* 修复：liblcl：修复`rtl.SysOpen`在Windows下包含中文时打开失败问题（#42）。
 
 -- res2go --    
 
