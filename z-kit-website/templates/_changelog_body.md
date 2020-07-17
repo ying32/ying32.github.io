@@ -12,6 +12,7 @@
 * 增加：添加一个simplecalc例子，主要用于另一种自动布局演示。
 * 增加：`TListColumn`添加`SortIndicator`属性。
 * 增加：`TMemo`添加`Append`方法。
+* 删除：移除一些未使用的枚举、事件和类型定义。
 
 -- res2go --    
 
