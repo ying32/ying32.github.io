@@ -13,6 +13,9 @@
 * 增加：`TListColumn`添加`SortIndicator`属性。
 * 增加：`TMemo`添加`Append`方法。
 * 删除：移除一些未使用的枚举、事件和类型定义。
+* 增加：`TStringGrid`添加更多的属性和方法。演示例子：`grid/stringgrid2`。
+* 删除：移除一些未使用的事件。
+* 修改：修复一些事件参数不正确问题。
 
 -- res2go --    
 
