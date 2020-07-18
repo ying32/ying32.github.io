@@ -19,6 +19,8 @@
 
 -- res2go --    
 
+* 增加：添加一些新的TStringGrid事件。
+
 ----
 
 ## 最新发布(The Latest release)   
