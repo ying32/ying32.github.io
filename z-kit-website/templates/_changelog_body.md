@@ -16,6 +16,8 @@
 * 增加：`TStringGrid`添加更多的属性和方法。演示例子：`grid/stringgrid2`。
 * 删除：移除一些未使用的事件。
 * 修改：修复一些事件参数不正确问题。
+* 添加：`TStrings`和`TStringList`添加新的方法和属性：`AddStrings`, `AddStrings2`, `AddStrings3`, `AddPair`, `AddPair2`, `NameValueSeparator`。
+* 添加：`vcl`包添加新的对话框函数：`PasswordBox`, `InputCombo`, `InputComboEx`。
 
 -- res2go --    
 
