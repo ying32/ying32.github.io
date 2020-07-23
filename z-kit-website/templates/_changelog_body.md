@@ -7,6 +7,7 @@
 
 -- govcl --  
 
+* 限制：要求最小liblcl二进制版为2.0.5。
 * 添加：`TListView`、`TTreeView`、`TListItem`、`TTreeNode`添加一些新的方法和属性。  
 * 修复：liblcl：修复`rtl.SysOpen`在Windows下包含中文时打开失败问题（[#42](https://github.com/ying32/govcl/issues/42)）。
 * 增加：添加一个simplecalc例子，主要用于另一种自动布局演示。
