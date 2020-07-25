@@ -41,6 +41,7 @@
 
 ![](/assets/images/screenshots/listboxcustomdraw2.jpg)   
 
+![](/assets/images/screenshots/stringgrid2.jpg)   
 ---
 ## Linux
 ### Ubuntu 16.04   

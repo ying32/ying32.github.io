@@ -23,6 +23,7 @@
 -- res2go --    
 
 * 增加：添加一些新的TStringGrid事件。
+* 删除：删除选项：outres、scale、pause、usestr、encrypt、outmain。
 
 ----
 
