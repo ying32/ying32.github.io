@@ -30,7 +30,7 @@
 			"version": "当前版本：",
 			"changeLog": "更新日志",
 			"lastUpdated": "上一次更新时间：",
-			"downloadGoVCL": "下载 GoVCL",
+			"downloadGoVCL": "获取GoVCL",
 			"preCompiledGUILibrary": "预编译GUI库",
 			"description2": "简单易用，一次编写，多个平台编译",
 			"description3": "GoVCL是完全开源的、免费的、跨平台Go语言GUI库。核心绑定自[Lazarus](https://www.lazarus-ide.org/)创建的通用跨平台GUI库[liblcl](https://github.com/ying32/liblcl)",
