@@ -1,5 +1,16 @@
 {{if ne .langDir ""}}
-**Please use Google Translate if your native language is not Chinese.** 
+**Please use Google Translate if your native language is not Chinese. <div id="google_translate_element"></div>** 
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage : 'zh-CN',
+            autoDisplay : true,
+            gaTrack : true,
+            layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 {{end}}
 
 ## {{.nextTitle}}
