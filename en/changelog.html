@@ -118,20 +118,10 @@
             <h1 class="page-header">What&#39;s new</h1>
             <div class="row placeholders">
                 <article class="markdown-body">
-                    <p><strong>Please use Google Translate if your native language is not Chinese. <div id="google_translate_element"></div></strong> </p>
-<script>
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage : 'zh-CN',
-            autoDisplay : true,
-            gaTrack : true,
-            layout : google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-    }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
+                    <style>
+.goog-te-banner-frame {display: none;}
+</style>
+<p><strong>Choose your native language(Google Translate):</strong> <div id="google_translate_element"></div></p>
 <h2 id="next-version-dev-branch">Next version, dev branch</h2>
 <h2 id="next-v20x">next v2.0.x</h2>
 <p>-- govcl --  </p>
@@ -719,6 +709,17 @@
 <h2 id="for-earlier-logs-please-check-git-commit">For earlier logs, please check git commit</h2>
 </li>
 </ul>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage : 'zh-CN',
+            autoDisplay : true,
+            gaTrack : true,
+            layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script> 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
 
                 </article>
             </div>

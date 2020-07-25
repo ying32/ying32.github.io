@@ -1,21 +1,13 @@
 {{if ne .langDir ""}}
-**Please use Google Translate if your native language is not Chinese. <div id="google_translate_element"></div>** 
-<script>
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage : 'zh-CN',
-            autoDisplay : true,
-            gaTrack : true,
-            layout : google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-    }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style>
+.goog-te-banner-frame {display: none;}
+</style>
+**Choose your native language(Google Translate):** <div id="google_translate_element"></div>
 {{end}}
 
 ## {{.nextTitle}}
 
-## next v2.0.x
+## next v2.0.x 
 
 
 -- govcl --  
@@ -529,3 +521,17 @@
  ---	
 ## {{.moreInfo}}   
 
+
+{{if ne .langDir ""}}
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage : 'zh-CN',
+            autoDisplay : true,
+            gaTrack : true,
+            layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script> 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+{{end}}
