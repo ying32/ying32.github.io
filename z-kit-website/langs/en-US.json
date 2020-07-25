@@ -8,11 +8,12 @@
 	},
 
 	"menubar": {
-		"docTitle": "Chinese doc",
+		"docTitle": "Chinese WIKI",
 		"exampleTitle": "Example",
 		"screenshot": "Screenshots",
 		"videoTitle": "Video tutorial(cyanBone)",
-		"ide": "UI Designer"
+		"ide": "UI Designer",
+		"moreTitle": "More..."
 	},
 
    "pages": [
@@ -36,6 +37,7 @@
 			"description2": "Easy to use, write once, compile on multiple platforms",
 			"description3": "GoVCL is a completely open source, free, cross-platform Go language GUI library. The core binding is [liblcl](https://github.com/ying32/liblcl), a common cross-platform GUI library created by [Lazarus](https://www.lazarus-ide.org/)",
 			"viewTheGitHub": "View the GitHub"
+
 	   },
 	   {
 		   "name": "sponsor",
@@ -58,6 +60,18 @@
 		   "thanks": "Thanks to the above friends for their generous support."
 	   },
 	   {
+		   "name": "changelog",
+		   "path": "",
+		   "markdown": true,
+		   "includeFile1": "_markdown.html",
+		   "includeMdFile": "_changelog_body.md",
+		   "title": "What's new",
+		   "description": "",
+		   "nextTitle": "Next version, dev branch",
+		   "lastRelease": "The Latest release",
+		   "moreInfo": "For earlier logs, please check git commit"
+	   },
+	   {
 		   "name": "about",
 		   "path": "",
 		   "markdown": true,
@@ -71,7 +85,7 @@
 		   "path": "",
 		   "includeFile1": "_iframe.html",
 		   "iframeURL": "https://gitee.com/ying32/govcl/wikis/pages",
-		   "title": "Chinese doc",
+		   "title": "Chinese WIKI",
 		   "description": "document"
 	   },
 	   {

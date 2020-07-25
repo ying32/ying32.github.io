@@ -12,7 +12,8 @@
 		"exampleTitle": "示例",
 		"screenshot": "屏幕截图",
 		"videoTitle": "视频教程(cyanBone)",
-		"ide": "UI设计器"
+		"ide": "UI设计器",
+		"moreTitle": "更多项目"
 	},
 
 	"pages": [
@@ -34,6 +35,7 @@
 			"description2": "简单易用，一次编写，多个平台编译",
 			"description3": "GoVCL是完全开源的、免费的、跨平台Go语言GUI库。核心绑定自[Lazarus](https://www.lazarus-ide.org/)创建的通用跨平台GUI库[liblcl](https://github.com/ying32/liblcl)",
 			"viewTheGitHub": "查看 GitHub 项目主页"
+
 	   },
 		{
 			"name": "sponsor",
@@ -62,7 +64,10 @@
 			"includeFile1": "_markdown.html",
 			"includeMdFile": "_changelog_body.md",
 			"title": "更新日志",
-			"description": ""
+			"description": "",
+			"nextTitle": "下个版本，dev分支",
+			"lastRelease": "最新发布",
+			"moreInfo": "更早的日志请查看git提交"
 		},
 		{
 			"name": "about",

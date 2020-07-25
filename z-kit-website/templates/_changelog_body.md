@@ -1,6 +1,8 @@
-## 下个版本，dev分支(Next version, dev branch)
-**Please use Google Translate if your native language is not Chinese.**   
+{{if ne .langDir ""}}
+**Please use Google Translate if your native language is not Chinese.** 
+{{end}}
 
+## {{.nextTitle}}
 
 ## next v2.0.x
 
@@ -27,7 +29,7 @@
 
 ----
 
-## 最新发布(The Latest release)   
+## {{.lastRelease}}   
 
 ## v2.0.4  
 
@@ -514,5 +516,5 @@
 * 更新go编译约束。 
 
  ---	
-## 更早的日志请查看提交记录   
+## {{.moreInfo}}   
 
