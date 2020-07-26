@@ -23,7 +23,10 @@
 * 删除：移除一些未使用的事件。
 * 修改：修复一些事件参数不正确问题。
 * 添加：`TStrings`和`TStringList`添加新的方法和属性：`AddStrings`, `AddStrings2`, `AddStrings3`, `AddPair`, `AddPair2`, `NameValueSeparator`。
-* 添加：`vcl`包添加新的对话框函数：`PasswordBox`, `InputCombo`, `InputComboEx`。
+* 添加：`vcl`包添加新的对话框函数：`PasswordBox`, `InputCombo`, `InputComboEx`。 
+* 修改：`TStrings`和`TStringList`更改继承自`IStrings`，并修改所有与之相关的参数类型变更为`IStrings`。
+* 修改：`TMemoryStream`更改继承自`IStream`，并修改所有与之相关的参数类型变更为`IStream`。
+* 增加：`TComboBox`、`TColorBox`、`TDateTimePicker`、`TComboBoxEx`增加`OnDropDown`事件。
 
 -- res2go --    
 
