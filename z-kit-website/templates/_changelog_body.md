@@ -9,6 +9,17 @@
 
 ## next v2.0.x 
 
+-- govcl --  
+
+-- res2go --    
+
+----  
+
+## {{.lastRelease}}   
+
+## v2.0.5  
+
+2020年7月27日   
 
 -- govcl --  
 
@@ -35,9 +46,7 @@
 * 增加：支持导出`OnDropDown`事件。
 * 删除：删除选项：`outres`、`scale`、`pause`、`usestr`、`encrypt`、`outmain`。
 
-----
 
-## {{.lastRelease}}   
 
 ## v2.0.4  
 
