@@ -26,11 +26,13 @@
 * 添加：`vcl`包添加新的对话框函数：`PasswordBox`, `InputCombo`, `InputComboEx`。 
 * 修改：`TStrings`和`TStringList`更改继承自`IStrings`，并修改所有与之相关的参数类型变更为`IStrings`。
 * 修改：`TMemoryStream`更改继承自`IStream`，并修改所有与之相关的参数类型变更为`IStream`。
-* 增加：`TComboBox`、`TColorBox`、`TDateTimePicker`、`TComboBoxEx`增加`OnDropDown`事件。
+* 增加：`TComboBox`、`TColorBox`、`TDateTimePicker`、`TComboBoxEx`增加`OnDropDown`事件。  
+* 增加：`TMonthCalendar`、`TDateTimePicker`添加了一些属性、方法和类型。
 
 -- res2go --    
 
 * 增加：添加一些新的`TStringGrid`事件。
+* 增加：支持导出`OnDropDown`事件。
 * 删除：删除选项：`outres`、`scale`、`pause`、`usestr`、`encrypt`、`outmain`。
 
 ----
