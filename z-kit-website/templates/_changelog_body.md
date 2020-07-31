@@ -11,7 +11,7 @@
 
 -- govcl --  
 
-* 添加：新的tag：`finalizerOn`默认不开启，开启后，非组件`Newxxx`之后无需手动调用`Free`。
+* 添加：新的tag：`finalizerOn`默认不开启，开启后，非组件`Newxxx`之后无需手动调用`Free`（实验性）。
 
 -- res2go --    
 
