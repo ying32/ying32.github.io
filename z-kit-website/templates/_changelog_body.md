@@ -15,7 +15,9 @@
 
 -- res2go --    
 
-----  
+* 增加：新的res2go-IDE插件，目前仅在群里测试，[使用说明](https://gitee.com/ying32/govcl/wikis/pages?sort_id=2645001&doc_id=102420)。
+
+----
 
 ## {{.lastRelease}}   
 
@@ -75,7 +77,7 @@
 * 移除：删除`TSelectDirExtOpt`类型及其枚举值，因为不再需要兼容Delphi。
 * 移除：删除`TSelectDirExtOpts`类型，因为不再需要兼容Delphi。     
 * 修改：`TTreeView`的折叠箭头使用LCL默认值。
-     
+  
 
 -- res2go --    
 
@@ -253,7 +255,7 @@
 2020年3月6日   
 
 -- govcl --  
- 
+
 * 增加：添加新的枚举类型:`TDefaultMonitor`。   
 * 增加：`TForm`添加`DefaultMonitor`、`Monitor`属性。   
 * 增加：改变事件id的获取。    
@@ -271,7 +273,7 @@
 * 变更：`vcl/exts/miniblink`包移到`pkgs/miniblink`。
 * 变更：`vcl/exts/winappres`包移到`pkgs/winappres`。
 * 变更：`vcl/exts/multilang`包移到`vcl/multilang`。
- 
+
 -- res2go --   
 
 * 更新：更新`winappres`包路径。
@@ -313,7 +315,7 @@
 * 增加：编译liblcl时添加`USED_BY_LAZLOGGER_DUMMY`指令用于屏蔽lcl的调试信息（似乎无效）。
 * 增加：liblcl兼容Delphi资源中的TListView的`ItemData`和TTreeView的`NodeData`，需要使用`Tools/LazarusPatch`打补丁后重新编译。   
 * 更改：启用新的GoVCL图标，图标设计来自[Free Logo Design](https://www.freelogodesign.org/preview?lang=en&name=GoVCL&logo=2ffb4d90-2095-4daa-b334-389bbd40504c)。  
- 
+
 
  -- res2go --   
 
@@ -494,10 +496,10 @@
 * TApplication.CreateForm参数变化，详细参考注释。	
 * 正式移除标记为丢弃的方法: TApplication.CreateFormFromFile、TApplication.CreateFormFromStream、TApplication.CreateFormFromBytes。	
 
- ---	
- 
+---
+
  -- res2go --  	
- 
+
 * 添加linux和macOS编译配置。  	
 * 修改：检查到不支持的组件后直接停止当前文件转换。  	
 * 添加检测环境变量“LANG”判断是否为中文系统。  	
@@ -510,10 +512,10 @@
 * 修改：“-encrypt”默认为false。	
 * 更新res2go二进制，并添加res2go macOS二进制。	
 
- ---	
- 
+---
+
  ## v1.2.0  	
- 
+
  2018年11月5日  
  	
 * 修复liblcl在linux和macOS下在协程中使用vcl.ShowMessage或其它模态窗口时应用程序崩溃问题。bug提交来源于issues #14。  	
@@ -534,7 +536,7 @@
 * 更新windowsProcess和multilanguage例程。	
 * 更新go编译约束。 
 
- ---	
+---
 ## {{.moreInfo}}   
 
 

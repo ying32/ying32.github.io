@@ -129,6 +129,9 @@
 <li>添加：新的tag：<code>finalizerOn</code>默认不开启，开启后，非组件<code>Newxxx</code>之后无需手动调用<code>Free</code>（实验性）。</li>
 </ul>
 <p>-- res2go --    </p>
+<ul>
+<li>增加：新的res2go-IDE插件，目前仅在群里测试，<a href="https://gitee.com/ying32/govcl/wikis/pages?sort_id=2645001&amp;doc_id=102420">使用说明</a>。</li>
+</ul>
 <hr>
 <h2 id="the-latest-release">The Latest release</h2>
 <h2 id="v205">v2.0.5</h2>
@@ -605,122 +608,72 @@
 <p>2018年11月20日    </p>
 <p> -- govcl --  </p>
 <ul>
-<li><p>govcl增加的“arm”编译约束。</p>
-</li>
-<li><p>liblcl类补丁，兼容Delphi。</p>
-</li>
-<li><p>添加linux下获取当前系统语言。</p>
-</li>
-<li><p>win包添加新的winapi: SetForegroundWindow</p>
-</li>
-<li><p>libvcl库添加新的png解码器“TPortableNetworkGraphic”，用来兼容liblcl。</p>
-</li>
-<li><p>使用新的“hash”函数传递事件回调ID，解决上下文信息丢失问题。</p>
-</li>
-<li><p>修改liblcl窗口默认宽度=678和高度=321。</p>
-</li>
-<li><p>api包中不再直接公开eventCallbackMap、messageCallbackMap两个变量，并使用EventCallbackOf、MessageCallbackOf替代。</p>
-</li>
-<li><p>api包DSynchronize函数，当执行完后删除事件ID。</p>
-</li>
-<li><p>重构“事件关联”功能。</p>
-</li>
-<li><p>“事件关联”增加tag字段用于res2go共享事件，支持多个事件共享。</p>
-</li>
-<li><p>rtl包添加一个&quot;IsNil&quot;函数，用于判断interface{}为空。</p>
-</li>
-<li><p>libvcl与liblcl移除TGoEvent类型，改用方法地址替代TGoEvent 。</p>
-</li>
-<li><p>libvcl修改AllowDropFiles属性read方法不再使用变量。并修复样式改变的情况下失效问题。</p>
-</li>
-<li><p>liblcl使用宏简化事件代码。</p>
-</li>
-<li><p>添加一个新的TMiniWebview组件，支持liblcl/libvcl 32bit/64bit,  macOS32/cocoa接口。</p>
-</li>
-<li><p>调整exts/tools包中mactool，如果存在则复制$GOPATH/bin/liblcl.dylib至当前可执行文件目录。</p>
-</li>
-<li><p>liblcl:修复TCanvas.TextRect2。</p>
-</li>
-<li><p>添加新方法：TCanvas.TextRect3。</p>
-</li>
-<li><p>liblcl: TStringGrid、TDrawGrid、TValueListEditor添加OnDrawCell事件。</p>
-</li>
-<li><p>添加新枚举类型TGridOptionLz，用于liblcl库Grid控件Options属性。因为无法兼容Delphi。</p>
-</li>
-<li><p>添加一个新的drawgrid例子，见samples/grids/drawgrid。 </p>
-</li>
-<li><p>在非Windows下“LazyProc”的Find方法增加互斥锁。  </p>
-</li>
-<li><p>所有libvcl源代码文件编码变更为UTF-8。     </p>
-</li>
-<li><p>TApplication.CreateForm参数变化，详细参考注释。    </p>
-</li>
-<li><p>正式移除标记为丢弃的方法: TApplication.CreateFormFromFile、TApplication.CreateFormFromStream、TApplication.CreateFormFromBytes。    </p>
+<li>govcl增加的“arm”编译约束。</li>
+<li>liblcl类补丁，兼容Delphi。</li>
+<li>添加linux下获取当前系统语言。</li>
+<li>win包添加新的winapi: SetForegroundWindow</li>
+<li>libvcl库添加新的png解码器“TPortableNetworkGraphic”，用来兼容liblcl。</li>
+<li>使用新的“hash”函数传递事件回调ID，解决上下文信息丢失问题。</li>
+<li>修改liblcl窗口默认宽度=678和高度=321。</li>
+<li>api包中不再直接公开eventCallbackMap、messageCallbackMap两个变量，并使用EventCallbackOf、MessageCallbackOf替代。</li>
+<li>api包DSynchronize函数，当执行完后删除事件ID。</li>
+<li>重构“事件关联”功能。</li>
+<li>“事件关联”增加tag字段用于res2go共享事件，支持多个事件共享。</li>
+<li>rtl包添加一个&quot;IsNil&quot;函数，用于判断interface{}为空。</li>
+<li>libvcl与liblcl移除TGoEvent类型，改用方法地址替代TGoEvent 。</li>
+<li>libvcl修改AllowDropFiles属性read方法不再使用变量。并修复样式改变的情况下失效问题。</li>
+<li>liblcl使用宏简化事件代码。</li>
+<li>添加一个新的TMiniWebview组件，支持liblcl/libvcl 32bit/64bit,  macOS32/cocoa接口。</li>
+<li>调整exts/tools包中mactool，如果存在则复制$GOPATH/bin/liblcl.dylib至当前可执行文件目录。</li>
+<li>liblcl:修复TCanvas.TextRect2。</li>
+<li>添加新方法：TCanvas.TextRect3。</li>
+<li>liblcl: TStringGrid、TDrawGrid、TValueListEditor添加OnDrawCell事件。</li>
+<li>添加新枚举类型TGridOptionLz，用于liblcl库Grid控件Options属性。因为无法兼容Delphi。</li>
+<li>添加一个新的drawgrid例子，见samples/grids/drawgrid。 </li>
+<li>在非Windows下“LazyProc”的Find方法增加互斥锁。  </li>
+<li>所有libvcl源代码文件编码变更为UTF-8。     </li>
+<li>TApplication.CreateForm参数变化，详细参考注释。    </li>
+<li>正式移除标记为丢弃的方法: TApplication.CreateFormFromFile、TApplication.CreateFormFromStream、TApplication.CreateFormFromBytes。    </li>
+</ul>
 <hr>
-<p>-- res2go --      </p>
-</li>
-<li><p>添加linux和macOS编译配置。      </p>
-</li>
-<li><p>修改：检查到不支持的组件后直接停止当前文件转换。      </p>
-</li>
-<li><p>添加检测环境变量“LANG”判断是否为中文系统。      </p>
-</li>
-<li><p>修复“-outbytes”选项保存时太慢的问题。      </p>
-</li>
-<li><p>修复没有“-outbytes”选项时不保存gfm文件问题。      </p>
-</li>
-<li><p>添加新选项“-usestr，默认为true”。      </p>
-</li>
-<li><p>增加支持共享事件导出（支持多个事件，见res2goTest例程）。      </p>
-</li>
-<li><p>添加新选项-origfn，生成的.go文件使用原始的delphi/lazarus单元名，默认为false。      </p>
-</li>
-<li><p>移除“-gui”选项。    </p>
-</li>
-<li><p>修改：“-encrypt”默认为false。    </p>
-</li>
-<li><p>更新res2go二进制，并添加res2go macOS二进制。    </p>
+<p> -- res2go --      </p>
+<ul>
+<li>添加linux和macOS编译配置。      </li>
+<li>修改：检查到不支持的组件后直接停止当前文件转换。      </li>
+<li>添加检测环境变量“LANG”判断是否为中文系统。      </li>
+<li>修复“-outbytes”选项保存时太慢的问题。      </li>
+<li>修复没有“-outbytes”选项时不保存gfm文件问题。      </li>
+<li>添加新选项“-usestr，默认为true”。      </li>
+<li>增加支持共享事件导出（支持多个事件，见res2goTest例程）。      </li>
+<li>添加新选项-origfn，生成的.go文件使用原始的delphi/lazarus单元名，默认为false。      </li>
+<li>移除“-gui”选项。    </li>
+<li>修改：“-encrypt”默认为false。    </li>
+<li>更新res2go二进制，并添加res2go macOS二进制。    </li>
+</ul>
 <hr>
 <h2 id="v120">v1.2.0</h2>
-<p>2018年11月5日  </p>
-</li>
-<li><p>修复liblcl在linux和macOS下在协程中使用vcl.ShowMessage或其它模态窗口时应用程序崩溃问题。bug提交来源于issues #14。      </p>
-</li>
-<li><p>限制govcl最要低要求go1.9.0；     </p>
-</li>
-<li><p>res2go增加新的选项“-outbytes”。     </p>
-</li>
-<li><p>res2go添加新特性, 私有字段，详见“res2goTest”例子。    </p>
-</li>
-<li><p>修复了xunleidownloader例子中的bug。    </p>
-</li>
-<li><p>多国语言包修改：&quot;RegisterLibResouces&quot;的调用移至包内init函数，以后不再需要手动注册了并移除“RegisterLibResouces”函数。    </p>
-</li>
-<li><p>“api.DSynchronize”增加互斥锁。防止多个go协程更新造成崩溃问题。    </p>
-</li>
-<li><p>res2go说明中增加集成到Delphi/Lazarus IDE的方法。    </p>
-</li>
-<li><p>res2go “输入”、“输出”默认目录使用相对路径。    </p>
-</li>
-<li><p>添加新组件：TSpinEdit。并更新stdcontrols例程用于演示新组件。    </p>
-</li>
-<li><p>“win”包增加资源相关的api和类型。    </p>
-</li>
-<li><p>res2go添加支持“TSpinEdit”组件导出。    </p>
-</li>
-<li><p>增加窗口的消息捕获事件“OnWndProc”。用法例子见“messageTest”。     </p>
-</li>
-<li><p>添加一个新的“message”包，里面包含windows消息常量（linux、MacOS也可用）和VCL消息常量。用法例子见“messageTest”。     </p>
-</li>
-<li><p>“win”包增加新api&quot;GetModuleFileNameExW&quot;。     </p>
-</li>
-<li><p>更新windowsProcess和multilanguage例程。    </p>
-</li>
-<li><p>更新go编译约束。 </p>
+<p> 2018年11月5日  </p>
+<ul>
+<li>修复liblcl在linux和macOS下在协程中使用vcl.ShowMessage或其它模态窗口时应用程序崩溃问题。bug提交来源于issues #14。      </li>
+<li>限制govcl最要低要求go1.9.0；     </li>
+<li>res2go增加新的选项“-outbytes”。     </li>
+<li>res2go添加新特性, 私有字段，详见“res2goTest”例子。    </li>
+<li>修复了xunleidownloader例子中的bug。    </li>
+<li>多国语言包修改：&quot;RegisterLibResouces&quot;的调用移至包内init函数，以后不再需要手动注册了并移除“RegisterLibResouces”函数。    </li>
+<li>“api.DSynchronize”增加互斥锁。防止多个go协程更新造成崩溃问题。    </li>
+<li>res2go说明中增加集成到Delphi/Lazarus IDE的方法。    </li>
+<li>res2go “输入”、“输出”默认目录使用相对路径。    </li>
+<li>添加新组件：TSpinEdit。并更新stdcontrols例程用于演示新组件。    </li>
+<li>“win”包增加资源相关的api和类型。    </li>
+<li>res2go添加支持“TSpinEdit”组件导出。    </li>
+<li>增加窗口的消息捕获事件“OnWndProc”。用法例子见“messageTest”。     </li>
+<li>添加一个新的“message”包，里面包含windows消息常量（linux、MacOS也可用）和VCL消息常量。用法例子见“messageTest”。     </li>
+<li>“win”包增加新api&quot;GetModuleFileNameExW&quot;。     </li>
+<li>更新windowsProcess和multilanguage例程。    </li>
+<li>更新go编译约束。 </li>
+</ul>
 <hr>
 <h2 id="for-earlier-logs-please-check-git-commit">For earlier logs, please check git commit</h2>
-</li>
-</ul>
 <script>
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
