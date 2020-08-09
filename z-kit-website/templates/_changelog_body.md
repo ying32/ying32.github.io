@@ -12,6 +12,8 @@
 -- govcl --  
 
 * 添加：新的tag：`finalizerOn`默认不开启，开启后，非组件`Newxxx`之后无需手动调用`Free`（实验性）。
+* 删除：`TCanvas`移除`TextRect3`方法，之后改用`TextRect2`替代。
+* 修改：`TCanvas`修改`TextRect2`方法参数`text *string`-> `text string`。
 
 -- res2go --    
 
