@@ -16,6 +16,9 @@
 * 删除：`TCanvas`移除`TextRect3`方法，之后改用`TextRect2`替代。
 * 修改：`TCanvas`修改`TextRect2`方法参数`text *string`-> `text string`。
 * 增加：`TImageButton`支持纵向排列的图片，优化内部绘制。
+* 增加：`TClipboard`增加了`FindPictureFormatID`、`FindFormatID`、`GetAsHtml`、`SupportedFormats`、`HasFormatName`、`HasPictureFormat`、`SetAsHtml`，重构了`HasFormat`的实现，并调整了`Formats`的返回类型。
+* 增加：`TImageList`增加了`StretchDraw`, `AddSliced`方法。
+
 
 -- res2go --    
 
