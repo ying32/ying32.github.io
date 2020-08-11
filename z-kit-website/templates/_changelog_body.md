@@ -18,8 +18,8 @@
 * 增加：`TImageButton`支持纵向排列的图片，优化内部绘制。
 * 增加：`TClipboard`增加了`FindPictureFormatID`、`FindFormatID`、`GetAsHtml`、`SupportedFormats`、`HasFormatName`、`HasPictureFormat`、`SetAsHtml`，重构了`HasFormat`的实现，并调整了`Formats`的返回类型。
 * 增加：`TImageList`增加了`StretchDraw`, `AddSliced`方法。
-* 增加：所有继承自TControl的添加AnchorSame属性
-* 增加：TColorDialog添加`CustomColors`属性。
+* 增加：所有继承自`TControl`的添加`AnchorSame`属性。
+* 增加：`TColorDialog`添加`CustomColors`属性。
 
 
 -- res2go --    
