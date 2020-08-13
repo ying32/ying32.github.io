@@ -75,7 +75,7 @@
 		  <li><a href="/doc.html" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '文档'])">文档</a></li>
 		  <li><a href="https://github.com/ying32/govcl/tree/master/samples" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '例子'])">示例</a></li>
 		  <li><a href="/screenshot.html" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '截图'])">屏幕截图</a></li>
-		  <li><a href="/ide.html" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', 'IDE'])">UI设计器</a></li>
+		 
 		  <li><a href="https://video.0-w.cc/videos/1" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '视频教程'])"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg> 视频教程(cyanBone)</a></li>
 	    
 		  <li><a id="qq_group" href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '加入QQ群'])"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg> 加入QQ群</a></li>
@@ -123,19 +123,13 @@
             <div class="row placeholders">
                 <article class="markdown-body">
                     <p><strong>不在乎y(ying32)</strong>   </p>
-<p>湖南人，记忆中是从05年接触到vb的书后开始对编程感兴趣（那时候没电脑，只能看看理论），到后来接触C++，再到08年偶然听说“熊猫烧香”的病毒，了解到是Delphi写的，开始学习Delphi一直到现在。<br>一直没闲着，中间学过汇编（学汇编是因为学习软件逆向需要）、C/C++、Java、C#、PHP、Objective-C、JavaScript、Go等等......(学多了又好又不好)，现在停留在Go上面了，可是学习Go却“跑偏了”，净瞎折腾GUI去了，唉。<br>14年正式迈入职业程序员生涯，一做就是几年......，离职后开过店，如今又退出了。</p>
 <hr>
 <p><strong>关于GoVCL</strong>   </p>
 <p>创建GoVCL（Go Language Visual Component Library）项目也原本是一时兴起，目的只为解决某些情况下需要一些UI的时候，记得是2017年下半年开始做的，具体几月份记不清了。  </p>
 <p>GoVCL从开始到现在都不是为了大型项目准备的，更不是为了需要漂亮的UI而准备的，一切以实用为主。  </p>
 <p>做开源，不容易。在<code>GoVCL</code>这个开源项目上花费了我太多的时间和精力，后期我几乎是全职在做（几乎0收入，还好去年有老板给点单做做，不至于饿死），而且是免费提供全部的代码，不求感谢，但求勿喷。  </p>
 <hr>
-<p><strong>关于UI的设计器</strong>  </p>
-<p>其实在最开始的<code>Delphi/VCL</code>版本时代就开发过一款GoVCL专用设计器，因为种种原因，最后选择放弃了（很是无奈），不得已的情况下提供了res2go来替代专用设计器。    </p>
-<p>此次在v2.0版中移除了<code>Delphi/VCL</code>的支持后，重新用Lazarus开发了一个跨平台的GoVCL专用UI设计器（基本都已经开发完成，只是未对外提供）。开发UI设计器的初衷只是为了能让<br>开发变得更简单方便，更高效（说句实在话，我也可以完全不开发这个UI设计器的，就对我本人而言其实并没有影响）。</p>
-<p>本次的设计器依然选择不开源，而且采用收费制，至于怎么收费暂时没想好。</p>
-<hr>
-<p><strong>关于v2.0版本</strong>  </p>
+<p><strong>关于不再支持Delphi/VCL</strong>  </p>
 <p>在<code>master</code>分支中的<code>v2.0</code>版本中已经移除了对<code>Delphi/VCL</code>的支持，至于为什么移除有几点：  </p>
 <ul>
 <li>1、一直以来govcl都是由我一个人维护的，所以很多方面精力有限。</li>
