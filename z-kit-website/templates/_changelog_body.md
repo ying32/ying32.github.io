@@ -18,9 +18,11 @@
 * 增加：`TImageButton`支持纵向排列的图片，优化内部绘制。
 * 增加：`TClipboard`增加了`FindPictureFormatID`、`FindFormatID`、`GetAsHtml`、`SupportedFormats`、`HasFormatName`、`HasPictureFormat`、`SetAsHtml`，重构了`HasFormat`的实现，并调整了`Formats`的返回类型。
 * 增加：`TImageList`增加了`StretchDraw`, `AddSliced`方法。
-* 增加：所有继承自`TControl`的添加`AnchorSame`属性。
+* 增加：所有继承自`TControl`的添加`AnchorSame`, `ScaleDesignToForm`, `ScaleFormToDesign`, `Scale96ToForm`, `ScaleFormTo96`, `Scale96ToFont`, `ScaleFontTo96`, `ScaleScreenToFont`, `ScaleFontToScreen`, `Scale96ToScreen`, `ScaleScreenTo96`, `AutoAdjustLayout`, `FixDesignFontsPPI`, `ScaleFontsPPI`属性。
 * 增加：`TColorDialog`添加`CustomColors`属性。
-
+* 增加：所有继承自`TWinControl`的组件添加`PaintTo`方法。
+* 增加：`TForm`与`TFrame`增加`DesignTimePPI`属性。
+ 
 
 -- res2go --    
 
