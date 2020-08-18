@@ -26,7 +26,7 @@
 
 -- res2go --    
 
-* 增加：新的res2go-IDE插件，目前仅在群里测试，[使用说明](https://gitee.com/ying32/govcl/wikis/pages?sort_id=2645001&doc_id=102420)。
+* 增加：新的res2go-IDE插件，目前仅在群里测试，[使用说明](https://gitee.com/ying32/govcl/wikis/pages?sort_id=2645001&doc_id=102420)，后期会逐步废弃res2go命令行工具。
 
 ----
 
