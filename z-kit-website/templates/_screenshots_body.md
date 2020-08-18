@@ -1,7 +1,7 @@
 
-* [Windows](#Windows)
-* [Linux](#Linux)
-* [MacOS](#MacOS)
+* [Windows](#windows)
+* [Linux](#linux)
+* [MacOS](#macos)
 
 
 ## Windows
