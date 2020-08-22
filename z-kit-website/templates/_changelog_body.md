@@ -22,7 +22,8 @@
 * 增加：`TColorDialog`添加`CustomColors`属性。
 * 增加：所有继承自`TWinControl`的组件添加`PaintTo`方法。
 * 增加：`TForm`与`TFrame`增加`DesignTimePPI`属性。
- 
+* 增加：`TListView`添加新的方法：`GetHitTestInfoAt`, `GetItemAt`, `GetNearestItem`, `GetNextItem`，新的属性：`ColumnCount`。
+* 增加：`TTreeView`添加新的方法：`GetHitTestInfoAt`。
 
 -- res2go --    
 
