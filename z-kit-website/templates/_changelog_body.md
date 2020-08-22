@@ -24,6 +24,10 @@
 * 增加：`TForm`与`TFrame`增加`DesignTimePPI`属性。
 * 增加：`TListView`添加新的方法：`GetHitTestInfoAt`, `GetItemAt`, `GetNearestItem`, `GetNextItem`，新的属性：`ColumnCount`。
 * 增加：`TTreeView`添加新的方法：`GetHitTestInfoAt`。
+* 删除：删除`memloaddll`例子及`amd64`下的代码。
+* 修改：`listviewvirtualdata`例子，`OwnerData`为true时，Windows下增加模拟`CheckBox`功能。
+* 修复：`gdiptest`例子增加绘制一个按钮并响应单击事件演示。
+
 
 -- res2go --    
 
