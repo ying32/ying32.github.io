@@ -11,6 +11,20 @@
 
 -- govcl --  
 
+
+-- res2go --    
+
+----
+
+## {{.lastRelease}}   
+
+
+## next v2.0.6 
+
+2020年8月23日   
+
+-- govcl --  
+
 * 限制：liblcl二进制要求>=2.0.6。
 * 添加：新的tag：`finalizerOn`默认不开启，开启后，非组件`Newxxx`之后无需手动调用`Free`（实验性）。
 * 删除：`TCanvas`移除`TextRect3`方法，之后改用`TextRect2`替代。
@@ -27,15 +41,13 @@
 * 删除：删除`memloaddll`例子及`amd64`下的代码。
 * 修改：`listviewvirtualdata`例子，`OwnerData`为true时，Windows下增加模拟`CheckBox`功能。
 * 修复：`gdiptest`例子增加绘制一个按钮并响应单击事件演示。
-
+* 调整：调整TGraphic、TJPEGImage、TPngImage、TGIFImage、TBitmap、TIcon的基类为IGraphic。
 
 -- res2go --    
 
 * 增加：新的res2go-IDE插件，目前仅在群里测试，[使用说明](https://gitee.com/ying32/govcl/wikis/pages?sort_id=2645001&doc_id=102420)，后期会逐步废弃res2go命令行工具。
 
 ----
-
-## {{.lastRelease}}   
 
 ## v2.0.5  
 
