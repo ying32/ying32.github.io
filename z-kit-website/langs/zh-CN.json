@@ -13,7 +13,8 @@
 		"screenshot": "屏幕截图",
 		"videoTitle": "视频教程(非官方)",
 		"ide": "UI设计器",
-		"moreTitle": "更多项目"
+		"moreTitle": "更多项目",
+		"casesTitle": "开发者案例"
 	},
 
 	"pages": [
@@ -119,6 +120,16 @@
 			"info3": "3、是否收费：是（收费模式：待定）",
 			"info4": "4、是否跨平台：是",
 			"aboutide": "[更多关于设计器的信息可以在关于中找到](https://z-kit.cc/about.html)"
+		},
+		{
+			"name": "cases",
+			"path": "",
+			"markdown": false,
+			"includeFile1": "_cases_body.html",
+			"title": "开发者案例",
+			"description": "cases",
+			"gosee": "前去看看"
+
 		}
 	]
 }

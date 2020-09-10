@@ -13,7 +13,8 @@
 		"screenshot": "Screenshots",
 		"videoTitle": "Video tutorial(Unofficial)",
 		"ide": "UI Designer",
-		"moreTitle": "More..."
+		"moreTitle": "More projects",
+		"casesTitle": "Developer case"
 	},
 
    "pages": [
@@ -112,6 +113,16 @@
 		   "info3": "3. Whether to charge: Yes (Charge Mode: To be determined)",
 		   "info4": "4. Cross-platform: Yes",
 		   "aboutide": "[More information about the designer can be found in About](https://z-kit.cc/about.html)"
+	   },
+	   {
+		   "name": "cases",
+		   "markdown": false,
+		   "path": "",
+		   "includeFile1": "_cases_body.html",
+		   "title": "Developer case",
+		   "description": "cases",
+		   "gosee": "Go see"
+
 	   }
 	]
 }

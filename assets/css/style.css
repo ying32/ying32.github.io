@@ -15,6 +15,11 @@
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.6);
 }
 
+.case-text{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
 
 .bs-docs-nav .navbar-nav li a {
 	color:#b9b8bd;

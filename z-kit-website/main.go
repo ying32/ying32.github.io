@@ -22,6 +22,12 @@ const (
 	domain = "https://z-kit.cc/"
 )
 
+type TCase struct {
+	Title string `json:"title"`
+	Image string `json:"image"`
+	URL   string `json:"url"`
+}
+
 func main() {
 	flag.Parse()
 
@@ -31,6 +37,7 @@ func main() {
 	if langs == nil {
 		panic("读语言列表失败。")
 	}
+	cases := readCases()
 
 	updateSite := func() {
 
@@ -67,7 +74,7 @@ func main() {
 				langDir, _ := lang.(map[string]interface{})["langDir"].(string)
 				fmt.Println("生成：", langName, "，目录：", langDir)
 
-				makeSite(root, langName, langDir, langs, addToSiteMap)
+				makeSite(root, langName, langDir, langs, cases, addToSiteMap)
 			}
 		}
 
@@ -147,6 +154,21 @@ func readLangs() []interface{} {
 	return nil
 }
 
+func readCases() []interface{} {
+	var data interface{}
+	bs, err := ioutil.ReadFile("./cases.json")
+	if err != nil {
+		return nil
+	}
+	if json.Unmarshal(bs, &data) != nil {
+		return nil
+	}
+	if res, ok := data.([]interface{}); ok {
+		return res
+	}
+	return nil
+}
+
 func readWiki(lang string) []byte {
 	bs, err := ioutil.ReadFile(fmt.Sprintf("./langs/wiki.%s.txt", lang))
 	if err != nil {
@@ -155,7 +177,7 @@ func readWiki(lang string) []byte {
 	return bs
 }
 
-func makeSite(root string, langName, langDir string, langs []interface{}, addToSiteMap func(page string)) {
+func makeSite(root string, langName, langDir string, langs, cases []interface{}, addToSiteMap func(page string)) {
 	if langName == "" {
 		log.Println("未找到语言名。")
 	}
@@ -189,6 +211,7 @@ func makeSite(root string, langName, langDir string, langs []interface{}, addToS
 				pg["footer"] = dataMap["footer"]
 				pg["menubar"] = dataMap["menubar"]
 				pg["year"] = time.Now().Year()
+				pg["cases"] = cases
 				makeHtmlPage(root, pg, addToSiteMap)
 			}
 		}
