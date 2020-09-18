@@ -33,13 +33,13 @@ func main() {
 
 	// 站点根目录
 	root := "../"
-	langs := readLangs()
-	if langs == nil {
-		panic("读语言列表失败。")
-	}
-	cases := readCases()
 
 	updateSite := func() {
+		langs := readLangs()
+		if langs == nil {
+			panic("读语言列表失败。")
+		}
+		cases := readCases()
 
 		siteMap := bytes.NewBuffer(nil)
 		siteMap.WriteString(`<?xml version="1.0" encoding="UTF-8"?>`)

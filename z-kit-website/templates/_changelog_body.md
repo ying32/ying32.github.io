@@ -10,6 +10,12 @@
 ## next v2.0.x 
 
 -- govcl --  
+
+
+-- govcl --  
+
+* 增加：`TClipboard`导出GetFormat方法。
+* 修复：修复`TClipboard.AsText`超大字符串读取产生访问异常。
  
 
 -- res2go --    
