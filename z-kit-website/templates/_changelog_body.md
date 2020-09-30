@@ -11,19 +11,23 @@
 
 -- govcl --  
 
-
--- govcl --  
-
-* 增加：`TClipboard`导出GetFormat方法。
-* 修复：修复`TClipboard.AsText`超大字符串读取产生访问异常。
- 
-
 -- res2go --    
 
 ----
 
 ## {{.lastRelease}}   
 
+
+## next v2.0.7
+
+2020年9月30日     
+
+
+-- govcl --  
+
+* 增加：`TClipboard`导出GetFormat方法。
+* 修复：修复`TClipboard.AsText`超大字符串读取产生访问异常。
+ 
 
 ## v2.0.6.2
 
