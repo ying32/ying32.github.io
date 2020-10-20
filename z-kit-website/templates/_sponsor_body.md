@@ -56,5 +56,6 @@
 | [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2020-07-03 |   |   |  
 | 大白菜(9****8) | ￥500 | 2020-08-08 |  {{.alipay}} |   |    
 | 大白菜(9****8) | ￥1000 | 2020-08-20 |  {{.alipay}} |   |    
+| 夜●千寻墨(3*****1)| ￥50 | 2020-10-20 19:46:36|  {{.wechatpay}} |  感谢群主大佬 |  
 
 **{{.thanks}}** 

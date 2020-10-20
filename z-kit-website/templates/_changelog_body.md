@@ -11,6 +11,10 @@
 
 -- govcl --  
 
+* 修复：修复`事件id`在某些情况下会冲突，感谢`Qomos`。  
+* 增加：`TColorBox`、`TComboBox`、`TDateTimePicker`增加`OnCloseUp`事件。
+* 增加：`TRadioGroup`增加`OnSelectionChanged`事件。
+
 -- res2go --    
 
 ----
