@@ -14,7 +14,9 @@
 		"videoTitle": "Video tutorial(Unofficial)",
 		"ide": "UI Designer",
 		"moreTitle": "More projects",
-		"casesTitle": "Developer case"
+		"casesTitle": "Developer case",
+		"idePlugin":"IDE plugin",
+		"usage": "usage"
 	},
 
    "pages": [
@@ -123,6 +125,15 @@
 		   "description": "cases",
 		   "gosee": "Go see"
 
+	   },
+	   {
+		   "name": "ideplugin",
+		   "path": "",
+		   "markdown": true,
+		   "includeFile1": "_markdown.html",
+		   "includeMdFile": "_ideplugin_body.md",
+		   "title": "Lazarus IDE plugin",
+		   "description": "Lazarus IDE plugin"
 	   }
 	]
 }

@@ -14,7 +14,9 @@
 		"videoTitle": "视频教程(非官方)",
 		"ide": "UI设计器",
 		"moreTitle": "更多项目",
-		"casesTitle": "开发者案例"
+		"casesTitle": "开发者案例",
+		"idePlugin":"IDE插件",
+		"usage": "使用方法"
 	},
 
 	"pages": [
@@ -130,6 +132,15 @@
 			"description": "cases",
 			"gosee": "前去看看"
 
+		},
+		{
+			"name": "ideplugin",
+			"path": "",
+			"markdown": true,
+			"includeFile1": "_markdown.html",
+			"includeMdFile": "_ideplugin_body.md",
+			"title": "Lazarus IDE插件",
+			"description": "Lazarus IDE插件"
 		}
 	]
 }
