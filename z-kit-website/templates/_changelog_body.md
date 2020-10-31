@@ -17,6 +17,8 @@
 
 -- res2go --    
 
+* 公开：正式公开res2go IDE插件源代码：https://github.com/ying32/res2go-ide-plugin
+
 ----
 
 ## {{.lastRelease}}   
