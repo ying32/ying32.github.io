@@ -17,7 +17,7 @@
 
 -- res2go --    
 
-* 公开：正式公开res2go IDE插件源代码：https://github.com/ying32/res2go-ide-plugin
+* 公开：正式对非QQ群员公开[res2go IDE插件源代码](https://github.com/ying32/res2go-ide-plugin)，标志着res2go命令行工具正式废弃使用。 
 
 ----
 
