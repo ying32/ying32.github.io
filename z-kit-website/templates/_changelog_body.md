@@ -11,6 +11,18 @@
 
 -- govcl --  
 
+-- res2go --    
+
+----
+
+## {{.lastRelease}}   
+
+## v2.0.8
+
+2020年11月12日    
+
+-- govcl --  
+
 * 修复：修复`事件id`在某些情况下会冲突，感谢`Qomos`。  
 * 增加：`TColorBox`、`TComboBox`、`TDateTimePicker`增加`OnCloseUp`事件。
 * 增加：`TRadioGroup`增加`OnSelectionChanged`事件。
@@ -19,10 +31,6 @@
 -- res2go --    
 
 * 公开：正式对非QQ群员公开[res2go IDE插件源代码](https://github.com/ying32/res2go-ide-plugin)，标志着res2go命令行工具正式废弃使用。 
-
-----
-
-## {{.lastRelease}}   
 
 
 ## v2.0.7
