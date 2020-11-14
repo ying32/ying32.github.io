@@ -107,6 +107,7 @@
 			"description": "屏幕截图"
 		},
 		{
+	    	"enabled":false,
 			"name": "ide",
 			"path": "",
 			"includeFile1": "_markdown.html",

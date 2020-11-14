@@ -100,6 +100,7 @@
 		   "description": "Screenshots"
 	   },
 	   {
+	       "enabled":false,
 		   "name": "ide",
 		   "path": "",
 		   "includeFile1": "_markdown.html",
