@@ -141,7 +141,8 @@
 			"includeFile1": "_markdown.html",
 			"includeMdFile": "_ideplugin_body.md",
 			"title": "Lazarus IDE插件",
-			"description": "Lazarus IDE插件"
+			"description": "Lazarus IDE插件",
+			"readme":"做这个插件的初衷是因为自己做独立的设计器感觉太费精力（独立设计器基本完工），太累了，索性抛弃了自己的设计器。"
 		}
 	]
 }
