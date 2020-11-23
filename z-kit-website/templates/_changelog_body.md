@@ -11,6 +11,8 @@
 
 -- govcl --  
 
+* 增加：`TGIFImage`、`TIcon`、`TJPEGImage`、`TPicture`、`TPngImage`、`TBitmap`、`TStringList`、`TStrings`增加`LoadFromBytes`方法，用于简化加载。
+
 -- res2go --    
 
 * 移除：正式移除已经标记为弃用的res2go命令行工具源码。
