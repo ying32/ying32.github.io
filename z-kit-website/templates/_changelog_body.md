@@ -12,6 +12,7 @@
 -- govcl --  
 
 * 增加：`TGIFImage`、`TIcon`、`TJPEGImage`、`TPicture`、`TPngImage`、`TBitmap`、`TStringList`、`TStrings`增加`LoadFromBytes`方法，用于简化加载。
+* 增加：`TForm`增加被动方法`CreateParams`，用于创建窗体时修改一些窗体信息。
 
 -- res2go --    
 
