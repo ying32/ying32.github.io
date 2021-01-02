@@ -82,7 +82,8 @@
 		  <li><a href="https://video.0-w.cc/videos/1" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '视频教程'])"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-video"></use></svg> {{.menubar.videoTitle}}</a></li>
 
 	    {{if eq .lang "zh-CN"}}
-		  <li><a id="qq_group" href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '加入QQ群'])"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg> 加入QQ群</a></li>
+		  <!-- 不放qq群链接了，唉，心累 -->
+		  <!--<li><a id="qq_group" href="https://jq.qq.com/?_wv=1027&k=5Sv7Qiq" target="_blank" onclick="_hmt.push(['_trackEvent', 'menubar', 'click', '加入QQ群'])"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg> 加入QQ群</a></li> -->
 		{{end}}
 		  <li class="dropdown">
 			  <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">{{.menubar.moreTitle}} <b class="caret"></b></a>
@@ -109,7 +110,7 @@
       </ul>
     </nav>
 	  {{if eq .lang "zh-CN"}}
-	<img id="qq_group_qrcode" src="/assets/images/qqgroup_qrcode.png" style="display: none; position: absolute;" >
+	<!--<img id="qq_group_qrcode" src="/assets/images/qqgroup_qrcode.png" style="display: none; position: absolute;" > -->
 	  {{end}}
   </div>
 </header>
