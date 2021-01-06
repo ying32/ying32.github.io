@@ -25,7 +25,7 @@
 -- govcl --  
 
 * 增加：`TGIFImage`、`TIcon`、`TJPEGImage`、`TPicture`、`TPngImage`、`TBitmap`、`TStringList`、`TStrings`增加`LoadFromBytes`方法，用于简化加载。
-* 增加：`TForm`增加被动方法`CreateParams`，用于创建窗体时修改一些窗体信息。
+* 增加：`TForm`增加被动方法`CreateParams`，用于创建窗体时修改一些窗体信息，例子参见：[createparams](https://github.com/ying32/govcl/tree/master/samples/Windows/createparams)。
 * 修复：修复第三库richmemo在Windows下某些值溢出问题。
 
 -- res2go --    
