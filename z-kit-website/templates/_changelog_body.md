@@ -11,16 +11,27 @@
 
 -- govcl --  
 
+-- res2go --    
+
+----
+
+## {{.lastRelease}}   
+
+
+## v2.0.9
+
+2021年1月6日   
+
+-- govcl --  
+
 * 增加：`TGIFImage`、`TIcon`、`TJPEGImage`、`TPicture`、`TPngImage`、`TBitmap`、`TStringList`、`TStrings`增加`LoadFromBytes`方法，用于简化加载。
 * 增加：`TForm`增加被动方法`CreateParams`，用于创建窗体时修改一些窗体信息。
+* 修复：修复第三库richmemo在Windows下某些值溢出问题。
 
 -- res2go --    
 
 * 移除：正式移除已经标记为弃用的res2go命令行工具源码。
 
-----
-
-## {{.lastRelease}}   
 
 ## v2.0.8
 
