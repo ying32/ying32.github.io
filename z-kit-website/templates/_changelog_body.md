@@ -11,7 +11,14 @@
 
 -- govcl --  
 
--- res2go --    
+-- liblcl --  
+
+* 修复：修复`TXButton`字体属性不生效问题。(`感谢群友 520`)
+* 修复：修复TDateTime和TDate时间类型数据溢出问题。(`感谢群友 唔歌`) [#61](https://github.com/ying32/govcl/issues/61)  
+
+-- res2go plugin --    
+
+* 增加：增加go1.16 `go:embed`支持。
 
 ----
 
