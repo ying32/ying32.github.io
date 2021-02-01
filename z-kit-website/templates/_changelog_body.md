@@ -11,6 +11,8 @@
 
 -- govcl --  
 
+* 增加：添加新的WINAPI: SHGetFileInfo及有关的结构和常量。
+
 -- liblcl --  
 
 * 修复：修复`TXButton`字体属性不生效问题。(`感谢群友 520`)
