@@ -11,6 +11,7 @@
 
 -- govcl --  
 
+* 限制：要求最小liblcl二进制版为2.0.10。  
 * 增加：添加新的WINAPI: SHGetFileInfo及有关的结构和常量。
 
 -- liblcl --  
