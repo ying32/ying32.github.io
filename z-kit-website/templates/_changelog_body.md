@@ -17,6 +17,7 @@
 
 * 修复：修复`TXButton`字体属性不生效问题。(`感谢群友 520`)
 * 修复：修复TDateTime和TDate时间类型数据溢出问题。(`感谢群友 唔歌`) [#61](https://github.com/ying32/govcl/issues/61)  
+* 添加：TBitBtn添加ImageIndex和Images属性。（`感谢群友 c2meforyou`）  
 
 -- res2go plugin --    
 
