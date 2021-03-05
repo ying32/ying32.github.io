@@ -11,6 +11,19 @@
 
 -- govcl --  
 
+-- res2go plugin --    
+
+----
+
+## {{.lastRelease}}   
+
+
+## v2.0.10
+
+2021年3月5日   
+
+-- govcl --  
+
 * 限制：要求最小liblcl二进制版为2.0.10。  
 * 增加：添加新的WINAPI: SHGetFileInfo及有关的结构和常量。
 
@@ -25,9 +38,6 @@
 * 增加：增加go1.16 `go:embed`支持。
 
 ----
-
-## {{.lastRelease}}   
-
 
 ## v2.0.9
 
