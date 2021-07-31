@@ -11,6 +11,7 @@
 
 -- govcl --  
 
+* liblcl: 添加`OnPrepareCanvas`事件（[#85](https://github.com/ying32/govcl/issues/85)）。
 * liblcl: 修复添加事件未正确更新引用问题。 感谢群友`520`反馈。
 * 加载liblcl中的函数不再使用全局变量（实验），因为Go新版本在linux下因为导入太多造成无法编译。
 
