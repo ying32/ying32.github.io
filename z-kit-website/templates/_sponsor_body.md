@@ -70,5 +70,7 @@
 | cyanBone(4*****1)| ￥50 | 2021-05-06 17:35 |  {{.wechatpay}} |  |  
 | h*r| ￥100 | 2021-05-12 13:53 |  {{.wechatpay}} |  |  
 | *伟| ￥50 | 2021-06-05 16:59 |  {{.wechatpay}} | 5点啦，饮茶先啦😂 |  
+| [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2021-06-22 |   |   |  
+| q*s | ￥200 | 2021-08-03 14:37 |  {{.wechatpay}} |  |  
 
 **{{.thanks}}** 
