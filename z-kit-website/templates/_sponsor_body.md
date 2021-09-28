@@ -73,5 +73,7 @@
 | [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2021-06-22 |   |   |  
 | q*s | ￥200 | 2021-08-03 14:37 |  {{.wechatpay}} |  |  
 | *贵 | ￥10 | 2021-08-11 11:07 |  {{.wechatpay}} |  |  
+| *崽 | ￥100 | 2021-09-27 17:11 |  {{.wechatpay}} |  |  
+| *贯 | ￥1 | 2021-09-27 19:04 |  {{.wechatpay}} |  |  
 
 **{{.thanks}}** 
