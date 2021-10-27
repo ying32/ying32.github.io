@@ -15,6 +15,7 @@
 * liblcl: 为`TTreeNode`添加一些新的方法和事件（[#87](https://github.com/ying32/govcl/issues/87)）。
 * liblcl: 修复添加事件未正确更新引用问题。 感谢群友`520`反馈。
 * 加载liblcl中的函数不再使用全局变量（实验），因为Go新版本在linux下因为导入太多造成无法编译。
+* 修复ListView的`TLVCustomDrawItemEvent`、`TLVCustomDrawSubItemEvent`、`TTVCustomDrawItemEvent`参数类型错误，增加`OnDrawItem`事件。`感谢群友 丰盛辉煌`）     
 
 
 -- res2go plugin --    
