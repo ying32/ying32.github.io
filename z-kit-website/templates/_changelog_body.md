@@ -24,7 +24,7 @@
 
 -- govcl --  
 
-* liblcl: 更新至`Lazarus 2.2`版本，[Lazarus_2.2.0_release_notes](http://wiki.lazarus.freepascal.org/Lazarus_2.2.0_release_notes)，(Lazarus_2.2_fixes_branch)[https://wiki.lazarus.freepascal.org/Lazarus_2.2_fixes_branch]。
+* liblcl: 更新至`Lazarus 2.2`版本，[Lazarus_2.2.0_release_notes](http://wiki.lazarus.freepascal.org/Lazarus_2.2.0_release_notes)，[Lazarus_2.2_fixes_branch](https://wiki.lazarus.freepascal.org/Lazarus_2.2_fixes_branch)。
 * liblcl: 添加`OnPrepareCanvas`事件（[#85](https://github.com/ying32/govcl/issues/85)）。
 * liblcl: 为`TTreeNode`添加一些新的方法和事件（[#87](https://github.com/ying32/govcl/issues/87)）。
 * liblcl: 修复添加事件未正确更新引用问题。 感谢群友`520`反馈。
