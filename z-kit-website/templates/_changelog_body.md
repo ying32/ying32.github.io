@@ -7,16 +7,9 @@
 
 ## {{.nextTitle}}
 
-## next v2.0.x 
+## next v2.2.x 
 
 -- govcl --  
-
-* liblcl: 添加`OnPrepareCanvas`事件（[#85](https://github.com/ying32/govcl/issues/85)）。
-* liblcl: 为`TTreeNode`添加一些新的方法和事件（[#87](https://github.com/ying32/govcl/issues/87)）。
-* liblcl: 修复添加事件未正确更新引用问题。 感谢群友`520`反馈。
-* 加载liblcl中的函数不再使用全局变量（实验），因为Go新版本在linux下因为导入太多造成无法编译。
-* 修复ListView的`TLVCustomDrawItemEvent`、`TLVCustomDrawSubItemEvent`、`TTVCustomDrawItemEvent`参数类型错误，增加`OnDrawItem`事件。`感谢群友 丰盛辉煌`）     
-
 
 -- res2go plugin --    
 
@@ -24,6 +17,24 @@
 
 ## {{.lastRelease}}   
 
+
+## v2.2.0 
+
+2022年1月11日   
+
+-- govcl --  
+
+* liblcl: 更新至`Lazarus 2.2`版本，[Lazarus_2.2.0_release_notes](http://wiki.lazarus.freepascal.org/Lazarus_2.2.0_release_notes)，(Lazarus_2.2_fixes_branch)[https://wiki.lazarus.freepascal.org/Lazarus_2.2_fixes_branch]。
+* liblcl: 添加`OnPrepareCanvas`事件（[#85](https://github.com/ying32/govcl/issues/85)）。
+* liblcl: 为`TTreeNode`添加一些新的方法和事件（[#87](https://github.com/ying32/govcl/issues/87)）。
+* liblcl: 修复添加事件未正确更新引用问题。 感谢群友`520`反馈。
+* 加载liblcl中的函数不再使用全局变量，因为Go新版本在linux下因为导入太多造成无法编译。
+* 修复ListView的`TLVCustomDrawItemEvent`、`TLVCustomDrawSubItemEvent`、`TTVCustomDrawItemEvent`参数类型错误，增加`OnDrawItem`事件。`感谢群友 丰盛辉煌`）     
+
+
+-- res2go plugin --    
+
+----
 
 ## v2.0.10
 
