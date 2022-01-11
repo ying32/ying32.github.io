@@ -11,8 +11,6 @@
 
 -- govcl --  
 
--- res2go plugin --    
-
 ----
 
 ## {{.lastRelease}}   
@@ -31,8 +29,6 @@
 * 加载liblcl中的函数不再使用全局变量，因为Go新版本在linux下因为导入太多造成无法编译。
 * 修复ListView的`TLVCustomDrawItemEvent`、`TLVCustomDrawSubItemEvent`、`TTVCustomDrawItemEvent`参数类型错误，增加`OnDrawItem`事件。`感谢群友 丰盛辉煌`）     
 
-
--- res2go plugin --    
 
 ----
 
