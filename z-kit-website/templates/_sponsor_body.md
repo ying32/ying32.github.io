@@ -83,5 +83,6 @@
 
 | {{.sponsor}}    | {{.Amount}}    | {{.time}} | {{.Sponsorship}} | {{.comment}} |  
 | :------ | :------ | :----    | :----  | :---- |   
+| *༒  |￥100 | 2022-02-07 12:45 |  {{.wechatpay}} | 赏大佬的govcl |  
 
 **{{.thanks}}** 
