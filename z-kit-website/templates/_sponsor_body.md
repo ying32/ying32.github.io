@@ -5,7 +5,7 @@
 
 * 微信  
 
-![wechatpay](/assets/images/wechatpay.jpg)  
+![wechatpay](/assets/images/wechatsp.jpg)  
 {{else}}
 **Nothing...**  
 {{end}}
