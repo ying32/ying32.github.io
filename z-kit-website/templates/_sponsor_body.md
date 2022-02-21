@@ -84,5 +84,6 @@
 | {{.sponsor}}    | {{.Amount}}    | {{.time}} | {{.Sponsorship}} | {{.comment}} |  
 | :------ | :------ | :----    | :----  | :---- |   
 | *༒  |￥100 | 2022-02-07 12:45 |  {{.wechatpay}} | 赏大佬的govcl |  
+| U*t |￥50 | 2022-02-20 20:07 |  {{.wechatpay}} | For goVCL and dylib |  
 
 **{{.thanks}}** 
