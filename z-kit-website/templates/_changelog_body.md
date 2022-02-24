@@ -9,6 +9,7 @@
 
 ## next v2.2.x 
 
+* 增加：新增TFloatSpinEdit和TDirectoryEdit组件。
 
 ----
 
