@@ -10,6 +10,7 @@
 ## next v2.2.x 
 
 * 增加：新增TFloatSpinEdit、TDirectoryEdit、TColorButton组件。
+* 修复：修复i18n包错误（感谢群友`Rance`）。
 
 ----
 
