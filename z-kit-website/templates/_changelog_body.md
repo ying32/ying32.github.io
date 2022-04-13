@@ -13,7 +13,7 @@
 * 修复：修复i18n包错误（感谢群友`Rance`）。
 * 增加：`TPageControl`添加`ActivePage`属性。
 * 优化：调整govcl内部的一些函数名和调用方式。
-
+* 增加：`TDateTimePicker`增加`HideDateTimeParts`、`TimeFormat`属性。
 ----
 
 ## {{.lastRelease}}   
