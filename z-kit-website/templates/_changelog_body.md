@@ -9,6 +9,7 @@
 
 ## next v2.2.x 
 
+* 合并：合并 [101](https://github.com/ying32/govcl/pull/101)、[103](https://github.com/ying32/govcl/pull/103)两个请求，并作了相关调整，主要是支持arm64（macOS M1）。
 * 增加：新增`TFloatSpinEdit`、`TDirectoryEdit`、`TColorButton`、`TCheckComboBox`组件。
 * 修复：修复i18n包错误（感谢群友`Rance`）。
 * 增加：`TPageControl`添加`ActivePage`属性。
