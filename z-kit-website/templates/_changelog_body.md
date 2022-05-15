@@ -9,12 +9,13 @@
 
 ## next v2.2.x 
 
-* 合并：合并 [101](https://github.com/ying32/govcl/pull/101)、[103](https://github.com/ying32/govcl/pull/103)两个请求，并作了相关调整，主要是支持arm64（macOS M1）。
+* 合并：合并 [#101](https://github.com/ying32/govcl/pull/101)、[#103](https://github.com/ying32/govcl/pull/103)两个请求，并作了相关调整，主要是支持arm64（macOS M1）。
 * 增加：新增`TFloatSpinEdit`、`TDirectoryEdit`、`TColorButton`、`TCheckComboBox`组件。
 * 修复：修复i18n包错误（感谢群友`Rance`）。
 * 增加：`TPageControl`添加`ActivePage`属性。
 * 优化：调整govcl内部的一些函数名和调用方式。
 * 增加：`TDateTimePicker`增加`HideDateTimeParts`、`TimeFormat`属性。
+* 增加：`TForm`增加`OnUTF8KeyPress`事件 [#126](https://github.com/ying32/govcl/pull/126)。
 ----
 
 ## {{.lastRelease}}   
