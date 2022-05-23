@@ -86,7 +86,8 @@
 | *༒  |￥100 | 2022-02-07 12:45 |  {{.wechatpay}} | 赏大佬的govcl |  
 | U*t |￥50 | 2022-02-20 20:07 |  {{.wechatpay}} | For goVCL and dylib |  
 | 高*平 |￥100 | 2022-03-27 12:08 |  {{.wechatpay}} | govcl很棒，让我学习了很多 |  
-| honor |￥100 | 2022-05-03 11:26 |  {{.wechatpay}} | 想知道lazarus和go配合 |  
+| honor | ￥100 | 2022-05-03 11:26 |  {{.wechatpay}} | 想知道lazarus和go配合 |  
 | [korimas](https://github.com/korimas) |￥200 | 2022-05-16 09:30 |  {{.wechatpay}} | 支持一下，开源不易！ |  
+| 夜魂 | ￥50 | 2022-05-21 22:16 |  {{.wechatpay}} | 开源不易,向群主致敬 |  
 
 **{{.thanks}}** 
