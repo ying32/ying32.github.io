@@ -89,5 +89,6 @@
 | honor | ￥100 | 2022-05-03 11:26 |  {{.wechatpay}} | 想知道lazarus和go配合 |  
 | [korimas](https://github.com/korimas) |￥200 | 2022-05-16 09:30 |  {{.wechatpay}} | 支持一下，开源不易！ |  
 | 夜魂 | ￥50 | 2022-05-21 22:16 |  {{.wechatpay}} | 开源不易,向群主致敬 |  
+| 佳 | ￥5 | 2022-06-14 17:28 |  {{.wechatpay}} | 大佬，下个版本能不能加些组件，Tsynedit这些 |  
 
 **{{.thanks}}** 
