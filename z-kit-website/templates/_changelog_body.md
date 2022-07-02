@@ -18,6 +18,7 @@
 * 增加：`TForm`增加`OnUTF8KeyPress`事件 [#126](https://github.com/ying32/govcl/pull/126)。
 * 增加：`TPanel`增加`Canvas`属性和`OnPaint`事件。  
 * 增加：`TComboBox`增加`ReadOnly`属性。  
+* 修改：macOS要求最低10.10。  
 ----
 
 ## {{.lastRelease}}   
