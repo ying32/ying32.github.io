@@ -91,6 +91,7 @@
 | 夜魂 | ￥50 | 2022-05-21 22:16 |  {{.wechatpay}} | 开源不易,向群主致敬 |  
 | 佳 | ￥5 | 2022-06-14 17:28 |  {{.wechatpay}} | 大佬，下个版本能不能加些组件，Tsynedit这些 |  
 | [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2022-06-30 |   |   |  
+| 开发者 | ￥20 | 2022-08-13 | {{.wechatpay}}  | 希望支持气泡提示框popup |  
 
 
 **{{.thanks}}** 
