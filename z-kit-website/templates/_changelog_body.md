@@ -19,7 +19,15 @@
 * 增加：`TPanel`增加`Canvas`属性和`OnPaint`事件。  
 * 增加：`TComboBox`增加`ReadOnly`属性。  
 * 修改：macOS要求最低10.10。  
+* 修复：重构事件回调功能（需要配合最新的liblcl使用），解决一些效率和有可能再次出现的事件错乱问题。
+* 增加：`TFlowPanel`增加`ControlList`及相关的类。
+* 增加：一些List类型增加`Exchange`或`Move`。
+* 删除：移除一些已定义为`弃用`的类转换函数。
+* 删除：删除`vcl/api/memorydll`包。
+* 删除：删除伪类的`ptr`成员。
+* 增加：增加清除事件回调，用于解除某些引用，以便于GC可以回收内存。
 ----
+
 
 ## {{.lastRelease}}   
 
