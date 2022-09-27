@@ -12,7 +12,6 @@
 * 合并：合并 [#101](https://github.com/ying32/govcl/pull/101)、[#103](https://github.com/ying32/govcl/pull/103)两个请求，并作了相关调整，主要是支持arm64（macOS M1）。
 * 增加：新增`TFloatSpinEdit`、`TDirectoryEdit`、`TColorButton`、`TCheckComboBox`组件。
 * 修复：修复i18n包错误（感谢群友`Rance`）。
-* 增加：`TPageControl`添加`ActivePage`属性。
 * 优化：调整govcl内部的一些函数名和调用方式。
 * 增加：`TDateTimePicker`增加`HideDateTimeParts`、`TimeFormat`属性。
 * 增加：`TForm`增加`OnUTF8KeyPress`事件 [#126](https://github.com/ying32/govcl/pull/126)。
@@ -28,6 +27,7 @@
 * 增加：增加清除事件回调，用于解除某些引用，以便于GC可以回收内存。
 * 增加：`TImageList`增加一些方法和修改一些参数。
 * 增加：`TPageControl`增加一些属性、方法和事件。
+* 修改：重构dll导入的API函数调用方式（测试新版本可以在linux下编译通过，也能进入debug模式。注：具体需要多少内存不知道，虚拟机中测试的）。
 ----
 
 
