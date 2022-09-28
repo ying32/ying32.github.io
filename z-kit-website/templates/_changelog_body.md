@@ -9,6 +9,7 @@
 
 ## next v2.2.x 
 
+* liblcl: 更新至`Lazarus 2.2.2`版本，[Fixes_for_2.2.2_.28merged.29](https://wiki.lazarus.freepascal.org/Lazarus_2.2_fixes_branch#Fixes_for_2.2.2_.28merged.29)。
 * 合并：合并 [#101](https://github.com/ying32/govcl/pull/101)、[#103](https://github.com/ying32/govcl/pull/103)两个请求，并作了相关调整，主要是支持arm64（macOS M1）。
 * 增加：新增`TFloatSpinEdit`、`TDirectoryEdit`、`TColorButton`、`TCheckComboBox`组件。
 * 修复：修复i18n包错误（感谢群友`Rance`）。
