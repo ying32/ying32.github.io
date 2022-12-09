@@ -32,6 +32,7 @@
 * 修改：重构dll调用，不再依赖`github.com/ying32/dylib`包，并变更导入的API函数调用方式（测试新版本可以在linux下编译通过，也能进入debug模式。注：具体需要多少内存不知道，虚拟机中测试的）。
 * 增加：可通过 `-tags hideversion` 隐藏控制台输出的liblcl版本号。
 * 增加：`TApplication`添加一些属性和方法。
+* 增加：`TImage`添加`OnPaintBackground`事件。
 ----
 
 
