@@ -93,6 +93,7 @@
 | [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2022-06-30 |   |   |  
 | 开发者 | ￥20 | 2022-08-13 | {{.wechatpay}}  | 希望支持气泡提示框popup |  
 | 沉淀下来 | ￥100 | 2022-11-25 | {{.wechatpay}}  | 很好的一个跨平台GUI库，支持！！ |  
+|   | ￥5 | 2022-12-11 | {{.wechatpay}}  |  |  
 
 
 **{{.thanks}}** 
