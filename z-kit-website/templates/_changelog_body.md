@@ -33,6 +33,8 @@
 * 增加：可通过 `-tags hideversion` 隐藏控制台输出的liblcl版本号。
 * 增加：`TApplication`添加一些属性和方法。
 * 增加：`TImage`添加`OnPaintBackground`、`OnPaint`和`OnPictureChanged`事件。
+* 增加：`TClipboard`增加`AddFormat`、`SetFormat`、`GetComponent`、`SetComponent`和`SetComponentAsText`方法。
+* 增加：`TCanvas`增加`TryLock`、`Unlock`方法。
 ----
 
 
