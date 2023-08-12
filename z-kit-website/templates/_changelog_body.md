@@ -7,7 +7,14 @@
 
 ## {{.nextTitle}}
 
-## next v2.2.x 
+## next v2.x.x 
+
+----
+
+
+## {{.lastRelease}}   
+
+## v2.2.3 
 
 * liblcl: 更新至`Lazarus 2.2.2`版本，[Fixes_for_2.2.2_.28merged.29](https://wiki.lazarus.freepascal.org/Lazarus_2.2_fixes_branch#Fixes_for_2.2.2_.28merged.29)。
 * 合并：合并 [#101](https://github.com/ying32/govcl/pull/101)、[#103](https://github.com/ying32/govcl/pull/103)两个请求，并作了相关调整，主要是支持arm64（macOS M1）。
@@ -35,10 +42,8 @@
 * 增加：`TImage`添加`OnPaintBackground`、`OnPaint`和`OnPictureChanged`事件。
 * 增加：`TClipboard`增加`AddFormat`、`SetFormat`、`GetComponent`、`SetComponent`和`SetComponentAsText`方法。
 * 增加：`TCanvas`增加`TryLock`、`Unlock`方法。
+
 ----
-
-
-## {{.lastRelease}}   
 
 
 ## v2.2.0 
