@@ -31,7 +31,7 @@
 * 增加：一些List类型增加`Exchange`或`Move`。
 * 删除：移除一些已定义为`弃用`的类转换函数和`string`、`bool`转换函数。
 * 删除：删除`vcl/api/memorydll`包。
-* 删除：删除伪类的`ptr`成员。
+* 删除：删除伪类的`ptr`字段。
 * 增加：增加清除事件回调，用于解除某些引用，以便于GC可以回收内存。
 * 增加：`TImageList`增加一些方法和修改一些参数。
 * 增加：`TPageControl`增加一些属性、方法和事件。
@@ -42,6 +42,7 @@
 * 增加：`TImage`添加`OnPaintBackground`、`OnPaint`和`OnPictureChanged`事件。
 * 增加：`TClipboard`增加`AddFormat`、`SetFormat`、`GetComponent`、`SetComponent`和`SetComponentAsText`方法。
 * 增加：`TCanvas`增加`TryLock`、`Unlock`方法。
+* 调整：将`liblclbinres`包移到`govcl/pkgs/liblclbinres`下。
 
 ----
 
