@@ -4,12 +4,20 @@
 
 function loadRepoInfo() {
     $.get('https://api.github.com/repos/ying32/govcl/releases/latest', function(res){
-        $('#btnDownload').attr("href", res.assets[0].browser_download_url);
+		// https://github.com/ying32/govcl/releases/download/v2.2.3/liblcl-2.2.3.zip
+		for(int i=0;i<res.assets.length;i++){
+			if(assets[i].name.indexOf("liblcl") != -1){
+				$('#btnDownload').attr("href", res.assets[i].browser_download_url);
+				break;
+			}		
+		}
+        
         $("#versionInfo").html(res.tag_name);
-		if(res.assets.length > 1)
-            $("#btnDownloadUIDesigner").attr("href", res.assets[1].browser_download_url);
-		else
-			$("#btnDownloadUIDesigner").attr("href", "javascript:alert('No designer is available');");
+		//if(res.assets.length > 1)
+        //    $("#btnDownloadUIDesigner").attr("href", res.assets[1].browser_download_url);
+		//else
+		//	$("#btnDownloadUIDesigner").attr("href", "javascript:alert('No designer is available');");
+		$("#btnDownloadUIDesigner").attr("href", "https://github.com/ying32/govcl/releases/download/v2.2.3/GoVCLDesigner-win-1.2.0.zip");
     }, 'json');
 
     $.get('https://api.github.com/repos/ying32/govcl', function(res){
