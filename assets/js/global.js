@@ -5,8 +5,8 @@
 function loadRepoInfo() {
     $.get('https://api.github.com/repos/ying32/govcl/releases/latest', function(res){
 		// https://github.com/ying32/govcl/releases/download/v2.2.3/liblcl-2.2.3.zip
-		for(int i=0;i<res.assets.length;i++){
-			if(assets[i].name.indexOf("liblcl") != -1){
+		for(var i=0;i<res.assets.length;i++){
+			if(res.assets[i].name.indexOf("liblcl") != -1){
 				$('#btnDownload').attr("href", res.assets[i].browser_download_url);
 				break;
 			}		
