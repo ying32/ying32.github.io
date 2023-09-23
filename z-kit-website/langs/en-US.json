@@ -37,6 +37,7 @@
 			"lastUpdated": "Last Updated: ",
 			"downloadGoVCL": "Get GoVCL",
 			"preCompiledGUILibrary": "Pre-compiled GUI library",
+            "msg1": "Because the domain name is about to expire, I don’t want to renew it. After expiration, the original",
 			"description2": "Easy to use, write once, compile on multiple platforms",
 			"description3": "GoVCL is a completely open source, free, cross-platform Go language GUI library. The core binding is [liblcl](https://github.com/ying32/liblcl), a common cross-platform GUI library created by [Lazarus](https://www.lazarus-ide.org/)",
 			"viewTheGitHub": "View the GitHub",
