@@ -53,7 +53,7 @@
 | 大白菜(9****8) | ￥100 | 2020-06-11 21:50 |  {{.alipay}} |   |  
 | 大白菜(9****8) | ￥100 | 2020-06-12 05:47 |  {{.alipay}} |   |    
 | *慌 | ￥88 | 2020-06-21 15:50 |  {{.wechatpay}} |   |  
-| [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2020-07-03 |   |   |  
+| [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2020-07-03 |   | 开源开发许可证（自己申请的） |  
 | 大白菜(9****8) | ￥500 | 2020-08-08 |  {{.alipay}} |   |    
 | 大白菜(9****8) | ￥1000 | 2020-08-20 |  {{.alipay}} |   |    
 | 夜●千寻墨(3*****1)| ￥50 | 2020-10-20 19:46 |  {{.wechatpay}} |  感谢群主大佬 |  
@@ -70,7 +70,7 @@
 | cyanBone(4*****1)| ￥50 | 2021-05-06 17:35 |  {{.wechatpay}} |  |  
 | h*r| ￥100 | 2021-05-12 13:53 |  {{.wechatpay}} |  |  
 | *伟| ￥50 | 2021-06-05 16:59 |  {{.wechatpay}} | 5点啦，饮茶先啦😂 |  
-| [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2021-06-22 |   |   |  
+| [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2021-06-22 |   | 开源开发许可证（自己申请的）  |  
 | q*s | ￥200 | 2021-08-03 14:37 |  {{.wechatpay}} |  |  
 | *贵 | ￥10 | 2021-08-11 11:07 |  {{.wechatpay}} |  |  
 | *崽 | ￥100 | 2021-09-27 17:11 |  {{.wechatpay}} |  |  
@@ -90,7 +90,7 @@
 | [korimas](https://github.com/korimas) |￥200 | 2022-05-16 09:30 |  {{.wechatpay}} | 支持一下，开源不易！ |  
 | 夜魂 | ￥50 | 2022-05-21 22:16 |  {{.wechatpay}} | 开源不易,向群主致敬 |  
 | 佳 | ￥5 | 2022-06-14 17:28 |  {{.wechatpay}} | 大佬，下个版本能不能加些组件，Tsynedit这些 |  
-| [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2022-06-30 |   |   |  
+| [<img height="32" src="/assets/images/jetbrains.png"> JET BRAINS](https://www.jetbrains.com/?from=govcl) | 1 All Products Pack License | 2022-06-30 |   | 开源开发许可证（自己申请的）  |  
 | 开发者 | ￥20 | 2022-08-13 | {{.wechatpay}}  | 希望支持气泡提示框popup |  
 | 沉淀下来 | ￥100 | 2022-11-25 | {{.wechatpay}}  | 很好的一个跨平台GUI库，支持！！ |  
 |   | ￥5 | 2022-12-11 | {{.wechatpay}}  |  |  
@@ -103,6 +103,7 @@
 | cccwww  |￥200 | 2023-02-01 09:44 |  {{.wechatpay}} | for govcl |  
 | 无忧愁  |￥50 | 2023-04-10 15:51 |  {{.wechatpay}} | 加油，希望增加LED数字 |  
 | 傅*凡  |￥33 | 2023-09-04 14:14 |  {{.wechatpay}} | 学习使用，感谢作者，喝杯奶茶！能拉我进群看下你的视频教程？ |  
+| 和**v10  |￥50 | 2023-10-12 20:22 |  {{.wechatpay}} | 做得很好，把walk换成govcl了，方便了很多，感谢。 |  
 
 
 **{{.thanks}}** 
