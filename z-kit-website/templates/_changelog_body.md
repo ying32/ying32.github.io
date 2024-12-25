@@ -9,6 +9,9 @@
 
 ## next v2.x.x 
 
+* 增加：增加新的控件`TNoteBook`、`TButtonPanel`和关控件以及使用例子。[#220](https://github.com/ying32/govcl/issues/220)
+* 增加：为一些控件增加一些事件和方法。[#206](https://github.com/ying32/govcl/issues/206)
+
 ----
 
 
